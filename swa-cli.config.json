@@ -4,8 +4,8 @@
       "appLocation": ".",
       "outputLocation": "public",
       "appBuildCommand": "",
-      "appName": "PDX BitDevs-static-site",
-      "resourceGroup": "PDX BitDevs-static-site-rg"
+      "appName": "pdxbitdevs-static-site",
+      "resourceGroup": "pdxbitdevs-static-site-rg"
     }
   }
 }
