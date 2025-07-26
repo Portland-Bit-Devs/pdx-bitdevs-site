@@ -1,0 +1,11 @@
+{
+  "configurations": {
+    "pdxbitdevs": {
+      "appLocation": ".",
+      "outputLocation": "public",
+      "appBuildCommand": "",
+      "appName": "pdxbitdevs-static-site",
+      "resourceGroup": "pdxbitdevs-static-site-rg"
+    }
+  }
+}
