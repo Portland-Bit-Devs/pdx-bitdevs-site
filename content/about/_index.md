@@ -3,7 +3,7 @@ title = "About"
 description = "All about this site"
 +++
 
-PDXBitDevs is inspired by the original [BitDevs NYC](https://bitdevs.org) to 
+PDX BitDevs is inspired by the original [BitDevs NYC](https://bitdevs.org) to 
 help grow a community in the Portland, Oregon area of those interested in discussing 
 and participating in the research and development of Bitcoin and related 
 protocols and software. You can be well versed with or new to the topics, all are welcome. 

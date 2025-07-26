@@ -1,4 +1,4 @@
-# PdxBitDevs Website
+# PDX BitDevs Website
 
 Simple Zola site for hosting all of the links from meetups past and future.
 

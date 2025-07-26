@@ -1,6 +1,6 @@
 +++
-title = "PDXBitDevs Parking"
-description = "Where to Park at PDXBitDevs meetup"
+title = "PDX BitDevs Parking"
+description = "Where to Park at PDX BitDevs meetup"
 +++
 
 ### Please park ...  
