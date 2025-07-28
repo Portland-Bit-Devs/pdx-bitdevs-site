@@ -15,7 +15,12 @@ site locally. Once it is setup:
 
 Use swa cli to deploy static content to Azure.   The CLI tool will create the Static Web App resource from the command line.
 
+    swa login --subscription-id jta-home \
+          --resource-group pdxbitdevs-static-site-rg \
+          --app-name pdxbitdevs-static-site
+
     swa deploy --env production
+
 
 ## Making a Post
 
