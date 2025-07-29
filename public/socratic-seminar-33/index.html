@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>
+        PDX BitDevs
+    </title>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="Site">
+
+    <header class="Header">
+        <div class="Header-inner">
+            <div class="Header-logo">
+                <a href="/">PDX BitDevs</a>
+            </div>
+            <nav class="Header-nav">
+                <a href="/about">About</a>
+                <a href="/support" target="_blank" rel="noopener nofollow">Support</a>
+                <a href="https:&#x2F;&#x2F;www.meetup.com&#x2F;portlandbitdevs&#x2F;" target="_blank" rel="noopener nofollow">Meetup</a>
+                <a href="https:&#x2F;&#x2F;t.me??&#x2F;PortlandBitDevs" target="_blank" rel="noopener nofollow">Telegram</a>
+            </nav>
+        </div>
+        <div class="Header-border">
+            ==============================================================================================================================================================
+        </div>
+    </header>
+
+    
+<section>
+    <div class="Post">
+        <h1 class="Post-title">PDX BitDevs Socratic Seminar #33</h1>
+        <div class="Post-info">
+            <span>2025-07-22</span>
+            
+            <span>
+                <a href="https:&#x2F;&#x2F;www.meetup.com&#x2F;portlandbitdevs&#x2F;/events/307442941" target="_blank" rel="noopener nofollow">
+                    Link to Meetup
+                </a>
+            </span>
+            
+        </div>
+        
+
+        <div class="Post-content"><h2 id="announcements">Announcements</h2>
+<p>Please join us for our next Socratic Seminar. A special thank you to our host <a href="https://dicksprimalburger.com/" data-no-summary>Primal Burger</a>, for the event space. Please support them by buying their delicious food or a beverage.</p>
+<p>If you can't make it to the main event please join us at Lutz Tavern around 9PM <strong><a href="https://www.lutztavern.com/" data-no-summary>here</a>.</strong></p>
+<h3 id="special-thanks-mentions">Special Thanks | Mentions</h3>
+<ul>
+<li>Thank you to everyone who shows up each month!</li>
+</ul>
+<h3 id="guess-the-nonce-is-back">Guess the Nonce is Back</h3>
+<p>After some OPs engineering we can now host a raffle without getting rugged! Prizes this week ... 🎉 🎁 😊</p>
+<h3 id="rules">Rules</h3>
+<ul>
+<li>Respect people's privacy</li>
+<li><a href="https://www.chathamhouse.org/about-us/chatham-house-rule">Chatham House Rules</a></li>
+<li>Interaction and asking questions are encouraged!</li>
+</ul>
+<h3 id="requests">Requests</h3>
+<ul>
+<li>A guest speaker for Aug 26 2025</li>
+<li>Artist / Graphic designed to help with branding and web applications</li>
+<li>Revitalize the effort to create our own Portland.BitDevs website</li>
+</ul>
+<h3 id="schedule">Schedule</h3>
+<ul>
+<li><strong>6:30pm - 7:00pm:</strong> Arrive, socialize, and grab some food.</li>
+<li><strong>7:00pm - 8:30pm:</strong> Primary topics discussion.</li>
+<li><strong>8:00pm - 9:00pm:</strong> Overtime discussions about tonights topics or additional user submissions.</li>
+</ul>
+<h2 id="bitcoin-dev-news">Bitcoin Dev News</h2>
+<ul>
+<li><a href="https://frostsnap.com/">Frostsnap Hardware Wallet</a>
+<ul>
+<li>Sharmir Share Backup</li>
+<li>Restor Wallet With M/N</li>
+<li>Based on BDK</li>
+<li>Early Access (Frostsnap Frontier)</li>
+</ul>
+</li>
+<li><a href="https://whentaproot.org/#support">Gemini Exchange Adds Taproot Support</a></li>
+<li><a href="https://github.com/bitcoin/bitcoin/pull/32604">Bitcoin Core Diskfilling Logs Attack Mitigation</a>
+<ul>
+<li>1MB per source maximum</li>
+<li>After that truncates with ...</li>
+</ul>
+</li>
+<li><a href="https://github.com/bitcoin/bitcoin/pull/31553">Cluster Mempool Reorg Support</a>
+<ul>
+<li>A bunch of Transctions could be reorged back into the mempool cuasing too large of a cluster</li>
+<li>Now accounts for this</li>
+<li>Removes as a DoS vector</li>
+</ul>
+</li>
+<li><a href="https://delvingbitcoin.org/t/a-rust-library-to-encode-descriptors-with-a-30-40-size-reduction/1804">Descriptor Encoding Compression</a>
+<ul>
+<li>Uses bech32 to reduce the number of Bits needed to represent a descritpor when transmitting thorough a QR Code</li>
+</ul>
+</li>
+<li><a href="https://x.com/stutxo/status/1947774746030182553">Taproot Control Block Data Store?</a>
+<ul>
+<li>Using the merkle pairs it's possible to encode a payload into the taproot control block</li>
+</ul>
+</li>
+<li><a href="https://x.com/mononautical/status/1947530080475091159">Sub 1 sat/vBtye Summer is here</a>
+<ul>
+<li>Over 50% of hashrate is now mining sub 1 sat/vByte transactions</li>
+</ul>
+</li>
+<li><a href="https://x.com/mononautical/status/1946410602177380358">Mempool.space displays sub 1 sat/vByte Txns</a>
+<ul>
+<li>Baha Blast Green Color</li>
+<li><a href="https://x.com/mempool/status/1945080617290404161">Official Post</a></li>
+</ul>
+</li>
+<li><a href="https://cointelegraph.com/news/coindcx-whitehat-recovery-bounty-44m-hack">CoinDCX Indian Exchange Hacked 44MM</a></li>
+</ul>
+</div>
+    </div>
+</section>
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://www.schema.org",
+  "@type": "LocalBusiness",
+  "name": "PDX BitDevs",
+  "url": "https://www.portlandbitdevs.com/",
+  "description": "PDX BitDevs is a community in the Portland, Oregon area for those interested in discussing and participating in the research and development of Bitcoin and related protocols and software.",
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Eddy ..."
+    },
+    {
+      "@type": "Person",
+      "name": "Eric ..."
+    },
+    {
+      "@type": "Person",
+      "name": "Portland HODL."
+    },
+    {
+      "@type": "Person",
+      "name": "Andrew Chalkley"
+    }
+  ],
+  "sponsor": [
+    {
+      "@type": "Corporation",
+      "name": "Bitcoin Is For Everyone",
+      "url": "https://bitcoinisforeveryone.com/",
+      "sameAs": "https://x.com/BTCisforEvery1"
+    }
+  ],
+  "member": [
+    {
+      "@type": "Person",
+      "name": "Jon Austen"
+    },
+    {
+      "@type": "Person",
+      "name": "Add Yourself"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Portland",
+    "addressRegion": "Oregon",
+    "addressCountry": "United States of America"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Organizer",
+    "email": "none@..."
+  }
+}
+</script>
+
+    <footer class="Footer">
+        <div class="Footer-border">
+            ==============================================================================================================================================================
+        </div>
+        <div class="Footer-inner">
+            <div class="Footer-source">
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;Portland-Bit-Devs&#x2F;" target="_blank"
+                   rel="noopener nofollow">Source available on Github</a>
+            </div>
+            <div class="Footer-rss">
+                <a href="/rss.xml">RSS Feed</a>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+</body>
+
+</html>

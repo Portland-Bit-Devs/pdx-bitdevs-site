@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>
+        PDX BitDevs
+    </title>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="Site">
+
+    <header class="Header">
+        <div class="Header-inner">
+            <div class="Header-logo">
+                <a href="/">PDX BitDevs</a>
+            </div>
+            <nav class="Header-nav">
+                <a href="/about">About</a>
+                <a href="/support" target="_blank" rel="noopener nofollow">Support</a>
+                <a href="https:&#x2F;&#x2F;www.meetup.com&#x2F;portlandbitdevs&#x2F;" target="_blank" rel="noopener nofollow">Meetup</a>
+                <a href="https:&#x2F;&#x2F;t.me??&#x2F;PortlandBitDevs" target="_blank" rel="noopener nofollow">Telegram</a>
+            </nav>
+        </div>
+        <div class="Header-border">
+            ==============================================================================================================================================================
+        </div>
+    </header>
+
+    
+<section>
+    <div class="Post">
+        <h1 class="Post-title">PDX BitDevs Socratic Seminar #19</h1>
+        <div class="Post-info">
+            <span>2024-01-24</span>
+            
+            <span>
+                <a href="https:&#x2F;&#x2F;www.meetup.com&#x2F;portlandbitdevs&#x2F;/events/304303269" target="_blank" rel="noopener nofollow">
+                    Link to Meetup
+                </a>
+            </span>
+            
+        </div>
+        
+
+        <div class="Post-content"><h2 id="announcements">Announcements</h2>
+<p>Please join us for our next Socratic Seminar. A special thank you to our host <a href="https://dicksprimalburger.com/" data-no-summary>Primal Burger</a>, for the event space. Please support them by buying their delicious food or a beverage.</p>
+<p>If you can't make it to the main event please join us at Lutz Tavern around 9PM <strong><a href="https://www.lutztavern.com/" data-no-summary>here</a>.</strong></p>
+<h3 id="special-thanks-mentions">Special Thanks | Mentions</h3>
+<ul>
+<li>Jon Austen - Got the BitDevs upgrade working full hosting of the site soon™</li>
+<li><a href="https://twitter.com/reardencode">Rearden</a> Speaking on LNHANCE - Feb 27 2024</li>
+<li>Thank you to everyone who shows up each month!</li>
+</ul>
+<h3 id="rules">Rules</h3>
+<ul>
+<li>Respect people's privacy</li>
+<li><a href="https://www.chathamhouse.org/about-us/chatham-house-rule">Chatham House Rules</a></li>
+<li>Interaction and asking questions are encouraged!</li>
+</ul>
+<h3 id="requests">Requests</h3>
+<ul>
+<li>A guest speaker for March 25 2024</li>
+<li>Artist / Graphic designed to help with branding and web applications.</li>
+<li>A Portland BitDevs project to rally around.</li>
+</ul>
+<h3 id="giveaway">Giveaway</h3>
+<ul>
+<li><a href="https://nonce.portlandbitdevs.com/">Use Guess the Nonce</a>
+<ul>
+<li>2 Tins of Bitcoin Blend coffee
+<ul>
+<li>PDXBTC &amp;&amp; SHIPBTC for 30% off and free shipping</li>
+</ul>
+</li>
+<li><a href="https://freedomfoods.store/">Freedom Foods - Premium Freeze Dried Food</a>
+<ul>
+<li>Beef broccoli teriyaki</li>
+<li>Spaghetti</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="schedule">Schedule</h3>
+<ul>
+<li><strong>6:30 - 7:00pm:</strong> Arrive, socialize, and grab some food.</li>
+<li><strong>7:00 - 8:30pm:</strong> Join Eric and @PortlandHODL for a Socratic Seminar as they delve into the latest updates on Bitcoin &amp; Lightning (so many current events to talk about!)</li>
+<li><strong>8:30 - 9:00pm:</strong> Overtime discussions about tonights topics or additional user submissions.</li>
+</ul>
+<h2 id="bitcoin-dev-news">Bitcoin Dev News</h2>
+<ul>
+<li><a href="https://stacker.news/items/371764">Loan Shark - Super Testnet</a>
+<ul>
+<li>NOSTR Communication Protocol</li>
+<li>2 Spending Paths - Taproot [fail to pay, collaberate]</li>
+</ul>
+</li>
+<li><a href="https://github.com/bitcoin/bitcoin/pull/29198">LNHANCE</a>
+<ul>
+<li>OP_CHECKTEMPLATE_VERIFY</li>
+<li>OP_CHECKSIGFROMSTACK</li>
+<li>OP_INTERNALKEY</li>
+</ul>
+</li>
+<li><a href="https://twitter.com/rot13maxi/status/1748452535017296069">Rijndael OP_CAT Covenants</a>
+<ul>
+<li>Uses Liquid</li>
+<li><a href="https://medium.com/blockstream/cat-and-schnorr-tricks-i-faf1b59bd298">Andrew Poelstra Thesis</a></li>
+<li>No need for OP_CHECKSIGFROMSTACK</li>
+</ul>
+</li>
+<li><a href="https://petertodd.org/2023/v3-txs-pinning-vulnerability">Pinning Attacks in V3 still possible - Peter Todd</a>
+<ul>
+<li>Absolute fee still trumps fee rate.</li>
+</ul>
+</li>
+<li><a href="https://delvingbitcoin.org/t/disclosure-btcd-consensus-bugs-due-to-usage-of-signed-transaction-version/455">YABTCDB - Signed Integer TX Versions</a>
+<ul>
+<li>BTCD used a signed integer to represent the transactions version</li>
+<li>Responsibly disclosed</li>
+</ul>
+</li>
+<li><a href="https://twitter.com/mononautical/status/1743274489893282187">Stamps causing sigops limits to be hit</a>
+<ul>
+<li>Satoshi counts the sigops on each outpoint not input</li>
+</ul>
+</li>
+<li><a href="https://twitter.com/mononautical/status/1749101242289127439">Mempool.space Googles Release</a>
+<ul>
+<li>Visualized as stripes of packages</li>
+</ul>
+</li>
+<li><a href="https://www.nobsbitcoin.com/phoenix-wallet-ios-v2-1-0/">Phoenix Wallet v2.1.0</a>
+<ul>
+<li>Request inbound liquidity</li>
+</ul>
+</li>
+</ul>
+<h2 id="tech-news">Tech news</h2>
+<ul>
+<li><a href="https://github.com/bitcoin/bitcoin/pull/28217">P2MS (PERMIT_BAREMULTISIG) discussion lockd</a>
+<ul>
+<li>Discussion has been locked by A. Chow</li>
+</ul>
+</li>
+<li><a href="https://github.com/payjoin/rust-payjoin/tree/master/payjoin-cli">Payjoin Client for Bitcoin Core released</a>
+<ul>
+<li>Enables a coinjoin between 2 people that appears to be a single spend onchain</li>
+</ul>
+</li>
+<li><a href="https://github.com/ZeusLN/zeus/releases/tag/v0.8.0">Zeus 0.8 Released</a>
+<ul>
+<li>OLYMPUS by ZEUS 0-conf channel service</li>
+<li>Zaplocker self-custodial lightning addresses</li>
+<li>Taproot Channel Support</li>
+</ul>
+</li>
+<li>OP_CHECKTEMPLATEVERIFY regains community support
+<ul>
+<li><a href="https://twitter.com/reardencode/status/1739059702485709212">Twitter Post Supporting Covenants</a></li>
+<li><a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2023-September/021941.html">Mailing List - Scaling Lightning with Simple Covenants</a>i</li>
+</ul>
+</li>
+<li>Nyan Keys Bitcoin Mining Keyboard is actually Fast
+<ul>
+<li><a href="https://imgur.com/a/y1hlmqy">130µ Second Response Time</a></li>
+</ul>
+</li>
+<li><a href="https://bitcoinorangeparty.com/">Bitcoin Orange Party Tracker</a></li>
+</ul>
+<h2 id="market-news">Market News</h2>
+<ul>
+<li><a href="https://twitter.com/thomas_fahrer/status/1749935401538904437">ETF outflows from grayscale continure</a></li>
+<li><a href="https://www.bloomberg.com/news/articles/2024-01-22/bitcoin-slips-back-toward-40-000-as-etf-hype-simmers">ETF approval did not pump thy bags</a></li>
+<li><a href="https://twitter.com/mononautical/status/1749821386720174460">Grayscale outflows continue</a></li>
+</ul>
+<h2 id="education">Education</h2>
+<ul>
+<li><a href="https://twitter.com/PortlandHODL/status/1746731228122976617">Programming Bitcoin Part 1. Finite Fields</a></li>
+<li><a href="https://twitter.com/PortlandHODL/status/1746731228122976617">Programming Bitcoin Part 2. Elliptic Curves</a></li>
+</ul>
+</div>
+    </div>
+</section>
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://www.schema.org",
+  "@type": "LocalBusiness",
+  "name": "PDX BitDevs",
+  "url": "https://www.portlandbitdevs.com/",
+  "description": "PDX BitDevs is a community in the Portland, Oregon area for those interested in discussing and participating in the research and development of Bitcoin and related protocols and software.",
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Eddy ..."
+    },
+    {
+      "@type": "Person",
+      "name": "Eric ..."
+    },
+    {
+      "@type": "Person",
+      "name": "Portland HODL."
+    },
+    {
+      "@type": "Person",
+      "name": "Andrew Chalkley"
+    }
+  ],
+  "sponsor": [
+    {
+      "@type": "Corporation",
+      "name": "Bitcoin Is For Everyone",
+      "url": "https://bitcoinisforeveryone.com/",
+      "sameAs": "https://x.com/BTCisforEvery1"
+    }
+  ],
+  "member": [
+    {
+      "@type": "Person",
+      "name": "Jon Austen"
+    },
+    {
+      "@type": "Person",
+      "name": "Add Yourself"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Portland",
+    "addressRegion": "Oregon",
+    "addressCountry": "United States of America"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Organizer",
+    "email": "none@..."
+  }
+}
+</script>
+
+    <footer class="Footer">
+        <div class="Footer-border">
+            ==============================================================================================================================================================
+        </div>
+        <div class="Footer-inner">
+            <div class="Footer-source">
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;Portland-Bit-Devs&#x2F;" target="_blank"
+                   rel="noopener nofollow">Source available on Github</a>
+            </div>
+            <div class="Footer-rss">
+                <a href="/rss.xml">RSS Feed</a>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+</body>
+
+</html>
