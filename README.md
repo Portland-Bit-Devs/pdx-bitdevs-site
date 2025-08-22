@@ -14,6 +14,8 @@ site locally. Once it is setup:
 
 ### Azure Deployment
 
+This site is hosted on Azure using a simple `Static Web App` resource.  The DNS and the SSL cert, is currently hosted through `NameCheap`.
+
 Use swa cli to deploy static content to Azure.   The CLI tool will create the Static Web App resource from the command line.
 
     swa login --subscription-id jta-home \
