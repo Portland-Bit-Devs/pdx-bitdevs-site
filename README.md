@@ -14,7 +14,9 @@ site locally. Once it is setup:
 
 ### Azure Deployment
 
-This site is hosted on Azure using a simple `Static Web App` resource.  The DNS and the SSL cert, is currently hosted through `NameCheap`.
+This site is hosted for free on Azure using a simple `Static Web App` resource.  
+
+The DNS and the SSL cert, is currently hosted through `NameCheap`.  This costs approx $20/year.
 
 Use swa cli to deploy static content to Azure.   The CLI tool will create the Static Web App resource from the command line.
 
