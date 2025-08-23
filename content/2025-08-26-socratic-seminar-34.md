@@ -30,6 +30,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ## Announcements
 - Our own Portland.BitDevs website is now online: https://portlandbitdevs.org/
+  - Includes auto-deployment Github action whenever a file on the site is modified.
 
 ### Schedule
 - **6:30pm - 7:00pm:** Arrive, socialize, and grab some food.
