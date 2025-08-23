@@ -23,7 +23,7 @@ on:
 env:
   APP_LOCATION: "/" # location of your client code
   API_LOCATION: "api" # location of your api source code - optional
-  APP_ARTIFACT_LOCATION: "build" # location of client code build output
+  APP_ARTIFACT_LOCATION: "public" # location of client code build output
   AZURE_STATIC_WEB_APPS_API_TOKEN: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }} # secret containing deployment token for your static web app
 
 permissions:
@@ -41,8 +41,19 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
-      - name: Build And Deploy
-        id: builddeploy
+
+      # Install Zola
+      - name: Install Zola Framework
+        run: |
+          curl -sL https://github.com/getzola/zola/releases/download/v0.19.1/zola-v0.19.1-x86_64-linux.tar.gz | tar -xz -C /usr/local/bin
+          zola --version
+
+      # Build the Zola site
+      - name: App Build Zola Site
+        run: zola build
+
+      - name: App Deploy
+        id: appdeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ env.AZURE_STATIC_WEB_APPS_API_TOKEN }} # secret containing api token for app
