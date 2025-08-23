@@ -1,8 +1,8 @@
 # The URL the site will be built for
-base_url = "https://white-pond-03b06391e.1.azurestaticapps.net/"
+base_url = "https://portlandbitdevs.org/"
 
-title = "PDX BitDevs"
-description = "PDX BitDevs is a community in the Portland, Oregon area for those interested in discussing and participating in the research and development of Bitcoin and related protocols and software."
+title = "Portland BitDevs"
+description = "Portland BitDevs is a community in the Portland, Oregon area for those interested in discussing and participating in the research and development of Bitcoin and related protocols and software."
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true

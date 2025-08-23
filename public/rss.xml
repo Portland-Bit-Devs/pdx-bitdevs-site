@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-      <title>PDX BitDevs</title>
-      <link>https://white-pond-03b06391e.1.azurestaticapps.net/</link>
-      <description>PDX BitDevs is a community in the Portland, Oregon area for those interested in discussing and participating in the research and development of Bitcoin and related protocols and software.</description>
+      <title>Portland BitDevs</title>
+      <link>https://portlandbitdevs.org/</link>
+      <description>Portland BitDevs is a community in the Portland, Oregon area for those interested in discussing and participating in the research and development of Bitcoin and related protocols and software.</description>
       <generator>Zola</generator>
       <language>en</language>
-      <atom:link href="https://white-pond-03b06391e.1.azurestaticapps.net/rss.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://portlandbitdevs.org/rss.xml" rel="self" type="application/rss+xml"/>
       <lastBuildDate>Tue, 22 Jul 2025 00:00:00 +0000</lastBuildDate>
       <item>
           <title>PDX BitDevs Socratic Seminar #33</title>
           <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-33/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-33/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-33/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-33/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-33/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-33/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -94,9 +94,9 @@
           <title>PDX BitDevs Socratic Seminar #32</title>
           <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-32/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-32/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-32/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-32/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-32/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-32/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;The Portland Bitcoin Group Meetup is now sponsored by the non-profit Bitcoin is for Everyone!
@@ -238,9 +238,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #31</title>
           <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-31/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-31/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-31/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-31/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-31/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-31/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;The Portland Bitcoin Group Meetup is now sponsored by the non-profit Bitcoin is for Everyone!
@@ -354,9 +354,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #30</title>
           <pubDate>Tue, 22 Apr 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-30/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-30/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-30/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-30/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-30/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-30/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;The Portland Bitcoin Group Meetup is now sponsored by the non-profit Bitcoin is for Everyone!
@@ -463,9 +463,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #29</title>
           <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-29/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-29/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-29/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-29/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-29/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-29/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;The Portland Bitcoin Group Meetup is now sponsored by the non-profit Bitcoin is for Everyone!
@@ -572,9 +572,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #28</title>
           <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-28/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-28/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-28/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-28/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-28/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-28/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;The Portland Bitcoin Group Meetup is now sponsored by the non-profit Bitcoin is for Everyone!
@@ -700,9 +700,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #27</title>
           <pubDate>Tue, 28 Jan 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-27/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-27/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-27/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-27/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-27/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-27/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -811,9 +811,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #26</title>
           <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-26/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-26/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-26/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-26/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-26/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-26/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -912,9 +912,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #25</title>
           <pubDate>Tue, 26 Nov 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-25/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-25/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-25/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-25/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-25/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-25/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -1010,9 +1010,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #24</title>
           <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-24/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-24/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-24/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-24/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-24/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-24/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -1126,9 +1126,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #23</title>
           <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-23/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-23/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-23/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-23/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-23/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-23/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -1264,9 +1264,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #22</title>
           <pubDate>Tue, 25 Jun 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-22/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-22/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-22/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-22/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-22/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-22/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -1332,9 +1332,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #21</title>
           <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-21/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-21/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-21/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-21/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-21/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-21/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -1402,9 +1402,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #20</title>
           <pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-20/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-20/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-20/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-20/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-20/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-20/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -1517,9 +1517,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #19</title>
           <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-19/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-19/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-19/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-19/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-19/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-19/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -1662,9 +1662,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #18</title>
           <pubDate>Tue, 26 Dec 2023 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-18/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-18/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-18/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-18/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-18/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-18/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -1752,21 +1752,21 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;mining-presentation-slides&quot;&gt;Mining Presentation Slides&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;white-pond-03b06391e.1.azurestaticapps.net&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;1.jpg&quot; alt=&quot;Title Slide&quot; &#x2F;&gt;
-&lt;img src=&quot;https:&#x2F;&#x2F;white-pond-03b06391e.1.azurestaticapps.net&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;2.jpg&quot; alt=&quot;Mining Flow&quot; &#x2F;&gt;
-&lt;img src=&quot;https:&#x2F;&#x2F;white-pond-03b06391e.1.azurestaticapps.net&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;3.jpg&quot; alt=&quot;Mining History&quot; &#x2F;&gt;
-&lt;img src=&quot;https:&#x2F;&#x2F;white-pond-03b06391e.1.azurestaticapps.net&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;4.jpg&quot; alt=&quot;Present Mining&quot; &#x2F;&gt;
-&lt;img src=&quot;https:&#x2F;&#x2F;white-pond-03b06391e.1.azurestaticapps.net&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;5.jpg&quot; alt=&quot;Problems&quot; &#x2F;&gt;
-&lt;img src=&quot;https:&#x2F;&#x2F;white-pond-03b06391e.1.azurestaticapps.net&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;6.jpg&quot; alt=&quot;The Future&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;1.jpg&quot; alt=&quot;Title Slide&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;2.jpg&quot; alt=&quot;Mining Flow&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;3.jpg&quot; alt=&quot;Mining History&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;4.jpg&quot; alt=&quot;Present Mining&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;5.jpg&quot; alt=&quot;Problems&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;6.jpg&quot; alt=&quot;The Future&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
           <title>PDX BitDevs Socratic Seminar #17</title>
           <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-17/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-17/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-17/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-17/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-17/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-17/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -1832,9 +1832,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #16</title>
           <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-16/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-16/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-16/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-16/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-16/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-16/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;rules&quot;&gt;Rules:&lt;&#x2F;h3&gt;
@@ -1889,9 +1889,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #15</title>
           <pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-15/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-15/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-15/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-15/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-15/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-15/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;rules&quot;&gt;Rules:&lt;&#x2F;h3&gt;
@@ -1930,9 +1930,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #14</title>
           <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-14/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-14/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-14/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-14/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-14/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-14/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
@@ -1992,9 +1992,9 @@ Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
           <title>PDX BitDevs Socratic Seminar #13</title>
           <pubDate>Mon, 24 Apr 2023 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-13/</link>
-          <guid>https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-13/</guid>
-          <description xml:base="https://white-pond-03b06391e.1.azurestaticapps.net/socratic-seminar-13/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+          <link>https://portlandbitdevs.org/socratic-seminar-13/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-13/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-13/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
 &lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
 &lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;

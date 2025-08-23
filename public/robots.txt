@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://white-pond-03b06391e.1.azurestaticapps.net/sitemap.xml
+Sitemap: https://portlandbitdevs.org/sitemap.xml
