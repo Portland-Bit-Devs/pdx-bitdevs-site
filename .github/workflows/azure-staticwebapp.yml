@@ -55,7 +55,7 @@ jobs:
         run: |
           zola build
           ls -al $GITHUB_WORKSPACE
-          pwd
+          echo "Current directory: $PWD"
 
       - name: App Deploy
         id: appdeploy
