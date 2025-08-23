@@ -54,7 +54,7 @@ jobs:
       - name: App Build Zola Site
         run: |
           zola build
-          ls -al /github/workspace
+          ls -al $GITHUB_WORKSPACE
 
       - name: App Deploy
         id: appdeploy
