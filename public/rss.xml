@@ -1,0 +1,2105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Portland BitDevs</title>
+      <link>https://portlandbitdevs.org/</link>
+      <description>Portland BitDevs is a community in the Portland, Oregon area for those interested in discussing and participating in the research and development of Bitcoin and related protocols and software.</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://portlandbitdevs.org/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 26 Aug 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #38</title>
+          <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-38/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-38/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-38/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space.
+Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;guess-the-nonce-is-back&quot;&gt;Guess the Nonce is Back&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;After some OPs engineering we can now host a raffle without getting rugged! Prizes this week ... 🎉 🎁 😊&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for Aug 26 2025 ?&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designed to help with branding and web applications&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;announcements-1&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Our own Portland.BitDevs website is now online: https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;
+&lt;ul&gt;
+&lt;li&gt;Includes auto-deployment Github action whenever a file on the site is modified.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 8:30pm:&lt;&#x2F;strong&gt; Primary topics discussion.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonights topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;p&gt;TODO&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Blog Created #1</title>
+          <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/blog/blog-created-1/</link>
+          <guid>https://portlandbitdevs.org/blog/blog-created-1/</guid>
+          <description xml:base="https://portlandbitdevs.org/blog/blog-created-1/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;TODO&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #37</title>
+          <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-37/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-37/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-37/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;guess-the-nonce-is-back&quot;&gt;Guess the Nonce is Back&lt;&#x2F;h3&gt;
+&lt;p&gt;After some OPs engineering we can now host a raffle without getting rugged! Prizes this week ... 🎉 🎁 😊&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for Aug 26 2025&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designed to help with branding and web applications&lt;&#x2F;li&gt;
+&lt;li&gt;Revitalize the effort to create our own Portland.BitDevs website&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 8:30pm:&lt;&#x2F;strong&gt; Primary topics discussion.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonights topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;frostsnap.com&#x2F;&quot;&gt;Frostsnap Hardware Wallet&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Sharmir Share Backup&lt;&#x2F;li&gt;
+&lt;li&gt;Restor Wallet With M&#x2F;N&lt;&#x2F;li&gt;
+&lt;li&gt;Based on BDK&lt;&#x2F;li&gt;
+&lt;li&gt;Early Access (Frostsnap Frontier)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;whentaproot.org&#x2F;#support&quot;&gt;Gemini Exchange Adds Taproot Support&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;32604&quot;&gt;Bitcoin Core Diskfilling Logs Attack Mitigation&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;1MB per source maximum&lt;&#x2F;li&gt;
+&lt;li&gt;After that truncates with ...&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;31553&quot;&gt;Cluster Mempool Reorg Support&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;A bunch of Transctions could be reorged back into the mempool cuasing too large of a cluster&lt;&#x2F;li&gt;
+&lt;li&gt;Now accounts for this&lt;&#x2F;li&gt;
+&lt;li&gt;Removes as a DoS vector&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;a-rust-library-to-encode-descriptors-with-a-30-40-size-reduction&#x2F;1804&quot;&gt;Descriptor Encoding Compression&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Uses bech32 to reduce the number of Bits needed to represent a descritpor when transmitting thorough a QR Code&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;stutxo&#x2F;status&#x2F;1947774746030182553&quot;&gt;Taproot Control Block Data Store?&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Using the merkle pairs it&#x27;s possible to encode a payload into the taproot control block&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1947530080475091159&quot;&gt;Sub 1 sat&#x2F;vBtye Summer is here&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Over 50% of hashrate is now mining sub 1 sat&#x2F;vByte transactions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1946410602177380358&quot;&gt;Mempool.space displays sub 1 sat&#x2F;vByte Txns&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Baha Blast Green Color&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mempool&#x2F;status&#x2F;1945080617290404161&quot;&gt;Official Post&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cointelegraph.com&#x2F;news&#x2F;coindcx-whitehat-recovery-bounty-44m-hack&quot;&gt;CoinDCX Indian Exchange Hacked 44MM&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #36</title>
+          <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-36/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-36/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-36/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The Portland Bitcoin Group Meetup is now sponsored by the non-profit Bitcoin is for Everyone!
+Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pay.zaprite.com&#x2F;pl_r0iZfbk20s&quot;&gt;Ticket-only ($99)&lt;&#x2F;a&gt;🎟&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;0d0a9967-cc65-4674-b341-c0865256eed3&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pay.zaprite.com&#x2F;pl_qd6uXJ80ZQ&quot;&gt;Combo: ticket plus T-shirt ($124)&lt;&#x2F;a&gt;🎟👕&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;529d2ad8-db78-4177-809c-ef415aebd00d&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;Bitcoin is for Everyone&lt;&#x2F;em&gt;
+&lt;em&gt;Friday Aug 1st 2025&lt;&#x2F;em&gt;
+&lt;em&gt;Revolution Hall&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for July 22. 2025&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designer to help with branding and web applications. [1.7 years in]&lt;&#x2F;li&gt;
+&lt;li&gt;Continue to improve the Portland BitDevs web experience.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 8:30pm:&lt;&#x2F;strong&gt; General Bitcoin Developer Discussion Lead by PortlandHODL and Eric.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonight&#x27;s topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mailing-list.bitcoindevs.xyz&#x2F;bitcoindev&#x2F;CABaSBax-meEsC2013zKYJnC3phFFB_W3cHQLroUJcPDZKsjB8w@mail.gmail.com&#x2F;&quot;&gt;Privatizing Bitcoin Core&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;There are no additional explicit obligations beyond the license.&lt;&#x2F;li&gt;
+&lt;li&gt;Githubs poor moderation tools&lt;&#x2F;li&gt;
+&lt;li&gt;Use Gitlab (Private access for pulls&#x2F;issues)&lt;&#x2F;li&gt;
+&lt;li&gt;A lot of development and discussion alreayd happening in private (Chaincode, Brink, etc..)&lt;&#x2F;li&gt;
+&lt;li&gt;Reduce interaction from non-technical activist users&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;b10c.me&#x2F;observations&#x2F;15-inv-to-send-queue&#x2F;&quot;&gt;DoS Inventory&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;censorshipresistant.com&#x2F;&quot;&gt;Censorship Resistant&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ashigaru.rs&#x2F;news&#x2F;announcement-whirlpool&#x2F;&quot;&gt;Whirlpools are back!&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;P3b7_&#x2F;status&#x2F;1937501354232008974&quot;&gt;Ledger Recovery Key&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;SE uses pin to access secret.&lt;&#x2F;li&gt;
+&lt;li&gt;Ledger Flex or Stax can use used to decode and display the secret
+&lt;ul&gt;
+&lt;li&gt;Still closed source so what is the point?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;btcqna&#x2F;status&#x2F;1937525905917702297&quot;&gt;Licence issues&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rubin.io&#x2F;public&#x2F;pdfs&#x2F;delbrag.pdf&quot;&gt;BitVM Garbeled Circuits&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Current BitVM Transactions can be very large. (non-standard)&lt;&#x2F;li&gt;
+&lt;li&gt;Avoids &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@Bitlayer&#x2F;first-bitvm-bridge-use-case-successfully-executed-on-bitcoin-mainnet-105477bce266&quot;&gt;this&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.bitlayer.org&#x2F;bitlayer-partners-with-major-mining-pools&#x2F;&quot;&gt;Bitlayer Partners with 45% hash&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Get NST mined into the chain&lt;&#x2F;li&gt;
+&lt;li&gt;Goal is large TXs presumably (unless the above takes foot)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;1 sat&#x2F;vByte Summer is here
+&lt;ul&gt;
+&lt;li&gt;MARA (Policy of .1 Sats&#x2F;vByte)&lt;&#x2F;li&gt;
+&lt;li&gt;F2Pool (Policy of .1 Sats&#x2F;vByte)&lt;&#x2F;li&gt;
+&lt;li&gt;Ant pool (Sometimes mining .1 Sats&#x2F;vByte)&lt;&#x2F;li&gt;
+&lt;li&gt;Discussion about how to make this happen + wallet Support
+&lt;ul&gt;
+&lt;li&gt;Tx Pidgeon&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;blob&#x2F;master&#x2F;src&#x2F;net.h&quot;&gt;net.h&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;maxconnections=125&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1932099710401356077&quot;&gt;Mononaut&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Knots Banlist
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;aeonBTC&#x2F;status&#x2F;1936838919833919853&quot;&gt;Twitter&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aeonBTC&#x2F;Knots-Banlist&quot;&gt;Github&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;lopp&#x2F;status&#x2F;1936907218638823756&quot;&gt;Lopp&lt;&#x2F;a&gt; Active filter&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;dimahledba&#x2F;status&#x2F;1935354385795592491&quot;&gt;Stark Based Mining&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Plausible deniability&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;starkware-bitcoin&#x2F;stratum&quot;&gt;SV2 Implementation &lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;where-does-the-33-33-threshold-for-selfish-mining-come-from&#x2F;1757&quot;&gt;Selfish Mining&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;darosior&#x2F;miningsimulation&quot;&gt;Simulator&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mempool.space&#x2F;tx&#x2F;50bb2e1ae25b8c9ce49e254ed7b92a7af3ed8862dea836b2013b990d3cd3238c?showFlow=true#flow&quot;&gt;Ephemeral Dust Hitting the Mempool&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;32406&quot;&gt;OP_RETURN Uncapped as Policy (core)&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;32406#issuecomment-2955614286&quot;&gt;Reasoning&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;non-confiscatory-transaction-weight-limit&#x2F;1732&quot;&gt;Non-confiscatory Transaction Weight Limit&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;dust-expiry-clean-the-utxo-set-from-spam&#x2F;1707&quot;&gt;Age based expiration of UTXOs&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;IMO a horrible idea, none the less presented&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;timechainarcade.com&#x2F;&quot;&gt;Timechain Arcade&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;interesting&quot;&gt;Interesting&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.btcpolicysummit.org&#x2F;&quot;&gt;Bitcoin Policy Summit (Whashington Getting in Bed with Crypto)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;BitcoinShooter&#x2F;status&#x2F;1852007873691422875&quot;&gt;Bitcoin Shooter - No More Inflation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;BitcoinNewsCom&#x2F;status&#x2F;1935443909951336910&quot;&gt;Hackers Torch 90 Million in BTC for Motive&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;BitcoinNewsCom&#x2F;status&#x2F;1935443912786681930&quot;&gt;Quantum Proof Address 1FuckiRGCTerroristsNoBiTEX&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Akin to a military strike&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=bDzbKH5dwys&quot;&gt;Zeus Video Tutorial&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #35</title>
+          <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-35/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-35/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-35/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The Portland Bitcoin Group Meetup is now sponsored by the non-profit Bitcoin is for Everyone!
+Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pay.zaprite.com&#x2F;pl_r0iZfbk20s&quot;&gt;Ticket-only ($99)&lt;&#x2F;a&gt;🎟&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;0d0a9967-cc65-4674-b341-c0865256eed3&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pay.zaprite.com&#x2F;pl_qd6uXJ80ZQ&quot;&gt;Combo: ticket plus T-shirt ($124)&lt;&#x2F;a&gt;🎟👕&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;529d2ad8-db78-4177-809c-ef415aebd00d&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;Bitcoin is for Everyone&lt;&#x2F;em&gt;
+&lt;em&gt;Friday Aug 1st 2025&lt;&#x2F;em&gt;
+&lt;em&gt;Revolution Hall&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;li&gt;Thank you to Jon for the Bank Simulator Presentation.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for June 17. 2025&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designer to help with branding and web applications. [1.7 years in]&lt;&#x2F;li&gt;
+&lt;li&gt;Continue to improve the Portland BitDevs web experience!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.L&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 8:30pm:&lt;&#x2F;strong&gt; General Bitcoin Developer Discussion Lead by PortlandHODL and Eric.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonight&#x27;s topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;b10c.me&#x2F;blog&#x2F;015-bitcoin-mining-centralization&#x2F;&quot;&gt;Bitcoin Mining Centralization Report 0xB10C&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mempool.space&#x2F;block&#x2F;0000000000000000000011a508e48be0bbe2cf4cd3ec062cfafc19f78ea810e0?audit=false&quot;&gt;&#x27;Art&#x27; Block Pizza Day&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mempool.space&#x2F;tx&#x2F;8245e67349565e481c622fe3437408db7344cdf730edb193c1466326eb021c0b&quot;&gt;Escrow transaction&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Using node connect to protect funds&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;blob&#x2F;ce46000712439782e7d44b3bb22c375503371ee6&#x2F;src&#x2F;validation.cpp#L299&quot;&gt;Reorg risk mitigation using non-standard txns&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;commit&#x2F;638a4c0bd8b53766faeb437244b2aae4eed28dcf&quot;&gt;Legacy Wallet Support Removed for v30.0&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;32423#discussion_r2094833979&quot;&gt;RPC User&#x2F;Password has been undeprecated&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;BitcoinReviewHQ&#x2F;status&#x2F;1926325014493536521&quot;&gt;Miniscript n&#x2F;n bug&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;peterktodd&#x2F;status&#x2F;1924517867652792342&quot;&gt;Garbage Man Client Eclipsing&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;groups.google.com&#x2F;g&#x2F;bitcoindev&#x2F;c&#x2F;bmV1QwYEN4k&quot;&gt;Response&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;stutxo&#x2F;status&#x2F;1923023753040015687&quot;&gt;TX Pidgeon using inventory messages&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;spanning-forest-cluster-linearization&#x2F;1419&quot;&gt;Optimiziing Cluster Mempool&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;proto-at-block&#x2F;bitkey&quot;&gt;BitKey Open Sources their Codebase&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoincore.org&#x2F;en&#x2F;2025&#x2F;04&#x2F;28&#x2F;disclose-cve-2024-52919&#x2F;&quot;&gt;Core Sub 29.0 Vuln&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;32155&quot;&gt;Timelock Cleanup for GCC, Cores Internal Miner&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;RubenSomsen&#x2F;a02b9071bf81b922dcc9edea7d810b7c&quot;&gt;Hard Forking Bitcoin&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;31649&quot;&gt;PR Removing Checkpoints &lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;BtcpayServer&#x2F;status&#x2F;1922845019494318519&quot;&gt;BTCPay Server Broken&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;NicolasDorier&#x2F;status&#x2F;1922810237938999719&quot;&gt;Post&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;skibidi.cash&#x2F;&quot;&gt;Skibidi Wallet Challenge&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;research.mempool.space&#x2F;utxo-set-report&#x2F;&quot;&gt;Orange Surf UTXO Set Report&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1922707114176159955&quot;&gt;Large OP_RETURNs hit the chain&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1921193678195810492&quot;&gt;MARA Enabled Taproot Annex Support (Unstructured)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mempool&#x2F;status&#x2F;1920864673949204677&quot;&gt;Mempool.space enabled SigHash Flag Visualization&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1919834852070694990&quot;&gt;OP_RETURNS Nonstandard getting mined&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Most were using OP_RETURN BOT&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1918740367635083495&quot;&gt;Nonstandard transaction usage increasing. &lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;interesting&quot;&gt;Interesting&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoin.stackexchange.com&#x2F;questions&#x2F;125776&#x2F;how-long-does-it-take-for-a-transaction-to-propagate-through-the-network&quot;&gt;Transaction Propigation Time&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-news&quot;&gt;Bitcoin News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.gemini.com&#x2F;credit-card&quot;&gt;Gemini Credit Card. BlockFi V2?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;intell_on_chain&#x2F;status&#x2F;1924053872609308733&quot;&gt;Fake ledger steals coins&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;hodlorado&#x2F;status&#x2F;1927075626134982885&quot;&gt;Ledger False Advertising&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;Swan&#x2F;status&#x2F;1924542730023391533&quot;&gt;Lumis Refuses to meet with Ripple CEO&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1927494779572473913&#x2F;photo&#x2F;1&quot;&gt;Bitcoin Hits 3Billion spend txos&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;MartiniGuyYT&#x2F;status&#x2F;1927456988042055817&quot;&gt;Square will accept bitcoin payments to all PoS&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;Square&#x2F;status&#x2F;1927396327039684690&quot;&gt;Not using sats&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;Bryan10309&#x2F;status&#x2F;1923419290079834335&quot;&gt;Steak and Shake LN payments&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;cryptonator1337&#x2F;status&#x2F;1927242311991234706&quot;&gt;Strategy Completely Dogdges PoR question&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;ZeusLN&#x2F;status&#x2F;1927381302547820835&quot;&gt;Zeus onchain Swaps + Ecash&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;techhalla&#x2F;status&#x2F;1925206104679809432&quot;&gt;Google Veo3 - Boomers Hell&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #34</title>
+          <pubDate>Tue, 22 Apr 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-34/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-34/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-34/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The Portland Bitcoin Group Meetup is now sponsored by the non-profit Bitcoin is for Everyone!
+Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pay.zaprite.com&#x2F;pl_r0iZfbk20s&quot;&gt;Ticket-only ($99)&lt;&#x2F;a&gt;🎟&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;0d0a9967-cc65-4674-b341-c0865256eed3&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pay.zaprite.com&#x2F;pl_qd6uXJ80ZQ&quot;&gt;Combo: ticket plus T-shirt ($124)&lt;&#x2F;a&gt;🎟👕&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;529d2ad8-db78-4177-809c-ef415aebd00d&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;Bitcoin is for Everyone&lt;&#x2F;em&gt;
+&lt;em&gt;Friday Aug 1st 2025&lt;&#x2F;em&gt;
+&lt;em&gt;Revolution Hall&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;li&gt;Thank you to Jon for the Bank Simulator Presentation.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for May 27. 2025&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designer to help with branding and web applications. [1.6 years in]&lt;&#x2F;li&gt;
+&lt;li&gt;Continue to improve the Portland BitDevs web experience.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;guess-the-nonce&quot;&gt;Guess the Nonce&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;1x Block Stream Jade&lt;&#x2F;li&gt;
+&lt;li&gt;The UnCommunist Manifesto&lt;&#x2F;li&gt;
+&lt;li&gt;Death Athletic Hat&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 7:20pm:&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Mining Disrupted - Reckless&lt;&#x2F;li&gt;
+&lt;li&gt;Orange Pilling Non-Profits - Ahs&lt;&#x2F;li&gt;
+&lt;li&gt;🚨 Breaking Bitcoin 🚨 Portland HODL&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:20pm - 8:30pm:&lt;&#x2F;strong&gt; General Bitcoin Developer Discussion Lead by PortlandHODL and Eric.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonight&#x27;s topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;ocean_mining&#x2F;status&#x2F;1911774879008927944&quot;&gt;Tether + Ocean = ❤️&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;ocean_mining&#x2F;status&#x2F;1911774879008927944&quot;&gt;Doubles&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;b10c.me&#x2F;blog&#x2F;015-bitcoin-mining-centralization&#x2F;&quot;&gt;0xB10C Mining Centralization&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;b10c.me&#x2F;observations&#x2F;14-antpool-and-friends-invalid-mining-jobs&#x2F;&quot;&gt;0xB10C Antpool creating bad jobs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoincore.org&#x2F;en&#x2F;releases&#x2F;29.0&#x2F;&quot;&gt;Bitcoin Core 29.0 Released 🎉&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Ephemeral Dust&lt;&#x2F;li&gt;
+&lt;li&gt;Coinbase Reserved Double Counted WUs Fixes (Issues Maybe?)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;testmempoolaccept&lt;&#x2F;code&gt; now has reject details&lt;&#x2F;li&gt;
+&lt;li&gt;Timewarp Fix getblocktemplate&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;corecheck.dev&#x2F;bitcoin&#x2F;bitcoin&#x2F;pulls&#x2F;30708&quot;&gt;Bitcoin Core PR Checker&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mempool&#x2F;status&#x2F;1911389181101679080&quot;&gt;Taproot Tree Visualizer on Mempool.space&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1910703196672340007&quot;&gt;Ancient Inscriptions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;spiralbtc&#x2F;status&#x2F;1914334079387914435&quot;&gt;Benthecarman Leaves Taproot Wizards to Work on LN&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;polymarket.com&#x2F;event&#x2F;will-bitcoin-activate-op-ctv-or-op-cat-in-2025&quot;&gt;Polymarket Adds OP_CAT vs. OP_CTV&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;AikidoSecurity&#x2F;status&#x2F;1914610391218299190&quot;&gt;XRP NPM Package PWND&#x27;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1gSJKPKtutw-Ui9oHIij8QMTtIvfctPXpPV85xW0pUK4&#x2F;edit?usp=sharing&quot;&gt;🚨 Breaking Bitcoin Slides 🚨&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;great-consensus-cleanup-revival&#x2F;710&#x2F;84&quot;&gt;GCC - SPV Proofs Vulnerable to 64 Byte TXNS&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bip370.org&#x2F;&quot;&gt;PSBT V2. Viewer&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoinops.org&#x2F;en&#x2F;newsletters&#x2F;2025&#x2F;03&#x2F;28&#x2F;#discussion-of-testnets-3-and-4&quot;&gt;Testnet3 Removal?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoinops.org&#x2F;en&#x2F;newsletters&#x2F;2025&#x2F;03&#x2F;28&#x2F;#plan-to-relay-certain-taproot-annexes&quot;&gt;Taproot Annex Relay&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;interesting&quot;&gt;Interesting&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoin.stackexchange.com&#x2F;questions&#x2F;125776&#x2F;how-long-does-it-take-for-a-transaction-to-propagate-through-the-network&quot;&gt;Transaction Propigation Time&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;bitcoindata.space
+&lt;ul&gt;
+&lt;li&gt;WIP Torrents for Bitcoin Timechain Data&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-news&quot;&gt;Bitcoin News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;stacyherbert&#x2F;status&#x2F;1914476033807442340&quot;&gt;[ETH&#x2F;BTC] ATL&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Very nice video about LLVM ❤️ Rust&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;satyanadella&#x2F;status&#x2F;1892242895094313420&quot;&gt;Microsoft Quantum Meta Materials&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #33</title>
+          <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-33/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-33/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-33/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The Portland Bitcoin Group Meetup is now sponsored by the non-profit Bitcoin is for Everyone!
+Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pay.zaprite.com&#x2F;pl_r0iZfbk20s&quot;&gt;Ticket-only ($99)&lt;&#x2F;a&gt;🎟&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;0d0a9967-cc65-4674-b341-c0865256eed3&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pay.zaprite.com&#x2F;pl_qd6uXJ80ZQ&quot;&gt;Combo: ticket plus T-shirt ($124)&lt;&#x2F;a&gt;🎟👕&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;529d2ad8-db78-4177-809c-ef415aebd00d&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;Bitcoin is for Everyone&lt;&#x2F;em&gt;
+&lt;em&gt;Friday Aug 1st 2025&lt;&#x2F;em&gt;
+&lt;em&gt;Revolution Hall&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;li&gt;Thank you to Jon for the Bank Simulator Presentation.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for Apr. 22 2025&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designer to help with branding and web applications. [1.5 years in]&lt;&#x2F;li&gt;
+&lt;li&gt;Continue to improve the Portland BitDevs web experience.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;guess-the-nonce&quot;&gt;Guess the Nonce&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;1x Top Secret Until Revealed&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 7:20pm:&lt;&#x2F;strong&gt; General Self Custody Discussion.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:20pm - 8:30pm:&lt;&#x2F;strong&gt; General Bitcoin Developer Discussion Lead by PortlandHODL and Eric.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonight&#x27;s topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;russeree&#x2F;cerkle-tree&quot;&gt;Cerkle Tree&lt;&#x2F;a&gt; - A Sparse Merkle Tree Implementation&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;SoloSatoshi&#x2F;status&#x2F;1903060375626478070&quot;&gt;Solo Block Found&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;SoloSatoshi&#x2F;status&#x2F;1903629700242555293&quot;&gt;Claimes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;abundantmines.com&#x2F;bitcoin-custody&#x2F;&quot;&gt;Self Custody Discussion&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;abundantmines.com&#x2F;seed-phrases&#x2F;&quot;&gt;Seed Phrases Discussion&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;16vND0sQFJCMKeSi8OyVUaIdB5PD4F4miTmcX4lLGJQk&#x2F;edit?usp=sharing&quot;&gt;Private Keys Slides&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.bitmex.com&#x2F;bitcoins-duplicate-transactions&#x2F;&quot;&gt;Duplicate Transactions&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mempool&#x2F;mempool&#x2F;issues&#x2F;5823&quot;&gt;Mempool.Space PR&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stratum.work&#x2F;height&#x2F;889433&quot;&gt;Stratum Observer&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;boerst&#x2F;status&#x2F;1904214228421992646&quot;&gt;Timing&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;grid.orange.surf&#x2F;?metric=miners&amp;amp;minerGroups=AntPool+%26+friends%3Ared%3AAntPool%2CBTC.com%2CBinance+Pool%2CWhitePool%2CSECPOOL%2CLuxor%7COther%3Agreen%3ASBI+Crypto%2COCEAN%2CMARA+Pool%2CF2Pool%2CFoundry+USA%2CViaBTC&amp;amp;ref=b10c.me&quot;&gt;Orange Surf - Antpool and Friends&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;braiins&#x2F;BCB100&quot;&gt;BCB100 Full Opensource&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1899702910600298812&quot;&gt;Slipstream Competitor&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1895639824197206352&quot;&gt;Brain Wallets Swept&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;privatekeys.pw&#x2F;brainwallet&#x2F;bitcoin&#x2F;1&quot;&gt;Brain Wallet Browser&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;emn178.github.io&#x2F;online-tools&#x2F;sha256.html&quot;&gt;Hashing Example&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;foil0hzl4Pg?t=439&quot;&gt;OG Cracking&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bip370.org&quot;&gt;Bip370 Decoder&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tropicsquare.com&#x2F;tropic01&quot;&gt;Source Available Secure Element&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;bitcoin-node-p2p-traffic-analysis&#x2F;1490&quot;&gt;Node P2P Traffic Analysis&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoin.stackexchange.com&#x2F;questions&#x2F;124636&#x2F;why-do-standardness-rules-limit-transaction-weight&quot;&gt;Large TXs and Block Construction&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developers.google.com&#x2F;optimization&#x2F;pack&#x2F;knapsack&quot;&gt;Knapsack Probelm&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoiner.guide&#x2F;seed&#x2F;&quot;&gt;Improved Bitcoin Seed Tool by Ian Colemann&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-news&quot;&gt;Bitcoin News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;SBF_FTX&#x2F;status&#x2F;1894204086754709951&quot;&gt;SBF Tweets from Jail?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@LLVMPROJ&#x2F;videos&quot;&gt;LLVM Meeting Notes Public&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn a lot more about what make LLVM tick under the hood and what is next&lt;&#x2F;li&gt;
+&lt;li&gt;Very nice video about LLVM ❤️ Rust&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;satyanadella&#x2F;status&#x2F;1892242895094313420&quot;&gt;Microsoft Quantum Meta Materials&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #32</title>
+          <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-32/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-32/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-32/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The Portland Bitcoin Group Meetup is now sponsored by the non-profit Bitcoin is for Everyone!
+Insider Tickets (shhh!) available for a limited time&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pay.zaprite.com&#x2F;pl_r0iZfbk20s&quot;&gt;Ticket-only ($99)&lt;&#x2F;a&gt;🎟&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;0d0a9967-cc65-4674-b341-c0865256eed3&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pay.zaprite.com&#x2F;pl_qd6uXJ80ZQ&quot;&gt;Combo: ticket plus T-shirt ($124)&lt;&#x2F;a&gt;🎟👕&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;529d2ad8-db78-4177-809c-ef415aebd00d&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;Bitcoin is for Everyone&lt;&#x2F;em&gt;
+&lt;em&gt;Friday Aug 1st 2025&lt;&#x2F;em&gt;
+&lt;em&gt;Revolution Hall&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;li&gt;Thank you to Jon for the Bank Simulator Presentation.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for March. 25 2025&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designer to help with branding and web applications. [1.5 years in]&lt;&#x2F;li&gt;
+&lt;li&gt;Continue to improve the Portland BitDevs web experience.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;guess-the-nonce&quot;&gt;Guess the Nonce&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;1x The Fiat Standard&lt;&#x2F;li&gt;
+&lt;li&gt;1x PDX Bitdevs Waterbottle&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 7:20pm:&lt;&#x2F;strong&gt; Jon Bank Simulator Presentation&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:20pm - 8:30pm:&lt;&#x2F;strong&gt; General Bitcoin Developer Discussion Lead by PortlandHODL and Eric&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonight&#x27;s topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;EliNagarBrr&#x2F;status&#x2F;1894066945907200145&quot;&gt;Braiins bASIC&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mempool.space&#x2F;stratum&quot;&gt;Mempool.space Stratum Viewer&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;b10c.me&#x2F;observations&#x2F;13-missing-sanctioned-transactions-2024-12&#x2F;&quot;&gt;OFAC Transactions Missing From Blocks&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;jaoNoctus&#x2F;status&#x2F;1889855527360119266&quot;&gt;Package Relay Cipher Challenge&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mempool.space&#x2F;tx&#x2F;d562bc7c7c428a0ecf11ddbe50136c13076fdf465f30e4e7b9c0483268390fea?mode=details#flow=&amp;amp;vout=0&quot;&gt;Spending Transaction&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1888907190033072434&quot;&gt;Mempool Clears (Multiple Times)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1887340507778728072&quot;&gt;Funds Sent to Satoshis P2PK Script&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;thecharlatan.ch&#x2F;Kernel&#x2F;&quot;&gt;The Bitcoin Kernel&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Modular Consensus Plugin.&lt;&#x2F;li&gt;
+&lt;li&gt;Deprecates lib-bitcoinconsensus&lt;&#x2F;li&gt;
+&lt;li&gt;Code Cleanliness&lt;&#x2F;li&gt;
+&lt;li&gt;Parts have been merged but not completely&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;31483&quot;&gt;kernel: Move kernel-related cache constants to kernel cache&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;high_byte&#x2F;status&#x2F;1893560088842969428&quot;&gt;Bitcoin Script Simplicty vs. Eth.&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;acinq_co&#x2F;status&#x2F;1890448329193959610&quot;&gt;V3 Lightning Channel Closes&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Completely removes fees from the the closing transaction removing a massive part of the attack surface that enables the theft of funds.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lightning&#x2F;bolts&#x2F;pull&#x2F;1180&quot;&gt;Bolts Include BIP353 Name in Invoice&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.bitcoin.it&#x2F;wiki&#x2F;BIP_0353&quot;&gt;BIP 353&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.bitcoin.it&#x2F;wiki&#x2F;Covenants_support&quot;&gt;Covenants Alignment Chart&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoin.stackexchange.com&#x2F;questions&#x2F;124636&#x2F;why-do-standardness-rules-limit-transaction-weight&quot;&gt;Large TXs and Block Construction&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developers.google.com&#x2F;optimization&#x2F;pack&#x2F;knapsack&quot;&gt;Knapsack Probelm&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.orangepillapp.com&#x2F;blog&#x2F;orange-pill-app-wallet&quot;&gt;Orange Pill App LN Wallet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoiner.guide&#x2F;seed&#x2F;&quot;&gt;Improved Bitcoin Seed Tool by Ian Colemann&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoindevs.xyz&#x2F;decoding&#x2F;reorg-calculator&quot;&gt;Bitcoin Reorg Calculator&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-news&quot;&gt;Bitcoin News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;BikesandBitcoin&#x2F;status&#x2F;1894006852469346647&quot;&gt;Gox Hack 21st Anniversary&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;SBF_FTX&#x2F;status&#x2F;1894204086754709951&quot;&gt;SBF Tweets from Jail?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;calendar.bitbo.io&#x2F;lightning-pizza-day&#x2F;&quot;&gt;LN Pizza Day (Eric)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;paulbutler.org&#x2F;2025&#x2F;smuggling-arbitrary-data-through-an-emoji&#x2F;&quot;&gt;Arb data in Emojis&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@LLVMPROJ&#x2F;videos&quot;&gt;LLVM Meeting Notes Public&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn a lot more about what make LLVM tick under the hood and what is next&lt;&#x2F;li&gt;
+&lt;li&gt;Very nice video about LLVM ❤️ Rust&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;rot13maxi&#x2F;status&#x2F;1894103676916035754&quot;&gt;Falppy Coin&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Made purely using Grok&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.anthropic.com&#x2F;news&#x2F;claude-3-7-sonnet&quot;&gt;Claude 3.7&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Much better frontend dev&lt;&#x2F;li&gt;
+&lt;li&gt;Marginally better backend dev&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;satyanadella&#x2F;status&#x2F;1892242895094313420&quot;&gt;Microsoft Quantum Meta Materials&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoinplusplus.devpost.com&#x2F;project-gallery?page=1&quot;&gt;Bitcoin++ Winners + entries&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;benbybit&#x2F;status&#x2F;1892963530422505586&quot;&gt;ByBit Hacked for 1.5B in &#x27;Crypto&#x27;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;Bybit_Official&#x2F;status&#x2F;1893687749229563958&quot;&gt;This is why we Bitcoin&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #31</title>
+          <pubDate>Tue, 28 Jan 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-31/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-31/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-31/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;li&gt;Happy First BitDevs of 2025&lt;&#x2F;li&gt;
+&lt;li&gt;Want to extend a warm welcome to our special host &#x27;J&#x27;
+&lt;ul&gt;
+&lt;li&gt;Host of the first NY BitDevs&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for Feb. 25 2025&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designer to help with branding and web applications. [1.5 years in]&lt;&#x2F;li&gt;
+&lt;li&gt;Continue to improve the Portland BitDevs web experience.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;guess-the-nonce&quot;&gt;Guess the Nonce&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;TOP SECRET GIFTS Provided by Eric!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 7:20pm:&lt;&#x2F;strong&gt; Portland.HODL Presentation TRUC 🚚.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:20pm - 8:30pm:&lt;&#x2F;strong&gt; General Bitcoin Developer Discussion Lead By &#x27;J&#x27;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonight&#x27;s topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;GingerPrivacy&#x2F;GingerWallet&#x2F;discussions&#x2F;116&quot;&gt;Wassabi Privacy Vuln.&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;3 different wallets affected.&lt;&#x2F;li&gt;
+&lt;li&gt;Coordinator can enter the join as many times as they would like.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1841595148544745652&quot;&gt;Mempool Contents (State) Then vs Now&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;0xB10C&#x2F;status&#x2F;1841863284636442882&quot;&gt;Foundry²&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;thecharlatan.ch&#x2F;Kernel&#x2F;&quot;&gt;The Bitcoin Kernel&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Modular Consensus Plugin.&lt;&#x2F;li&gt;
+&lt;li&gt;Deprecates lib-bitcoinconsensus&lt;&#x2F;li&gt;
+&lt;li&gt;Code Cleanliness&lt;&#x2F;li&gt;
+&lt;li&gt;Parts have been merged but not completely&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;31483&quot;&gt;kernel: Move kernel-related cache constants to kernel cache&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;30116&quot;&gt;p2p: Fill reconciliation sets (Erlay) attempt 2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;31397&quot;&gt;p2p: track and use all potential peers for orphan resolution&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;31122&quot;&gt;Cluster Mempool&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;disclosure-irrevocable-fees-stealing-from-ln-using-revoked-commitment-transactions&#x2F;1314&quot;&gt;LN Losing money to fees&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;citadel-tech&#x2F;coinswap&#x2F;releases&#x2F;tag&#x2F;v0.1.0&quot;&gt;Coinswap 0.1.0 Released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Full Coinswap protocol has been formalized.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lightning&#x2F;bolts&#x2F;pull&#x2F;1180&quot;&gt;Bolts Include BIP353 Name in Invoice&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.bitcoin.it&#x2F;wiki&#x2F;BIP_0353&quot;&gt;BIP 353&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lightningdevkit&#x2F;rust-lightning&#x2F;pull&#x2F;3446&quot;&gt;Support Trampoline flag in BOLT12 invoices&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Art Blocks on Mempool.space
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1880175477387850002&quot;&gt;Trump&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1882566486054826393&quot;&gt;BTCAI&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=0TjuC4NVxnI&quot;&gt;Foundation Prime PSP&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Shitcoin Support (XMT, Extensions)&lt;&#x2F;li&gt;
+&lt;li&gt;Not a wallet?&lt;&#x2F;li&gt;
+&lt;li&gt;Own Rust based OS.&lt;&#x2F;li&gt;
+&lt;li&gt;Separate Bluetooth Chipset.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mempool.space&#x2F;address&#x2F;bc1qqjn2j9cac562ws65raxeua88km8t4z5vqpun0l&quot;&gt;Anchor Outputs Swpet on Mainnet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.bitcoin.it&#x2F;wiki&#x2F;Covenants_support&quot;&gt;Covenants Alignment Chart&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoin.stackexchange.com&#x2F;questions&#x2F;124636&#x2F;why-do-standardness-rules-limit-transaction-weight&quot;&gt;Large TXs and Block Construction&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-news&quot;&gt;Bitcoin News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;btctranscripts.com&#x2F;bitcoin-core-dev-tech&#x2F;2024-10&quot;&gt;Bitcoin Core Dev Tech Transacripts&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;zachherbert&#x2F;status&#x2F;1857157133638250551&quot;&gt;NVK Block Clock Takedown&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@LLVMPROJ&#x2F;videos&quot;&gt;LLVM Meeting Notes Public&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn a lot more about what make LLVM tick under the hood and what is next&lt;&#x2F;li&gt;
+&lt;li&gt;Very nice video about LLVM ❤️ Rust&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #30</title>
+          <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-30/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-30/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-30/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for October 22 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designer to help with branding and web applications.&lt;&#x2F;li&gt;
+&lt;li&gt;Continue to improve the Portland BitDevs web experience.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;guess-the-nonce&quot;&gt;Guess the Nonce&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Bitcoin t-shirt (Large)&lt;&#x2F;li&gt;
+&lt;li&gt;The Fiat Standard (hardcover)&lt;&#x2F;li&gt;
+&lt;li&gt;Set of 4 Bitcoin &#x2F; Pleb Miner coasters&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 7:30pm:&lt;&#x2F;strong&gt; CrazyK Presenation &quot;Free Samourai&quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:30pm - 8:00pm:&lt;&#x2F;strong&gt; Portland.HODL Presentation - &quot;Bitcoin Bitcoin ❤️ Rust&quot;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00pm - 8:30pm:&lt;&#x2F;strong&gt; General Bitcoin Developer Discussion&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonight&#x27;s topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;PortlandHODL&#x2F;status&#x2F;1862204398719381753&quot;&gt;VSCode Bitcoin Script Hints&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Allows you to use the Bitcoin Script Rust Crate with Stack based hints&lt;&#x2F;li&gt;
+&lt;li&gt;Emulates to a small degree &lt;a href=&quot;https:&#x2F;&#x2F;ide.scriptwiz.app&#x2F;&quot;&gt;scriptwiz&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;aeonBTC&#x2F;status&#x2F;1866941104320553177&quot;&gt;Ascisco - Bitcoin Mining Types&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;BitcoinErrorLog&#x2F;status&#x2F;1867597672363806995&quot;&gt;John Carvhalo - Sats = Bitcoin BIP&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BitcoinAndLightningLayerSpecs&#x2F;balls&#x2F;blob&#x2F;main&#x2F;BIP%2021Q.md&quot;&gt;Actual repo&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=0TjuC4NVxnI&quot;&gt;Foundation Prime PSP&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Shitcoin Support (XMT, Extensions)&lt;&#x2F;li&gt;
+&lt;li&gt;Not a wallet?&lt;&#x2F;li&gt;
+&lt;li&gt;Own Rust based OS.&lt;&#x2F;li&gt;
+&lt;li&gt;Separate Bluetooth Chipset.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;supertestnet.github.io&#x2F;zero_fee_playground&#x2F;&quot;&gt;Zero Fee Playgound - Super Testnet&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mempool.space&#x2F;testnet4&#x2F;tx&#x2F;fb4e90e8823e34de3671df2f6f4b7cd9cf8ef89e8ef5f89d90096333f2d3e705?mode=details&quot;&gt;Testnet4 Example&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mempool.space&#x2F;address&#x2F;bc1qqjn2j9cac562ws65raxeua88km8t4z5vqpun0l&quot;&gt;Anchor Outputs Swpet on Mainnet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.bitcoin.it&#x2F;wiki&#x2F;Covenants_support&quot;&gt;Covenants Alignment Chart&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoin.stackexchange.com&#x2F;questions&#x2F;124636&#x2F;why-do-standardness-rules-limit-transaction-weight&quot;&gt;Large TXs and Block Construction&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-news&quot;&gt;Bitcoin News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;aeonBTC&#x2F;status&#x2F;1868040373936988463&quot;&gt;Mempal v1.4.0 Released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;New app icon.&lt;&#x2F;li&gt;
+&lt;li&gt;Major optimizations.&lt;&#x2F;li&gt;
+&lt;li&gt;Save multiple custom mempool servers.&lt;&#x2F;li&gt;
+&lt;li&gt;Set notification intervals from minutes to seconds.&lt;&#x2F;li&gt;
+&lt;li&gt;Tap to refresh any individual dashboard card.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoinops.org&#x2F;en&#x2F;newsletters&#x2F;2024&#x2F;12&#x2F;13&#x2F;#deanonymization-vulnerability-affecting-wasabi-and-related-software&quot;&gt;Wasabi  - Privacy Vuln.&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;btctranscripts.com&#x2F;bitcoin-core-dev-tech&#x2F;2024-10&quot;&gt;Bitcoin Core Dev Tech Transacripts&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;zachherbert&#x2F;status&#x2F;1857157133638250551&quot;&gt;NVK Block Clock Takedown&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;hardware&#x2F;comments&#x2F;1hbc4pw&#x2F;amd_secure_vm_tech_undone_by_dram_meddling&#x2F;&quot;&gt;BADRam Attack&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Spoofs double size RAM so that when the user writes a single known bit the other bit can be discovered.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@LLVMPROJ&#x2F;videos&quot;&gt;LLVM Meeting Notes Public&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn a lot more about what make LLVM tick under the hood and what is next&lt;&#x2F;li&gt;
+&lt;li&gt;Very nice video about LLVM ❤️ Rust&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #29</title>
+          <pubDate>Tue, 26 Nov 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-29/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-29/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-29/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;li&gt;æon for the presentation about MemPal!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for December 24 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designer to help with branding and web applications.&lt;&#x2F;li&gt;
+&lt;li&gt;Continue to improve the Portland BitDevs web experience.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;guess-the-nonce&quot;&gt;Guess the Nonce&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;T-Shirt&lt;&#x2F;li&gt;
+&lt;li&gt;The Fiat Standard - Saif&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 7:30pm:&lt;&#x2F;strong&gt; Guest Speaker: æon&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:30pm - 8:30pm:&lt;&#x2F;strong&gt; Primary topics discussion.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonight&#x27;s topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;30592&quot;&gt;Bitcoin Core Disables Full RBF&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoinmagazine.com&#x2F;technical&#x2F;colliderscript-a-50m-bitcoin-covenant-with-no-new-opcodes&quot;&gt;Colliderscript&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Covenants without OP_CODES&lt;&#x2F;li&gt;
+&lt;li&gt;Uses SHA1 Verification&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;OrangeSurfBTC&#x2F;status&#x2F;1859865603907125305&quot;&gt;Testnet 4 Unminable&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Software miners exploiting deficulty adjustments (20 minute rule)&lt;&#x2F;li&gt;
+&lt;li&gt;Drops difficulty to 1&lt;&#x2F;li&gt;
+&lt;li&gt;ASIC mining software cant handle this rule so they still mine at regular difficulty&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;t4t5&#x2F;status&#x2F;1861066474623782959&quot;&gt;Bitcoin Script Stack Viewer NVim&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Using Rust Bitcoin Lib with NVim you can view the stack elements as you code&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoincore.org&#x2F;en&#x2F;2024&#x2F;10&#x2F;08&#x2F;disclose-large-inv-to-send&#x2F;&quot;&gt;Bitcoin Core &amp;lt; v25.0 DoS &lt;strong&gt;inv-to-send sets&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;0xB10C&#x2F;status&#x2F;1844705899455062220&quot;&gt;0xB10C Graphs and Analysis &lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;murchandamus&#x2F;status&#x2F;1854678133896626293&quot;&gt;Cluster Mempool Overview By @murchandamus &lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1851830349208363379&quot;&gt;Metaprotocol Runes Fee Round Trip Mempool View&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ocean.xyz&#x2F;docs&#x2F;datum-setup&quot;&gt;Ocean Datum Released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;OCEAN-xyz&#x2F;datum_gateway&quot;&gt;Github&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;ocean_mining&#x2F;status&#x2F;1861469015547486447&quot;&gt;Tutorial&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;My thoughs about using and modifying Datum&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;denverbitcoin&#x2F;status&#x2F;1854184399593480302&quot;&gt;Ocean Hits 4EH&#x2F;s&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;ctv-apo-cat-activity-on-signet&#x2F;1257&#x2F;6&quot;&gt;Atowns Signet Usage Report&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sparrowwallet&#x2F;sparrow&#x2F;releases&#x2F;tag&#x2F;2.0.0&quot;&gt;Sparrow Wallet 2.0 Released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin-core&#x2F;secp256k1&#x2F;releases&#x2F;tag&#x2F;v0.6.0&quot;&gt;libsecp256k1 v0.6.0 Released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mempool.space&#x2F;tx&#x2F;56ef7ea4110eb595bf020d4121a2c31fe35f54d9c4759d1e1c94b82fdac5a193&quot;&gt;Gloria Zhao - TABConf TRUC TX modified in flight&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-news&quot;&gt;Bitcoin News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;0xB10C&#x2F;status&#x2F;1811390920744468502&quot;&gt;0xB10C Mining Pool Game Theory During Forks&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sparrowwallet&#x2F;sparrow&#x2F;releases&#x2F;tag&#x2F;2.0.0&quot;&gt;Sparrow 2.0 Released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cointelegraph.com&#x2F;news&#x2F;microstrategy-expands-bitcoin-holdings-5-4b-purchase&quot;&gt;Microstratgey Buys 5.4B USD of Bitcoin&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;blockspacepod&#x2F;status&#x2F;1856411618172620940&quot;&gt;Portland.HODL OP_NEXT Talk about Bitcoin Soft Forks&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin-cap&#x2F;bcap#recommendations&quot;&gt;BCAP - Analyzing Bitcoin Consensus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;Cointelegraph&#x2F;status&#x2F;1861557530050339276&quot;&gt;US Court of Appeals Rules Tornado Cash Sanctions Unconstitutional&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;btcdemy.thinkific.com&#x2F;&quot;&gt;Rust Bitcoin Course Now Free&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.nobsbitcoin.com&#x2F;norway-bitcoin-mining-facility-shutdown-leads-to-20-higher-energy-bills-for-town-residents&#x2F;&quot;&gt;Bitcoin Miner Shutting Down Results in 20% Higher Electricity Costs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;groups.google.com&#x2F;g&#x2F;bitcoindev&#x2F;c&#x2F;awBtvpXKBcw&quot;&gt;Starkware OP_CAT Bounty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;store.coinkite.com&#x2F;store&quot;&gt;CoinKite Black Friday&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitkey.world&quot;&gt;Bitkey $99&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #27</title>
+          <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-27/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-27/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-27/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for October 22 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designer to help with branding and web applications.&lt;&#x2F;li&gt;
+&lt;li&gt;Continue to improve the Portland BitDevs web experience.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;guess-the-nonce&quot;&gt;Guess the Nonce&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;T-Shirt&lt;&#x2F;li&gt;
+&lt;li&gt;Bitcoin Coffee&lt;&#x2F;li&gt;
+&lt;li&gt;Pack of Pleb Cards&lt;&#x2F;li&gt;
+&lt;li&gt;Pack of Pleb Cards&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 7:30pm:&lt;&#x2F;strong&gt; Guest Speaker: Jestopher - BancoLibre Demo&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:30pm - 8:30pm:&lt;&#x2F;strong&gt; Primary topics discussion.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonight&#x27;s topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lightning&#x2F;bolts&#x2F;blob&#x2F;master&#x2F;12-offer-encoding.md&quot;&gt;Bolt12 Added to Bolts Repo&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;issues&#x2F;30786&quot;&gt;Testnet 4 Consensus Failure&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Timewarp mitigation strategy to reduce block forward time from 3200s to 600s.&lt;&#x2F;li&gt;
+&lt;li&gt;Forked Testnet4.&lt;&#x2F;li&gt;
+&lt;li&gt;Alerted by NickH from Luxor something was wrong.&lt;&#x2F;li&gt;
+&lt;li&gt;Added MARA hash an resolved the fork.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;b10c.me&#x2F;observations&#x2F;12-template-similarity&#x2F;&quot;&gt;Mining Pool Similarities&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Floresta &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;vinteumorg&#x2F;Floresta&#x2F;releases&#x2F;tag&#x2F;0.6.0&quot;&gt;v0.6.0&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Expose some unexposed values for jsonrpc: Lets the user select between getting a serialized block or a json&lt;&#x2F;li&gt;
+&lt;li&gt;Bring our functional tests to life: attempts to build some basis for the Python-based tests&lt;&#x2F;li&gt;
+&lt;li&gt;Async add new address to electrum: Now, if you subscribe to an address that we don&#x27;t follow yet, we&#x27;ll start following it&lt;&#x2F;li&gt;
+&lt;li&gt;Implement tagged hashes for the leafhashes: This futures-proof the leaf commitment scheme from future modifications of the committed data, and it&#x27;s now part of the utreexo protocol&lt;&#x2F;li&gt;
+&lt;li&gt;Connect cli option: This option lets you connect exclusively to one specific node, given its IP address&lt;&#x2F;li&gt;
+&lt;li&gt;Rework internal node structure: Use our actors model to build optmized nodes for each phase of the startup process&lt;&#x2F;li&gt;
+&lt;li&gt;Add AssumeValidArg enum and correct verify_script: This adds a new AssumeValidArg to make communicating the desired assume-valid more ergonomic&lt;&#x2F;li&gt;
+&lt;li&gt;Add batch request for electrum: Now electrum lets users perform multiple requests at once, rather than sending one at the time&lt;&#x2F;li&gt;
+&lt;li&gt;Add PoW fraud proof: Implement pow fraud proofs for our node and enable it on signet for testing&lt;&#x2F;li&gt;
+&lt;li&gt;Log to file: Now you can write the logs to a file&lt;&#x2F;li&gt;
+&lt;li&gt;Add lib.rs: florestad is also a lib now, it can be used on other applications and&lt;&#x2F;li&gt;
+&lt;li&gt;Download and store filters from the network: Now we can download BIP-158 Compact Block Filters and use them to recover historical transactions without downloading the whole blockchain.&lt;&#x2F;li&gt;
+&lt;li&gt;Cache headers on ibd: Hold headers in memory and save all-at-once, because the database can optimize some writing operations&lt;&#x2F;li&gt;
+&lt;li&gt;electrum: new experimental electrum endpoints: This adds some experimental (and not used by any wallet) endpoints to the electrum server blockchain.scriptpubkey&lt;&#x2F;li&gt;
+&lt;li&gt;Nixify: Add a nix-based build system and some developer tools to floresta&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.second.tech&#x2F;demoing-the-first-ark-transactions-on-bitcoin-mainnet&#x2F;&quot;&gt;ARC Transaction Performed on Bitcoin Mainnet&lt;&#x2F;a&gt;
+-&lt;a href=&quot;https:&#x2F;&#x2F;ark-protocol.org&#x2F;&quot;&gt;Spec&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoincore.org&#x2F;en&#x2F;2024&#x2F;09&#x2F;18&#x2F;disclose-headers-oom&#x2F;&quot;&gt;Bitcoin Core &amp;lt; 24.0.1 DoS&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-news&quot;&gt;Bitcoin News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;strike.me&#x2F;blog&#x2F;bolt12-offers&#x2F;&quot;&gt;Strike adds BOLT12 support&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Bolt12 is overall a &#x27;Better&#x27; solution to static payment addresses in lightning&lt;&#x2F;li&gt;
+&lt;li&gt;No need to setup and maintain a webserver&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;explorer.unisat.io&#x2F;fractal-mainnet&#x2F;mining&quot;&gt;Fractal Bitcoin - 13EX&#x2F;s from Bitcoin Mainnet&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Shitcoin disguised as L2 uses SHA256D&lt;&#x2F;li&gt;
+&lt;li&gt;Not merged mined has absorbed 15EX&#x2F;s&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mempool.space&#x2F;&quot;&gt;Downward Difficulty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1837463728381424097&quot;&gt;Transactions Lower than 2 sats&#x2F;vByte were clearing&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mempoolresearch&#x2F;status&#x2F;1837147992287056315&quot;&gt;Merge Mining becoming less popular | STATS&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;solochance.com&#x2F;&quot;&gt;Calculating your Solo Mining Odds&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;0xB10C&#x2F;status&#x2F;1811390920744468502&quot;&gt;0xB10C Mining Pool Game Theory During Forks&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BlueWallet&#x2F;BlueWallet&#x2F;releases&#x2F;tag&#x2F;v7.0.2&quot;&gt;Blue Wallet v7.0 [1,2] Released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Added total balance to the overview screen&lt;&#x2F;li&gt;
+&lt;li&gt;Ability to disable phone privacy blur&lt;&#x2F;li&gt;
+&lt;li&gt;iOS lock screen widgets&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@ottosch&#x2F;how-bip47-works-ee641cc14bf3&quot;&gt;BIP47 Address Support&lt;&#x2F;a&gt; - Still needs an onchain TXN for payment code.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin-core&#x2F;bitcoin-devwiki&#x2F;wiki&#x2F;28.0-Release-Notes-Draft&quot;&gt;Bitcoin Core 28.0 Release Notes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;superscalar-laddered-timeout-tree-structured-decker-wattenhofer-factories&#x2F;1143&quot;&gt;Eric | SuperScalar Proposal&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sparrowwallet&#x2F;sparrow&#x2F;releases&#x2F;tag&#x2F;2.0.0&quot;&gt;Sparrow 2.0 Released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;btcdemy.thinkific.com&#x2F;&quot;&gt;Rust Bitcoin Course Now Free&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.bleepingcomputer.com&#x2F;news&#x2F;security&#x2F;hackers-leak-27-billion-data-records-with-social-security-numbers&#x2F;&quot;&gt;Hackers Leak 2.7 Billion Data Records (SSNs, Addresses)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;unusual_whales&#x2F;status&#x2F;1838670005795459205&quot;&gt;Caroline Ellison of FTX gets 24 Months&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.nobsbitcoin.com&#x2F;norway-bitcoin-mining-facility-shutdown-leads-to-20-higher-energy-bills-for-town-residents&#x2F;&quot;&gt;Bitcoin Miner Shutting Down Results in 20% Higher Electricity Costs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;groups.google.com&#x2F;g&#x2F;bitcoindev&#x2F;c&#x2F;awBtvpXKBcw&quot;&gt;Starkware OP_CAT Bounty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #26</title>
+          <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-26/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-26/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-26/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for September 28 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designer to help with branding and web applications.&lt;&#x2F;li&gt;
+&lt;li&gt;Continue to improve the Portland BitDevs web experience.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 8:30pm:&lt;&#x2F;strong&gt; Primary topics discussion.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonight&#x27;s topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;_markel___&#x2F;status&#x2F;1828112469010596347&quot;&gt;Intel SGX Compromised&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Not completely comprimised but master private key and sealing key both comprimised&lt;&#x2F;li&gt;
+&lt;li&gt;Path forward to completely comprimising the SGX&lt;&#x2F;li&gt;
+&lt;li&gt;SGX is no longer offered in desktop class processors, only Xeons&lt;&#x2F;li&gt;
+&lt;li&gt;Used in cloud environments to hide information&lt;&#x2F;li&gt;
+&lt;li&gt;Currently arm Secure Enclave ramins superior&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoincore.reviews&#x2F;29775&quot;&gt;Testnet 4 PR Merged&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Attempt was made to fix the 20 minute blockstoms &#x2F; timewarp - &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;blob&#x2F;3714692644f45808a6480525abc36870aeee1de4&#x2F;src&#x2F;pow.cpp#L32&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Most fixes were to fix the issues with blockstroms &#x2F; timewarp - &lt;a href=&quot;https:&#x2F;&#x2F;blog.lopp.net&#x2F;griefing-bitcoin-testnet&#x2F;&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Mempool.space Testnet4 Explorer &lt;a href=&quot;https:&#x2F;&#x2F;mempool.space&#x2F;testnet4&quot;&gt;link&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;techcrunch.com&#x2F;2024&#x2F;08&#x2F;07&#x2F;hackers-could-spy-on-cellphone-users-by-abusing-5g-baseband-flaws-researchers-say&#x2F;&quot;&gt;5G Base Station Exploit&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Defcon Deauth attacks to force a 4g connection, then your phone upgrages back to the comprimised basestation.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.wired.com&#x2F;story&#x2F;amd-chip-sinkclose-flaw&#x2F;&quot;&gt;AMD Sinkclose Flaw&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Mempool &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mempool&#x2F;mempool&#x2F;releases&#x2F;tag&#x2F;v3.0.0&quot;&gt;v3.0.0&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Add Mempool Accelerator™ to accelerate TX from your own instance&lt;&#x2F;li&gt;
+&lt;li&gt;Add Mempool Googles™ new mempool and blockchain analytics tool&lt;&#x2F;li&gt;
+&lt;li&gt;Add RBF Timeline visualizations including support for FullRBF&lt;&#x2F;li&gt;
+&lt;li&gt;Add CPFP and Effective Fee calculations in block visualizations&lt;&#x2F;li&gt;
+&lt;li&gt;Add Liquid Network audit tool to verify holdings vs liabilities&lt;&#x2F;li&gt;
+&lt;li&gt;Add new Wallet Balance widget for embedding into external sites&lt;&#x2F;li&gt;
+&lt;li&gt;Add customizable CSS themes including a new high-contrast mode&lt;&#x2F;li&gt;
+&lt;li&gt;Add optional support for FreecurrencyAPI fiat currencies&lt;&#x2F;li&gt;
+&lt;li&gt;Add optional Redis support for faster in-memory database&lt;&#x2F;li&gt;
+&lt;li&gt;Add support for legacy P2PK addresses and outputs&lt;&#x2F;li&gt;
+&lt;li&gt;Add new block fees graph at &#x2F;graphs&#x2F;mining&#x2F;block-fees&lt;&#x2F;li&gt;
+&lt;li&gt;Add new fiat calculator at &#x2F;tools&#x2F;calculator&lt;&#x2F;li&gt;
+&lt;li&gt;Re-design transaction page with new mobile &quot;pizza tracker&quot; UI&lt;&#x2F;li&gt;
+&lt;li&gt;Re-design address page with new balance history over time&lt;&#x2F;li&gt;
+&lt;li&gt;Improve Block Audit for accelerated transaction out-of-band fees&lt;&#x2F;li&gt;
+&lt;li&gt;Improve Websocket API to support tracking multiple addresses&lt;&#x2F;li&gt;
+&lt;li&gt;Improve search box now supports searching multiple networks&lt;&#x2F;li&gt;
+&lt;li&gt;Improve TV View to add new circular clock face view&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cointelegraph.com&#x2F;learn&#x2F;dark-skippy-attack-how-to-protect-against-it&quot;&gt;&#x27;Dark Skippy&#x27; Attack&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;darkskippy.com&#x2F;&quot;&gt;Demo&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pollard%27s_rho_algorithm&quot;&gt;Pollards Rho (kangaroo)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;privatekeys.pw&#x2F;puzzles&#x2F;bitcoin-puzzle-tx&quot;&gt;Visual of the power of Pollards Rho for breaking DLP&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mempool.space&#x2F;tx&#x2F;51bae58fa9d413b86d74da60d5366987dcdeb0586d39b93b2ca22f9e40dc83de?mode=details&quot;&gt;Slipstream OP_CAT&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Not actually valid&lt;&#x2F;li&gt;
+&lt;li&gt;OP_SUCCESSx &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bips&#x2F;blob&#x2F;master&#x2F;bip-0342.mediawiki&quot;&gt;BIP342&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Makes scipts unconditionally valid as such anyone can spend.&lt;&#x2F;li&gt;
+&lt;li&gt;Could cause forks?&lt;&#x2F;li&gt;
+&lt;li&gt;Retroactive enforcements of rules burden devs.&lt;&#x2F;li&gt;
+&lt;li&gt;Roles of &quot;Dev Hooks&quot;&lt;&#x2F;li&gt;
+&lt;li&gt;IRC discussion with GMAXWELL &lt;a href=&quot;https:&#x2F;&#x2F;bitcoin-irc.chaincode.com&#x2F;bitcoin-core-dev&#x2F;2024-08-11&quot;&gt;IRC weblogs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-news&quot;&gt;Bitcoin News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoincore.org&#x2F;en&#x2F;blog&#x2F;&quot;&gt;Bitcoin Core EoL Security Disclosures&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;research.mempool.space&#x2F;p&#x2F;09defe3d-c836-44e7-b244-7f8434e72151&#x2F;&quot;&gt;Mempool.space Block Time Analysis&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Smaller Pools seemingly keep better precision han the larger pools.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cointelegraph.com&#x2F;news&#x2F;tiny-500gh-home-bitcoin-mining-device-produced-a-block-earning-over-200k-btc&quot;&gt;BitAxe wins a block | I was wrong but still right&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;0xB10C&#x2F;status&#x2F;1811390920744468502&quot;&gt;0xB10C Mining Pool Game Theory During Forks&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BlueWallet&#x2F;BlueWallet&#x2F;releases&#x2F;tag&#x2F;v7.0.2&quot;&gt;Blue Wallet v7.0 [1,2] Released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Added total balance to the overview screen&lt;&#x2F;li&gt;
+&lt;li&gt;Ability to disable phone privacy blur&lt;&#x2F;li&gt;
+&lt;li&gt;iOS lock screen widgets&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@ottosch&#x2F;how-bip47-works-ee641cc14bf3&quot;&gt;BIP47 Address Support&lt;&#x2F;a&gt; - Still needs an onchain TXN for payment code.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bisq-network&#x2F;bisq2&#x2F;releases&#x2F;tag&#x2F;v2.1.0&quot;&gt;Bisq 2.1.0 Released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Support Lightning Network as a settlement method.&lt;&#x2F;li&gt;
+&lt;li&gt;Better visualizations&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin-core&#x2F;bitcoin-devwiki&#x2F;wiki&#x2F;28.0-Release-Notes-Draft&quot;&gt;Bitcoin Core 28.0 Release Notes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;zawy-s-alternating-timestamp-attack&#x2F;1062&#x2F;12&quot;&gt;A better timewarp attack&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Coldcard&#x2F;push-tx&quot;&gt;Coldcard PushTX&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;russeree&#x2F;795e961d4f9870c299a596ce0634e9fa&quot;&gt;MTP visualizations Ex. Script&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.bleepingcomputer.com&#x2F;news&#x2F;security&#x2F;hackers-leak-27-billion-data-records-with-social-security-numbers&#x2F;&quot;&gt;Hackers Leak 2.7 Billion Data Records (SSNs, Addresses)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;Zlatti_71&#x2F;status&#x2F;1828529272539304278&quot;&gt;Telegram Founder Arrested - France&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;apnews.com&#x2F;article&#x2F;assange-justice-department-plea-wikileaks-saipan-australia-00eb380879ff636cc9b916f82f82ed40&quot;&gt;Jullian Assange Ends Legal Fight&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;figures&quot;&gt;Figures&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;timestamp-vs-mtp-mainnet&quot;&gt;Timestamp vs MTP - Mainnet&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;075a55c8-af89-4430-bbbf-d20db07d8d63&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;timestamp-vs-mtp-tesntnet&quot;&gt;Timestamp Vs MTP - Tesntnet&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;b699d8fe-425f-43fd-87da-facd70c512fb&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #24</title>
+          <pubDate>Tue, 25 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-24/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-24/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-24/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;guess-the-nonce-is-back&quot;&gt;Guess the Nonce is Back&lt;&#x2F;h3&gt;
+&lt;p&gt;After some OPs engineering we can now host a raffle without getting rugged! Prizes this week ... 🎉 🎁 😊&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bitcoin Blend Coffee&lt;&#x2F;li&gt;
+&lt;li&gt;Bitcoin hat&lt;&#x2F;li&gt;
+&lt;li&gt;HODLShop Bitcoin Pizza shirt (Medium)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for May 28 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designed to help with branding and web applications&lt;&#x2F;li&gt;
+&lt;li&gt;Revitalize the effort to create our own Portland.BitDevs website&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;slides&quot;&gt;Slides&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Ff8zjaY-6GvCRhyODs5eMZozosbHZKo0ZRHtvk1h558&#x2F;edit?usp=sharing&quot;&gt;Google Slidedeck Bitcoin Blocks&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 7:30pm:&lt;&#x2F;strong&gt; Bitcoin Blocks - A deepdive into structure and construction.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:30pm - 8:30pm:&lt;&#x2F;strong&gt; Primary topics discussion.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonights topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoincore.reviews&#x2F;29775&quot;&gt;Testnet 4 PR&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;7fdgqbGy2gg?t=510&quot;&gt;Mechanics Statement of Bitmain Firmware Being Comprimised&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;darosior&#x2F;eb71638f20968f0dc896c4261a127be6&quot;&gt;Bitcoin Core Upated Security Disclosure Policy&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;proof-of-work-based-signet-faucet&#x2F;937&#x2F;2&quot;&gt;PoW Signet Faucet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bips&#x2F;blob&#x2F;master&#x2F;bip-0337.mediawiki&quot;&gt;Compressed Transactions - BIP337&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;groups.google.com&#x2F;g&#x2F;bitcoindev&#x2F;c&#x2F;wA-dW4t5BEY&quot;&gt;Miniscript BIP proposed text&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.nobsbitcoin.com&#x2F;bitcoin-core-v27-1&#x2F;&quot;&gt;Bitcoin Core v27.1 Released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.nobsbitcoin.com&#x2F;braiins-mini-miner-bmm-100&#x2F;&quot;&gt;Braiins Mini miner Released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.nobsbitcoin.com&#x2F;bitaxe-supra&#x2F;&quot;&gt;BitAxe Supra Released with S21 ICs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.nobsbitcoin.com&#x2F;how-to-use-electrum-plugin-for-joinstr&#x2F;&quot;&gt;Electrum Plugin for Joinstr&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;0xB10C&quot;&gt;Orphans and Forks Week&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1799874506426647009&quot;&gt;Dual Mempools and SigOps&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.nobsbitcoin.com&#x2F;lnd-versions-prior-to-v0-17-0-vulnerable-to-lnd-onion-bomb-dos-attack&#x2F;&quot;&gt;LND and Onion Bombs Vuln.&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;theMiningPod&#x2F;status&#x2F;1778822943390183855&quot;&gt;Marathon Fees +12%&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lightningnetwork&#x2F;lnd&#x2F;issues&#x2F;8571&quot;&gt;LND Fees Overfow Error&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PortlandHODL&#x2F;status&#x2F;1775331303950615017&quot;&gt;RaspberryPi 4 Sync Completes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;mononautical&#x2F;status&#x2F;1777686545715089605&quot;&gt;Miners sharing custodian&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;0xB10C&#x2F;status&#x2F;1780611768081121700&quot;&gt;Outsourced Template Generation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech news&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;apnews.com&#x2F;article&#x2F;assange-justice-department-plea-wikileaks-saipan-australia-00eb380879ff636cc9b916f82f82ed40&quot;&gt;Jullian Assange Ends Legal Fight&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #21</title>
+          <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-21/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-21/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-21/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;li&gt;Currently looking into a vending machine project with a active member.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for April 25 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designed to help with branding and web applications.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30 - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00 - 8:30pm:&lt;&#x2F;strong&gt; Join @PortlandHODL for a Socratic Seminar as they delve into the latest updates to Bitcoin &amp;amp; Lightning (so many current events to talk about!)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30 - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonights topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cointelegraph.com&#x2F;news&#x2F;bitcoin-block-art-marathon&quot;&gt;Marathon Slipstream M Block&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Why was it done?&lt;&#x2F;li&gt;
+&lt;li&gt;Methods of funding &#x2F; transaction selection&lt;&#x2F;li&gt;
+&lt;li&gt;Private mempool implications&lt;&#x2F;li&gt;
+&lt;li&gt;Presigned Transaction and not leaking them&lt;&#x2F;li&gt;
+&lt;li&gt;Miner theft from an orphan block&lt;&#x2F;li&gt;
+&lt;li&gt;Failures modes&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoincore.org&#x2F;bin&#x2F;bitcoin-core-27.0&#x2F;test.rc1&#x2F;&quot;&gt;Bitcoin Core V27.0rc1&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;27375&quot;&gt;Unix Sockets Onion Proxy&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;27114&quot;&gt;Whitelist Outbound Peets&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.bitgo.com&#x2F;available-now-for-clients-bitgo-introduces-replace-by-fee-f74e2593b245&quot;&gt;Bitgo Enables RBF&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Allows users to bump fees on transactions via resigning them.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bips&#x2F;pull&#x2F;1421&quot;&gt;OP Vault Gets a BIP Number&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stacker.news&#x2F;items&#x2F;481321&quot;&gt;Super Testnet Hedgehog - Offline Lightning Payments&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;b10c.me&#x2F;blog&#x2F;012-viabtc-spv-vulnerability-disclosure&#x2F;?x&quot;&gt;ViaBTC Invalid Blocks&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech news&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ZeusLN&#x2F;zeus&#x2F;releases&#x2F;tag&#x2F;v0.8.0&quot;&gt;Zeus 0.8 Released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;OLYMPUS by ZEUS 0-conf channel service&lt;&#x2F;li&gt;
+&lt;li&gt;Zaplocker self-custodial lightning addresses&lt;&#x2F;li&gt;
+&lt;li&gt;Taproot Channel Support&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #20</title>
+          <pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-20/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-20/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-20/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;reardencode&quot;&gt;Rearden&lt;&#x2F;a&gt; Speaking on LNHANCE - Feb 27 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for March 25 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designed to help with branding and web applications.&lt;&#x2F;li&gt;
+&lt;li&gt;A Portland BitDevs project to rally around.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;giveaway&quot;&gt;Giveaway&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nonce.portlandbitdevs.com&#x2F;&quot;&gt;Use Guess the Nonce&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;freedomfoods.store&#x2F;&quot;&gt;Freedom Foods - Premium Freeze Dried Food&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Beef broccoli teriyaki&lt;&#x2F;li&gt;
+&lt;li&gt;Spaghetti&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30 - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;7:00 - 8:00pm: &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;reardencode&quot;&gt;@reardencode&lt;&#x2F;a&gt; presenting about LNHANCE a covenants proposal for Bitcoin Core.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00 - 8:30pm:&lt;&#x2F;strong&gt; Join @PortlandHODL for a Socratic Seminar as they delve into the latest updates to Bitcoin &amp;amp; Lightning (so many current events to talk about!)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30 - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonights topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;COLDCARDwallet&#x2F;status&#x2F;1755639690357510485&quot;&gt;Coldcard Q1 Production Samples Go Out&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Coldcard&#x2F;firmware&#x2F;pull&#x2F;332&quot;&gt;Firmware released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Beta firmware 0.3 still has bugs that can brick, upgrade to 0.6 if you have one.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;29198&quot;&gt;LNHANCE&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;OP_CHECKTEMPLATE_VERIFY&lt;&#x2F;li&gt;
+&lt;li&gt;OP_CHECKSIGFROMSTACK&lt;&#x2F;li&gt;
+&lt;li&gt;OP_INTERNALKEY&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;27877&quot;&gt;27877&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Coin grinder selection algorithm will
+&lt;ul&gt;
+&lt;li&gt;Optimizes to reduce fees in the current TX&lt;&#x2F;li&gt;
+&lt;li&gt;Assumes fees network fees will go down so the next TX could&#x2F;will be larger&lt;&#x2F;li&gt;
+&lt;li&gt;Does this by minimizing inputs.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mugglehead.com&#x2F;marathon-digital-holdings-bypasses-bitcoin-high-transaction-scaling-issues-with-slipstream&#x2F;&quot;&gt;Marathon Slipstream&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;This article sucks but still shows the general sentiment&lt;&#x2F;li&gt;
+&lt;li&gt;Direct Submissions of TXs&lt;&#x2F;li&gt;
+&lt;li&gt;Private mempool&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lists.linuxfoundation.org&#x2F;pipermail&#x2F;bitcoin-dev&#x2F;2024-February&#x2F;022327.html&quot;&gt;Bitcoin-dev Mailing List Migration&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;groups.google.com&#x2F;g&#x2F;bitcoindev&quot;&gt;New location&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;rot13maxi&#x2F;status&#x2F;1748452535017296069&quot;&gt;Rijndael OP_CAT Covenants&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Uses Liquid&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;blockstream&#x2F;cat-and-schnorr-tricks-i-faf1b59bd298&quot;&gt;Andrew Poelstra Thesis&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;No need for OP_CHECKSIGFROMSTACK&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech news&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ZeusLN&#x2F;zeus&#x2F;releases&#x2F;tag&#x2F;v0.8.0&quot;&gt;Zeus 0.8 Released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;OLYMPUS by ZEUS 0-conf channel service&lt;&#x2F;li&gt;
+&lt;li&gt;Zaplocker self-custodial lightning addresses&lt;&#x2F;li&gt;
+&lt;li&gt;Taproot Channel Support&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;OP_CHECKTEMPLATEVERIFY regains community support
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;reardencode&#x2F;status&#x2F;1739059702485709212&quot;&gt;Twitter Post Supporting Covenants&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lists.linuxfoundation.org&#x2F;pipermail&#x2F;bitcoin-dev&#x2F;2023-September&#x2F;021941.html&quot;&gt;Mailing List - Scaling Lightning with Simple Covenants&lt;&#x2F;a&gt;i&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;education&quot;&gt;Education&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PortlandHODL&#x2F;status&#x2F;1746731228122976617&quot;&gt;Programming Bitcoin Part 1. Finite Fields&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PortlandHODL&#x2F;status&#x2F;1746731228122976617&quot;&gt;Programming Bitcoin Part 2. Elliptic Curves&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #19</title>
+          <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-19/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-19/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-19/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Jon Austen - Got the BitDevs upgrade working full hosting of the site soon™&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;reardencode&quot;&gt;Rearden&lt;&#x2F;a&gt; Speaking on LNHANCE - Feb 27 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for March 25 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designed to help with branding and web applications.&lt;&#x2F;li&gt;
+&lt;li&gt;A Portland BitDevs project to rally around.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;giveaway&quot;&gt;Giveaway&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nonce.portlandbitdevs.com&#x2F;&quot;&gt;Use Guess the Nonce&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;2 Tins of Bitcoin Blend coffee
+&lt;ul&gt;
+&lt;li&gt;PDXBTC &amp;amp;&amp;amp; SHIPBTC for 30% off and free shipping&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;freedomfoods.store&#x2F;&quot;&gt;Freedom Foods - Premium Freeze Dried Food&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Beef broccoli teriyaki&lt;&#x2F;li&gt;
+&lt;li&gt;Spaghetti&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30 - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00 - 8:30pm:&lt;&#x2F;strong&gt; Join Eric and @PortlandHODL for a Socratic Seminar as they delve into the latest updates on Bitcoin &amp;amp; Lightning (so many current events to talk about!)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30 - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonights topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stacker.news&#x2F;items&#x2F;371764&quot;&gt;Loan Shark - Super Testnet&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;NOSTR Communication Protocol&lt;&#x2F;li&gt;
+&lt;li&gt;2 Spending Paths - Taproot [fail to pay, collaberate]&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;29198&quot;&gt;LNHANCE&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;OP_CHECKTEMPLATE_VERIFY&lt;&#x2F;li&gt;
+&lt;li&gt;OP_CHECKSIGFROMSTACK&lt;&#x2F;li&gt;
+&lt;li&gt;OP_INTERNALKEY&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;rot13maxi&#x2F;status&#x2F;1748452535017296069&quot;&gt;Rijndael OP_CAT Covenants&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Uses Liquid&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;blockstream&#x2F;cat-and-schnorr-tricks-i-faf1b59bd298&quot;&gt;Andrew Poelstra Thesis&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;No need for OP_CHECKSIGFROMSTACK&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;petertodd.org&#x2F;2023&#x2F;v3-txs-pinning-vulnerability&quot;&gt;Pinning Attacks in V3 still possible - Peter Todd&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Absolute fee still trumps fee rate.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;disclosure-btcd-consensus-bugs-due-to-usage-of-signed-transaction-version&#x2F;455&quot;&gt;YABTCDB - Signed Integer TX Versions&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;BTCD used a signed integer to represent the transactions version&lt;&#x2F;li&gt;
+&lt;li&gt;Responsibly disclosed&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;mononautical&#x2F;status&#x2F;1743274489893282187&quot;&gt;Stamps causing sigops limits to be hit&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Satoshi counts the sigops on each outpoint not input&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;mononautical&#x2F;status&#x2F;1749101242289127439&quot;&gt;Mempool.space Googles Release&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Visualized as stripes of packages&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.nobsbitcoin.com&#x2F;phoenix-wallet-ios-v2-1-0&#x2F;&quot;&gt;Phoenix Wallet v2.1.0&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Request inbound liquidity&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech news&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;28217&quot;&gt;P2MS (PERMIT_BAREMULTISIG) discussion lockd&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Discussion has been locked by A. Chow&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;payjoin&#x2F;rust-payjoin&#x2F;tree&#x2F;master&#x2F;payjoin-cli&quot;&gt;Payjoin Client for Bitcoin Core released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Enables a coinjoin between 2 people that appears to be a single spend onchain&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ZeusLN&#x2F;zeus&#x2F;releases&#x2F;tag&#x2F;v0.8.0&quot;&gt;Zeus 0.8 Released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;OLYMPUS by ZEUS 0-conf channel service&lt;&#x2F;li&gt;
+&lt;li&gt;Zaplocker self-custodial lightning addresses&lt;&#x2F;li&gt;
+&lt;li&gt;Taproot Channel Support&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;OP_CHECKTEMPLATEVERIFY regains community support
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;reardencode&#x2F;status&#x2F;1739059702485709212&quot;&gt;Twitter Post Supporting Covenants&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lists.linuxfoundation.org&#x2F;pipermail&#x2F;bitcoin-dev&#x2F;2023-September&#x2F;021941.html&quot;&gt;Mailing List - Scaling Lightning with Simple Covenants&lt;&#x2F;a&gt;i&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Nyan Keys Bitcoin Mining Keyboard is actually Fast
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;imgur.com&#x2F;a&#x2F;y1hlmqy&quot;&gt;130µ Second Response Time&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoinorangeparty.com&#x2F;&quot;&gt;Bitcoin Orange Party Tracker&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;market-news&quot;&gt;Market News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;thomas_fahrer&#x2F;status&#x2F;1749935401538904437&quot;&gt;ETF outflows from grayscale continure&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.bloomberg.com&#x2F;news&#x2F;articles&#x2F;2024-01-22&#x2F;bitcoin-slips-back-toward-40-000-as-etf-hype-simmers&quot;&gt;ETF approval did not pump thy bags&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;mononautical&#x2F;status&#x2F;1749821386720174460&quot;&gt;Grayscale outflows continue&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;education&quot;&gt;Education&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PortlandHODL&#x2F;status&#x2F;1746731228122976617&quot;&gt;Programming Bitcoin Part 1. Finite Fields&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PortlandHODL&#x2F;status&#x2F;1746731228122976617&quot;&gt;Programming Bitcoin Part 2. Elliptic Curves&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #18</title>
+          <pubDate>Tue, 26 Dec 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-18/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-18/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-18/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Tonights guest speaker. &lt;em&gt;Bitcoin Mining&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for Jan 23th 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designed to help with branding and web applications.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;giveaway&quot;&gt;Giveaway&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nonce.portlandbitdevs.com&#x2F;&quot;&gt;Use Guess the Nonce&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;BitBox02&lt;&#x2F;li&gt;
+&lt;li&gt;Bitcoin Blend coffee&lt;&#x2F;li&gt;
+&lt;li&gt;Bitcoin hat&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30 - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00 - 7:45:&lt;&#x2F;strong&gt; Member Presentation about &lt;a href=&quot;https:&#x2F;&#x2F;localhost:1111&quot;&gt;The State of Bitcoin Mining 2023&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:45 - 8:30pm:&lt;&#x2F;strong&gt; Join Eric and @PortlandHODL for a Socratic Seminar as they delve into the latest updates on Bitcoin &amp;amp; Lightning (so many current events to talk about!)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30 - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonights topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech news&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;28217&quot;&gt;P2MS (PERMIT_BAREMULTISIG) discussion resurfaces as stamps usage increases&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Stamps bloat the UTXO set serialized size through data storage&lt;&#x2F;li&gt;
+&lt;li&gt;This is a relay policy change, as such doesn&#x27;t change consensus&lt;&#x2F;li&gt;
+&lt;li&gt;Has positives and negatives&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;protos.com&#x2F;researcher-finds-data-harvesting-inside-ledger-live-app&#x2F;&quot;&gt;Ledger Unsupisingly Harversting User Data&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;ocean_mining&#x2F;status&#x2F;1737745210191564958&quot;&gt;Ocean enables 3 termplates for miners to choose from&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&#x27;OCEAN Recommended&#x27; - Claims to be the best fliter for removing arbitrary data.&lt;&#x2F;li&gt;
+&lt;li&gt;&#x27;Ordistrspector&#x27; - Looser policy the culls inscription based scripts[]&lt;&#x2F;li&gt;
+&lt;li&gt;Bitcoin Core &#x27;- The regular Bitcoin Core block template generation (&lt;em&gt;Takes a pool fee of 2%&lt;&#x2F;em&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;payjoin&#x2F;rust-payjoin&#x2F;tree&#x2F;master&#x2F;payjoin-cli&quot;&gt;Payjoin Client for Bitcoin Core released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Enables a coinjoin between 2 people that appears to be a single spend onchain&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ZeusLN&#x2F;zeus&#x2F;releases&#x2F;tag&#x2F;v0.8.0&quot;&gt;Zeus 0.8 Released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;OLYMPUS by ZEUS 0-conf channel service&lt;&#x2F;li&gt;
+&lt;li&gt;Zaplocker self-custodial lightning addresses&lt;&#x2F;li&gt;
+&lt;li&gt;Taproot Channel Support&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dennisreimann&#x2F;btcpayserver-plugin-lnbank&#x2F;&quot;&gt;BTCPay Server Comprimised&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;BtcpayServer&#x2F;status&#x2F;1739669361223172448&quot;&gt;Twitter Post&lt;&#x2F;a&gt;i&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stacker.news&#x2F;items&#x2F;347361&quot;&gt;Large Theft&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;OP_CHECKTEMPLATEVERIFY regains community support
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;reardencode&#x2F;status&#x2F;1739059702485709212&quot;&gt;Twitter Post Supporting Covenants&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lists.linuxfoundation.org&#x2F;pipermail&#x2F;bitcoin-dev&#x2F;2023-September&#x2F;021941.html&quot;&gt;Mailing List - Scaling Lightning with Simple Covenants&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;coldcard&#x2F;comments&#x2F;17epqk8&#x2F;040_bitcoin_taken_instantly_from_my_coldcard&#x2F;&quot;&gt;.4BTC Taken from ColdCard - User Error&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;market-news&quot;&gt;Market News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Barry Silbert Resigns from Grayscale
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.bloomberg.com&#x2F;news&#x2F;articles&#x2F;2023-12-26&#x2F;grayscale-says-barry-silbert-resigns-as-chairman-of-the-board?embedded-checkout=true&quot;&gt;Resignation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;real_vijay&#x2F;status&#x2F;1721385528510251182?s=46&quot;&gt;Fraud Allegations&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;mining-presentation-slides&quot;&gt;Mining Presentation Slides&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;1.jpg&quot; alt=&quot;Title Slide&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;2.jpg&quot; alt=&quot;Mining Flow&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;3.jpg&quot; alt=&quot;Mining History&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;4.jpg&quot; alt=&quot;Present Mining&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;5.jpg&quot; alt=&quot;Problems&quot; &#x2F;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;socratic-seminar-18&#x2F;mining_presentation&#x2F;6.jpg&quot; alt=&quot;The Future&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #17</title>
+          <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-17/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-17/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-17/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Our new frontend developer.&lt;&#x2F;li&gt;
+&lt;li&gt;Tonights guest speaker.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Think about ideas for a physical project for the Portland.BitDevs, &lt;em&gt;Ex. A vending machine&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designed to help with branding and web applications.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30 - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00 - 7:30:&lt;&#x2F;strong&gt; Member Presentation about &lt;a href=&quot;https:&#x2F;&#x2F;utxo.live&#x2F;oracle&quot;&gt;URXOracle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:30 - 8:00:&lt;&#x2F;strong&gt; Portland.HODL Presentation about Basic Bitcoin Mining - Mining on an STM32&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00 - 8:30pm:&lt;&#x2F;strong&gt; Join Eric and @PortlandHODL for a Socratic Seminar as they delve into the latest updates on Bitcoin &amp;amp; Lightning (so many current events to talk about!)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30 - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonights topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech news&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;ZeusLN&#x2F;status&#x2F;1727810997656674355&quot;&gt;Wallet of Satoshi Removed from USA App Stores&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoinmagazine.com&#x2F;business&#x2F;ocean-jack-dorsey-funds-bitcoin-mining-pool&quot;&gt;@jack&#x27;s 6.5MM funding into Ocean decentralized mining&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ElementsProject&#x2F;lightning&#x2F;releases&#x2F;tag&#x2F;v23.11&quot;&gt;Core Lighting v23.11&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;mononautical&#x2F;status&#x2F;1727658038994325596&quot;&gt;83.5 BTC Fee Mined by AntPool&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;mononautical&#x2F;status&#x2F;1728946778798793126&quot;&gt;83.5 BTC Fee Signer Signs Message Claiming Proior Ownership&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;techcrunch.com&#x2F;2023&#x2F;11&#x2F;16&#x2F;taproot-wizards-bitcoin-ordinals&#x2F;?guccounter=1&quot;&gt;0xB10C Shows evidence of OFAC TX censorship from F2POOL&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lists.linuxfoundation.org&#x2F;pipermail&#x2F;bitcoin-dev&#x2F;2023-November&#x2F;022134.html&quot;&gt;Bitcoin Mailing List Host Ceases Operations EoY&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;market-news&quot;&gt;Market News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;unusual_whales&#x2F;status&#x2F;1726378361423863891&quot;&gt;Milei wins Argentina&#x27;s Election&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;techcrunch.com&#x2F;2023&#x2F;11&#x2F;16&#x2F;taproot-wizards-bitcoin-ordinals&#x2F;?guccounter=1&quot;&gt;Taproot Wizards Obatins 7.5MM VC Funding&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;rot13maxi&#x2F;status&#x2F;1727357665918243279&quot;&gt;Rijndael @rot13maxi joins Taproot Wizzards as CTO&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;notable-code-changes-proposals-and-releases&quot;&gt;Notable code changes, proposals, and releases&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ordinals&#x2F;ord&#x2F;compare&#x2F;master...rot13maxi:ord:sophon&#x2F;brc20&quot;&gt;Sophon Released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;28207&quot;&gt;Mempool.dar XOR obfuscating&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;lightning&quot;&gt;Lightning&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;mononautical&#x2F;status&#x2F;1715736832950825224&quot;&gt;Lightning Replacement Cycling Attack&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lightning.engineering&#x2F;posts&#x2F;2023-10-18-taproot-assets-v0.3&#x2F;&quot;&gt;Taproot Assets on Mainnet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;russeree&#x2F;docker-lnurl-commando&quot;&gt;Docker LNURL Commando&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;educational-materials&quot;&gt;Educational Materials&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1vwWUP6PyDgZ4xh72fUouf5iBEZGuFLIF9-O5z5GUshs&#x2F;edit?usp=drivesdk&quot;&gt;BitVM Explained&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PortlandHODL&#x2F;status&#x2F;1716594757881979350&quot;&gt;Sparrow Wallet Overview&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PortlandHODL&#x2F;status&#x2F;1726755895416430944&quot;&gt;SegWit Overview&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PortlandHODL&#x2F;status&#x2F;1721678252711027137&quot;&gt;PGP&#x2F;GPG Overview&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PortlandHODL&#x2F;status&#x2F;1719126872423051395&quot;&gt;Bitcoin node privavy&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #16</title>
+          <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-16/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-16/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-16/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules:&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;We are requesting a workshop or presentation from a community memeber for the next Portland.BitDevs on 11&#x2F;28&#x2F;2023&lt;&#x2F;li&gt;
+&lt;li&gt;A front end developer to manage and style the Portland.Bitdevs Upgrade website desgined to replace the Meetup forward that currently exists.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30-7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00 - 8:00pm:&lt;&#x2F;strong&gt; Join Eric and @PortlandHODL for a Socratic Seminar as they delve into the latest updates on Bitcoin &amp;amp; Lightning (so many current events to talk about!)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00pm:&lt;&#x2F;strong&gt; Enjoy a screening of the short film &quot;Stranded.&quot;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:30 - 9:00pm:&lt;&#x2F;strong&gt; Engage in discussions about the movie, further socialize, and then we&#x27;ll wrap up the night (Primal Burger closes at 9pm).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech news&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cointelegraph.com&#x2F;news&#x2F;bitcoin-mining-firm-marathon-mines-invalid-block-btc&quot;&gt;Marathon Mines Invalid Mainnet Block&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoinmagazine.com&#x2F;technical&#x2F;bitcoin-payment-service-btcpay-server-now-easier-to-integrate-with-react-apps&quot;&gt;BTCPay Server React Widget&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;BitcoinMagazine&#x2F;status&#x2F;1709557921820872803&quot;&gt;Block betas Bitkey Hardware Wallet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitvm.org&#x2F;bitvm.pdf&quot;&gt;BitVM is released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;Blockstream&#x2F;status&#x2F;1715628518435111162&quot;&gt;Blocksteam Phishing Scam&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.phoronix.com&#x2F;review&#x2F;raspberry-pi-5-benchmarks&quot;&gt;Raspberry Pi 5 Released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;market-news&quot;&gt;Market News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.bankingdive.com&#x2F;news&#x2F;ripple-backs-out-fortress-trust-acquisition-crypto-custodian&#x2F;695190&quot;&gt;Ripple Backs out of Fortress Deal&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cointelegraph.com&#x2F;news&#x2F;3ac-su-zhu-arrested-in-singapore&quot;&gt;3AC’s Su Zhu arrested in Singapore&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;jacobcanfield&#x2F;status&#x2F;1713919274241143193?s=46&quot;&gt;Cointelegraph Misreports Blackrock Bitcoin ETF&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;notable-code-changes-proposals-and-releases&quot;&gt;Notable code changes, proposals, and releases&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;blob&#x2F;master&#x2F;doc&#x2F;release-notes&#x2F;release-notes-25.1.md&quot;&gt;Bitcoin 25.1 Released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.coinkite.com&#x2F;5.2.0-seed-vault&quot;&gt;Coldcard Mk4 FW v5.2.0 Released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;26152&quot;&gt;Bump unconfirmed ancestor transactions to target feerate&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;27596&quot;&gt;Assume UTXO #27596&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;lightning&quot;&gt;Lightning&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;mononautical&#x2F;status&#x2F;1715736832950825224&quot;&gt;Lightning Replacement Cycling Attack&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lightning.engineering&#x2F;posts&#x2F;2023-10-18-taproot-assets-v0.3&#x2F;&quot;&gt;Taproot Assets on Mainnet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;russeree&#x2F;docker-lnurl-commando&quot;&gt;Docker LNURL Commando&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #15</title>
+          <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-15/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-15/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-15/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules:&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;news&quot;&gt;News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.coinkite.com&#x2F;donjon-faults-2023&#x2F;&quot;&gt;ColdCard Mk4 hacked&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;notable-code-changes-proposals-and-releases&quot;&gt;Notable code changes, proposals, and releases&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;supertestnet&#x2F;utxo-dealership&quot;&gt;UTXO Dealership&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;roasbeef&#x2F;status&#x2F;1700598667546419552&quot;&gt;ZeroSync Headers Sync&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;nickfarrow&#x2F;4be776782bce0c12cca523cbc203fb9d&#x2F;&quot;&gt;Private Collab Custody&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoinops.org&#x2F;en&#x2F;newsletters&#x2F;2023&#x2F;09&#x2F;06&#x2F;#bitcoin-transaction-compression&quot;&gt;Compressed Bitcoin Transactions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fedimint&#x2F;fedimint&#x2F;releases&#x2F;tag&#x2F;v0.1.0&quot;&gt;Fedimint 0.1.0&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;28400#issuecomment-1735100808&quot;&gt;Utxo Set Pruning&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;lightning&quot;&gt;Lightning&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lightningdevkit&#x2F;rust-lightning&#x2F;pull&#x2F;2371&quot;&gt;LDK can pay Bolt 12s&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lightningdevkit&#x2F;rust-lightning&#x2F;pull&#x2F;2337&quot;&gt;LDK Watch Towers&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;morehouse.github.io&#x2F;lightning&#x2F;fake-channel-dos&#x2F;&quot;&gt;Fake LN Channel DOS&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;scaling-lightning&#x2F;scaling-lightning&quot;&gt;Scaling lighting&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;bitcoin-core&quot;&gt;Bitcoin Core&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;28196&quot;&gt;BIP 324 Connection Support&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #14</title>
+          <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-14/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-14/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-14/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for May 28 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designed to help with branding and web applications&lt;&#x2F;li&gt;
+&lt;li&gt;Revitalize the effort to create our own Portland.BitDevs website&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;slides&quot;&gt;Slides&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Ff8zjaY-6GvCRhyODs5eMZozosbHZKo0ZRHtvk1h558&#x2F;edit?usp=sharing&quot;&gt;Google Slidedeck Bitcoin Blocks&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 7:30pm:&lt;&#x2F;strong&gt; Bitcoin Addresses - Deep Dive&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:30pm - 8:30pm:&lt;&#x2F;strong&gt; Primary topics discussion.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonights topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;7fdgqbGy2gg?t=510&quot;&gt;Mechanics Statement of Bitmain Firmware Being Comprimised&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;darosior&#x2F;eb71638f20968f0dc896c4261a127be6&quot;&gt;Bitcoin Core Upated Security Disclosure Policy&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;proof-of-work-based-signet-faucet&#x2F;937&#x2F;2&quot;&gt;PoW Signet Faucet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bips&#x2F;blob&#x2F;master&#x2F;bip-0337.mediawiki&quot;&gt;Compressed Transactions - BIP337&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;groups.google.com&#x2F;g&#x2F;bitcoindev&#x2F;c&#x2F;wA-dW4t5BEY&quot;&gt;Miniscript BIP proposed text&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.nobsbitcoin.com&#x2F;bitcoin-core-v27-1&#x2F;&quot;&gt;Bitcoin Core v27.1 Released&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;0xB10C&quot;&gt;Orphans and Forks Week&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;1799874506426647009&quot;&gt;Dual Mempools and SigOps&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.nobsbitcoin.com&#x2F;lnd-versions-prior-to-v0-17-0-vulnerable-to-lnd-onion-bomb-dos-attack&#x2F;&quot;&gt;LND and Onion Bombs Vuln.&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;mononautical&#x2F;status&#x2F;1777686545715089605&quot;&gt;Miners sharing custodian&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;0xB10C&#x2F;status&#x2F;1780611768081121700&quot;&gt;Outsourced Template Generation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-news&quot;&gt;Bitcoin news&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;SimplyBitcoinTV&#x2F;status&#x2F;1815836464334389633&quot;&gt;50,000 MT. Gox Coins distributed at .16 ratio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoincore.org&#x2F;en&#x2F;blog&#x2F;&quot;&gt;Bitcoin Core EoL Security Disclosures&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;0xB10C&#x2F;status&#x2F;1811390920744468502&quot;&gt;0xB10C Mining Pool Game Theory During Forks&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;coryklippsten&#x2F;status&#x2F;1815429462210539706&quot;&gt;Swan Cuts Staff and Likely Shuttering Managed Mining&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;vostrnad&#x2F;status&#x2F;1810024272049705168&quot;&gt;The Most Interesting Transaction in the World&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech news&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;apnews.com&#x2F;article&#x2F;assange-justice-department-plea-wikileaks-saipan-australia-00eb380879ff636cc9b916f82f82ed40&quot;&gt;Jullian Assange Ends Legal Fight&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+      <item>
+          <title>PDX BitDevs Socratic Seminar #12</title>
+          <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://portlandbitdevs.org/socratic-seminar-12/</link>
+          <guid>https://portlandbitdevs.org/socratic-seminar-12/</guid>
+          <description xml:base="https://portlandbitdevs.org/socratic-seminar-12/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;li&gt;Thank you @cole for being our geust of honnor.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for May 28 2024&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designed to help with branding and web applications.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30 - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00 - 8:00pm:&lt;&#x2F;strong&gt; @Colebear - General Mining Discussion  (so many current events to talk about!)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00 - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonights topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;b10c.me&#x2F;observations&#x2F;11-invalid-blocks-783426-and-784121&#x2F;&quot;&gt;F2Pool Invalid Block Analysis&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;Raybontwo&#x2F;status&#x2F;1781543445737419040&quot;&gt;ViaBTC Havling Block Rewards Not Visibale&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;moneyball&#x2F;status&#x2F;1782808288314433995&quot;&gt;Block 3nm ASIC&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;0xB10C&#x2F;status&#x2F;1781477794762965193&quot;&gt;Spider Pool Building on Old Templates&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;achow101&#x2F;status&#x2F;1781477641280684382&quot;&gt;Ocean Templates - 29BTC&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;theMiningPod&#x2F;status&#x2F;1778822943390183855&quot;&gt;Marathon Fees +12%&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lightningnetwork&#x2F;lnd&#x2F;issues&#x2F;8571&quot;&gt;LND Fees Overfow Error&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;PortlandHODL&#x2F;status&#x2F;1775331303950615017&quot;&gt;RaspberryPi 4 Sync Completes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;mononautical&#x2F;status&#x2F;1777686545715089605&quot;&gt;Miners sharing custodian&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;0xB10C&#x2F;status&#x2F;1780611768081121700&quot;&gt;Outsourced Template Generation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech news&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ZeusLN&#x2F;zeus&#x2F;releases&#x2F;tag&#x2F;v0.8.0&quot;&gt;Zeus 0.8 Released&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;OLYMPUS by ZEUS 0-conf channel service&lt;&#x2F;li&gt;
+&lt;li&gt;Zaplocker self-custodial lightning addresses&lt;&#x2F;li&gt;
+&lt;li&gt;Taproot Channel Support&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
+    </channel>
+</rss>
