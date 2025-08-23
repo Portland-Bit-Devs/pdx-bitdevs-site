@@ -52,7 +52,9 @@ jobs:
 
       # Build the Zola site
       - name: App Build Zola Site
-        run: zola build
+        run: |
+          zola build
+          ls -al /github/workspace
 
       - name: App Deploy
         id: appdeploy
