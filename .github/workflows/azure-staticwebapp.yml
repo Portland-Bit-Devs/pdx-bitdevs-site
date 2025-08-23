@@ -45,7 +45,7 @@ jobs:
       # Install Zola
       - name: Install Zola Framework
         run: |
-          curl -L -o zola.tar.gz https://github.com/getzola/zola/releases/download/v0.19.1/zola-v0.19.1-x86_64-linux.tar.gz
+          curl -L -o zola.tar.gz https://github.com/getzola/zola/releases/download/v0.21.0/zola-v0.21.0-x86_64-unknown-linux-gnu.tar.gz
           tar -xzf zola.tar.gz -C /usr/local/bin
           rm zola.tar.gz
           zola --version
