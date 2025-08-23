@@ -38,8 +38,12 @@ PDX BitDevs meetups. If you have any others to add to the list let us know.
   - [BitDevs Los Angeles](https://bitdevsla.org)
   - [BitDevs Washington DC](https://dcbitdevs.com/)
 
-  
 ### [Freenode IRC](https://freenode.net/)
 
   - #bitcoin-core-pr-reviews
-  - #bitcore-core-dev  
+  - #bitcore-core-dev
+
+### Other Information
+
+  - [Bitcoiner Jobs](https://bitcoinerjobs.com/)
+

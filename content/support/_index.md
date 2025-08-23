@@ -9,7 +9,7 @@ If you're like to be a supporter by making a donation please send a message to.
 <br>
 <br>
 
-PDX BitDevs - A community supported campus in the Portland, Oregon focused on grassroots bitcoin adoption and a home for bitcoiners to work, learn, collaborate, and build.
+Portland BitDevs - A community supported campus in the Portland, Oregon focused on grassroots bitcoin adoption and a home for bitcoiners to work, learn, collaborate, and build.
 <br>
 <br>
 
