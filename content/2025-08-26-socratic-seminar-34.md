@@ -28,7 +28,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - A guest speaker for Aug 26 2025 ?
 - Artist / Graphic designed to help with branding and web applications
 
-## Announcemens
+## Announcements
 - Our own Portland.BitDevs website is now online: https://portlandbitdevs.org/
 
 ### Schedule
