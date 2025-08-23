@@ -1,8 +1,8 @@
 +++
-title = "PDX BitDevs Socratic Seminar #33"
+title = "PDX BitDevs Socratic Seminar #34"
 template = "post.html"
 [extra]
-meetup_id = "307442941"
+meetup_id = "307472941"
 +++
 
 ## Announcements
@@ -27,6 +27,8 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ### Requests
 - A guest speaker for Aug 26 2025 ?
 - Artist / Graphic designed to help with branding and web applications
+
+## Announcemens
 - Our own Portland.BitDevs website is now online: https://portlandbitdevs.org/
 
 ### Schedule

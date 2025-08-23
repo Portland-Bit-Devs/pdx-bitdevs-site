@@ -5,8 +5,59 @@
     <link rel="self" type="application/atom+xml" href="https://portlandbitdevs.org/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://portlandbitdevs.org/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-07-22T00:00:00+00:00</updated>
+    <updated>2025-08-26T00:00:00+00:00</updated>
     <id>https://portlandbitdevs.org/atom.xml</id>
+    <entry xml:lang="en">
+        <title>PDX BitDevs Socratic Seminar #34</title>
+        <published>2025-08-26T00:00:00+00:00</published>
+        <updated>2025-08-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://portlandbitdevs.org/socratic-seminar-34/"/>
+        <id>https://portlandbitdevs.org/socratic-seminar-34/</id>
+        
+        <content type="html" xml:base="https://portlandbitdevs.org/socratic-seminar-34/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space.
+Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;guess-the-nonce-is-back&quot;&gt;Guess the Nonce is Back&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;After some OPs engineering we can now host a raffle without getting rugged! Prizes this week ... 🎉 🎁 😊&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for Aug 26 2025 ?&lt;&#x2F;li&gt;
+&lt;li&gt;Artist &#x2F; Graphic designed to help with branding and web applications&lt;&#x2F;li&gt;
+&lt;li&gt;Our own Portland.BitDevs website is now online: https:&#x2F;&#x2F;portlandbitdevs.org&#x2F;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 8:30pm:&lt;&#x2F;strong&gt; Primary topics discussion.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;8:00pm - 9:00pm:&lt;&#x2F;strong&gt; Overtime discussions about tonights topics or additional user submissions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;p&gt;TODO&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>PDX BitDevs Socratic Seminar #33</title>
         <published>2025-07-22T00:00:00+00:00</published>
