@@ -1,5 +1,5 @@
 +++
-title = "PDX BitDevs Socratic Seminar #22"
+title = "PDX BitDevs Socratic Seminar #24"
 template = "post.html"
 [extra]
 meetup_id = "304303269"
