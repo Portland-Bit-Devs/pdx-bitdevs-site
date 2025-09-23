@@ -47,6 +47,7 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 - [OP_TWEAKADD Proposal](https://github.com/bitcoin/bips/pull/1944)
 - [Spendable Unknown Segwit Outputs](https://x.com/mononautical/status/1968527558846419299)
 - [Sub 1sat Summer Profit](https://x.com/mononautical/status/1968138301182972400)
+- [BIP 321 Payment URIL replacement](https://x.com/TheBlueMatt/status/1970612483867255173)
 
 ## Bitcoin General News
 [[Market] Bitcoin Based Credit Card - weak](https://x.com/WatcherGuru/status/1970472183383159277)
