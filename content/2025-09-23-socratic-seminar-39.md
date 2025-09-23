@@ -32,9 +32,9 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 - **6:30pm - 7:00pm:** Arrive, socialize, and grab some food.
 - **7:00pm - 7:05pm:** Reckless Update [Mining Threeways]
 - **7:05pm - 7:15pm:** Vote of Confidence (Portland.HODL) 12 Months.
-- **7:45pm - 8:00pm:** Discussion "Portland.HODL - Vote of confidence schedule"
-  - [The tweet](https://x.com/LukeDashjr/status/1959068235678011739)
-- **8:00pm - 8:45pm:** General Bitcoin Development Discussion
+- **7:15pm - 7:45pm:** Transaction Mallebility Presentation
+- **7:45pm - 8:25pm:** General Bitcoin Development Discussion
+- **8:30pm - 8:45pm:** Vote Count + Overtime
 
 ## Bitcoin Dev News
 - [Sharing Block Templates](https://github.com/ajtowns/bips/blob/202508-sendtemplate/bip-ajtowns-sendtemplate.md)
