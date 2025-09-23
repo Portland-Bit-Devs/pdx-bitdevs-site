@@ -45,7 +45,3 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 ## Bitcoin General News
 
 ## Tech news
-
-## Poll Review
-
-<img width="374" height="689" alt="image" src="https://github.com/user-attachments/assets/a28081ef-8982-4089-b7a1-5be5b84389df" />
