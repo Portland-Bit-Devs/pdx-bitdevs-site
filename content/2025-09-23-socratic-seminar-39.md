@@ -41,6 +41,7 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 - [Unstoppable data](https://x.com/BitMEXResearch/status/1960328464008978669)
   - Uses private keys with shared nonces to encode data
   - Can't easily be stopped without banning private keys / reused nonces
+- [Bitcoin Core v30 IBD Speedups](https://x.com/L0RINC/status/1968392472717033927)
 
 ## Bitcoin General News
 
