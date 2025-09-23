@@ -15,7 +15,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ### Guess the Nonce is Back ([Aeon](https://x.com/aeonBTC))
 After some OPs engineering we can now host a raffle without getting rugged! Prizes this week ... 🎉 🎁 😊
-  - Bitcoin RaspberryPi Node
+  - Proof of Ink T-Shirt!
   - Bitcoin Magazine Ross Ulbricth edition
   - [censorshipresistant.com](https://censorshipresistant.com/) shirt
 
@@ -30,11 +30,8 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 
 ### Schedule
 - **6:30pm - 7:00pm:** Arrive, socialize, and grab some food.
-- **7:00pm - 7:15pm:** [Presentation "The New Portland BitDevs .org Website" ](https://portlandbitdevs.org/)
-- **7:15pm - 7:45pm:** Presentation "Mining 3 Ways"
-  - https://x.com/MyFirstBitcoin_/status/1957133179015377315
-  - https://x.com/blockhunters_/status/1957876599816425842
-  - https://x.com/KeithMukai/status/1957134281337127110
+- **7:00pm - 7:05pm:** Reckless Update [Mining Threeways]
+- **7:05pm - 7:15pm:** Vote of Confidence (Portland.HODL) 12 Months.
 - **7:45pm - 8:00pm:** Discussion "Portland.HODL - Vote of confidence schedule"
   - [The tweet](https://x.com/LukeDashjr/status/1959068235678011739)
 - **8:00pm - 8:45pm:** General Bitcoin Development Discussion
