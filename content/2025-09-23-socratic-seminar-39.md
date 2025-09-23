@@ -16,8 +16,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ### Guess the Nonce is Back ([Aeon](https://x.com/aeonBTC))
 After some OPs engineering we can now host a raffle without getting rugged! Prizes this week ... 🎉 🎁 😊
   - Proof of Ink T-Shirt!
-  - Bitcoin Magazine Ross Ulbricth edition
-  - [censorshipresistant.com](https://censorshipresistant.com/) shirt
+  - Bitcoin Baseball Cap
 
 ### Rules
 - Respect people's privacy
@@ -25,7 +24,7 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 - Interaction and asking questions are encouraged!
 
 ### Requests
-- A guest speaker for September 23 2025
+- A guest speaker for October 27 2025
 - Artist / Graphic designed to help with branding and web applications
 
 ### Schedule
