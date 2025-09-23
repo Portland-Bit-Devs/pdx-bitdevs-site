@@ -44,5 +44,6 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 - [Bitcoin Core v30 IBD Speedups](https://x.com/L0RINC/status/1968392472717033927)
 
 ## Bitcoin General News
+[[Market] Bitcoin Based Credit Card - weak](https://x.com/WatcherGuru/status/1970472183383159277)
 
 ## Tech news
