@@ -46,6 +46,7 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 - [[ABDel] 25ms header proofs](https://x.com/dimahledba/status/1968666625189564796)
 - [OP_TWEAKADD Proposal](https://github.com/bitcoin/bips/pull/1944)
 - [Spendable Unknown Segwit Outputs](https://x.com/mononautical/status/1968527558846419299)
+- [Sub 1sat Summer Profit](https://x.com/mononautical/status/1968138301182972400)
 
 ## Bitcoin General News
 [[Market] Bitcoin Based Credit Card - weak](https://x.com/WatcherGuru/status/1970472183383159277)
