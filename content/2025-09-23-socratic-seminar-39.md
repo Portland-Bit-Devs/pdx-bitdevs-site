@@ -50,5 +50,6 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 
 ## Bitcoin General News
 [[Market] Bitcoin Based Credit Card - weak](https://x.com/WatcherGuru/status/1970472183383159277)
+[Bitcoin Art Magizine](bitcoinartmagazine.com)
 
 ## Tech news
