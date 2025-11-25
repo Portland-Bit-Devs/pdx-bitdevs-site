@@ -1,5 +1,5 @@
 +++
-title = "PDX BitDevs Socratic Seminar #40"
+title = "PDX BitDevs Socratic Seminar #41"
 template = "post.html"
 [extra]
 meetup_id = "307472941"
@@ -11,45 +11,34 @@ Please join us for our next Socratic Seminar. A special thank you to our host <a
 If you can't make it to the main event please join us at Lutz Tavern around 9PM **<a href="https://www.lutztavern.com/" data-no-summary>here</a>.**
 
 ### Special Thanks | Mentions
-- Thank you to everyone who shows up each month!
+- DiD Presentation
+- MiniScript Presentation - [PortlandHODL](https://github.com/portlandhodl)
 
 ### Guess the Nonce is Back ([Aeon](https://x.com/aeonBTC))
 After some OPs engineering we can now host a raffle without getting rugged! Prizes this week ... 🎉 🎁 😊
-  - Proof of Ink T-Shirt!
-  - Bitcoin Baseball Cap
+  - Prize List
 
 ### Rules
 - Respect people's privacy
+  - No Photos / Sequenced Photos
+  - No Audio Recording 
+  - No Phones in your shirt front pocket camera out. 
 - [Chatham House Rules](https://www.chathamhouse.org/about-us/chatham-house-rule)
 - Interaction and asking questions are encouraged!
 
 ### Requests
-- A guest speaker for October 27 2025
-- Artist / Graphic designed to help with branding and web applications
+- A guest speaker for October 15 2025
 
 ### Schedule
 - **6:30pm - 7:00pm:** Arrive, socialize, and grab some food.
-- **7:00pm - 7:05pm:** Reckless Update [Mining Threeways]
-- **7:05pm - 7:15pm:** Vote of Confidence (Portland.HODL) 12 Months.
-- **7:15pm - 7:45pm:** Transaction Mallebility Presentation
-- **7:45pm - 8:25pm:** General Bitcoin Development Discussion
-- **8:30pm - 8:45pm:** Vote Count + Overtime
+- **7:00pm - 7:30pm:** DID Presentation
+- **7:30pm - 8:00pm:** Bitcoin Miniscript Presentation
+- **8:00pm - 8:30pm:** Bitcoin Development News
+- **8:30pm - 8:45pm:** Overtime
 
 ## Bitcoin Dev News
-- [PR - Undeprecate -datacarriersize option](https://github.com/bitcoin/bitcoin/pull/33453)
-- [Unstoppable data](https://x.com/BitMEXResearch/status/1960328464008978669)
-  - Uses private keys with shared nonces to encode data
-  - Can't easily be stopped without banning private keys / reused nonces
-- [Bitcoin Core v30 IBD Speedups](https://x.com/L0RINC/status/1968392472717033927)
-- [Bitcoin knobs](https://github.com/TABConf/bitcoinknobs)
-- [[ABDel] 25ms header proofs](https://x.com/dimahledba/status/1968666625189564796)
-- [OP_TWEAKADD Proposal](https://github.com/bitcoin/bips/pull/1944)
-- [Spendable Unknown Segwit Outputs](https://x.com/mononautical/status/1968527558846419299)
-- [Sub 1sat Summer Profit](https://x.com/mononautical/status/1968138301182972400)
-- [BIP 321 Payment URI replacement](https://x.com/TheBlueMatt/status/1970612483867255173)
+ - [Cluster Mempool (v31?)](https://github.com/bitcoin/bitcoin/pull/33629)
 
 ## Bitcoin General News
-[[Market] Bitcoin Based Credit Card - weak](https://x.com/WatcherGuru/status/1970472183383159277)
-[Bitcoin Art Magizine](bitcoinartmagazine.com)
 
 ## Tech news
