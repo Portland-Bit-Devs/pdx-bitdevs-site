@@ -38,6 +38,7 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 
 ## Bitcoin Dev News
  - [Cluster Mempool (v31?)](https://github.com/bitcoin/bitcoin/pull/33629)
+   - [Thread](https://x.com/murchandamus/status/1854678133896626293)  
  - [RDTS Softfork Proposal](https://github.com/bitcoin/bips/pull/2017)
  - [Proposed Limit to ScriptPubkey Size](https://groups.google.com/g/bitcoindev/c/YO8ZwnG_ISs)
    - [Abandoned](https://x.com/PortlandHODL/status/1988459825903399058)
