@@ -44,7 +44,7 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
    - [Abandoned](https://x.com/PortlandHODL/status/1988459825903399058)
    - [OP_TECH](https://bitcoinops.org/en/newsletters/2025/11/07/#multiple-discussions-about-restricting-data)
  - [MARA Pool Empty Block](https://x.com/mononautical/status/1991110957968265699)
- - [Ordiknots](https://github.com/taproot-wizards/ordiknotso)
+ - [Ordiknots](https://github.com/taproot-wizards/ordiknots)
  - [C Bitcoin Kernel Header API](https://github.com/bitcoin/bitcoin/pull/30595)
  - [Sync Performance Improvement](https://github.com/bitcoin/bitcoin/pull/31645)
  - [Chaincode Delegationin](https://block.xyz/inside/chain-code-delegation-improving-privacy-in-collaborative-multisig)
