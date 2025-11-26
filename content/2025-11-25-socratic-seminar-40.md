@@ -27,7 +27,7 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 - Interaction and asking questions are encouraged!
 
 ### Requests
-- A guest speaker for October 15 2025
+- A guest speaker for December 15 2025
 
 ### Schedule
 - **6:30pm - 7:00pm:** Arrive, socialize, and grab some food.
