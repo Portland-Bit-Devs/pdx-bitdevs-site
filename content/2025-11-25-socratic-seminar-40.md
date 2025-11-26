@@ -38,7 +38,16 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 
 ## Bitcoin Dev News
  - [Cluster Mempool (v31?)](https://github.com/bitcoin/bitcoin/pull/33629)
+ - [RDTS Softfork Proposal](https://github.com/bitcoin/bips/pull/2017)
+ - [Proposed Limit to ScriptPubkey Size](https://groups.google.com/g/bitcoindev/c/YO8ZwnG_ISs)
+   - [Abandoned](https://x.com/PortlandHODL/status/1988459825903399058)
+   - [OP_TECH](https://bitcoinops.org/en/newsletters/2025/11/07/#multiple-discussions-about-restricting-data)
+ - [MARA Pool Empty Block](https://x.com/mononautical/status/1991110957968265699)
+ - [Ordiknots](https://github.com/taproot-wizards/ordiknotso)
+ - [C Bitcoin Kernel Header API](https://github.com/bitcoin/bitcoin/pull/30595)
+ - [Sync Performance Improvement](https://github.com/bitcoin/bitcoin/pull/31645)
 
 ## Bitcoin General News
+ - [DDR 4/5 Prices go Parabolic](https://pcpartpicker.com/trends/price/memory/)
 
 ## Tech news
