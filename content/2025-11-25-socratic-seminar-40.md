@@ -46,9 +46,14 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
  - [Ordiknots](https://github.com/taproot-wizards/ordiknotso)
  - [C Bitcoin Kernel Header API](https://github.com/bitcoin/bitcoin/pull/30595)
  - [Sync Performance Improvement](https://github.com/bitcoin/bitcoin/pull/31645)
- - [Chaincode Delegation ]
+ - [Chaincode Delegationin](https://block.xyz/inside/chain-code-delegation-improving-privacy-in-collaborative-multisig)
+ - [Coldcard Firmware 6.4.0X](https://x.com/COLDCARDwallet/status/1991572009025675628)
+ - [Lightning Prediction Markets for Softforks](https://x.com/Rob1Ham/status/1985828339035017355)
+ - [Onchain RDTS (444) Softfork Contract](https://x.com/Rob1Ham/status/1987284298144399683)
 
 ## Bitcoin General News
- - [DDR 4/5 Prices go Parabolic](https://pcpartpicker.com/trends/price/memory/)
+ - [Naka Rugged 6MM payout](https://x.com/HodlMagoo/status/1991679031625040183)
 
 ## Tech news
+ - [DDR 4/5 Prices go Parabolic](https://pcpartpicker.com/trends/price/memory/)
+
