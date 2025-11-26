@@ -11,7 +11,7 @@ Please join us for our next Socratic Seminar. A special thank you to our host <a
 If you can't make it to the main event please join us at Lutz Tavern around 9PM **<a href="https://www.lutztavern.com/" data-no-summary>here</a>.**
 
 ### Special Thanks | Mentions
-- DiD Presentation
+- DiD Presentation - ZSub
 - MiniScript Presentation - [PortlandHODL](https://github.com/portlandhodl)
 
 ### Guess the Nonce is Back ([Aeon](https://x.com/aeonBTC))
@@ -46,6 +46,7 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
  - [Ordiknots](https://github.com/taproot-wizards/ordiknotso)
  - [C Bitcoin Kernel Header API](https://github.com/bitcoin/bitcoin/pull/30595)
  - [Sync Performance Improvement](https://github.com/bitcoin/bitcoin/pull/31645)
+ - [Chaincode Delegation ]
 
 ## Bitcoin General News
  - [DDR 4/5 Prices go Parabolic](https://pcpartpicker.com/trends/price/memory/)
