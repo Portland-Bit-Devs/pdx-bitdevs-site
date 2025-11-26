@@ -55,6 +55,7 @@ After some OPs engineering we can now host a raffle without getting rugged! Priz
 ## Bitcoin General News
  - [Naka Rugged 6MM payout](https://x.com/HodlMagoo/status/1991679031625040183)
  - [Samuori Devs Jailed](https://www.justice.gov/usao-sdny/pr/founders-samourai-wallet-cryptocurrency-mixing-service-sentenced-five-and-four-years)
+ - [Start9 Selling Treasury](https://x.com/start9labs/status/1985797112265654559)
 
 ## Tech news
  - [DDR 4/5 Prices go Parabolic](https://pcpartpicker.com/trends/price/memory/)
