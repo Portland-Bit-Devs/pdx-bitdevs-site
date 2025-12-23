@@ -88,7 +88,7 @@ sudo ./b2 -j$(nproc) install
 sudo ldconfig
 ```
 
-But wait there is more! Time to ensure that we have libsecp256k1 installed too.
+But wait there is more! Time to ensure that we have [libsecp256k1](https://github.com/bitcoin-core/secp256k1) installed too.
 
 ```
 cd ~
@@ -99,4 +99,21 @@ cd secp256k1
 make -j$(nproc)
 sudo make install
 sudo ldconfig
+```
+
+Now run this. ([Install Script](https://github.com/libbitcoin/libbitcoin-system/blob/master/install.sh))
+
+```
+./install.sh --prefix=/home/<username>/<libbitcoin prefix> --disable-shared
+```
+
+Building on an 8 core machine Xeon E5-2620 takes about 20 minutes. Now we can build and install Libbitcoin server.
+This build process failed on GCC with a segmentation fault. Clang 18.x seems to work just fine.
+
+### Installation [Libbitcoin Node](https://github.com/libbitcoin/libbitcoin-node)
+
+After doing the above steps we are able to run this command on Ubuntu
+
+```
+./install.sh --prefix=/home/<user>/development/libbitcoin/build/release_static/ --build-secp256k1 --build-boost --disable-shared
 ```
