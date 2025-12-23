@@ -60,4 +60,43 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ## Libbitcoin Server
 
+### Why?
+
+The primary reason would be to not be dependent on another Bitcoin Core based client implementation.
+
+### Prep
+
+- Host (Computer)
+- Internet
+- Time (10 minutes - 1 hour)
+
 ### Installation
+
+You will need a host that acts like a server, this would be something ideally running Linux, but could be Windows or MacOS.
+Libbitcoin does require boost >= 1.86.0. This needs to be installed before building and configuring. The install.sh file
+that is included did not fetch/build/install boost.
+
+This required me to run the following shell commands
+
+```
+cd ~
+wget https://archives.boost.io/release/1.86.0/source/boost_1_86_0.tar.gz
+tar -xzf boost_1_86_0.tar.gz
+cd boost_1_86_0
+./bootstrap.sh --prefix=/usr/local
+sudo ./b2 -j$(nproc) install
+sudo ldconfig
+```
+
+But wait there is more! Time to ensure that we have libsecp256k1 installed too.
+
+```
+cd ~
+git clone https://github.com/bitcoin-core/secp256k1.git
+cd secp256k1
+./autogen.sh
+./configure --prefix=/usr
+make -j$(nproc)
+sudo make install
+sudo ldconfig
+```
