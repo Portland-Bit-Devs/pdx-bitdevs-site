@@ -117,3 +117,7 @@ After doing the above steps we are able to run this command on Ubuntu
 ```
 ./install.sh --prefix=/home/<user>/development/libbitcoin/build/release_static/ --build-secp256k1 --build-boost --disable-shared
 ```
+
+### running
+
+Out of the box most things don't seem to work overall. The first is the suggested config file is out of date use [Config for v4.0](https://github.com/libbitcoin/libbitcoin-node/blob/105388e012f0d87ea670c56f748619bb532aa6f3/src/parser.cpp#L697)
