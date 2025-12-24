@@ -40,12 +40,12 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [RDTS (BIP110) Impact over time](https://x.com/mononautical/status/1988449182462660964/photo/1)
 - [The Cat - Non-Monetary UTXO Cleanup](https://github.com/bitcoin/bips/pull/2048)
 - [Jade Firmware PWN'd Again](https://x.com/darosior/status/2001269835305496835)
-
+- [Human Bitcoin Addresses](https://spiralbtc.substack.com/p/making-bitcoin-speak-human)
 - [Libsecp256k1 Performance vs. OpenSSL](https://delvingbitcoin.org/t/comparing-the-performance-of-ecdsa-signature-validation-in-openssl-vs-libsecp256k1-over-the-last-decade/2087)
 - [Quantum FUD is back](https://x.com/nic_carter/status/2001653606328487975)
 - [BIP 360 Update](https://delvingbitcoin.org/t/major-bip-360-update/2170)
 - [LUA based  policy](https://github.com/jasonfoura/bitcoin/pull/1)
-
+- [Ledger Bitcoin App Updater](https://x.com/Rob1Ham/status/2003137941619564683)
 - [Cluster Mempool (v31?)](https://github.com/bitcoin/bitcoin/pull/33629)
   - [Thread](https://x.com/murchandamus/status/1854678133896626293)  
 - [RDTS Softfork Proposal](https://github.com/bitcoin/bips/pull/2017)
