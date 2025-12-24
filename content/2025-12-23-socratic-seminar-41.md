@@ -67,6 +67,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Naka Rugged 6MM payout](https://x.com/HodlMagoo/status/1991679031625040183)
 - [Samuori Devs Jailed](https://www.justice.gov/usao-sdny/pr/founders-samourai-wallet-cryptocurrency-mixing-service-sentenced-five-and-four-years)
 - [Start9 Selling Treasury](https://x.com/start9labs/status/1985797112265654559)
+- [Trump Pardon Samuori Review](https://www.theblock.co/post/382630/trump-pardon-samourai-keonne-rodriguez)
 
 ## Tech news
 
