@@ -41,6 +41,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [The Cat - Non-Monetary UTXO Cleanup](https://github.com/bitcoin/bips/pull/2048)
 - [Jade Firmware PWN'd Again](https://x.com/darosior/status/2001269835305496835)
 - [Human Bitcoin Addresses](https://spiralbtc.substack.com/p/making-bitcoin-speak-human)
+ - [Possible mockups](https://x.com/OrangeSurfBTC/status/1999531873207205924) 
 - [Libsecp256k1 Performance vs. OpenSSL](https://delvingbitcoin.org/t/comparing-the-performance-of-ecdsa-signature-validation-in-openssl-vs-libsecp256k1-over-the-last-decade/2087)
 - [Quantum FUD is back](https://x.com/nic_carter/status/2001653606328487975)
 - [BIP 360 Update](https://delvingbitcoin.org/t/major-bip-360-update/2170)
