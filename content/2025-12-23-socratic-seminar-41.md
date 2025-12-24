@@ -36,6 +36,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ## Bitcoin Dev news
 
 - [New Mempool.space precise fee rates endpoint](https://x.com/OrangeSurfBTC/status/1995331334655586322)
+- [P2SH Puzzle Solved](https://www.reddit.com/r/Bitcoin/comments/acm9sw/solution_to_p2sh_puzzle/)
 - [Use slightly over integer fees](https://x.com/OrangeSurfBTC/status/1995340887921176785)
 - [RDTS (BIP110) Impact over time](https://x.com/mononautical/status/1988449182462660964/photo/1)
 - [The Cat - Non-Monetary UTXO Cleanup](https://github.com/bitcoin/bips/pull/2048)
