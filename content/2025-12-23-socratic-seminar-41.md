@@ -92,6 +92,9 @@ There are also many built in protocols
 - Internet
 - Time (1 hour+)
 
+### Sync
+  [Results](https://x.com/lopp/status/2003199171596365944)
+
 ### Installation
 
 You will need a host that acts like a server, this would be something ideally running Linux, but could be Windows or MacOS.
