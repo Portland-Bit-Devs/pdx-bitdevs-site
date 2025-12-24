@@ -68,6 +68,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ## Tech news
 
 - [DDR 4/5 Prices go Parabolic](https://pcpartpicker.com/trends/price/memory/)
+- [Raspberry pi5 Price Hikes](https://www.pcmag.com/news/facing-memory-shortage-raspberry-pi-hikes-prices-introduces-1gb-option)
 
 ## Libbitcoin Server
 
