@@ -39,7 +39,13 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Use slightly over integer fees](https://x.com/OrangeSurfBTC/status/1995340887921176785)
 - [RDTS (BIP110) Impact over time](https://x.com/mononautical/status/1988449182462660964/photo/1)
 - [The Cat - Non-Monetary UTXO Cleanup](https://github.com/bitcoin/bips/pull/2048)
+- [Jade Firmware PWN'd Again](https://x.com/darosior/status/2001269835305496835)
+
+- [Libsecp256k1 Performance vs. OpenSSL](https://delvingbitcoin.org/t/comparing-the-performance-of-ecdsa-signature-validation-in-openssl-vs-libsecp256k1-over-the-last-decade/2087)
+- [Quantum FUD is back](https://x.com/nic_carter/status/2001653606328487975)
+- [BIP 360 Update](https://delvingbitcoin.org/t/major-bip-360-update/2170)
 - [LUA based  policy](https://github.com/jasonfoura/bitcoin/pull/1)
+
 - [Cluster Mempool (v31?)](https://github.com/bitcoin/bitcoin/pull/33629)
   - [Thread](https://x.com/murchandamus/status/1854678133896626293)  
 - [RDTS Softfork Proposal](https://github.com/bitcoin/bips/pull/2017)
@@ -69,11 +75,20 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 The primary reason would be to not be dependent on another Bitcoin Core based client implementation.
 
+There are also many built in protocols
+
+- Stratum v2
+- Electrs
+- bitcoind
+- Web
+- ZMQ
+- Explorer
+
 ### Prep
 
 - Host (Computer)
 - Internet
-- Time (10 minutes - 1 hour)
+- Time (1 hour+)
 
 ### Installation
 
@@ -123,6 +138,16 @@ After doing the above steps we are able to run this command on Ubuntu
 ./install.sh --prefix=/home/<user>/development/libbitcoin/build/release_static/ --build-secp256k1 --build-boost --disable-shared
 ```
 
-### running
+### Running
 
-Out of the box most things don't seem to work overall. The first is the suggested config file is out of date use [Config for v4.0](https://github.com/libbitcoin/libbitcoin-node/blob/105388e012f0d87ea670c56f748619bb532aa6f3/src/parser.cpp#L697)
+Out of the box most things don't seem to work overall. The first is the suggested config file is out of date use [Config for v4.0](https://github.com/libbitcoin/libbitcoin-node/blob/105388e012f0d87ea670c56f748619bb532aa6f3/src/parser.cpp#L697).
+
+You can start libbitcoin with `./bn` or add your config file with `./bn --config ./bn.cfg` where bn.cfg is your configuration file.
+
+### Problems
+
+1. Just stops syncing ...
+2. Fresh Ubuntu 24.04 will not build without Segfault
+3. Config isn't properly documented
+4. All connections are broken on startup?
+5. Disk full error on Ubuntu startup
