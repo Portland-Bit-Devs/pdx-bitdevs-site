@@ -39,6 +39,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Use slightly over integer fees](https://x.com/OrangeSurfBTC/status/1995340887921176785)
 - [RDTS (BIP110) Impact over time](https://x.com/mononautical/status/1988449182462660964/photo/1)
 - [The Cat - Non-Monetary UTXO Cleanup](https://github.com/bitcoin/bips/pull/2048)
+- [LUA based  policy](https://github.com/jasonfoura/bitcoin/pull/1)
 - [Cluster Mempool (v31?)](https://github.com/bitcoin/bitcoin/pull/33629)
   - [Thread](https://x.com/murchandamus/status/1854678133896626293)  
 - [RDTS Softfork Proposal](https://github.com/bitcoin/bips/pull/2017)
