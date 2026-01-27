@@ -38,8 +38,15 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - [Repo](https://github.com/portlandhodl/windfish.git)
 [Bitcoin Core Miniscript FFI](https://x.com/PortlandHODL/status/2008119128146755911)
   - [Repo](https://github.com/portlandhodl/rust-bitcoin-core-miniscript-ffi)
+[Citrea Goes Live](https://x.com/citrea_xyz/status/2016149582942495044)
+[TX_HASH assigned BIP 346](https://github.com/bitcoin/bips/blob/master/bip-0346.md)
+[Feature Negotiation BIP 434](https://github.com/bitcoin/bips/blob/master/bip-0434.md)
+[FIBRE - Ressurection](https://x.com/lclhostresearch/status/2014485397569708074)
+[Binary Output Descriptors BIP 391](https://github.com/bitcoin/bips/pull/1548)
+[Silent Payment Electrs](https://github.com/sparrowwallet/frigate)
+[Rust Bitcoin - Fix | Duplicate Inputs](https://github.com/rust-bitcoin/rust-bitcoin/pull/5402)
 
--
+
 
 ## Bitcoin General News
 
