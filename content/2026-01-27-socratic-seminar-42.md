@@ -32,6 +32,12 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - **7:00pm - 8:00pm:** Developer Topics and Discussion
 
 ## Bitcoin Dev News
+[Liquid Pegin Tool](https://x.com/i/status/2015856426258935986)
+  - [Repo](https://github.com/aeonBTC/AutoLiquid)
+[Mempool Editor](https://x.com/PortlandHODL/status/2008841485433889145)
+  - [Repo](https://github.com/portlandhodl/windfish.git)
+[Bitcoin Core Miniscript FFI](https://x.com/PortlandHODL/status/2008119128146755911)
+  - [Repo](https://github.com/portlandhodl/rust-bitcoin-core-miniscript-ffi)
 
 -
 
