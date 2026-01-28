@@ -45,8 +45,13 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 [Binary Output Descriptors BIP 391](https://github.com/bitcoin/bips/pull/1548)
 [Silent Payment Electrs](https://github.com/sparrowwallet/frigate)
 [Rust Bitcoin - Fix | Duplicate Inputs](https://github.com/rust-bitcoin/rust-bitcoin/pull/5402)
-
-
+[Mutation Testing](https://delvingbitcoin.org/t/incremental-mutation-testing-in-the-bitcoin-core/2197)
+[Constant Time UTXO Database](https://delvingbitcoin.org/t/hornet-utxo-1-a-custom-constant-time-highly-parallel-utxo-database/2201)
+[Bitcoin Core Wallet Migration Bug](https://bitcoincore.org/en/2026/01/05/wallet-migration-bug/)
+  - [Issue](https://github.com/bitcoin/bitcoin/issues/34128)
+  - [Fix](https://github.com/bitcoin/bitcoin/pull/34156)
+[Request - BIP360](https://bip360.org/bip360.html)
+[Sparrow Creator - Proposal Silent Payments](https://github.com/bitcoin/bips/pull/2047)
 
 ## Bitcoin General News
 
