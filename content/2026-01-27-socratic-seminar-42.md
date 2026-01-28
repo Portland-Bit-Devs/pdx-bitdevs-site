@@ -47,9 +47,22 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
    - Injection and fun
    - Private Mempool?
 [Rust Bitcoin - Fix | Duplicate Inputs](https://github.com/rust-bitcoin/rust-bitcoin/pull/5402)
+  - Notes
+    - Applies to transaction SERDE (Serialize / Deserialize)
 [Bitcoin Core Miniscript FFI](https://x.com/PortlandHODL/status/2008119128146755911)
   - [Repo](https://github.com/portlandhodl/rust-bitcoin-core-miniscript-ffi)
+  - Notes
+    - Uses the latest Bitcoin Core V30.2
+    - Good for cross checking and validation or a direct replacement for descriptor logic in Rust
+    - Safe'ish unsafe
+    - Great for fuzzing and finding divergences in implementations
+    - Crates.io (Why you should use it)
 [Citrea Goes Live](https://x.com/citrea_xyz/status/2016149582942495044)
+  - Notes
+    - I still have not got credit for my Testnet Pegin 😂
+    - Wallet list is pretty bad
+    - Whole coin numbers must be used for Pegin (https://citrea.xyz/bridge)
+    - Docs (https://docs.citrea.xyz/developer-documentation/clementine-cli)
 [TX_HASH assigned BIP 346](https://github.com/bitcoin/bips/blob/master/bip-0346.md)
 [Feature Negotiation BIP 434](https://github.com/bitcoin/bips/blob/master/bip-0434.md)
 [FIBRE - Ressurection](https://x.com/lclhostresearch/status/2014485397569708074)
@@ -65,6 +78,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 [Sparrow Creator - Proposal Silent Payments](https://github.com/bitcoin/bips/pull/2047)
 [LIBSECP256K1 0.7.1 Released](https://github.com/bitcoin-core/secp256k1/blob/master/CHANGELOG.md)
 [Unbreaking Testnet 4](https://groups.google.com/g/bitcoindev/c/Jsv1VYpewuU)
+[Portland BitDevs Internal Topic: Covenants?](https://mempool.space/testnet4/tx/dca06078f6d42f90b895a9d7740cba5c7682731bf488176c887cf949912704a9)
 
 ## Bitcoin General News
 [Steak 'n Shake Buys More BTC](https://x.com/SteaknShake/status/2016208511802155197?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet)
