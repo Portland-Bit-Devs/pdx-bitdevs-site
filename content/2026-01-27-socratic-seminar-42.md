@@ -64,5 +64,5 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 -
 
 ## Tech News
-
--
+[DDR5 Prices Continue Relentless Climb](https://pcpartpicker.com/trends/price/memory/)
+[SSD Prices begin ascent](https://wccftech.com/the-ssd-markets-are-about-to-get-destroyed-with-nand-shortages/)
