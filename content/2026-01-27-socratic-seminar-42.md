@@ -34,6 +34,9 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ## Bitcoin Dev News
 [Liquid Pegin Tool](https://x.com/i/status/2015856426258935986)
   - [Repo](https://github.com/aeonBTC/AutoLiquid)
+  - Nots
+    - Python + RPC
+    - Looks Vibe Coded (Not bad for this application)
 [Mempool Editor](https://x.com/PortlandHODL/status/2008841485433889145)
   - [Repo](https://github.com/portlandhodl/windfish.git)
 [Bitcoin Core Miniscript FFI](https://x.com/PortlandHODL/status/2008119128146755911)
@@ -54,6 +57,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 [Sparrow Creator - Proposal Silent Payments](https://github.com/bitcoin/bips/pull/2047)
 
 ## Bitcoin General News
+[Steak 'n Shake Buys More BTC](https://x.com/SteaknShake/status/2016208511802155197?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet)
 
 -
 
