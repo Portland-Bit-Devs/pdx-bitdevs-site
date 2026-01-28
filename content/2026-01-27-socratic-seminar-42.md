@@ -34,11 +34,13 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ## Bitcoin Dev News
 [Liquid Pegin Tool](https://x.com/i/status/2015856426258935986)
   - [Repo](https://github.com/aeonBTC/AutoLiquid)
-  - Nots
+  - Notes
     - Python + RPC
     - Looks Vibe Coded (Not bad for this application)
+    - Does not give you a way to trustlessly peg out of Liquid
 [Mempool Editor](https://x.com/PortlandHODL/status/2008841485433889145)
   - [Repo](https://github.com/portlandhodl/windfish.git)
+[Rust Bitcoin - Fix | Duplicate Inputs](https://github.com/rust-bitcoin/rust-bitcoin/pull/5402)
 [Bitcoin Core Miniscript FFI](https://x.com/PortlandHODL/status/2008119128146755911)
   - [Repo](https://github.com/portlandhodl/rust-bitcoin-core-miniscript-ffi)
 [Citrea Goes Live](https://x.com/citrea_xyz/status/2016149582942495044)
@@ -47,7 +49,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 [FIBRE - Ressurection](https://x.com/lclhostresearch/status/2014485397569708074)
 [Binary Output Descriptors BIP 391](https://github.com/bitcoin/bips/pull/1548)
 [Silent Payment Electrs](https://github.com/sparrowwallet/frigate)
-[Rust Bitcoin - Fix | Duplicate Inputs](https://github.com/rust-bitcoin/rust-bitcoin/pull/5402)
+
 [Mutation Testing](https://delvingbitcoin.org/t/incremental-mutation-testing-in-the-bitcoin-core/2197)
 [Constant Time UTXO Database](https://delvingbitcoin.org/t/hornet-utxo-1-a-custom-constant-time-highly-parallel-utxo-database/2201)
 [Bitcoin Core Wallet Migration Bug](https://bitcoincore.org/en/2026/01/05/wallet-migration-bug/)
