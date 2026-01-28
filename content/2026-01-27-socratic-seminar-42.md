@@ -40,6 +40,12 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
     - Does not give you a way to trustlessly peg out of Liquid
 [Mempool Editor](https://x.com/PortlandHODL/status/2008841485433889145)
   - [Repo](https://github.com/portlandhodl/windfish.git)
+  - Notes
+   - Writen in rust
+   - Splits the TUI from the core logic
+   - Deserialze logic! (Go over this!)
+   - Injection and fun
+   - Private Mempool?
 [Rust Bitcoin - Fix | Duplicate Inputs](https://github.com/rust-bitcoin/rust-bitcoin/pull/5402)
 [Bitcoin Core Miniscript FFI](https://x.com/PortlandHODL/status/2008119128146755911)
   - [Repo](https://github.com/portlandhodl/rust-bitcoin-core-miniscript-ffi)
