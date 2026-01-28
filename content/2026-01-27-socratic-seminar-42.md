@@ -64,7 +64,12 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
     - Whole coin numbers must be used for Pegin (https://citrea.xyz/bridge)
     - Docs (https://docs.citrea.xyz/developer-documentation/clementine-cli)
 [TX_HASH assigned BIP 346](https://github.com/bitcoin/bips/blob/master/bip-0346.md)
+  - Notes
+    - Field Selection Stack Element
+    - Hash of that element set, does it match in the spending TXN
 [Feature Negotiation BIP 434](https://github.com/bitcoin/bips/blob/master/bip-0434.md)
+  - Notes
+    - Pior to this a new version had to be rolled out to get new protocol messages added
 [FIBRE - Ressurection](https://x.com/lclhostresearch/status/2014485397569708074)
 [Binary Output Descriptors BIP 391](https://github.com/bitcoin/bips/pull/1548)
 [Silent Payment Electrs](https://github.com/sparrowwallet/frigate)
