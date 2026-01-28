@@ -63,6 +63,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - [Fix](https://github.com/bitcoin/bitcoin/pull/34156)
 [Request - BIP360](https://bip360.org/bip360.html)
 [Sparrow Creator - Proposal Silent Payments](https://github.com/bitcoin/bips/pull/2047)
+[LIBSECP256K1 0.7.1 Released](https://github.com/bitcoin-core/secp256k1/blob/master/CHANGELOG.md)
 
 ## Bitcoin General News
 [Steak 'n Shake Buys More BTC](https://x.com/SteaknShake/status/2016208511802155197?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet)
