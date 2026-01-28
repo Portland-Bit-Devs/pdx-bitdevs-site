@@ -32,24 +32,25 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - **7:00pm - 8:00pm:** Developer Topics and Discussion
 
 ## Bitcoin Dev News
-[Liquid Pegin Tool](https://x.com/i/status/2015856426258935986)
+
+- [Liquid Pegin Tool](https://x.com/i/status/2015856426258935986)
   - [Repo](https://github.com/aeonBTC/AutoLiquid)
   - Notes
     - Python + RPC
     - Looks Vibe Coded (Not bad for this application)
     - Does not give you a way to trustlessly peg out of Liquid
-[Mempool Editor](https://x.com/PortlandHODL/status/2008841485433889145)
+- [Mempool Editor](https://x.com/PortlandHODL/status/2008841485433889145)
   - [Repo](https://github.com/portlandhodl/windfish.git)
   - Notes
-   - Writen in rust
-   - Splits the TUI from the core logic
-   - Deserialze logic! (Go over this!)
-   - Injection and fun
-   - Private Mempool?
-[Rust Bitcoin - Fix | Duplicate Inputs](https://github.com/rust-bitcoin/rust-bitcoin/pull/5402)
+    - Written in rust
+    - Splits the TUI from the core logic
+    - Deserialize logic! (Go over this!)
+    - Injection and fun
+    - Private Mempool?
+- [Rust Bitcoin - Fix | Duplicate Inputs](https://github.com/rust-bitcoin/rust-bitcoin/pull/5402)
   - Notes
     - Applies to transaction SERDE (Serialize / Deserialize)
-[Bitcoin Core Miniscript FFI](https://x.com/PortlandHODL/status/2008119128146755911)
+- [Bitcoin Core Miniscript FFI](https://x.com/PortlandHODL/status/2008119128146755911)
   - [Repo](https://github.com/portlandhodl/rust-bitcoin-core-miniscript-ffi)
   - Notes
     - Uses the latest Bitcoin Core V30.2
@@ -57,39 +58,51 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
     - Safe'ish unsafe
     - Great for fuzzing and finding divergences in implementations
     - Crates.io (Why you should use it)
-[Citrea Goes Live](https://x.com/citrea_xyz/status/2016149582942495044)
+- [Citrea Goes Live](https://x.com/citrea_xyz/status/2016149582942495044)
   - Notes
     - I still have not got credit for my Testnet Pegin 😂
     - Wallet list is pretty bad
     - Whole coin numbers must be used for Pegin (https://citrea.xyz/bridge)
     - Docs (https://docs.citrea.xyz/developer-documentation/clementine-cli)
-[TX_HASH assigned BIP 346](https://github.com/bitcoin/bips/blob/master/bip-0346.md)
+- [TX_HASH assigned BIP 346](https://github.com/bitcoin/bips/blob/master/bip-0346.md)
   - Notes
     - Field Selection Stack Element
     - Hash of that element set, does it match in the spending TXN
-[Feature Negotiation BIP 434](https://github.com/bitcoin/bips/blob/master/bip-0434.md)
+- [Feature Negotiation BIP 434](https://github.com/bitcoin/bips/blob/master/bip-0434.md)
   - Notes
-    - Pior to this a new version had to be rolled out to get new protocol messages added
-[FIBRE - Ressurection](https://x.com/lclhostresearch/status/2014485397569708074)
-[Binary Output Descriptors BIP 391](https://github.com/bitcoin/bips/pull/1548)
-[Silent Payment Electrs](https://github.com/sparrowwallet/frigate)
-
-[Mutation Testing](https://delvingbitcoin.org/t/incremental-mutation-testing-in-the-bitcoin-core/2197)
-[Constant Time UTXO Database](https://delvingbitcoin.org/t/hornet-utxo-1-a-custom-constant-time-highly-parallel-utxo-database/2201)
-[Bitcoin Core Wallet Migration Bug](https://bitcoincore.org/en/2026/01/05/wallet-migration-bug/)
+    - Prior to this a new version had to be rolled out to get new protocol messages added
+    - Size limits imposed
+    - Allows for compat longterm with other node without partitioning the network
+- [FIBRE - Resurrection](https://x.com/lclhostresearch/status/2014485397569708074)
+  - Notes
+    - Bitcoin Core Fork (v30.0)
+    - FEC encoding
+    - UDP Peer Multicast
+    - https://en.wikipedia.org/wiki/Multicast
+- [Binary Output Descriptors BIP 391](https://github.com/bitcoin/bips/pull/1548)
+  - Notes
+    - Really made for machine to machine descriptor transport
+    - Add headers
+- [Silent Payment Electrs](https://github.com/sparrowwallet/frigate)
+- [Mutation Testing](https://delvingbitcoin.org/t/incremental-mutation-testing-in-the-bitcoin-core/2197)
+  - Notes
+    - [Fuzzing](https://github.com/bitcoinfuzz/bitcoinfuzz)
+- [Constant Time UTXO Database](https://delvingbitcoin.org/t/hornet-utxo-1-a-custom-constant-time-highly-parallel-utxo-database/2201)
+  - Notes this is largely why UTXO set bloat will not be an issue long term
+- [Bitcoin Core Wallet Migration Bug](https://bitcoincore.org/en/2026/01/05/wallet-migration-bug/)
   - [Issue](https://github.com/bitcoin/bitcoin/issues/34128)
   - [Fix](https://github.com/bitcoin/bitcoin/pull/34156)
-[Request - BIP360](https://bip360.org/bip360.html)
-[Sparrow Creator - Proposal Silent Payments](https://github.com/bitcoin/bips/pull/2047)
-[LIBSECP256K1 0.7.1 Released](https://github.com/bitcoin-core/secp256k1/blob/master/CHANGELOG.md)
-[Unbreaking Testnet 4](https://groups.google.com/g/bitcoindev/c/Jsv1VYpewuU)
-[Portland BitDevs Internal Topic: Covenants?](https://mempool.space/testnet4/tx/dca06078f6d42f90b895a9d7740cba5c7682731bf488176c887cf949912704a9)
+- [Request - BIP360](https://bip360.org/bip360.html)
+- [Sparrow Creator - Proposal Silent Payments](https://github.com/bitcoin/bips/pull/2047)
+- [LIBSECP256K1 0.7.1 Released](https://github.com/bitcoin-core/secp256k1/blob/master/CHANGELOG.md)
+- [Unbreaking Testnet 4](https://groups.google.com/g/bitcoindev/c/Jsv1VYpewuU)
+- [Portland BitDevs Internal Topic: Covenants?](https://mempool.space/testnet4/tx/dca06078f6d42f90b895a9d7740cba5c7682731bf488176c887cf949912704a9)
 
 ## Bitcoin General News
-[Steak 'n Shake Buys More BTC](https://x.com/SteaknShake/status/2016208511802155197?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet)
 
--
+- [Steak 'n Shake Buys More BTC](https://x.com/SteaknShake/status/2016208511802155197?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet)
 
 ## Tech News
-[DDR5 Prices Continue Relentless Climb](https://pcpartpicker.com/trends/price/memory/)
-[SSD Prices begin ascent](https://wccftech.com/the-ssd-markets-are-about-to-get-destroyed-with-nand-shortages/)
+
+- [DDR5 Prices Continue Relentless Climb](https://pcpartpicker.com/trends/price/memory/)
+- [SSD Prices begin ascent](https://wccftech.com/the-ssd-markets-are-about-to-get-destroyed-with-nand-shortages/)
