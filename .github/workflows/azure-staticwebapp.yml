@@ -21,9 +21,8 @@ on:
 
 # Environment variables available to all jobs and steps in this workflow
 env:
-  APP_LOCATION: "/" # location of your client code
+  APP_LOCATION: "public" # location of build output (Zola builds to public/)
   API_LOCATION: "api" # location of your api source code - optional
-  APP_ARTIFACT_LOCATION: "public" # location of client code build output
   AZURE_STATIC_WEB_APPS_API_TOKEN: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }} # secret containing deployment token for your static web app
 
 permissions:
@@ -67,7 +66,7 @@ jobs:
           ###### Repository/Build Configurations - These values can be configured to match you app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           api_location: ${{ env.API_LOCATION }}
-          app_location: ${{ env.APP_ARTIFACT_LOCATION }}
+          app_location: ${{ env.APP_LOCATION }}
           output_location: ""
           skip_app_build: true
           ###### End of Repository/Build Configurations ######
