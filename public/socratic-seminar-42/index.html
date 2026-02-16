@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>
+        Portland BitDevs
+    </title>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="Site">
+
+    <header class="Header">
+        <div class="Header-inner">
+            <div class="Header-logo">
+                <a href="/">Portland BitDevs</a>
+            </div>
+            <nav class="Header-nav">
+                <a href="/about">About</a>
+                <a href="/blog">Blog</a>
+                <a href="/support" target="_blank" rel="noopener nofollow">Support</a>
+                <a href="https:&#x2F;&#x2F;www.meetup.com&#x2F;portlandbitdevs&#x2F;" target="_blank" rel="noopener nofollow">Meetup</a>
+                <a href="https:&#x2F;&#x2F;t.me&#x2F;+hk_V3SDCnDE1MWNh" target="_blank" rel="noopener nofollow">Telegram</a>
+            </nav>
+        </div>
+        <div class="Header-border">
+            ==============================================================================================================================================================
+        </div>
+    </header>
+
+    
+<section>
+    <div class="Post">
+        <h1 class="Post-title">PDX BitDevs Socratic Seminar #42</h1>
+        <div class="Post-info">
+            <span>2026-01-27</span>
+            
+        </div>
+        
+
+        <div class="Post-content"><h2 id="announcements">Announcements</h2>
+<p>Please join us for our next Socratic Seminar. A special thank you to our host <a href="https://dicksprimalburger.com/" data-no-summary>Primal Burger</a>, for the event space. Please support them by buying their delicious food or a beverage.</p>
+<p>If you can't make it to the main event please join us at Lutz Tavern around 9PM <strong><a href="https://www.lutztavern.com/" data-no-summary>here</a>.</strong></p>
+<h3 id="special-thanks-mentions">Special Thanks | Mentions</h3>
+<ul>
+<li>Thank you to everyone who shows up each month!</li>
+</ul>
+<h3 id="rules">Rules</h3>
+<ul>
+<li>Respect people's privacy</li>
+<li><a href="https://www.chathamhouse.org/about-us/chatham-house-rule">Chatham House Rules</a></li>
+<li>Interaction and asking questions are encouraged!</li>
+</ul>
+<h3 id="requests">Requests</h3>
+<ul>
+<li>A guest speaker for February 2026</li>
+</ul>
+<h3 id="schedule">Schedule</h3>
+<ul>
+<li><strong>6:00pm - 6:30pm:</strong> Arrive, socialize, and grab some food.</li>
+<li><strong>6:30pm - 7:00pm:</strong> Libitcoin Discussion + Demo</li>
+<li><strong>7:00pm - 8:00pm:</strong> Developer Topics and Discussion</li>
+</ul>
+<h2 id="bitcoin-dev-news">Bitcoin Dev News</h2>
+<ul>
+<li><a href="https://x.com/i/status/2015856426258935986">Liquid Pegin Tool</a>
+<ul>
+<li><a href="https://github.com/aeonBTC/AutoLiquid">Repo</a></li>
+<li>Notes
+<ul>
+<li>Python + RPC</li>
+<li>Looks Vibe Coded (Not bad for this application)</li>
+<li>Does not give you a way to trustlessly peg out of Liquid</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://x.com/PortlandHODL/status/2008841485433889145">Mempool Editor</a>
+<ul>
+<li><a href="https://github.com/portlandhodl/windfish.git">Repo</a></li>
+<li>Notes
+<ul>
+<li>Written in rust</li>
+<li>Splits the TUI from the core logic</li>
+<li>Deserialize logic! (Go over this!)</li>
+<li>Injection and fun</li>
+<li>Private Mempool?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/rust-bitcoin/rust-bitcoin/pull/5402">Rust Bitcoin - Fix | Duplicate Inputs</a>
+<ul>
+<li>Notes
+<ul>
+<li>Applies to transaction SERDE (Serialize / Deserialize)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://x.com/PortlandHODL/status/2008119128146755911">Bitcoin Core Miniscript FFI</a>
+<ul>
+<li><a href="https://github.com/portlandhodl/rust-bitcoin-core-miniscript-ffi">Repo</a></li>
+<li>Notes
+<ul>
+<li>Uses the latest Bitcoin Core V30.2</li>
+<li>Good for cross checking and validation or a direct replacement for descriptor logic in Rust</li>
+<li>Safe'ish unsafe</li>
+<li>Great for fuzzing and finding divergences in implementations</li>
+<li>Crates.io (Why you should use it)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://x.com/citrea_xyz/status/2016149582942495044">Citrea Goes Live</a>
+<ul>
+<li>Notes
+<ul>
+<li>I still have not got credit for my Testnet Pegin 😂</li>
+<li>Wallet list is pretty bad</li>
+<li>Whole coin numbers must be used for Pegin (https://citrea.xyz/bridge)</li>
+<li>Docs (https://docs.citrea.xyz/developer-documentation/clementine-cli)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/bitcoin/bips/blob/master/bip-0346.md">TX_HASH assigned BIP 346</a>
+<ul>
+<li>Notes
+<ul>
+<li>Field Selection Stack Element</li>
+<li>Hash of that element set, does it match in the spending TXN</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/bitcoin/bips/blob/master/bip-0434.md">Feature Negotiation BIP 434</a>
+<ul>
+<li>Notes
+<ul>
+<li>Prior to this a new version had to be rolled out to get new protocol messages added</li>
+<li>Size limits imposed</li>
+<li>Allows for compat longterm with other node without partitioning the network</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://x.com/lclhostresearch/status/2014485397569708074">FIBRE - Resurrection</a>
+<ul>
+<li>Notes
+<ul>
+<li>Bitcoin Core Fork (v30.0)</li>
+<li>FEC encoding</li>
+<li>UDP Peer Multicast</li>
+<li>https://en.wikipedia.org/wiki/Multicast</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/bitcoin/bips/pull/1548">Binary Output Descriptors BIP 391</a>
+<ul>
+<li>Notes
+<ul>
+<li>Really made for machine to machine descriptor transport</li>
+<li>Add headers</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/sparrowwallet/frigate">Silent Payment Electrs</a></li>
+<li><a href="https://delvingbitcoin.org/t/incremental-mutation-testing-in-the-bitcoin-core/2197">Mutation Testing</a>
+<ul>
+<li>Notes
+<ul>
+<li><a href="https://github.com/bitcoinfuzz/bitcoinfuzz">Fuzzing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://delvingbitcoin.org/t/hornet-utxo-1-a-custom-constant-time-highly-parallel-utxo-database/2201">Constant Time UTXO Database</a>
+<ul>
+<li>Notes this is largely why UTXO set bloat will not be an issue long term</li>
+</ul>
+</li>
+<li><a href="https://bitcoincore.org/en/2026/01/05/wallet-migration-bug/">Bitcoin Core Wallet Migration Bug</a>
+<ul>
+<li><a href="https://github.com/bitcoin/bitcoin/issues/34128">Issue</a></li>
+<li><a href="https://github.com/bitcoin/bitcoin/pull/34156">Fix</a></li>
+</ul>
+</li>
+<li><a href="https://bip360.org/bip360.html">Request - BIP360</a></li>
+<li><a href="https://github.com/bitcoin/bips/pull/2047">Sparrow Creator - Proposal Silent Payments</a></li>
+<li><a href="https://github.com/bitcoin-core/secp256k1/blob/master/CHANGELOG.md">LIBSECP256K1 0.7.1 Released</a></li>
+<li><a href="https://groups.google.com/g/bitcoindev/c/Jsv1VYpewuU">Unbreaking Testnet 4</a></li>
+<li><a href="https://mempool.space/testnet4/tx/dca06078f6d42f90b895a9d7740cba5c7682731bf488176c887cf949912704a9">Portland BitDevs Internal Topic: Covenants?</a></li>
+</ul>
+<h2 id="bitcoin-general-news">Bitcoin General News</h2>
+<ul>
+<li><a href="https://x.com/SteaknShake/status/2016208511802155197?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet">Steak 'n Shake Buys More BTC</a></li>
+</ul>
+<h2 id="tech-news">Tech News</h2>
+<ul>
+<li><a href="https://pcpartpicker.com/trends/price/memory/">DDR5 Prices Continue Relentless Climb</a></li>
+<li><a href="https://wccftech.com/the-ssd-markets-are-about-to-get-destroyed-with-nand-shortages/">SSD Prices begin ascent</a></li>
+</ul>
+</div>
+    </div>
+</section>
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://www.schema.org",
+  "@type": "LocalBusiness",
+  "name": "Portland BitDevs",
+  "url": "https://portlandbitdevs.org/",
+  "description": "Portland BitDevs is a community in the Portland, Oregon area for those interested in discussing and participating in the research and development of Bitcoin and related protocols and software.",
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Eddy ..."
+    },
+    {
+      "@type": "Person",
+      "name": "Eric ..."
+    },
+    {
+      "@type": "Person",
+      "name": "Portland HODL."
+    },
+    {
+      "@type": "Person",
+      "name": "Andrew Chalkley"
+    }
+  ],
+  "sponsor": [
+    {
+      "@type": "Corporation",
+      "name": "Bitcoin Is For Everyone",
+      "url": "https://bitcoinisforeveryone.com/",
+      "sameAs": "https://x.com/BTCisforEvery1"
+    }
+  ],
+  "member": [
+    {
+      "@type": "Person",
+      "name": "Jon Austen"
+    },
+    {
+      "@type": "Person",
+      "name": "Add Yourself"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Portland",
+    "addressRegion": "Oregon",
+    "addressCountry": "United States of America"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Organizer",
+    "email": "none@..."
+  }
+}
+</script>
+
+    <footer class="Footer">
+        <div class="Footer-border">
+            ==============================================================================================================================================================
+        </div>
+        <div class="Footer-inner">
+            <div class="Footer-source">
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;Portland-Bit-Devs&#x2F;" target="_blank"
+                   rel="noopener nofollow">Source available on Github</a>
+            </div>
+            <div class="Footer-rss">
+                <a href="/rss.xml">RSS Feed</a>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+</body>
+
+</html>
