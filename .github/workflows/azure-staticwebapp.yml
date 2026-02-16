@@ -42,6 +42,11 @@ jobs:
         with:
           submodules: true
 
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.111.3'
+
       # Install Zola
       - name: Install Zola Framework
         run: |
