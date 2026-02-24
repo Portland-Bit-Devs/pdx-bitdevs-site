@@ -29,23 +29,23 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 - **6:00pm - 6:30pm:** Arrive, socialize, and grab some food.
 - **6:30pm - 7:00pm:** Member Presentation
- - [Opportunity Cost](https://www.opportunitycost.app/)
- - [Bitcoin Products](https://www.bitcoinproducts.com/)
+    - [Opportunity Cost](https://www.opportunitycost.app/)
+    - [Bitcoin Products](https://www.bitcoinproducts.com/)
 - **7:00pm - 8:00pm:** Developer Topics and Discussion
 
 ## Bitcoin Dev News
-[Bitcoin Core v31.0 Announced](https://github.com/bitcoin/bitcoin/issues/33607)
- - [Fanquake X](https://x.com/fanquake/status/2026006073686016084?s=20)
- - [Mempool Changes](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes-33629.md)
- - [Outstanding TODOs](https://github.com/bitcoin/bitcoin/milestone/74)
-[Mempool Clears](https://x.com/mononautical/status/2023303999743730139)
-[BIP-110 Consensus Bugs](https://x.com/L0RINC/status/2022268491403763855)
- - [Disclosure](https://github.com/bitcoinknots/bitcoin/pull/238#issuecomment-3896624715)
- - [Secondary AI based audit discovered potential bugs as well](https://x.com/defenwycke/status/2024543013960094205?s=20)
-[IBIS Wallet Release](https://x.com/aeonBTC/status/2024218454153449500?s=20)
-[Multiprocess Writeup IPC Mining Interface](https://github.com/ismaelsadeeq/libmultiprocess/blob/experimentation/example/analytics.md)
+- [Bitcoin Core v31.0 Announced](https://github.com/bitcoin/bitcoin/issues/33607)
+    - [Fanquake X](https://x.com/fanquake/status/2026006073686016084?s=20)
+    - [Mempool Changes](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes-33629.md)
+    - [Outstanding TODOs](https://github.com/bitcoin/bitcoin/milestone/74)
+- [Mempool Clears](https://x.com/mononautical/status/2023303999743730139)
+- [BIP-110 Consensus Bugs](https://x.com/L0RINC/status/2022268491403763855)
+    - [Disclosure](https://github.com/bitcoinknots/bitcoin/pull/238#issuecomment-3896624715)
+    - [Secondary AI based audit discovered potential bugs as well](https://x.com/defenwycke/status/2024543013960094205?s=20)
+- [IBIS Wallet Release](https://x.com/aeonBTC/status/2024218454153449500?s=20)
+- [Multiprocess Writeup IPC Mining Interface](https://github.com/ismaelsadeeq/libmultiprocess/blob/experimentation/example/analytics.md)
 ## Bitcoin General News
 
 ## Tech News
-[METR Benchmark](https://metr.org/time-horizons/)
- - Doubling of AI capacity in 4 months
+- [METR Benchmark](https://metr.org/time-horizons/)
+    - Doubling of AI capacity in 4 months
