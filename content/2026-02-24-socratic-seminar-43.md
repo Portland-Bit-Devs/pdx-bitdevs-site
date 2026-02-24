@@ -45,9 +45,14 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - [Secondary AI based audit discovered potential bugs as well](https://x.com/defenwycke/status/2024543013960094205?s=20)
 - [IBIS Wallet Release](https://x.com/aeonBTC/status/2024218454153449500?s=20)
 - [Multiprocess Writeup IPC Mining Interface](https://github.com/ismaelsadeeq/libmultiprocess/blob/experimentation/example/analytics.md)
+- [AI Review for Bitcoin Projects](https://delvingbitcoin.org/t/using-ai-tooling-for-code-review/2277)
+
 ## Bitcoin General News
+- [OP_RETURN Report - Orange Surf](https://research.mempool.space/opreturn-report/)
+  - 3 Waves
+  - Total volume of OP_RETURN by bytes is not notably dfferent after V30 release
+  - Nonstandard OP_RETURNs have by and large novel and are barely visible on the graph
 
 ## Tech News
-
 - [METR Benchmark](https://metr.org/time-horizons/)
   - Doubling of AI capacity in 4 months
