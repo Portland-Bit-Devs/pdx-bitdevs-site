@@ -41,8 +41,10 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
     [Mempool Clears](https://x.com/mononautical/status/2023303999743730139)
     [BIP-110 Consensus Bugs](https://x.com/L0RINC/status/2022268491403763855)
         - [Disclosure](https://github.com/bitcoinknots/bitcoin/pull/238#issuecomment-3896624715)
-
-
+        - [Secondary AI based audit discovered potential bugs as well](https://x.com/defenwycke/status/2024543013960094205?s=20)
+    [IBIS Wallet Release](https://x.com/aeonBTC/status/2024218454153449500?s=20)
 ## Bitcoin General News
 
 ## Tech News
+    [METR Benchmark](https://metr.org/time-horizons/)
+        - Doubling of AI capacity in 4 months
