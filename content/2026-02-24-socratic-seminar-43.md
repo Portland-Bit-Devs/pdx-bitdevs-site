@@ -39,6 +39,8 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
         - [Mempool Changes](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes-33629.md)
         - [Outstanding TODOs](https://github.com/bitcoin/bitcoin/milestone/74)
     [Mempool Clears](https://x.com/mononautical/status/2023303999743730139)
+    [BIP-110 Consensus Bugs](https://x.com/L0RINC/status/2022268491403763855)
+        - [Disclosure](https://github.com/bitcoinknots/bitcoin/pull/238#issuecomment-3896624715)
 
 
 ## Bitcoin General News
