@@ -28,12 +28,18 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ### Schedule
 
 - **6:00pm - 6:30pm:** Arrive, socialize, and grab some food.
-- **6:30pm - 7:00pm:**
+- **6:30pm - 7:00pm:** Member Presentation
  - [Opportunity Cost](https://www.opportunitycost.app/)
  - [Bitcoin Products](https://www.bitcoinproducts.com/)
 - **7:00pm - 8:00pm:** Developer Topics and Discussion
 
 ## Bitcoin Dev News
+    [Bitcoin Core v31.0 Announced](https://github.com/bitcoin/bitcoin/issues/33607)
+        - [Fanquake X](https://x.com/fanquake/status/2026006073686016084?s=20)
+        - [Mempool Changes](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes-33629.md)
+        - [Outstanding TODOs](https://github.com/bitcoin/bitcoin/milestone/74)
+    [Mempool Clears](https://x.com/mononautical/status/2023303999743730139)
+
 
 ## Bitcoin General News
 
