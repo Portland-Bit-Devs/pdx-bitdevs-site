@@ -43,6 +43,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
         - [Disclosure](https://github.com/bitcoinknots/bitcoin/pull/238#issuecomment-3896624715)
         - [Secondary AI based audit discovered potential bugs as well](https://x.com/defenwycke/status/2024543013960094205?s=20)
     [IBIS Wallet Release](https://x.com/aeonBTC/status/2024218454153449500?s=20)
+    [Multiprocess Writeup IPC Mining Interface](https://github.com/ismaelsadeeq/libmultiprocess/blob/experimentation/example/analytics.md)
 ## Bitcoin General News
 
 ## Tech News
