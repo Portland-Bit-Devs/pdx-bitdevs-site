@@ -63,7 +63,8 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [MARA - AI Through OpenRouter](https://x.com/cbspears/status/2036454290869346686)
 - [Production Ready - Alternate Client Impl Group](https://x.com/ProductionReady/status/2036080347918770272)
 - [Foundation Passport - 2FA](https://x.com/FOUNDATIONdvcs/status/2036495723299037278?s=20)
-
+- [Tether - MiningOS](https://mos.tether.io/)
+- [Coldcard Edge FW](https://x.com/COLDCARDwallet/status/2029684130938531965)
 ## Tech News
 - [PiPi Supply Chain Attack](https://x.com/karpathy/status/2036487306585268612?s=20)
   - [Official Details](https://futuresearch.ai/blog/litellm-pypi-supply-chain-attack/)
