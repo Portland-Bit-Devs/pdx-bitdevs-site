@@ -48,6 +48,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [AI Review for Bitcoin Projects](https://delvingbitcoin.org/t/using-ai-tooling-for-code-review/2277)
 - [0xB10C - Detecting DoS on the Bitcoin Network](https://x.com/btcplusplus/status/2036013331732156923?s=20)
 - [Electrum LN Network Graph Visualizer](https://x.com/ElectrumWallet/status/2036386666907161018?s=20)
+- [Robin Linus BiNo Hash](https://x.com/PortlandHODL/status/2026797604525453772?s=20)
 ## Bitcoin General News
 - [OP_RETURN Report - Orange Surf](https://research.mempool.space/opreturn-report/)
   - 3 Waves
