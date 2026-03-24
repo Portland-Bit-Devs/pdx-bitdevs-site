@@ -50,6 +50,8 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - [Fanquake X](https://x.com/fanquake/status/2026006073686016084?s=20)
   - [Mempool Changes](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes-33629.md)
   - [Outstanding TODOs](https://github.com/bitcoin/bitcoin/milestone/74)
+- [BIP446](https://github.com/bitcoin/bips/pull/1974)
+- [BIP448](https://github.com/bitcoin/bips/pull/1974)
 
 ## Bitcoin General News
 - [OP_RETURN Report - Orange Surf](https://research.mempool.space/opreturn-report/)
