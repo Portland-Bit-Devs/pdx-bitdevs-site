@@ -34,11 +34,6 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - **7:00pm - 8:00pm:** Developer Topics and Discussion
 
 ## Bitcoin Dev News
-
-- [Bitcoin Core v31.0 Announced](https://github.com/bitcoin/bitcoin/issues/33607)
-  - [Fanquake X](https://x.com/fanquake/status/2026006073686016084?s=20)
-  - [Mempool Changes](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes-33629.md)
-  - [Outstanding TODOs](https://github.com/bitcoin/bitcoin/milestone/74)
 - [Mempool Clears](https://x.com/mononautical/status/2023303999743730139)
 - [BIP-110 Consensus Bugs](https://x.com/L0RINC/status/2022268491403763855)
   - [Disclosure](https://github.com/bitcoinknots/bitcoin/pull/238#issuecomment-3896624715)
@@ -50,6 +45,12 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Electrum LN Network Graph Visualizer](https://x.com/ElectrumWallet/status/2036386666907161018?s=20)
 - [Robin Linus BiNo Hash](https://x.com/PortlandHODL/status/2026797604525453772?s=20)
 - [Robin Linus SagHash](https://x.com/robin_linus/status/2034889653464228240)
+- [Bitcoin Core v31.0 RC Testing Guide](https://github.com/bitcoin-core/bitcoin-devwiki/wiki/31.0-Release-Candidate-Testing-Guide)
+- [Bitcoin Core v31.0 Announced](https://github.com/bitcoin/bitcoin/issues/33607)
+  - [Fanquake X](https://x.com/fanquake/status/2026006073686016084?s=20)
+  - [Mempool Changes](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes-33629.md)
+  - [Outstanding TODOs](https://github.com/bitcoin/bitcoin/milestone/74)
+
 ## Bitcoin General News
 - [OP_RETURN Report - Orange Surf](https://research.mempool.space/opreturn-report/)
   - 3 Waves
@@ -60,6 +61,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - [In the Wild](https://x.com/2140data/status/2036438510349975761)
   - [NFC PushTX](https://x.com/BTCsessions/status/2036489587112157445)
 - [MARA - AI Through OpenRouter](https://x.com/cbspears/status/2036454290869346686)
+- [Production Ready - Alternate Client Impl Group](https://x.com/ProductionReady/status/2036080347918770272)
 
 ## Tech News
 - [PiPi Supply Chain Attack](https://x.com/karpathy/status/2036487306585268612?s=20)
