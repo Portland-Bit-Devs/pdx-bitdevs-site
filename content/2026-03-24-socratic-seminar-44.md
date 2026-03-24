@@ -65,6 +65,9 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Foundation Passport - 2FA](https://x.com/FOUNDATIONdvcs/status/2036495723299037278?s=20)
 - [Tether - MiningOS](https://mos.tether.io/)
 - [Coldcard Edge FW](https://x.com/COLDCARDwallet/status/2029684130938531965)
+- [Coldcard Edge FW Getting MuSig2](https://github.com/Coldcard/firmware/commits/new_edge/)
+- [Jade adds Lightning Payments](https://blog.blockstream.com/jade-lightning-payments-are-here/)
+- [Fibre Relaunched Official](https://lclhost.org/blog/fibre-resurrected/)
 ## Tech News
 - [PiPi Supply Chain Attack](https://x.com/karpathy/status/2036487306585268612?s=20)
   - [Official Details](https://futuresearch.ai/blog/litellm-pypi-supply-chain-attack/)
