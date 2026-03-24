@@ -65,3 +65,4 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [METR Benchmark](https://metr.org/time-horizons/)
   - Doubling of AI capacity in 4 months
 - [FCC Makes all Foreign Consumer Routers Require Conditional Approval](https://www.fcc.gov/document/fcc-updates-covered-list-include-foreign-made-consumer-routers)
+- [Microsoft Rust Training Docs](https://github.com/microsoft/RustTraining)
