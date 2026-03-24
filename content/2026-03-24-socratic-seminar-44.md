@@ -28,10 +28,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ### Schedule
 
 - **6:00pm - 6:30pm:** Arrive, socialize, and grab some food.
-- **6:30pm - 7:00pm:** Member Presentation
-    - [Opportunity Cost](https://www.opportunitycost.app/)
-    - [Bitcoin Products](https://www.bitcoinproducts.com/)
-- **7:00pm - 8:00pm:** Developer Topics and Discussion
+- **6:30pm - 8:00pm::** Developer Topics and Discussion
 
 ## Bitcoin Dev News
 - [Mempool Clears](https://x.com/mononautical/status/2023303999743730139)
@@ -83,7 +80,6 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Start9 Raising Prices](https://x.com/start9labs/status/2034371952182542642?s=20)
 - [Trezor Fault Injection Attacks](https://x.com/it4sec/status/2036536722763211086?s=20)
   - [Xbox One Hacked After 12 Years](https://thecybersecguru.com/news/xbox-one-hacked-boot-rom-exploit-bliss/)
-
 
 ## Tech News
 - [PiPi Supply Chain Attack](https://x.com/karpathy/status/2036487306585268612?s=20)
