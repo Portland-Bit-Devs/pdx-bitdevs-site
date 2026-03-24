@@ -31,11 +31,6 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - **6:30pm - 8:00pm::** Developer Topics and Discussion
 
 ## Bitcoin Dev News
-- [Mempool Clears](https://x.com/mononautical/status/2023303999743730139)
-- [BIP-110 Consensus Bugs](https://x.com/L0RINC/status/2022268491403763855)
-  - [Disclosure](https://github.com/bitcoinknots/bitcoin/pull/238#issuecomment-3896624715)
-  - [Secondary AI based audit discovered potential bugs as well](https://x.com/defenwycke/status/2024543013960094205?s=20)
-- [IBIS Wallet Release](https://x.com/aeonBTC/status/2024218454153449500?s=20)
 - [Multiprocess Writeup IPC Mining Interface](https://github.com/ismaelsadeeq/libmultiprocess/blob/experimentation/example/analytics.md)
 - [AI Review for Bitcoin Projects](https://delvingbitcoin.org/t/using-ai-tooling-for-code-review/2277)
 - [0xB10C - Detecting DoS on the Bitcoin Network](https://x.com/btcplusplus/status/2036013331732156923?s=20)
@@ -51,7 +46,9 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [BIP448](https://github.com/bitcoin/bips/pull/1974)
 - [Foundry 2 Block Reorg Win Streak](https://x.com/0xB10C/status/2036118084734349542)
 - [Ibis 3.0 Beta Tag](https://github.com/aeonBTC/IbisWallet/releases/tag/v3.0-beta)
-
+- [BIP-110 Consensus Bugs](https://x.com/L0RINC/status/2022268491403763855)
+  - [Disclosure](https://github.com/bitcoinknots/bitcoin/pull/238#issuecomment-3896624715)
+  - [Secondary AI based audit discovered potential bugs as well](https://x.com/defenwycke/status/2024543013960094205?s=20)
 
 ## LN Dev News
 - [Gossip Observer LN](https://github.com/jharveyb/gossip_observer)
