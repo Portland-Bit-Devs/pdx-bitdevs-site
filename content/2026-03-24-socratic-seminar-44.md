@@ -62,6 +62,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - [NFC PushTX](https://x.com/BTCsessions/status/2036489587112157445)
 - [MARA - AI Through OpenRouter](https://x.com/cbspears/status/2036454290869346686)
 - [Production Ready - Alternate Client Impl Group](https://x.com/ProductionReady/status/2036080347918770272)
+- [Foundation Passport - 2FA](https://x.com/FOUNDATIONdvcs/status/2036495723299037278?s=20)
 
 ## Tech News
 - [PiPi Supply Chain Attack](https://x.com/karpathy/status/2036487306585268612?s=20)
