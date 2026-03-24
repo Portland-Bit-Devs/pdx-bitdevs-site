@@ -59,6 +59,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [ColdCard MKV](https://x.com/COLDCARDwallet/status/2031356036356149746?s=20)
   - [In the Wild](https://x.com/2140data/status/2036438510349975761)
   - [NFC PushTX](https://x.com/BTCsessions/status/2036489587112157445)
+- [MARA - AI Through OpenRouter](https://x.com/cbspears/status/2036454290869346686)
 
 ## Tech News
 - [PiPi Supply Chain Attack](https://x.com/karpathy/status/2036487306585268612?s=20)
