@@ -79,6 +79,11 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Jade adds Lightning Payments](https://blog.blockstream.com/jade-lightning-payments-are-here/)
 - [Fibre Relaunched Official](https://lclhost.org/blog/fibre-resurrected/)
 - [Knots Node Counts and Spoofing](https://x.com/lopp/status/2036055358767292799)
+- [FutureBit Raising Prices](https://x.com/JStefanop1/status/2036510939487298016?s=20)
+- [Start9 Raising Prices](https://x.com/start9labs/status/2034371952182542642?s=20)
+- [Trezor Fault Injection Attacks](https://x.com/it4sec/status/2036536722763211086?s=20)
+  - [Xbox One Hacked After 12 Years](https://thecybersecguru.com/news/xbox-one-hacked-boot-rom-exploit-bliss/)
+
 
 ## Tech News
 - [PiPi Supply Chain Attack](https://x.com/karpathy/status/2036487306585268612?s=20)
