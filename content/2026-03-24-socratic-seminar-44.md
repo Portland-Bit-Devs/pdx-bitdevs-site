@@ -60,10 +60,6 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Splicing Ratified in LN](https://x.com/dusty_daemon/status/2036053303503536618)
 
 ## Bitcoin General News
-- [OP_RETURN Report - Orange Surf](https://research.mempool.space/opreturn-report/)
-  - 3 Waves
-  - Total volume of OP_RETURN by bytes is not notably dfferent after V30 release
-  - Nonstandard OP_RETURNs have by and large novel and are barely visible on the graph
 - [Quantum Testnet BTQ](https://bitcoinquantum.com/testnet)
 - [ColdCard MKV](https://x.com/COLDCARDwallet/status/2031356036356149746?s=20)
   - [In the Wild](https://x.com/2140data/status/2036438510349975761)
