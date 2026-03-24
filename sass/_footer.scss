@@ -15,11 +15,18 @@
     a {
       color: #333;
       opacity: 0.4;
+      transition: color 0.3s ease, opacity 0.3s ease;
 
       &:hover {
         color: $primary-color;
         opacity: 1;
       }
     }
+  }
+}
+
+html.dark-mode {
+  .Footer-inner a {
+    color: $dark-font-color;
   }
 }

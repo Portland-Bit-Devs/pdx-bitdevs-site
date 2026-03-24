@@ -2,10 +2,15 @@
 $body-font: 'Source Code Pro', monospace;
 $base-font-size: 16px;
 
-// Colors
+// Colors - Light Mode (default)
 $primary-color: #FF9900;
 $background-color: #FFF;
 $font-color: #333;
+
+// Colors - Dark Mode
+$dark-background-color: #1a1a1a;
+$dark-font-color: #e0e0e0;
+$dark-secondary-color: #888;
 
 // Screen size for responsiveness
 $small-screen: 400px;

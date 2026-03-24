@@ -4,6 +4,7 @@ html, body {
   line-height: 1.5;
   background-color: $background-color;
   color: $font-color;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   @media (max-width: $large-screen) {
     font-size: 14px;
@@ -15,6 +16,20 @@ html, body {
 
   @media (max-width: $small-screen) {
     font-size: 12px;
+  }
+}
+
+// Dark mode styles
+html.dark-mode, html.dark-mode body {
+  background-color: $dark-background-color;
+  color: $dark-font-color;
+}
+
+html.dark-mode a {
+  color: $primary-color;
+
+  &:hover {
+    color: lighten($primary-color, 10%);
   }
 }
 

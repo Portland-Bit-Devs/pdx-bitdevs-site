@@ -24,6 +24,7 @@
 
   &-nav {
     display: flex;
+    align-items: center;
     font-size: 1.3rem;
 
     @media (max-width: $small-screen) {
@@ -34,11 +35,57 @@
       color: #333;
       opacity: 0.4;
       margin-left: 1.5rem;
+      transition: color 0.3s ease, opacity 0.3s ease;
 
       &:hover {
         color: $primary-color;
         opacity: 1;
       }
+    }
+  }
+}
+
+// Dark mode toggle button
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1.5rem;
+  padding: 0.25rem;
+  font-size: 1.3rem;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+
+  @media (max-width: $small-screen) {
+    font-size: 1.1rem;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .icon-sun,
+  .icon-moon {
+    display: none;
+  }
+
+  .icon-moon {
+    display: inline;
+  }
+}
+
+html.dark-mode {
+  .Header-nav a {
+    color: $dark-font-color;
+  }
+
+  .dark-mode-toggle {
+    .icon-moon {
+      display: none;
+    }
+
+    .icon-sun {
+      display: inline;
     }
   }
 }
