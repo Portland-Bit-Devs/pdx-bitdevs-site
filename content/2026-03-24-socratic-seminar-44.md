@@ -61,6 +61,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ## Tech News
 - [PiPi Supply Chain Attack](https://x.com/karpathy/status/2036487306585268612?s=20)
   - [Official Details](https://futuresearch.ai/blog/litellm-pypi-supply-chain-attack/)
+  - [Video Explanation](https://x.com/IceSolst/status/2036506834228465832?s=20)
 - [METR Benchmark](https://metr.org/time-horizons/)
   - Doubling of AI capacity in 4 months
 - [FCC Makes all Foreign Consumer Routers Require Conditional Approval](https://www.fcc.gov/document/fcc-updates-covered-list-include-foreign-made-consumer-routers)
