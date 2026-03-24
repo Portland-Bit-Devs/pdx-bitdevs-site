@@ -46,6 +46,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - [Fanquake X](https://x.com/fanquake/status/2026006073686016084?s=20)
   - [Mempool Changes](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes-33629.md)
   - [Outstanding TODOs](https://github.com/bitcoin/bitcoin/milestone/74)
+  - [Add a "tx output spender" index](https://github.com/bitcoin/bitcoin/pull/24539)
 - [BIP446](https://github.com/bitcoin/bips/pull/1974)
 - [BIP448](https://github.com/bitcoin/bips/pull/1974)
 - [Foundry 2 Block Reorg Win Streak](https://x.com/0xB10C/status/2036118084734349542)
