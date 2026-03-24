@@ -1,5 +1,5 @@
 +++
-title = "PDX BitDevs Socratic Seminar #43"
+title = "PDX BitDevs Socratic Seminar #44"
 template = "post.html"
 [extra]
 meetup_id = ""
@@ -46,13 +46,18 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [IBIS Wallet Release](https://x.com/aeonBTC/status/2024218454153449500?s=20)
 - [Multiprocess Writeup IPC Mining Interface](https://github.com/ismaelsadeeq/libmultiprocess/blob/experimentation/example/analytics.md)
 - [AI Review for Bitcoin Projects](https://delvingbitcoin.org/t/using-ai-tooling-for-code-review/2277)
-
+- [0xB10C - Detecting DoS on the Bitcoin Network](https://x.com/btcplusplus/status/2036013331732156923?s=20)
 ## Bitcoin General News
 - [OP_RETURN Report - Orange Surf](https://research.mempool.space/opreturn-report/)
   - 3 Waves
   - Total volume of OP_RETURN by bytes is not notably dfferent after V30 release
   - Nonstandard OP_RETURNs have by and large novel and are barely visible on the graph
+- [Quantum Testnet BTQ](https://bitcoinquantum.com/testnet)
+- [ColdCard MKV](https://x.com/COLDCARDwallet/status/2031356036356149746?s=20)
+  - [In the Wild](https://x.com/2140data/status/2036438510349975761)
 
 ## Tech News
+- [PiPi Supply Chain Attack](https://x.com/karpathy/status/2036487306585268612?s=20)
+  - [Official Details](https://futuresearch.ai/blog/litellm-pypi-supply-chain-attack/)
 - [METR Benchmark](https://metr.org/time-horizons/)
   - Doubling of AI capacity in 4 months
