@@ -53,6 +53,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [BIP446](https://github.com/bitcoin/bips/pull/1974)
 - [BIP448](https://github.com/bitcoin/bips/pull/1974)
 - [Foundry 2 Block Reorg Win Streak](https://x.com/0xB10C/status/2036118084734349542)
+- [Ibis 3.0 Beta Tag](https://github.com/aeonBTC/IbisWallet/releases/tag/v3.0-beta)
 
 
 ## LN Dev News
@@ -88,4 +89,5 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Microsoft Rust Training Docs](https://github.com/microsoft/RustTraining)
 - [Linux Age Verification](https://x.com/LundukeJournal/status/2036515229127876894?s=20)
   - [Systemd](https://github.com/systemd/systemd/pull/40954)
+  - [Dissenters](https://x.com/LundukeJournal/status/2036523955842949277?s=20)
 - [Block Fires 40% (4000)](https://x.com/jack/status/2027129697092731343)
