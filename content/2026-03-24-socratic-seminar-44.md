@@ -70,6 +70,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - [In the Wild](https://x.com/2140data/status/2036438510349975761)
   - [NFC PushTX](https://x.com/BTCsessions/status/2036489587112157445)
 - [MARA - AI Through OpenRouter](https://x.com/cbspears/status/2036454290869346686)
+  - [Pod Discussion](https://x.com/blockspace/status/2036441402553319461)
 - [Production Ready - Alternate Client Impl Group](https://x.com/ProductionReady/status/2036080347918770272)
 - [Foundation Passport - 2FA](https://x.com/FOUNDATIONdvcs/status/2036495723299037278?s=20)
 - [Tether - MiningOS](https://mos.tether.io/)
