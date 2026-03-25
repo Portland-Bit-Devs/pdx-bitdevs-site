@@ -78,6 +78,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Start9 Raising Prices](https://x.com/start9labs/status/2034371952182542642?s=20)
 - [Trezor Fault Injection Attacks](https://x.com/it4sec/status/2036536722763211086?s=20)
   - [Xbox One Hacked After 12 Years](https://thecybersecguru.com/news/xbox-one-hacked-boot-rom-exploit-bliss/)
+  - [Secure UART](https://x.com/Riscure/status/2036541949943988497/photo/1)
 
 ## Tech News
 - [PiPi Supply Chain Attack](https://x.com/karpathy/status/2036487306585268612?s=20)
