@@ -32,6 +32,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ## Bitcoin Dev News
 [PQ Shrimps Signature Scheme](https://delvingbitcoin.org/t/shrimps-2-5-kb-post-quantum-signatures-across-multiple-stateful-devices/2355)
+[OP_NEXT Oblivious Signing](https://sigbash.com/opnext.html#/)
 
 ## LN Dev News
 
