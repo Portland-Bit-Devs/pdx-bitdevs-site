@@ -34,6 +34,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [PQ Shrimps Signature Scheme](https://delvingbitcoin.org/t/shrimps-2-5-kb-post-quantum-signatures-across-multiple-stateful-devices/2355)
 - [OP_NEXT Oblivious Signing](https://sigbash.com/opnext.html#/)
 - [Bitcoin Core V31 Released](https://bitcoincore.org/en/releases/31.0/)
+  - [New Mempool Design](https://github.com/bitcoin/bitcoin/issues/27677#eviction-mining-not-opposite)
 - [Stuck Mempool TXNs](https://mempool.space/signet/tx/6381f1c158ef36bc9fed122a0aac585049ef4a391d7f64fe17c4d60bf97b947d)
   - [Explanation](https://x.com/theinstagibbs/status/2046611637784715451?s=20)
 - [BIP361](https://www.bip361.org/)
@@ -41,6 +42,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Quantum Safe Bitcoin Transactions](https://github.com/avihu28/Quantum-Safe-Bitcoin-Transactions)
 - [CKCC Message File Signing](https://github.com/Coldcard/ckcc-protocol/pull/60)
 - [Project11 Quantum Contest](https://x.com/yuvadm/status/2047708266205995269)
+- [Frigate 1.4.0 Electrum with SP Support](https://damus.io/nevent1qqsrg3xsjwpt4d9g05rqy4vkzx5ysdffm40qtxntfr47y3annnfwpzgpp4mhxue69uhkummn9ekx7mqpz3mhxue69uhkummnw3ezummcw3ezuer9wcq3samnwvaz7tmjv4kxz7fwwdhx7un59eek7cmfv9kqz9rhwden5te0wfjkccte9ejxzmt4wvhxjmczyzl85553k5ew3wgc7twfs9yffz3n60sd5pmc346pdaemf363fuywvqcyqqqqqqgmgu9ev)
 
 ## LN Dev News
 - [Core Lightning CLN 26.04 Released](https://github.com/ElementsProject/lightning/releases/tag/v26.04)
