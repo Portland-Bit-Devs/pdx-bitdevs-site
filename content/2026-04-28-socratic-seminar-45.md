@@ -40,6 +40,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Slow Block Demo](https://delvingbitcoin.org/t/consensus-cleanup-demo-of-slow-blocks-on-signet/2367)
 - [Quantum Safe Bitcoin Transactions](https://github.com/avihu28/Quantum-Safe-Bitcoin-Transactions)
 - [CKCC Message File Signing](https://github.com/Coldcard/ckcc-protocol/pull/60)
+- [Project11 Quantum Contest](https://x.com/yuvadm/status/2047708266205995269)
 
 ## LN Dev News
 - [Core Lightning CLN 26.04 Released](https://github.com/ElementsProject/lightning/releases/tag/v26.04)
@@ -47,5 +48,6 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ## Bitcoin General News
 - [Passport Prime Shipping](https://x.com/throughnothing/status/2037606802280390815?s=20)
   - Discuss hands on review from Bitcoin Vegas 26
+- [New Bitkey Announced](https://bitkey.world/blog/meet-the-new-bitkey)
 
 ## Tech News
