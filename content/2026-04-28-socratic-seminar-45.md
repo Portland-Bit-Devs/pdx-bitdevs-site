@@ -36,6 +36,8 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 [Bitcoin Core V31 Released](https://bitcoincore.org/en/releases/31.0/)
 [Stuck Mempool TXNs](https://mempool.space/signet/tx/6381f1c158ef36bc9fed122a0aac585049ef4a391d7f64fe17c4d60bf97b947d)
  - [Explanation](https://x.com/theinstagibbs/status/2046611637784715451?s=20)
+[BIP361](https://www.bip361.org/)
+[Slow Block Demo](https://delvingbitcoin.org/t/consensus-cleanup-demo-of-slow-blocks-on-signet/2367)
 
 ## LN Dev News
 [Core Lightning CLN 26.04 Released](https://github.com/ElementsProject/lightning/releases/tag/v26.04)
