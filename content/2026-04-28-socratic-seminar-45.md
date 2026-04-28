@@ -40,9 +40,11 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [BIP361](https://www.bip361.org/)
 - [Slow Block Demo](https://delvingbitcoin.org/t/consensus-cleanup-demo-of-slow-blocks-on-signet/2367)
 - [Quantum Safe Bitcoin Transactions](https://github.com/avihu28/Quantum-Safe-Bitcoin-Transactions)
+  - [9xB10C Livestream](https://www.youtube.com/watch?v=Zx20r7QAtEM&t=1000s)
 - [CKCC Message File Signing](https://github.com/Coldcard/ckcc-protocol/pull/60)
 - [Project11 Quantum Contest](https://x.com/yuvadm/status/2047708266205995269)
 - [Frigate 1.4.0 Electrum with SP Support](https://damus.io/nevent1qqsrg3xsjwpt4d9g05rqy4vkzx5ysdffm40qtxntfr47y3annnfwpzgpp4mhxue69uhkummn9ekx7mqpz3mhxue69uhkummnw3ezummcw3ezuer9wcq3samnwvaz7tmjv4kxz7fwwdhx7un59eek7cmfv9kqz9rhwden5te0wfjkccte9ejxzmt4wvhxjmczyzl85553k5ew3wgc7twfs9yffz3n60sd5pmc346pdaemf363fuywvqcyqqqqqqgmgu9ev)
+- [Slipstream Maintenance Mode](https://slipstream.mara.com)
 
 ## LN Dev News
 - [Core Lightning CLN 26.04 Released](https://github.com/ElementsProject/lightning/releases/tag/v26.04)
@@ -52,5 +54,5 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Discuss hands on review from Bitcoin Vegas 26
 - [New Bitkey Announced](https://bitkey.world/blog/meet-the-new-bitkey)
   - [Product Page](https://bitkey.world/product)
-
+- [PortlandHODL MARA Resignation](https://x.com/PortlandHODL/status/2041864250873016673)
 ## Tech News
