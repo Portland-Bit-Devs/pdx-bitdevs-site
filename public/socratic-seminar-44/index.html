@@ -45,9 +45,9 @@
     
 <section>
     <div class="Post">
-        <h1 class="Post-title">PDX BitDevs Socratic Seminar #42</h1>
+        <h1 class="Post-title">PDX BitDevs Socratic Seminar #44</h1>
         <div class="Post-info">
-            <span>2026-01-27</span>
+            <span>2026-03-24</span>
             
         </div>
         
@@ -67,155 +67,109 @@
 </ul>
 <h3 id="requests">Requests</h3>
 <ul>
-<li>A guest speaker for February 2026</li>
+<li>A guest speaker for March 2026</li>
 </ul>
 <h3 id="schedule">Schedule</h3>
 <ul>
 <li><strong>6:00pm - 6:30pm:</strong> Arrive, socialize, and grab some food.</li>
-<li><strong>6:30pm - 7:00pm:</strong> Libitcoin Discussion + Demo</li>
-<li><strong>7:00pm - 8:00pm:</strong> Developer Topics and Discussion</li>
+<li><strong>6:30pm - 8:00pm::</strong> Developer Topics and Discussion</li>
 </ul>
 <h2 id="bitcoin-dev-news">Bitcoin Dev News</h2>
 <ul>
-<li><a href="https://x.com/i/status/2015856426258935986">Liquid Pegin Tool</a>
+<li><a href="https://github.com/ismaelsadeeq/libmultiprocess/blob/experimentation/example/analytics.md">Multiprocess Writeup IPC Mining Interface</a>
 <ul>
-<li><a href="https://github.com/aeonBTC/AutoLiquid">Repo</a></li>
-<li>Notes
+<li><a href="https://github.com/bitcoin/bitcoin/blob/master/doc/build-unix.md">Unix Docs</a></li>
+<li><a href="https://github.com/bitcoin/bitcoin/blob/master/src/interfaces/mining.h">Src</a></li>
+</ul>
+</li>
+<li><a href="https://delvingbitcoin.org/t/using-ai-tooling-for-code-review/2277">AI Review for Bitcoin Projects</a></li>
+<li><a href="https://x.com/btcplusplus/status/2036013331732156923?s=20">0xB10C - Detecting DoS on the Bitcoin Network</a></li>
+<li><a href="https://x.com/ElectrumWallet/status/2036386666907161018?s=20">Electrum LN Network Graph Visualizer</a>
 <ul>
-<li>Python + RPC</li>
-<li>Looks Vibe Coded (Not bad for this application)</li>
-<li>Does not give you a way to trustlessly peg out of Liquid</li>
+<li><a href="https://x.com/ElectrumWallet/status/2028791061389209783">LN Support</a></li>
+<li><a href="https://electrum.readthedocs.io/en/latest/plugins.html">Plugin Arch</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/PortlandHODL/status/2026797604525453772?s=20">Robin Linus BiNo Hash</a></li>
+<li><a href="https://x.com/robin_linus/status/2034889653464228240">Robin Linus SigHash</a></li>
+<li><a href="https://github.com/bitcoin-core/bitcoin-devwiki/wiki/31.0-Release-Candidate-Testing-Guide">Bitcoin Core v31.0 RC Testing Guide</a></li>
+<li><a href="https://github.com/bitcoin/bitcoin/issues/33607">Bitcoin Core v31.0 Announced</a>
+<ul>
+<li><a href="https://x.com/fanquake/status/2026006073686016084?s=20">Fanquake X</a></li>
+<li><a href="https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes-33629.md">Mempool Changes</a></li>
+<li><a href="https://github.com/bitcoin/bitcoin/milestone/74">Outstanding TODOs</a></li>
+<li><a href="https://github.com/bitcoin/bitcoin/pull/24539">Add a "tx output spender" index</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/bitcoin/bips/pull/1974">BIP446</a></li>
+<li><a href="https://github.com/bitcoin/bips/pull/1974">BIP448</a></li>
+<li><a href="https://x.com/0xB10C/status/2036118084734349542">Foundry 2 Block Reorg Win Streak</a></li>
+<li><a href="https://github.com/aeonBTC/IbisWallet/releases/tag/v3.0-beta">Ibis 3.0 Beta Tag</a></li>
+<li><a href="https://x.com/L0RINC/status/2022268491403763855">BIP-110 Consensus Bugs</a>
+<ul>
+<li><a href="https://github.com/bitcoinknots/bitcoin/pull/238#issuecomment-3896624715">Disclosure</a></li>
+<li><a href="https://x.com/defenwycke/status/2024543013960094205?s=20">Secondary AI based audit discovered potential bugs as well</a></li>
 </ul>
 </li>
 </ul>
-</li>
-<li><a href="https://x.com/PortlandHODL/status/2008841485433889145">Mempool Editor</a>
+<h2 id="ln-dev-news">LN Dev News</h2>
 <ul>
-<li><a href="https://github.com/portlandhodl/windfish.git">Repo</a></li>
-<li>Notes
-<ul>
-<li>Written in rust</li>
-<li>Splits the TUI from the core logic</li>
-<li>Deserialize logic! (Go over this!)</li>
-<li>Injection and fun</li>
-<li>Private Mempool?</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://github.com/rust-bitcoin/rust-bitcoin/pull/5402">Rust Bitcoin - Fix | Duplicate Inputs</a>
-<ul>
-<li>Notes
-<ul>
-<li>Applies to transaction SERDE (Serialize / Deserialize)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://x.com/PortlandHODL/status/2008119128146755911">Bitcoin Core Miniscript FFI</a>
-<ul>
-<li><a href="https://github.com/portlandhodl/rust-bitcoin-core-miniscript-ffi">Repo</a></li>
-<li>Notes
-<ul>
-<li>Uses the latest Bitcoin Core V30.2</li>
-<li>Good for cross checking and validation or a direct replacement for descriptor logic in Rust</li>
-<li>Safe'ish unsafe</li>
-<li>Great for fuzzing and finding divergences in implementations</li>
-<li>Crates.io (Why you should use it)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://x.com/citrea_xyz/status/2016149582942495044">Citrea Goes Live</a>
-<ul>
-<li>Notes
-<ul>
-<li>I still have not got credit for my Testnet Pegin 😂</li>
-<li>Wallet list is pretty bad</li>
-<li>Whole coin numbers must be used for Pegin (https://citrea.xyz/bridge)</li>
-<li>Docs (https://docs.citrea.xyz/developer-documentation/clementine-cli)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://github.com/bitcoin/bips/blob/master/bip-0346.md">TX_HASH assigned BIP 346</a>
-<ul>
-<li>Notes
-<ul>
-<li>Field Selection Stack Element</li>
-<li>Hash of that element set, does it match in the spending TXN</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://github.com/bitcoin/bips/blob/master/bip-0434.md">Feature Negotiation BIP 434</a>
-<ul>
-<li>Notes
-<ul>
-<li>Prior to this a new version had to be rolled out to get new protocol messages added</li>
-<li>Size limits imposed</li>
-<li>Allows for compat longterm with other node without partitioning the network</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://x.com/lclhostresearch/status/2014485397569708074">FIBRE - Resurrection</a>
-<ul>
-<li>Notes
-<ul>
-<li>Bitcoin Core Fork (v30.0)</li>
-<li>FEC encoding</li>
-<li>UDP Peer Multicast</li>
-<li>https://en.wikipedia.org/wiki/Multicast</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://github.com/bitcoin/bips/pull/1548">Binary Output Descriptors BIP 391</a>
-<ul>
-<li>Notes
-<ul>
-<li>Really made for machine to machine descriptor transport</li>
-<li>Add headers</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://github.com/sparrowwallet/frigate">Silent Payment Electrs</a></li>
-<li><a href="https://delvingbitcoin.org/t/incremental-mutation-testing-in-the-bitcoin-core/2197">Mutation Testing</a>
-<ul>
-<li>Notes
-<ul>
-<li><a href="https://github.com/bitcoinfuzz/bitcoinfuzz">Fuzzing</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://delvingbitcoin.org/t/hornet-utxo-1-a-custom-constant-time-highly-parallel-utxo-database/2201">Constant Time UTXO Database</a>
-<ul>
-<li>Notes this is largely why UTXO set bloat will not be an issue long term</li>
-</ul>
-</li>
-<li><a href="https://bitcoincore.org/en/2026/01/05/wallet-migration-bug/">Bitcoin Core Wallet Migration Bug</a>
-<ul>
-<li><a href="https://github.com/bitcoin/bitcoin/issues/34128">Issue</a></li>
-<li><a href="https://github.com/bitcoin/bitcoin/pull/34156">Fix</a></li>
-</ul>
-</li>
-<li><a href="https://bip360.org/bip360.html">Request - BIP360</a></li>
-<li><a href="https://github.com/bitcoin/bips/pull/2047">Sparrow Creator - Proposal Silent Payments</a></li>
-<li><a href="https://github.com/bitcoin-core/secp256k1/blob/master/CHANGELOG.md">LIBSECP256K1 0.7.1 Released</a></li>
-<li><a href="https://groups.google.com/g/bitcoindev/c/Jsv1VYpewuU">Unbreaking Testnet 4</a></li>
-<li><a href="https://mempool.space/testnet4/tx/dca06078f6d42f90b895a9d7740cba5c7682731bf488176c887cf949912704a9">Portland BitDevs Internal Topic: Covenants?</a></li>
+<li><a href="https://github.com/jharveyb/gossip_observer">Gossip Observer LN</a></li>
+<li><a href="https://x.com/dusty_daemon/status/2036053303503536618">Splicing Ratified in LN</a></li>
 </ul>
 <h2 id="bitcoin-general-news">Bitcoin General News</h2>
 <ul>
-<li><a href="https://x.com/SteaknShake/status/2016208511802155197?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet">Steak 'n Shake Buys More BTC</a></li>
+<li><a href="https://bitcoinquantum.com/testnet">Quantum Testnet BTQ</a></li>
+<li><a href="https://x.com/COLDCARDwallet/status/2031356036356149746?s=20">ColdCard MKV</a>
+<ul>
+<li><a href="https://x.com/2140data/status/2036438510349975761">In the Wild</a></li>
+<li><a href="https://x.com/BTCsessions/status/2036489587112157445">NFC PushTX</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/cbspears/status/2036454290869346686">MARA - AI Through OpenRouter</a>
+<ul>
+<li><a href="https://x.com/blockspace/status/2036441402553319461">Pod Discussion</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/ProductionReady/status/2036080347918770272">Production Ready - Alternate Client Impl Group</a></li>
+<li><a href="https://x.com/FOUNDATIONdvcs/status/2036495723299037278?s=20">Foundation Passport - 2FA</a></li>
+<li><a href="https://mos.tether.io/">Tether - MiningOS</a></li>
+<li><a href="https://x.com/COLDCARDwallet/status/2029684130938531965">Coldcard Edge FW</a></li>
+<li><a href="https://github.com/Coldcard/firmware/commits/new_edge/">Coldcard Edge FW Getting MuSig2</a></li>
+<li><a href="https://blog.blockstream.com/jade-lightning-payments-are-here/">Jade adds Lightning Payments</a></li>
+<li><a href="https://lclhost.org/blog/fibre-resurrected/">Fibre Relaunched Official</a></li>
+<li><a href="https://x.com/lopp/status/2036055358767292799">Knots Node Counts and Spoofing</a></li>
+<li><a href="https://x.com/JStefanop1/status/2036510939487298016?s=20">FutureBit Raising Prices</a></li>
+<li><a href="https://x.com/start9labs/status/2034371952182542642?s=20">Start9 Raising Prices</a></li>
+<li><a href="https://x.com/it4sec/status/2036536722763211086?s=20">Trezor Fault Injection Attacks</a>
+<ul>
+<li><a href="https://thecybersecguru.com/news/xbox-one-hacked-boot-rom-exploit-bliss/">Xbox One Hacked After 12 Years</a></li>
+<li><a href="https://x.com/Riscure/status/2036541949943988497/photo/1">Secure UART</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="tech-news">Tech News</h2>
 <ul>
-<li><a href="https://pcpartpicker.com/trends/price/memory/">DDR5 Prices Continue Relentless Climb</a></li>
-<li><a href="https://wccftech.com/the-ssd-markets-are-about-to-get-destroyed-with-nand-shortages/">SSD Prices begin ascent</a></li>
+<li><a href="https://x.com/karpathy/status/2036487306585268612?s=20">PiPi Supply Chain Attack</a>
+<ul>
+<li><a href="https://futuresearch.ai/blog/litellm-pypi-supply-chain-attack/">Official Details</a></li>
+<li><a href="https://x.com/IceSolst/status/2036506834228465832?s=20">Video Explanation</a></li>
+</ul>
+</li>
+<li><a href="https://metr.org/time-horizons/">METR Benchmark</a>
+<ul>
+<li>Doubling of AI capacity in 4 months</li>
+</ul>
+</li>
+<li><a href="https://www.fcc.gov/document/fcc-updates-covered-list-include-foreign-made-consumer-routers">FCC Makes all Foreign Consumer Routers Require Conditional Approval</a></li>
+<li><a href="https://github.com/microsoft/RustTraining">Microsoft Rust Training Docs</a></li>
+<li><a href="https://x.com/LundukeJournal/status/2036515229127876894?s=20">Linux Age Verification</a>
+<ul>
+<li><a href="https://github.com/systemd/systemd/pull/40954">Systemd</a></li>
+<li><a href="https://x.com/LundukeJournal/status/2036523955842949277?s=20">Dissenters</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/jack/status/2027129697092731343">Block Fires 40% (4000)</a></li>
 </ul>
 </div>
     </div>

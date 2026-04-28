@@ -5,8 +5,417 @@
     <link rel="self" type="application/atom+xml" href="https://portlandbitdevs.org/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://portlandbitdevs.org/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-02-16T00:00:00+00:00</updated>
+    <updated>2026-04-28T00:00:00+00:00</updated>
     <id>https://portlandbitdevs.org/atom.xml</id>
+    <entry xml:lang="en">
+        <title>The Fungibility Misunderstanding That&#x27;s Quietly Hurting Bitcoin</title>
+        <published>2026-04-28T00:00:00+00:00</published>
+        <updated>2026-04-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://portlandbitdevs.org/blog/fungibility-misunderstanding/"/>
+        <id>https://portlandbitdevs.org/blog/fungibility-misunderstanding/</id>
+        
+        <content type="html" xml:base="https://portlandbitdevs.org/blog/fungibility-misunderstanding/">&lt;p&gt;There&#x27;s a long-running debate in Bitcoin circles about coin &quot;taint&quot; --- the idea that because the ledger is public, coins carry a history that can get them blacklisted by exchanges. It generates a lot of noise. It deserves much less attention than it gets. The friction it describes affects less than 2% of network activity, and the remaining 98% of Bitcoin moves through the system the way fungible money should: counted, not appraised.&lt;&#x2F;p&gt;
+&lt;p&gt;The conversation worth having isn&#x27;t about the 2% edge case. It&#x27;s about a much more consequential misunderstanding of fungibility --- one that&#x27;s quietly driving proposals to change Bitcoin&#x27;s protocol rules in ways that would actually reduce fungibility and, with it, the network&#x27;s ability to scale. The people pushing these changes mean well. They think they&#x27;re making Bitcoin more flexible, more capable, more useful. What they&#x27;re actually doing is eroding the property that makes the whole system work.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-fungibility-actually-is&quot;&gt;What Fungibility Actually Is&lt;&#x2F;h2&gt;
+&lt;p&gt;Most people, when they hear &quot;fungibility,&quot; think about something narrow: can this specific coin be rejected because of where it&#x27;s been? That&#x27;s a question about external recognition --- whether a third party will treat your unit as equivalent to any other unit.&lt;&#x2F;p&gt;
+&lt;p&gt;But fungibility in the deeper sense is a property of the protocol itself, not of how outsiders react to its outputs. A monetary unit is fungible when the rules governing it treat every unit identically. Every satoshi follows the same consensus rules. Every transaction is validated against the same script logic. Every block is subject to the same difficulty adjustment, the same size limits, the same ordering constraints. There are no special units, no privileged transactions, no exceptions.&lt;&#x2F;p&gt;
+&lt;p&gt;This protocol-level uniformity is what allows fungibility at the user level. You can count satoshis instead of appraising them precisely because every node in the network is running the same rules and arriving at the same conclusions about which units are valid. The moment the rules start treating different units differently, you&#x27;re no longer counting --- you&#x27;re appraising. And appraisal doesn&#x27;t scale.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-people-want-to-loosen-the-rules&quot;&gt;Why People Want to Loosen the Rules&lt;&#x2F;h2&gt;
+&lt;p&gt;Bitcoin&#x27;s protocol rules are restrictive by design. Block size is capped. Script functionality is limited. Validation is expensive. Many transaction types that would be technically possible are forbidden or made costly. To a developer or product person looking at this, it can feel like a system constrained by arbitrary limits --- limits that, if relaxed, would unlock new use cases.&lt;&#x2F;p&gt;
+&lt;p&gt;So you get proposals: bigger blocks for more throughput, richer scripting for more functionality, special transaction types for specific applications, accommodations for inscriptions or ordinals or covenants or whatever the current enthusiasm is. Each proposal sounds reasonable in isolation. Each promises to make Bitcoin do more.&lt;&#x2F;p&gt;
+&lt;p&gt;The framing is almost always the same: the rules are too tight, let&#x27;s loosen them. The implicit theory is that fungibility is something you can have separately from the protocol --- that you can change how Bitcoin works without changing what Bitcoin is.&lt;&#x2F;p&gt;
+&lt;p&gt;This is the misunderstanding. Fungibility isn&#x27;t separate from the protocol. It is the protocol&#x27;s uniformity, expressed through every node&#x27;s identical validation. When you loosen the rules, you don&#x27;t just add capability. You add variation in how units are treated. And variation is the opposite of fungibility.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-loosening-rules-reduces-fungibility&quot;&gt;How Loosening Rules Reduces Fungibility&lt;&#x2F;h2&gt;
+&lt;p&gt;Consider what happens when you make blocks bigger. Larger blocks are harder to validate, harder to propagate, and harder to store. Fewer participants can run full nodes. The participants who can are increasingly large, well-resourced, and concentrated. Now the rules haven&#x27;t formally changed --- every satoshi is still nominally equivalent --- but in practice, the set of entities that enforces the rules has shrunk. And when enforcement is concentrated, the enforcers can start treating different units differently. Maybe not today. But the structural option exists.&lt;&#x2F;p&gt;
+&lt;p&gt;Consider what happens when you add complex scripting. Now transactions vary in their computational cost. Some transactions are cheap to validate; others are expensive. Fee markets adjust, but more importantly, validation behavior diverges. Some nodes may refuse to relay certain transaction types. Some may apply different policies to different scripts. The protocol no longer treats every transaction identically because transactions are no longer identical in what they ask the network to do.&lt;&#x2F;p&gt;
+&lt;p&gt;Consider what happens when you accommodate special-purpose transactions --- inscriptions, named tokens, application-specific encodings. Now the network is carrying multiple categories of payload, and those categories have different economic profiles, different stakeholders, and different political constituencies. Pressure builds to treat them differently. To prioritize one category. To deprioritize another. To filter, censor, or specially process particular kinds of activity. Even if the protocol rules formally remain neutral, the social layer around the protocol starts negotiating exceptions. And exceptions are the wedge that breaks fungibility.&lt;&#x2F;p&gt;
+&lt;p&gt;In every one of these cases, the proposed change sounds like an enhancement. More throughput. More functionality. More use cases. But the cost is paid in the property that made Bitcoin work in the first place: the radical uniformity of treatment that lets you count units instead of evaluating them.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-this-matters-for-scaling&quot;&gt;Why This Matters for Scaling&lt;&#x2F;h2&gt;
+&lt;p&gt;Here&#x27;s the part that gets missed: fungibility is what allows scaling, not the other way around.&lt;&#x2F;p&gt;
+&lt;p&gt;When every unit is treated identically by every participant, you can pool, net, intermediate, and route transactions without anyone having to evaluate the specific units involved. Layer 2 networks like Lightning work because Lightning channels can assume that one satoshi entering a channel is exchangeable with any satoshi exiting. Mining pools work because rewards can be split among participants without anyone caring which specific satoshis they&#x27;re getting. Exchanges, custodians, and payment processors all depend on being able to commingle funds with confidence that any unit can substitute for any other.&lt;&#x2F;p&gt;
+&lt;p&gt;If you erode protocol-level fungibility --- by adding variation, exceptions, or differentiated treatment --- you erode every one of these scaling mechanisms. Lightning gets harder when channels have to track which kinds of satoshis they&#x27;re holding. Pooling gets harder when commingled funds carry distinguishable characteristics. Intermediation gets harder when intermediaries have to maintain category-aware accounting.&lt;&#x2F;p&gt;
+&lt;p&gt;The scaling story for Bitcoin is fundamentally a story about leveraging fungibility. The more uniformly the base layer treats units, the more aggressively higher layers can abstract, batch, and route. Loosen the base layer, and you lose the substrate that scaling depends on.&lt;&#x2F;p&gt;
+&lt;p&gt;This is why protocol conservatism in Bitcoin isn&#x27;t backwardness or stubbornness --- it&#x27;s an active defense of the property that makes the whole stack possible. Every &quot;improvement&quot; proposal that adds variation to base-layer treatment of transactions is, whether its proponents realize it or not, a proposal to lower the ceiling on how far Bitcoin can scale.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-proposals-to-watch&quot;&gt;The Proposals to Watch&lt;&#x2F;h2&gt;
+&lt;p&gt;The pattern shows up in almost every protocol debate. Whenever someone proposes that Bitcoin should accommodate a new use case by changing how the base layer treats certain kinds of activity, the question to ask isn&#x27;t &lt;em&gt;would this be useful?&lt;&#x2F;em&gt; --- it&#x27;s &lt;em&gt;does this introduce variation in how units are treated?&lt;&#x2F;em&gt; If the answer is yes, the proposal is asking you to trade fungibility for features. And that trade is almost never worth it, because fungibility is what makes the features possible in the first place.&lt;&#x2F;p&gt;
+&lt;p&gt;Bigger blocks trade decentralization (and therefore enforcement uniformity) for throughput. Richer scripting trades validation uniformity for functionality. Special-purpose accommodations trade neutral treatment for application support. Each trade looks attractive on its own. Cumulatively, they would turn Bitcoin into a system that has to be appraised rather than counted --- and a system that has to be appraised is not a system that scales.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-people-misunderstand&quot;&gt;What People Misunderstand&lt;&#x2F;h2&gt;
+&lt;p&gt;The deepest version of the misunderstanding is the assumption that fungibility is a consequence of the protocol --- something that emerges when the rules happen to be written a certain way, and that can be preserved separately if the rules are changed. It can&#x27;t. Fungibility is the rules. It&#x27;s the property of having one set of rules, applied identically, to every unit, by every participant.&lt;&#x2F;p&gt;
+&lt;p&gt;When you change the rules to accommodate new uses, you&#x27;re not preserving fungibility while adding capability. You&#x27;re trading away fungibility as the cost of the new capability. Sometimes that trade is worth making --- soft forks that genuinely preserve uniformity while adding capability are possible and have been done well. But most proposals to &quot;improve&quot; Bitcoin by loosening its constraints don&#x27;t preserve uniformity. They introduce variation, and variation is what fungibility is the absence of.&lt;&#x2F;p&gt;
+&lt;p&gt;The 2% taint debate is a sideshow. The real fungibility conversation is about the protocol itself --- and about whether the well-meaning people who want to make Bitcoin do more understand that what they&#x27;re really proposing is to make Bitcoin scale less.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>PDX BitDevs Socratic Seminar #44</title>
+        <published>2026-04-28T00:00:00+00:00</published>
+        <updated>2026-04-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://portlandbitdevs.org/socratic-seminar-45/"/>
+        <id>https://portlandbitdevs.org/socratic-seminar-45/</id>
+        
+        <content type="html" xml:base="https://portlandbitdevs.org/socratic-seminar-45/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for March 2026&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:00pm - 6:30pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 8:00pm::&lt;&#x2F;strong&gt; Developer Topics and Discussion&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ismaelsadeeq&#x2F;libmultiprocess&#x2F;blob&#x2F;experimentation&#x2F;example&#x2F;analytics.md&quot;&gt;Multiprocess Writeup IPC Mining Interface&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;blob&#x2F;master&#x2F;doc&#x2F;build-unix.md&quot;&gt;Unix Docs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;blob&#x2F;master&#x2F;src&#x2F;interfaces&#x2F;mining.h&quot;&gt;Src&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;using-ai-tooling-for-code-review&#x2F;2277&quot;&gt;AI Review for Bitcoin Projects&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;btcplusplus&#x2F;status&#x2F;2036013331732156923?s=20&quot;&gt;0xB10C - Detecting DoS on the Bitcoin Network&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;ElectrumWallet&#x2F;status&#x2F;2036386666907161018?s=20&quot;&gt;Electrum LN Network Graph Visualizer&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;ElectrumWallet&#x2F;status&#x2F;2028791061389209783&quot;&gt;LN Support&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;electrum.readthedocs.io&#x2F;en&#x2F;latest&#x2F;plugins.html&quot;&gt;Plugin Arch&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;PortlandHODL&#x2F;status&#x2F;2026797604525453772?s=20&quot;&gt;Robin Linus BiNo Hash&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;robin_linus&#x2F;status&#x2F;2034889653464228240&quot;&gt;Robin Linus SigHash&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin-core&#x2F;bitcoin-devwiki&#x2F;wiki&#x2F;31.0-Release-Candidate-Testing-Guide&quot;&gt;Bitcoin Core v31.0 RC Testing Guide&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;issues&#x2F;33607&quot;&gt;Bitcoin Core v31.0 Announced&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;fanquake&#x2F;status&#x2F;2026006073686016084?s=20&quot;&gt;Fanquake X&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;blob&#x2F;master&#x2F;doc&#x2F;release-notes-33629.md&quot;&gt;Mempool Changes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;milestone&#x2F;74&quot;&gt;Outstanding TODOs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;24539&quot;&gt;Add a &quot;tx output spender&quot; index&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bips&#x2F;pull&#x2F;1974&quot;&gt;BIP446&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bips&#x2F;pull&#x2F;1974&quot;&gt;BIP448&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;0xB10C&#x2F;status&#x2F;2036118084734349542&quot;&gt;Foundry 2 Block Reorg Win Streak&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aeonBTC&#x2F;IbisWallet&#x2F;releases&#x2F;tag&#x2F;v3.0-beta&quot;&gt;Ibis 3.0 Beta Tag&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;L0RINC&#x2F;status&#x2F;2022268491403763855&quot;&gt;BIP-110 Consensus Bugs&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoinknots&#x2F;bitcoin&#x2F;pull&#x2F;238#issuecomment-3896624715&quot;&gt;Disclosure&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;defenwycke&#x2F;status&#x2F;2024543013960094205?s=20&quot;&gt;Secondary AI based audit discovered potential bugs as well&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;ln-dev-news&quot;&gt;LN Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jharveyb&#x2F;gossip_observer&quot;&gt;Gossip Observer LN&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;dusty_daemon&#x2F;status&#x2F;2036053303503536618&quot;&gt;Splicing Ratified in LN&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-general-news&quot;&gt;Bitcoin General News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoinquantum.com&#x2F;testnet&quot;&gt;Quantum Testnet BTQ&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;COLDCARDwallet&#x2F;status&#x2F;2031356036356149746?s=20&quot;&gt;ColdCard MKV&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;2140data&#x2F;status&#x2F;2036438510349975761&quot;&gt;In the Wild&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;BTCsessions&#x2F;status&#x2F;2036489587112157445&quot;&gt;NFC PushTX&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;cbspears&#x2F;status&#x2F;2036454290869346686&quot;&gt;MARA - AI Through OpenRouter&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;blockspace&#x2F;status&#x2F;2036441402553319461&quot;&gt;Pod Discussion&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;ProductionReady&#x2F;status&#x2F;2036080347918770272&quot;&gt;Production Ready - Alternate Client Impl Group&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;FOUNDATIONdvcs&#x2F;status&#x2F;2036495723299037278?s=20&quot;&gt;Foundation Passport - 2FA&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mos.tether.io&#x2F;&quot;&gt;Tether - MiningOS&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;COLDCARDwallet&#x2F;status&#x2F;2029684130938531965&quot;&gt;Coldcard Edge FW&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Coldcard&#x2F;firmware&#x2F;commits&#x2F;new_edge&#x2F;&quot;&gt;Coldcard Edge FW Getting MuSig2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.blockstream.com&#x2F;jade-lightning-payments-are-here&#x2F;&quot;&gt;Jade adds Lightning Payments&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lclhost.org&#x2F;blog&#x2F;fibre-resurrected&#x2F;&quot;&gt;Fibre Relaunched Official&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;lopp&#x2F;status&#x2F;2036055358767292799&quot;&gt;Knots Node Counts and Spoofing&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;JStefanop1&#x2F;status&#x2F;2036510939487298016?s=20&quot;&gt;FutureBit Raising Prices&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;start9labs&#x2F;status&#x2F;2034371952182542642?s=20&quot;&gt;Start9 Raising Prices&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;it4sec&#x2F;status&#x2F;2036536722763211086?s=20&quot;&gt;Trezor Fault Injection Attacks&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;thecybersecguru.com&#x2F;news&#x2F;xbox-one-hacked-boot-rom-exploit-bliss&#x2F;&quot;&gt;Xbox One Hacked After 12 Years&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;Riscure&#x2F;status&#x2F;2036541949943988497&#x2F;photo&#x2F;1&quot;&gt;Secure UART&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;karpathy&#x2F;status&#x2F;2036487306585268612?s=20&quot;&gt;PiPi Supply Chain Attack&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;futuresearch.ai&#x2F;blog&#x2F;litellm-pypi-supply-chain-attack&#x2F;&quot;&gt;Official Details&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;IceSolst&#x2F;status&#x2F;2036506834228465832?s=20&quot;&gt;Video Explanation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;metr.org&#x2F;time-horizons&#x2F;&quot;&gt;METR Benchmark&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Doubling of AI capacity in 4 months&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.fcc.gov&#x2F;document&#x2F;fcc-updates-covered-list-include-foreign-made-consumer-routers&quot;&gt;FCC Makes all Foreign Consumer Routers Require Conditional Approval&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;RustTraining&quot;&gt;Microsoft Rust Training Docs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;LundukeJournal&#x2F;status&#x2F;2036515229127876894?s=20&quot;&gt;Linux Age Verification&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;systemd&#x2F;systemd&#x2F;pull&#x2F;40954&quot;&gt;Systemd&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;LundukeJournal&#x2F;status&#x2F;2036523955842949277?s=20&quot;&gt;Dissenters&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;jack&#x2F;status&#x2F;2027129697092731343&quot;&gt;Block Fires 40% (4000)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>PDX BitDevs Socratic Seminar #44</title>
+        <published>2026-03-24T00:00:00+00:00</published>
+        <updated>2026-03-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://portlandbitdevs.org/socratic-seminar-44/"/>
+        <id>https://portlandbitdevs.org/socratic-seminar-44/</id>
+        
+        <content type="html" xml:base="https://portlandbitdevs.org/socratic-seminar-44/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for March 2026&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:00pm - 6:30pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 8:00pm::&lt;&#x2F;strong&gt; Developer Topics and Discussion&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ismaelsadeeq&#x2F;libmultiprocess&#x2F;blob&#x2F;experimentation&#x2F;example&#x2F;analytics.md&quot;&gt;Multiprocess Writeup IPC Mining Interface&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;blob&#x2F;master&#x2F;doc&#x2F;build-unix.md&quot;&gt;Unix Docs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;blob&#x2F;master&#x2F;src&#x2F;interfaces&#x2F;mining.h&quot;&gt;Src&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;using-ai-tooling-for-code-review&#x2F;2277&quot;&gt;AI Review for Bitcoin Projects&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;btcplusplus&#x2F;status&#x2F;2036013331732156923?s=20&quot;&gt;0xB10C - Detecting DoS on the Bitcoin Network&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;ElectrumWallet&#x2F;status&#x2F;2036386666907161018?s=20&quot;&gt;Electrum LN Network Graph Visualizer&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;ElectrumWallet&#x2F;status&#x2F;2028791061389209783&quot;&gt;LN Support&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;electrum.readthedocs.io&#x2F;en&#x2F;latest&#x2F;plugins.html&quot;&gt;Plugin Arch&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;PortlandHODL&#x2F;status&#x2F;2026797604525453772?s=20&quot;&gt;Robin Linus BiNo Hash&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;robin_linus&#x2F;status&#x2F;2034889653464228240&quot;&gt;Robin Linus SigHash&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin-core&#x2F;bitcoin-devwiki&#x2F;wiki&#x2F;31.0-Release-Candidate-Testing-Guide&quot;&gt;Bitcoin Core v31.0 RC Testing Guide&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;issues&#x2F;33607&quot;&gt;Bitcoin Core v31.0 Announced&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;fanquake&#x2F;status&#x2F;2026006073686016084?s=20&quot;&gt;Fanquake X&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;blob&#x2F;master&#x2F;doc&#x2F;release-notes-33629.md&quot;&gt;Mempool Changes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;milestone&#x2F;74&quot;&gt;Outstanding TODOs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;pull&#x2F;24539&quot;&gt;Add a &quot;tx output spender&quot; index&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bips&#x2F;pull&#x2F;1974&quot;&gt;BIP446&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bips&#x2F;pull&#x2F;1974&quot;&gt;BIP448&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;0xB10C&#x2F;status&#x2F;2036118084734349542&quot;&gt;Foundry 2 Block Reorg Win Streak&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aeonBTC&#x2F;IbisWallet&#x2F;releases&#x2F;tag&#x2F;v3.0-beta&quot;&gt;Ibis 3.0 Beta Tag&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;L0RINC&#x2F;status&#x2F;2022268491403763855&quot;&gt;BIP-110 Consensus Bugs&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoinknots&#x2F;bitcoin&#x2F;pull&#x2F;238#issuecomment-3896624715&quot;&gt;Disclosure&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;defenwycke&#x2F;status&#x2F;2024543013960094205?s=20&quot;&gt;Secondary AI based audit discovered potential bugs as well&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;ln-dev-news&quot;&gt;LN Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jharveyb&#x2F;gossip_observer&quot;&gt;Gossip Observer LN&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;dusty_daemon&#x2F;status&#x2F;2036053303503536618&quot;&gt;Splicing Ratified in LN&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-general-news&quot;&gt;Bitcoin General News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitcoinquantum.com&#x2F;testnet&quot;&gt;Quantum Testnet BTQ&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;COLDCARDwallet&#x2F;status&#x2F;2031356036356149746?s=20&quot;&gt;ColdCard MKV&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;2140data&#x2F;status&#x2F;2036438510349975761&quot;&gt;In the Wild&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;BTCsessions&#x2F;status&#x2F;2036489587112157445&quot;&gt;NFC PushTX&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;cbspears&#x2F;status&#x2F;2036454290869346686&quot;&gt;MARA - AI Through OpenRouter&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;blockspace&#x2F;status&#x2F;2036441402553319461&quot;&gt;Pod Discussion&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;ProductionReady&#x2F;status&#x2F;2036080347918770272&quot;&gt;Production Ready - Alternate Client Impl Group&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;FOUNDATIONdvcs&#x2F;status&#x2F;2036495723299037278?s=20&quot;&gt;Foundation Passport - 2FA&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mos.tether.io&#x2F;&quot;&gt;Tether - MiningOS&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;COLDCARDwallet&#x2F;status&#x2F;2029684130938531965&quot;&gt;Coldcard Edge FW&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Coldcard&#x2F;firmware&#x2F;commits&#x2F;new_edge&#x2F;&quot;&gt;Coldcard Edge FW Getting MuSig2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.blockstream.com&#x2F;jade-lightning-payments-are-here&#x2F;&quot;&gt;Jade adds Lightning Payments&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lclhost.org&#x2F;blog&#x2F;fibre-resurrected&#x2F;&quot;&gt;Fibre Relaunched Official&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;lopp&#x2F;status&#x2F;2036055358767292799&quot;&gt;Knots Node Counts and Spoofing&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;JStefanop1&#x2F;status&#x2F;2036510939487298016?s=20&quot;&gt;FutureBit Raising Prices&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;start9labs&#x2F;status&#x2F;2034371952182542642?s=20&quot;&gt;Start9 Raising Prices&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;it4sec&#x2F;status&#x2F;2036536722763211086?s=20&quot;&gt;Trezor Fault Injection Attacks&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;thecybersecguru.com&#x2F;news&#x2F;xbox-one-hacked-boot-rom-exploit-bliss&#x2F;&quot;&gt;Xbox One Hacked After 12 Years&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;Riscure&#x2F;status&#x2F;2036541949943988497&#x2F;photo&#x2F;1&quot;&gt;Secure UART&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;karpathy&#x2F;status&#x2F;2036487306585268612?s=20&quot;&gt;PiPi Supply Chain Attack&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;futuresearch.ai&#x2F;blog&#x2F;litellm-pypi-supply-chain-attack&#x2F;&quot;&gt;Official Details&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;IceSolst&#x2F;status&#x2F;2036506834228465832?s=20&quot;&gt;Video Explanation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;metr.org&#x2F;time-horizons&#x2F;&quot;&gt;METR Benchmark&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Doubling of AI capacity in 4 months&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.fcc.gov&#x2F;document&#x2F;fcc-updates-covered-list-include-foreign-made-consumer-routers&quot;&gt;FCC Makes all Foreign Consumer Routers Require Conditional Approval&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;RustTraining&quot;&gt;Microsoft Rust Training Docs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;LundukeJournal&#x2F;status&#x2F;2036515229127876894?s=20&quot;&gt;Linux Age Verification&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;systemd&#x2F;systemd&#x2F;pull&#x2F;40954&quot;&gt;Systemd&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;LundukeJournal&#x2F;status&#x2F;2036523955842949277?s=20&quot;&gt;Dissenters&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;jack&#x2F;status&#x2F;2027129697092731343&quot;&gt;Block Fires 40% (4000)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>PDX BitDevs Socratic Seminar #43</title>
+        <published>2026-02-24T00:00:00+00:00</published>
+        <updated>2026-02-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://portlandbitdevs.org/socratic-seminar-43/"/>
+        <id>https://portlandbitdevs.org/socratic-seminar-43/</id>
+        
+        <content type="html" xml:base="https://portlandbitdevs.org/socratic-seminar-43/">&lt;h2 id=&quot;announcements&quot;&gt;Announcements&lt;&#x2F;h2&gt;
+&lt;p&gt;Please join us for our next Socratic Seminar. A special thank you to our host &lt;a href=&quot;https:&#x2F;&#x2F;dicksprimalburger.com&#x2F;&quot; data-no-summary&gt;Primal Burger&lt;&#x2F;a&gt;, for the event space. Please support them by buying their delicious food or a beverage.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t make it to the main event please join us at Lutz Tavern around 9PM &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lutztavern.com&#x2F;&quot; data-no-summary&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;special-thanks-mentions&quot;&gt;Special Thanks | Mentions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thank you to everyone who shows up each month!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Respect people&#x27;s privacy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.chathamhouse.org&#x2F;about-us&#x2F;chatham-house-rule&quot;&gt;Chatham House Rules&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Interaction and asking questions are encouraged!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;Requests&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A guest speaker for March 2026&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6:00pm - 6:30pm:&lt;&#x2F;strong&gt; Arrive, socialize, and grab some food.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;6:30pm - 7:00pm:&lt;&#x2F;strong&gt; Member Presentation
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.opportunitycost.app&#x2F;&quot;&gt;Opportunity Cost&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.bitcoinproducts.com&#x2F;&quot;&gt;Bitcoin Products&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7:00pm - 8:00pm:&lt;&#x2F;strong&gt; Developer Topics and Discussion&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-dev-news&quot;&gt;Bitcoin Dev News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;issues&#x2F;33607&quot;&gt;Bitcoin Core v31.0 Announced&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;fanquake&#x2F;status&#x2F;2026006073686016084?s=20&quot;&gt;Fanquake X&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;blob&#x2F;master&#x2F;doc&#x2F;release-notes-33629.md&quot;&gt;Mempool Changes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bitcoin&#x2F;milestone&#x2F;74&quot;&gt;Outstanding TODOs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;mononautical&#x2F;status&#x2F;2023303999743730139&quot;&gt;Mempool Clears&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;L0RINC&#x2F;status&#x2F;2022268491403763855&quot;&gt;BIP-110 Consensus Bugs&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoinknots&#x2F;bitcoin&#x2F;pull&#x2F;238#issuecomment-3896624715&quot;&gt;Disclosure&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;defenwycke&#x2F;status&#x2F;2024543013960094205?s=20&quot;&gt;Secondary AI based audit discovered potential bugs as well&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;aeonBTC&#x2F;status&#x2F;2024218454153449500?s=20&quot;&gt;IBIS Wallet Release&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ismaelsadeeq&#x2F;libmultiprocess&#x2F;blob&#x2F;experimentation&#x2F;example&#x2F;analytics.md&quot;&gt;Multiprocess Writeup IPC Mining Interface&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;delvingbitcoin.org&#x2F;t&#x2F;using-ai-tooling-for-code-review&#x2F;2277&quot;&gt;AI Review for Bitcoin Projects&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;bitcoin-general-news&quot;&gt;Bitcoin General News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;research.mempool.space&#x2F;opreturn-report&#x2F;&quot;&gt;OP_RETURN Report - Orange Surf&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;3 Waves&lt;&#x2F;li&gt;
+&lt;li&gt;Total volume of OP_RETURN by bytes is not notably dfferent after V30 release&lt;&#x2F;li&gt;
+&lt;li&gt;Nonstandard OP_RETURNs have by and large novel and are barely visible on the graph&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tech-news&quot;&gt;Tech News&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;metr.org&#x2F;time-horizons&#x2F;&quot;&gt;METR Benchmark&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;Doubling of AI capacity in 4 months&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>BIP-110: Taproot&#x27;s Promised Scaling, What Went Wrong, and a Path Forward</title>
         <published>2026-02-16T00:00:00+00:00</published>
