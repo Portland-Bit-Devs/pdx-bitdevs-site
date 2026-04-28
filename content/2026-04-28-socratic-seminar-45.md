@@ -38,6 +38,8 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
  - [Explanation](https://x.com/theinstagibbs/status/2046611637784715451?s=20)
 [BIP361](https://www.bip361.org/)
 [Slow Block Demo](https://delvingbitcoin.org/t/consensus-cleanup-demo-of-slow-blocks-on-signet/2367)
+[Quantum Safe Bitcoin Transactions](https://github.com/avihu28/Quantum-Safe-Bitcoin-Transactions)
+[CKCC Message File Signing](https://github.com/Coldcard/ckcc-protocol/pull/60)
 
 ## LN Dev News
 [Core Lightning CLN 26.04 Released](https://github.com/ElementsProject/lightning/releases/tag/v26.04)
