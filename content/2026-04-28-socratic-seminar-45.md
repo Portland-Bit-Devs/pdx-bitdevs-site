@@ -49,5 +49,6 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Passport Prime Shipping](https://x.com/throughnothing/status/2037606802280390815?s=20)
   - Discuss hands on review from Bitcoin Vegas 26
 - [New Bitkey Announced](https://bitkey.world/blog/meet-the-new-bitkey)
+  - [Product Page](https://bitkey.world/product)
 
 ## Tech News
