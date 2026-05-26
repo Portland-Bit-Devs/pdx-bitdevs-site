@@ -44,10 +44,10 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 [BIP323 24bit(s) Version Rolling](https://github.com/bitcoin/bips/blob/master/bip-0323.mediawiki)
 [Discussion NAT holepunching](https://delvingbitcoin.org/t/tcp-hole-punching-for-bitcoin-nodes-behind-home-nats/2497)
 [BIP322 Fomral Message Signing for Various Script Types](https://github.com/bitcoin/bips/blob/master/bip-0322.mediawiki)
-
-
-
-
+[Mempool.spaace v3.3.0](https://github.com/mempool/mempool/releases/tag/v3.3.0)
+[Combine PSBT Proprietary Fields](https://github.com/bitcoin/bitcoin/pull/34893)
+[RPC addhdkey](https://github.com/bitcoin/bitcoin/pull/29136)
+[Remove Dummy Extra Nonce](https://github.com/bitcoin/bitcoin/pull/34860)
 
 ## LN Dev News
 [BOLTS V3 TRUC SPEC](https://github.com/lightning/bolts/pull/1228)
