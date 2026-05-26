@@ -43,6 +43,9 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 [SECP256K1 Multiplication Formally Verified](https://groups.google.com/g/bitcoindev/c/l7AdGAKd1Oo)
 [BIP323 24bit(s) Version Rolling](https://github.com/bitcoin/bips/blob/master/bip-0323.mediawiki)
 [Discussion NAT holepunching](https://delvingbitcoin.org/t/tcp-hole-punching-for-bitcoin-nodes-behind-home-nats/2497)
+[BIP322 Fomral Message Signing for Various Script Types](https://github.com/bitcoin/bips/blob/master/bip-0322.mediawiki)
+
+
 
 
 
