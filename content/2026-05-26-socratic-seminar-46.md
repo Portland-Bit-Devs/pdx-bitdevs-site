@@ -37,5 +37,6 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ## LN Dev News
 
 ## Bitcoin General News
+[Bitcoin is for Everyone Concluded](https://bitcoinisforeveryone.com)
 
 ## Tech News
