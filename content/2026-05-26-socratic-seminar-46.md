@@ -33,10 +33,17 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - **7:30pm - 8:30pm:** Developer Topics and Discussion
 
 ## Bitcoin Dev News
+[Bitcoin Core Script Interpreter Remote Crash](https://bitcoincore.org/en/2026/05/05/disclose-cve-2024-52911/)
+[Knots Include RTDS Support](https://github.com/bitcoinknots/bitcoin/blob/v29.3.knots20260508/doc/release-notes.md#reduced-data-temporary-softfork)
+[BIP110 Signaling 6 Blocks](https://x.com/w_s_bitcoin/status/2059267265313361923?s=20)
+
 
 ## LN Dev News
+[BOLTS V3 TRUC SPEC](https://github.com/lightning/bolts/pull/1228)
 
 ## Bitcoin General News
 [Bitcoin is for Everyone Concluded](https://bitcoinisforeveryone.com)
+[TabConf Concluding](https://x.com/miketwenty1/status/2059352494669484103)
+[Austin Bitdevs Revived](https://stacker.news/items/1490809)
 
 ## Tech News
