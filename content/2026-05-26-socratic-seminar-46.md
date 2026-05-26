@@ -28,7 +28,9 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ### Schedule
 
 - **6:00pm - 6:30pm:** Arrive, socialize, and grab some food.
-- **6:30pm - 8:00pm:** Developer Topics and Discussion
+- **6:30pm - 7:00pm:** Zsub Presentation
+- **7:00pm - 7:30pm:** Silent Payments on Signet Presentation
+- **7:30pm - 8:30pm:** Developer Topics and Discussion
 
 ## Bitcoin Dev News
 
