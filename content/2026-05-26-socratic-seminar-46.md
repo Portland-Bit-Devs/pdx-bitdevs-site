@@ -61,5 +61,6 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Austin BitDevs Revived](https://stacker.news/items/1490809)
 - [Fake Ledger Nanos](https://x.com/BitcoinNewsCom/status/2044890362037125281)
 - [Casa Guardian](https://x.com/CasaHODL/status/2059347594183381393)
+- [Prime Trust Clawbacks](https://blockspace.media/short/prime-trust-bankruptcy-trust-seeks-970-million-clawback-from-swan-bitcoin/)
 
 ## Tech News
