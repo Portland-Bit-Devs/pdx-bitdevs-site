@@ -32,6 +32,10 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ## Bitcoin Dev News
 
+- [Bitcoin Mailing List - Remove BIP125 RBF Signaling](https://groups.google.com/g/bitcoindev/c/C7zNIk8llew/m/YAdpwe33AgAJ)
+- [Testnet 5 Proposal](https://groups.google.com/g/bitcoindev/c/kGUMTxOvdJA/m/Eyx5FxQeAAAJ)
+- [Quantum Secure BIP324](https://groups.google.com/g/bitcoindev/c/n_5WuKVYqwI/m/lBooLis3AQAJ)
+
 ## LN Dev News
 
 ## Bitcoin General News
