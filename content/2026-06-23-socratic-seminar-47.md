@@ -35,9 +35,15 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Bitcoin Mailing List - Remove BIP125 RBF Signaling](https://groups.google.com/g/bitcoindev/c/C7zNIk8llew/m/YAdpwe33AgAJ)
 - [Testnet 5 Proposal](https://groups.google.com/g/bitcoindev/c/kGUMTxOvdJA/m/Eyx5FxQeAAAJ)
 - [Quantum Secure BIP324](https://groups.google.com/g/bitcoindev/c/n_5WuKVYqwI/m/lBooLis3AQAJ)
+- [Rust Bitcoin Witness Commitment Check](https://github.com/rust-bitcoin/rust-bitcoin/pull/6250)
+-
 
 ## LN Dev News
 
 ## Bitcoin General News
+
+- [ZEC - Exploited for unlimited private coins](https://x.com/zooko/status/2062644925590900980)
+- [Tropic Square Security Vulnerability](https://x.com/tropicsquare/status/2062112682921078914)
+- [Sparrow Wallet Mobile Yoinked from app store](https://x.com/craigraw/status/2069124643223445854)
 
 ## Tech News
