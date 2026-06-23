@@ -36,14 +36,21 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Testnet 5 Proposal](https://groups.google.com/g/bitcoindev/c/kGUMTxOvdJA/m/Eyx5FxQeAAAJ)
 - [Quantum Secure BIP324](https://groups.google.com/g/bitcoindev/c/n_5WuKVYqwI/m/lBooLis3AQAJ)
 - [Rust Bitcoin Witness Commitment Check](https://github.com/rust-bitcoin/rust-bitcoin/pull/6250)
--
+- [Nix Deterministic Builds](https://x.com/0xB10C/status/2062896873761816854)
+- [Back to Back Forks](https://x.com/0xB10C/status/2054547919450071266/photo/1)
 
 ## LN Dev News
 
 ## Bitcoin General News
 
-- [ZEC - Exploited for unlimited private coins](https://x.com/zooko/status/2062644925590900980)
+- [ZEC - Exploited for Unlimited Private Coins](https://x.com/zooko/status/2062644925590900980)
 - [Tropic Square Security Vulnerability](https://x.com/tropicsquare/status/2062112682921078914)
-- [Sparrow Wallet Mobile Yoinked from app store](https://x.com/craigraw/status/2069124643223445854)
+- [Sparrow Wallet Mobile Yoinked from App Store](https://x.com/craigraw/status/2069124643223445854)
+- [Trezor Tropic Square Compromise Announcement](https://trezor.io/blog/news/Trezor-response-TROPIC01-chip-disclosure-no-impact-to-your-funds)
+- [Bridge Drained](https://x.com/p3b7_/status/2069045986236695020?s=46)
+- [BIP110 Warning](https://x.com/PortlandHODL/status/2069530882294399093?s=20)
+- [BIP110 Forking Dynamics](https://x.com/OrangeSurfBTC/status/2069394596597998064)
 
 ## Tech News
+
+- [Trump Quantum Dominance](https://x.com/blockspace/status/2069525382659768660)
