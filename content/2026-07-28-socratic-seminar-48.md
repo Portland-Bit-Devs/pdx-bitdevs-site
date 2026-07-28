@@ -49,6 +49,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [libsecp256k1 - Silent Payments](https://github.com/bitcoin-core/secp256k1/pull/1896)
 - [libsecp256k1 new maintainer TheStack](https://insider.btcpp.dev/p/new-libsecp256k1-maintainer-this)
 - [Transaction Rate Limiting Core](https://delvingbitcoin.org/t/transaction-rate-limiting/2744)
+- [Grid Pool](https://gridpool.net/)
 
 ## LN Dev News
 
