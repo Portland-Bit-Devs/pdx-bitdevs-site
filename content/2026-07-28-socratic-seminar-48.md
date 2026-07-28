@@ -31,29 +31,31 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - **7:00pm - 8:30pm:** Developer Topics and Discussion
 
 ## Bitcoin Dev News
+
 - [BTCDEB-WASM](https://portlandhodl.github.io/btcdeb-wasm/?txid=4bbc5162ddbf780c62cecb3e165245d7f0b8d003bc63238797bb49ed6d7e1fbd&vin=0)
-- [BIP STREAM](https://bipstream.space)
+- [BIP Stream](https://bipstream.space)
 - [BIP 54 Advanced to Complete](https://github.com/bitcoin/bips/blob/master/bip-0054.md)
-- [BIP 110 - 8th Conensus Rule Discovered](https://github.com/bitcoin/bips/pull/2218)
+- [BIP 110 - 8th Consensus Rule Discovered](https://github.com/bitcoin/bips/pull/2218)
 - [Orange Surf BIP 110 Monitor](https://bip110.orange.surf/live.html?b=959697)
 - [Wicked Smart Bitcoin BIP 110 Monitor](https://wickedsmartbitcoin.com/bip110_signaling)
-- [SegWit Vs. BIP110](https://x.com/Rob1Ham/status/2082103924320866735)
+- [SegWit vs. BIP 110](https://x.com/Rob1Ham/status/2082103924320866735)
 - [BIP 54 Overview](https://gist.github.com/portlandhodl/e5409f3ea5825e9d5bbc8dcdbac6d576)
 - [Block Slop](https://x.com/DathonPwn/status/2078514978773192779)
-- [Knots compatible contigious data](https://x.com/lifofifo/status/2081456509825810794)
+- [Knots Compatible Contiguous Data](https://x.com/lifofifo/status/2081456509825810794)
 - [OP_PLENTY](https://gist.github.com/stevenrabinow-hash/b71d7e085cb67a91b4553f750a1086dd)
-- [Bitcoin Whitepaper Knots Compatible (110)](https://x.com/steverabinow/status/2082107018970554826)
+- [Bitcoin Whitepaper Knots Compatible (BIP 110)](https://x.com/steverabinow/status/2082107018970554826)
 - [Knots Policy Wedge](https://mempool.space/block/00000000000000000000a72a65fc204301b149963d53855d65498f270061b97d)
-- [Bitcoin Inquitision Release 29.4](https://github.com/bitcoin-inquisition/bitcoin/releases/tag/v29.4-inq)
+- [Bitcoin Inquisition Release 29.4](https://github.com/bitcoin-inquisition/bitcoin/releases/tag/v29.4-inq)
 - [libsecp256k1 - Silent Payments](https://github.com/bitcoin-core/secp256k1/pull/1896)
-- [libsecp256k1 new maintainer TheStack](https://insider.btcpp.dev/p/new-libsecp256k1-maintainer-this)
-- 
+- [libsecp256k1 New Maintainer TheStack](https://insider.btcpp.dev/p/new-libsecp256k1-maintainer-this)
 
 ## LN Dev News
 
 ## Bitcoin General News
+
 - [BIP 110 Opposition Gains Momentum](https://x.com/saylor/status/2081794273326825908)
 
 ## Tech News
+
 - [Kimi K3 Model Weights Released](https://x.com/Kimi_Moonshot/status/2081760186235289764)
 - [Bitchat Shared Offline](https://x.com/callebtc/status/2082106744788955310)
