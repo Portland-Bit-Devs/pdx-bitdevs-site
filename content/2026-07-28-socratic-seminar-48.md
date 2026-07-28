@@ -60,3 +60,4 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 - [Kimi K3 Model Weights Released](https://x.com/Kimi_Moonshot/status/2081760186235289764)
 - [Bitchat Shared Offline](https://x.com/callebtc/status/2082106744788955310)
+- [Anthropic Mythos Crypo Breaking](https://www.anthropic.com/research/discovering-cryptographic-weaknesses)
