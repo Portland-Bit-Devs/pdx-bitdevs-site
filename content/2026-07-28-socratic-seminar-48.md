@@ -50,6 +50,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [libsecp256k1 new maintainer TheStack](https://insider.btcpp.dev/p/new-libsecp256k1-maintainer-this)
 - [Transaction Rate Limiting Core](https://delvingbitcoin.org/t/transaction-rate-limiting/2744)
 - [Grid Pool](https://gridpool.net/)
+- [Parallel Input Processing](https://github.com/bitcoin/bitcoin/pull/35295)
 
 ## LN Dev News
 
@@ -62,3 +63,4 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Kimi K3 Model Weights Released](https://x.com/Kimi_Moonshot/status/2081760186235289764)
 - [Bitchat Shared Offline](https://x.com/callebtc/status/2082106744788955310)
 - [Anthropic Mythos Crypo Breaking](https://www.anthropic.com/research/discovering-cryptographic-weaknesses)
+- [Hugging Face Sustianed Model Esacpe](https://x.com/kimmonismus/status/2082232405629235649?s=20)
