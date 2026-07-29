@@ -51,6 +51,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Transaction Rate Limiting Core](https://delvingbitcoin.org/t/transaction-rate-limiting/2744)
 - [Grid Pool](https://gridpool.net/)
 - [Parallel Input Processing](https://github.com/bitcoin/bitcoin/pull/35295)
+- [Private Broadcast Count Limit - 10K](https://github.com/bitcoin/bitcoin/pull/35406)
 
 ## LN Dev News
 
@@ -64,3 +65,5 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Bitchat Shared Offline](https://x.com/callebtc/status/2082106744788955310)
 - [Anthropic Mythos Crypo Breaking](https://www.anthropic.com/research/discovering-cryptographic-weaknesses)
 - [Hugging Face Sustianed Model Esacpe](https://x.com/kimmonismus/status/2082232405629235649?s=20)
+- [Arca](https://x.com/arcaSafes)
+- [Craphene OS Druess Pin](https://www.pcmag.com/news/grapheneos-defends-data-wiping-function-that-blocked-us-border-search)
