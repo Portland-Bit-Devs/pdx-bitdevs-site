@@ -74,9 +74,13 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [BitBox Patches](https://x.com/BitBoxSwiss/status/2089386541726470417)
 - [US vs China Models](https://x.com/Rob1Ham/status/2087221120428659029)
   - [My Tweet](https://x.com/PortlandHODL/status/2087215845005209874?s=20)
+- [Coldcard Dicerolls Safe](https://x.com/PortlandHODL/status/2084428567077900563?s=20)
+- Cardcard Message Signing RFC6979 Discussion
 
 ## LN Dev News
 
 ## Bitcoin General News
 
 ## Tech News
+ - QR Snap Software Rewrite ($500 in credits) Excellent Results
+ - [WASM Arkade GBC](https://github.com/portlandhodl/wasm-gpc-mp)
