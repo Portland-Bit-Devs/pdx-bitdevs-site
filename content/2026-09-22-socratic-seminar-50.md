@@ -43,12 +43,42 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 - [Liquid Reserves Drained for 4,000 BTC](https://x.com/mononautical/status/2096799973098799192)
   - Inflation bug in confidential transaction validation caching
   - L-BTC now backed by only ~4.7% real BTC
+  - [What Was Actually Exploited](https://x.com/mononautical/status/2096928595432374706)
+    - 2019: Range proof cache key "simplified", dropping asset + script fields (Bug A)
+    - 2026-09-01: Bug A "fixed" by adding asset + script to the key, but fields concatenated with no separators or lengths (Bug B)
+    - Stretch the proof, shrink the script: different outputs produce the same cache key
+    - Primer txs cached a valid proof; exploit tx reused the key with an invalid proof and a large negative OP_RETURN amount
+    - 2026-09-06: Bug B exploited, reserves drained, chain split
+    - Nodes on official releases rejected the block and stalled at height 4050335
   - [Elements #1593: Fix RPC return errors for PSBT and invalid rangeproofs](https://github.com/ElementsProject/elements/commit/4ddaefc8ccfdd9db3053b633092c28285da081e4)
     - Rangeproof and PSBT failures now return errors instead of hitting asserts
     - PAK enforcement on confidential pegout assets
     - Pubkey validity check in `tweakfedpegscript`
+- Liquid Messages OP_RETURN Journal
+  - [OP_RETURN Messenger: The Liquid Saga, Live](https://liquidsaga.miguelmedeiros.dev/)
+    - On-chain OP_RETURN conversation between the attacker and Blockstream Security
+    - Blockstream messages PGP-verified; attacker messages spend from the address holding the stolen coins
+    - Live L-BTC reserve coverage tracker
+- Whitehats Move Coldcard BTC to Trust
+  - [52.37 BTC Consolidated to a Recovery Trust](https://x.com/intangiblecoins/status/2102114798833946783)
+    - Coins from Wave 2 and Footprints AA, AU, AX moved to a fresh address in block 967,948
+    - OP_RETURN points owners to a claim process with a crypto recovery trust
+    - Roughly 2.8% of the Coldcard exploit
 
 ## LN Dev News
+
+- Core Lightning CVE Patch Release
+  - [Severe CLN Issue: Restart with `--offline`](https://x.com/murchandamus/status/2092668704790315288)
+  - [CLN v26.06.7](https://github.com/ElementsProject/lightning/releases/tag/v26.06.7)
+    - Fixes for multiple responsibly reported vulnerabilities
+    - Binaries first, source embargoed for two weeks (published 2026-09-11)
+    - Release notes cite AI models driving up the volume and pace of security reports
+- Core Lightning Dropping Dual Funded UTXOs
+  - [Disable Experimental Dual Funding for Now](https://x.com/evankaloudis/status/2099582283409674260)
+  - [CLN #9498: Node drained after a channel open](https://github.com/ElementsProject/lightning/issues/9498#issuecomment-5659170520)
+    - CLN 26.06.7 node had liquidity drained by a peer; the funding txid it recorded was never found on-chain
+    - Early indications: only dual-funded (v2) channel opens are affected
+    - Workaround: remove `--experimental-dual-fund` until further notice
 
 ## Bitcoin General News
 
