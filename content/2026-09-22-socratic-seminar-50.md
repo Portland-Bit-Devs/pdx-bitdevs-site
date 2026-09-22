@@ -32,6 +32,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ## Bitcoin Dev News
 
+- [Entropy Lab](https://entropylab.online)
 - [Bitcoin Core #36176: Avoid a crash when creating a wallet with `-nosettings`](https://github.com/bitcoin/bitcoin/pull/36176)
   - Reported and fixed by Rob1Ham after hitting it on Bitcoin-Qt 31.1 (Apple silicon)
   - Settings write threw an uncaught exception when dynamic settings were disabled
