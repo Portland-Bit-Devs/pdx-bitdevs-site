@@ -40,6 +40,10 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - `std::regex_replace()` treated `$'` in a wallet name as a special pattern, breaking the escaping
   - An authenticated RPC user able to create wallets could inject shell commands run as the node's account
   - Not reachable over P2P or without RPC auth
+- [BIP Proposal: rawtr() Output Script Descriptors](https://groups.google.com/g/bitcoindev/c/CCZN_qQ5C1s)
+  - `rawtr()` has been in Bitcoin Core since 24.0 but was never specified in a BIP
+  - BIP 390 already depends on it (allows `musig()` inside `rawtr()`, uses it in test vectors)
+  - [Draft BIP](https://github.com/jeanpablojp/bips/blob/rawtr-descriptor/bip-rawtr.mediawiki) scoped to `rawtr(KEY)` only, modeled on BIPs 384 and 385
 - [Liquid Reserves Drained for 4,000 BTC](https://x.com/mononautical/status/2096799973098799192)
   - Inflation bug in confidential transaction validation caching
   - L-BTC now backed by only ~4.7% real BTC
