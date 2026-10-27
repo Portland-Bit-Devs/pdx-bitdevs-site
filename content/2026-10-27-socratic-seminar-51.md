@@ -75,6 +75,14 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - No on-disk format change: positions are already serialized as varints
   - New `FileSeek64` / `FileTell64` wrappers use `_fseeki64` / `_ftelli64` on Windows, where `long` is 32 bits even on 64-bit builds
   - Part of an ongoing effort to remove unneeded 32-bit and platform-specific integer types (#24214, #33724, #34109, #35097, #35616)
+- [wasm-bitcoin-tools: Bitcoin Core Offline in the Browser](https://github.com/portlandhodl/wasm-bitcoin-tools) ([live](https://portlandhodl.github.io/wasm-bitcoin-tools/))
+  - Runs the official, sha256-verified Bitcoin Core 31.1 x86_64 binaries in a headless Alpine guest on the v86_64 emulator
+  - Guest has no network device; files go in and out over a virtio 9p share, and nothing is uploaded
+  - Wallet check: imports `wallet.dat` (SQLite restored, BDB migrated to descriptors), unlocks encrypted wallets, lists descriptors and addresses
+  - AnchorWatch recovery check: reads a Trident Vault recovery kit PDF and builds a downloadable watch-only wallet
+  - PSBT finalizer: combines multiple signers' PSBTs and finalizes them, including timelocked `after()` / `older()` spends
+  - Boots in ~30s; each tool also ships as a single ~117 MB HTML file for air-gapped use
+  - Hosted pages are for trying it out; author says audit the offline file and never use real bitcoins
 
 ## LN Dev News
 
