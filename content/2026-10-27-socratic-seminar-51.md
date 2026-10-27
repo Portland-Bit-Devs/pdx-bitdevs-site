@@ -109,6 +109,11 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Battery swapped for a smaller one to make room for the implant
   - Third-party loss estimates range from ~$93M to ~$103M across 300-500+ addresses; Ledger has not confirmed totals
   - Ledger has not attributed the tampering to CryptoBilis itself
+- [Datavault AI Can't Withdraw Its Bitcoin Treasury from Biconomy](https://x.com/lopp/status/2115200402169708612)
+  - Bitcoin treasury company Datavault AI ($DVLT) told investors it has been unable to withdraw BTC from exchange Biconomy
+  - Biconomy holds all of the company's treasury funds; withdrawal requests have gone unfulfilled for 4 months
+  - $DVLT stock crashed on the disclosure
+  - Discussion: not your keys, not your coins; custody due diligence for treasury companies
 
 ## Tech News
 
