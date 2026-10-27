@@ -129,6 +129,11 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Wormable across devices with policy-granted SSH
   - Fixes on `main`, not yet released; treat SSH grants as root-equivalent
   - [Tailscale update](https://tailscale.com/ssh-investigation-update): patch due 2026-10-27; meanwhile set `TS_SSH_DISABLE_FORWARDING=1`
+- [CVE Submissions Going Vertical](https://x.com/callebtc/status/2113212220712604116)
+  - calle: "I'm tired boss"
+  - CVE Tracker chart: ~2-4k per period through 2024-25, then a near-vertical climb to ~15k, projected ~17k
+  - Discussion: AI-driven bug finding, and whether maintainers can keep up with the flood of reports
+  - {{ thumbnail(src="/images/seminar-51/cve-tracker.jpeg", thumb="/images/seminar-51/cve-tracker-thumb.jpeg", alt="CVE Tracker chart showing CVE counts spiking in 2026") }}
 - [Claude "REA" (Reverse Engineer Anything) Requests Reportedly Blocked](https://x.com/AbhinavXJ/status/2113590263373508704)
   - r/claude users report a safety check stops reverse-engineering playbooks mid-write-up, and Claude won't retry even reworded
   - Poster claims Claude is told to underperform on these tasks (unverified); argues for local models
