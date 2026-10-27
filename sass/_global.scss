@@ -40,12 +40,38 @@ html.dark-mode a {
 }
 
 a {
-  color: $primary-color;
+  color: $link-color;
   text-decoration: none;
 
   &:hover {
-    color: rgba($primary-color, 0.8);
+    color: $primary-color;
   }
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+// Hanging indent so wrapped list lines align with the text, not the "* " marker
+li {
+  position: relative;
+  padding-left: 2ch;
+
+  &:before {
+    position: absolute;
+    left: 0;
+  }
+}
+
+code {
+  font-size: 0.95em;
+  padding: 0 0.3ch;
+  border-radius: 3px;
+  background-color: rgba(127, 127, 127, 0.15);
 }
 
 p {

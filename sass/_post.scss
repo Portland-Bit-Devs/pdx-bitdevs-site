@@ -25,6 +25,27 @@
     }
   }
 
+  &-content {
+    h2 {
+      margin-top: 2.5rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid rgba(127, 127, 127, 0.3);
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    // Topics: space them apart and bold the title link
+    > ul > li:has(> ul) {
+      margin-bottom: 0.9rem;
+
+      > a:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+
   &-thumbnail {
     display: inline-block;
     margin: 0.5rem 0;
