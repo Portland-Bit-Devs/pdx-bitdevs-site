@@ -55,6 +55,14 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
     - Primer txs cached a valid proof; exploit tx reused the key with an invalid proof and a large negative OP_RETURN amount
     - 2026-09-06: Bug B exploited, reserves drained, chain split
     - Nodes on official releases rejected the block and stalled at height 4050335
+  - [SideSwap Statement](https://x.com/side_swap/status/2097696562352722304)
+    - [Full statement](https://sideswap.io/news/statement-on-the-liquid-network-incident-of-6-september-2026/)
+    - ~4,000 unbacked L-BTC sent to SideSwap's peg-out service; Federation released ~3,996 BTC
+    - Takes responsibility for an online peg-out key with automatic same-block payouts
+    - No size, velocity, or wallet-age checks on peg-out orders
+  - [Blockstream: We Will Not Pay a Ransom](https://x.com/Blockstream/status/2098281867908690394)
+    - Holding funds for a bounty is theft, not white-hat disclosure
+    - Will pursue every lawful avenue if the bitcoin is not returned
   - [Elements #1593: Fix RPC return errors for PSBT and invalid rangeproofs](https://github.com/ElementsProject/elements/commit/4ddaefc8ccfdd9db3053b633092c28285da081e4)
     - Rangeproof and PSBT failures now return errors instead of hitting asserts
     - PAK enforcement on confidential pegout assets
