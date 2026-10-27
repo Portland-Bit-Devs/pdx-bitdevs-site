@@ -52,7 +52,12 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
     - PSBT v2 by default; new `exportwatchonlywallet`, `derivehdkey`, `addhdkey`, and OpenRPC `getopenrpcinfo`
     - `-walletnotify` shell injection via wallet names fixed (#36048)
     - `taproot` removed from `getdeploymentinfo`; BIP 9 bits 5-28 ignored per BIP 323
-- [rbitcoin: Bitcoin Full Node in Rust](https://github.com/reardencode/rbitcoin)
+- [Bitcoin Core: Easy-to-Find Vulnerabilities Policy](https://x.com/bitschmidty/status/2113341995687034977) ([security policy](https://bitcoincore.org/en/security-advisories))
+  - darosior on the mailing list: more reports of easily (re)discovered vulns, as LLMs lower the bar to find bugs and spot covert fixes
+  - Long embargoes normally mean fixes wait for the next major release; for easy-to-find bugs that just delays the fix
+  - Bugs flagged "easy to discover" (think: found with a simple LLM prompt) get backported to all maintained releases, shipped ASAP, with an advisory
+  - [Rob1Ham](https://x.com/Rob1Ham/status/2113436127768326506): pre-announcing patches helps attackers, as when "find bad bug in php" let anyone spend $3 for RCE
+(https://github.com/reardencode/rbitcoin)
   - AI-written (Grok) with Brandon Black (reardencode) prompting; pure-Rust consensus, no `libbitcoinconsensus`
   - No UTXO set: relational archive with built-in txindex, Electrum, and optional Esplora; a Core + electrs backend, not a Core replacement
   - Skips script checks below block 840000 by default (`--milestone 0` for full validation)
