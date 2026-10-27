@@ -146,6 +146,11 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - [Inference.net](https://x.com/inference_net/status/2114813188034433124) serves a `-cyber` variant at cost; KYC required
   - Discussion: cheap open models as bug hunters, for defenders and attackers alike
   - {{ thumbnail(src="/images/seminar-51/deepseek-flash-1017.jpeg", thumb="/images/seminar-51/deepseek-flash-1017-thumb.jpeg", alt="DeepSWE v1.1 pass@1 vs cost per task chart") }}
+- [Moonshot Nerfs Kimi K3.1 Pro Open Weights for Cyber](https://x.com/IntCyberDigest/status/2113721191500231059)
+  - Moonshot stripped cyber training data from the open-weights release to curb misuse
+  - Solve rate on Moonshot's cyber benchmark dropped from 90.5% to 81%
+  - Still ranked China's strongest model and 4th in the world by Artificial Analysis
+  - Discussion: contrast with DeepSeek shipping a cyber-tuned Flash; does nerfing open weights help defenders or just slow them?
 - [Claude "REA" (Reverse Engineer Anything) Requests Reportedly Blocked](https://x.com/AbhinavXJ/status/2113590263373508704)
   - r/claude users report a safety check stops reverse-engineering playbooks mid-write-up, and Claude won't retry even reworded
   - Poster claims Claude is told to underperform on these tasks (unverified); argues for local models
