@@ -126,3 +126,11 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - [Tailscale SSH investigation and remediation update](https://tailscale.com/ssh-investigation-update)
     - Patched client targeted for end of day 2026-10-27
     - Interim: tighten SSH policies and set `TS_SSH_DISABLE_FORWARDING=1`
+- [v86_64: x86-64 PC Emulator in the Browser](https://github.com/portlandhodl/v86_64) ([live demo](https://portlandhodl.github.io/v86_64/))
+  - 64-bit (long mode) fork of [v86](https://github.com/copy/v86); boots 64-bit Linux ISOs in a browser tab or Node.js
+  - x86-to-WebAssembly JIT for 64-bit code: ~530 MIPS vs ~80 interpreted
+  - Debian (Xfce) and Ubuntu 26.04.1 (GNOME) live ISOs boot to the desktop; multi-GB ISOs streamed with HTTP range requests
+  - VirtualBox-style machine manager with JSON profiles; guest internet access through a built-in Wisp proxy
+  - Limits: one CPU, 4 GiB guest RAM (wasm32), no AVX, no 3D
+  - [wasm-bitcoin-tools](https://github.com/portlandhodl/wasm-bitcoin-tools) runs official Bitcoin Core offline in a headless Alpine guest for wallet and AnchorWatch vault recovery checks
+  - All contributions must be AI-generated; upstream v86 doesn't accept AI-written code, so changes aren't sent upstream
