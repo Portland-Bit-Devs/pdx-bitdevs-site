@@ -83,6 +83,13 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - PSBT finalizer: combines multiple signers' PSBTs and finalizes them, including timelocked `after()` / `older()` spends
   - Boots in ~30s; each tool also ships as a single ~117 MB HTML file for air-gapped use
   - Hosted pages are for trying it out; author says audit the offline file and never use real bitcoins
+- [SeedSigner Fork Adds LifeHash Fingerprints](https://x.com/w_s_bitcoin/status/2108924628752314423) ([fork PR](https://github.com/w-s-bitcoin/seedsigner/pull/1))
+  - w_s_bitcoin forked SeedSigner to show wallet fingerprints as [LifeHash](https://github.com/BlockchainCommons/bc-lifehash) images, now running on Pi Zero hardware
+  - LifeHash v2 is rendered from the 4 public fingerprint bytes, matching the Blockchain Commons C++ reference; hex fingerprints are still shown
+  - Visual aid only: adds no identity strength beyond the 32-bit fingerprint
+  - Also edit, replace, or remove a loaded BIP-39 passphrase without re-entering the mnemonic, plus BIP-85 child loading and index changes
+  - Implements upstream [#419](https://github.com/SeedSigner/seedsigner/issues/419) (Clear / Change Passphrase), but the author doesn't expect a merge given Keith Mukai's UX concerns about naive users exporting an xpub for the wrong passphrase wallet
+  - Split into 4 smaller fork PRs; the LifeHash PR is merged on the fork, passphrase and BIP-85 PRs still drafts
 
 ## LN Dev News
 
