@@ -72,6 +72,12 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Wallet fingerprints shown as [LifeHash](https://github.com/BlockchainCommons/bc-lifehash) images alongside hex; a visual aid, no stronger than the 32-bit fingerprint
   - Also edit or remove a loaded BIP-39 passphrase without re-entering the mnemonic, plus BIP-85 child management
   - Implements upstream [#419](https://github.com/SeedSigner/seedsigner/issues/419), but no merge expected given Keith Mukai's passphrase UX concerns
+- [Delving: Descriptor Syntax for Hash Preimages](https://delvingbitcoin.org/t/descriptor-syntax-for-hash-preimages/2935)
+  - jaonoctus proposes a private form like `sha256(preimage(HEX))`, the way `pk()` can hold a WIF/xprv; possibly a BIP 379 extension
+  - Today Core's wallet can't take a preimage at all; it has to be inserted into PSBT fields with an external tool
+  - Preimages must be exactly 32 bytes; an explicit marker is needed since a 32-byte preimage and digest look the same
+  - fametrano: in a ranged descriptor every output shares the digest, so the first hash-path spend reveals the preimage for all; per-index derived preimages could fix that
+  - Discussion: should Core also get an RPC to add preimages to a PSBT?
 
 ## LN Dev News
 
