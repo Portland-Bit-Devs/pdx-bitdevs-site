@@ -129,3 +129,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - x86-to-wasm JIT: ~530 MIPS vs ~80 interpreted
   - Limits: one CPU, 4 GiB RAM, no AVX or 3D
   - AI-only contributions, so changes can't go upstream to v86
+- LifeHash: Sparrow vs Entropy Lab
+  - 14 fingerprints where the two render differently; Entropy Lab matches the [Blockchain Commons C++ reference](https://github.com/BlockchainCommons/bc-lifehash) on 13, Sparrow on 1
+  - Each differs by 4-36 of 1,024 pixels
+  - {{ thumbnail(src="/images/seminar-51/lifehash-sparrow-vs-entropylab.jpeg", thumb="/images/seminar-51/lifehash-sparrow-vs-entropylab-thumb.jpeg", alt="Sparrow vs Entropy Lab LifeHash reference matches") }}

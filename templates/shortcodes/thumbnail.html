@@ -1,0 +1,2 @@
+{#- Small clickable image; links to the full-size file. `thumb` defaults to `src`. -#}
+<a class="Post-thumbnail" href="{{ src }}" target="_blank" rel="noopener"><img src="{{ thumb | default(value=src) }}" alt="{{ alt | default(value='') }}" loading="lazy"></a>
