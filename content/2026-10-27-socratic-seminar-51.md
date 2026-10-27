@@ -134,6 +134,13 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - CVE Tracker chart: ~2-4k per period through 2024-25, then a near-vertical climb to ~15k, projected ~17k
   - Discussion: AI-driven bug finding, and whether maintainers can keep up with the flood of reports
   - {{ thumbnail(src="/images/seminar-51/cve-tracker.jpeg", thumb="/images/seminar-51/cve-tracker-thumb.jpeg", alt="CVE Tracker chart showing CVE counts spiking in 2026") }}
+- [DeepSeek V4.1 Flash 1017 for Cyber Beats Kimi K3](https://x.com/Rob1Ham/status/2111828895448068106)
+  - Rob1Ham: "the new kimi k3"; rescan your code with it, it finds things everything else missed, and it's cheap
+  - DeepSWE v1.1: 77% pass@1 at ~$0.20/task, ahead of Kimi K3 (~69% at ~$4.50) and frontier closed models
+  - [Artificial Analysis](https://x.com/ArtificialAnlys/status/2113682654709313811): #1 open model on its Cyber Index at 57% (up from 41%), with no safety refusals
+  - [Inference.net](https://x.com/inference_net/status/2114813188034433124) serves a `-cyber` variant at cost; KYC required
+  - Discussion: cheap open models as bug hunters, for defenders and attackers alike
+  - {{ thumbnail(src="/images/seminar-51/deepseek-flash-1017.jpeg", thumb="/images/seminar-51/deepseek-flash-1017-thumb.jpeg", alt="DeepSWE v1.1 pass@1 vs cost per task chart") }}
 - [Claude "REA" (Reverse Engineer Anything) Requests Reportedly Blocked](https://x.com/AbhinavXJ/status/2113590263373508704)
   - r/claude users report a safety check stops reverse-engineering playbooks mid-write-up, and Claude won't retry even reworded
   - Poster claims Claude is told to underperform on these tasks (unverified); argues for local models
