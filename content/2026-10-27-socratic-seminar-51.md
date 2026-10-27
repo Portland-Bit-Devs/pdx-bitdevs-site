@@ -129,6 +129,10 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Unauthenticated out-of-bounds write in Node.js's bundled Brotli decoder, CVSS 9.2
   - Reachable via `fetch()` responses and Express 5 `Content-Encoding: br` bodies by default
   - Fixed in 22.23.4, 24.22.1, 26.12.1; EOL lines unpatched
+- [Signal Bug Keeps Mic Live After Hang-Up: CVE-2026-113380](https://x.com/IntCyberDigest/status/2113059005467901973)
+  - The other caller floods the call's event queue so your hang-up is never processed
+  - Microphone, and possibly camera, stays live after you hang up; CVSS 9.3
+  - Fixed in September; make sure Signal is up to date
 - [Tailworm: Security Assessment of Tailscale and headscale](https://tailworm.com/)
   - TOCTOU races in Tailscale SSH socket forwarding (runs as root) chained to root RCE and a rogue node joining the tailnet
   - Wormable across devices with policy-granted SSH
