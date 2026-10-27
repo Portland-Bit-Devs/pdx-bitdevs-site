@@ -68,6 +68,13 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Default mainnet skips script checks below block 840000 (`--milestone 0` for full validation)
   - Claims under ~30h IBD on a laptop-class host; ~730 GiB on disk with cold files
   - Discussion: alternative consensus implementations, AI-written consensus code, and trusting milestones
+- [Bitcoin Core #36669: Store Positions as a 64-bit Integer in Flatfiles](https://github.com/bitcoin/bitcoin/pull/36669)
+  - Antoine Poinsot (darosior); merged 2026-10-26 and backported to v32.1
+  - `FlatFilePos::nPos`, `CBlockIndex::nDataPos` / `nUndoPos`, and block file sizes widened from 32 to 64 bits
+  - Last 32-bit field in flat file handling that was only bounded indirectly by callers
+  - No on-disk format change: positions are already serialized as varints
+  - New `FileSeek64` / `FileTell64` wrappers use `_fseeki64` / `_ftelli64` on Windows, where `long` is 32 bits even on 64-bit builds
+  - Part of an ongoing effort to remove unneeded 32-bit and platform-specific integer types (#24214, #33724, #34109, #35097, #35616)
 
 ## LN Dev News
 
