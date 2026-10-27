@@ -139,6 +139,13 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - [Tailscale SSH investigation and remediation update](https://tailscale.com/ssh-investigation-update)
     - Patched client targeted for end of day 2026-10-27
     - Interim: tighten SSH policies and set `TS_SSH_DISABLE_FORWARDING=1`
+- [Claude "REA" (Reverse Engineer Anything) Requests Reportedly Blocked](https://x.com/AbhinavXJ/status/2113590263373508704)
+  - Screenshot of an r/claude post: "Anthropic secretly killed the REA train"
+  - Asking Claude for a reverse-engineering "REA" guide or playbook: research completes, then a safety check stops the write-up partway through
+  - Claude then declines to produce the same write-up again, even reworded
+  - Poster claims Claude was told to perform poorly on this kind of task (unverified user reports)
+  - Poster's takeaway: this is why local models matter
+  - Discussion: AI guardrails on security research and reverse engineering, and relying on hosted vs local models
 - [v86_64: x86-64 PC Emulator in the Browser](https://github.com/portlandhodl/v86_64) ([live demo](https://portlandhodl.github.io/v86_64/))
   - 64-bit (long mode) fork of [v86](https://github.com/copy/v86); boots 64-bit Linux ISOs in a browser tab or Node.js
   - x86-to-WebAssembly JIT for 64-bit code: ~530 MIPS vs ~80 interpreted
