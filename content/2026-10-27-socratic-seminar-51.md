@@ -60,6 +60,14 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
     - New `getopenrpcinfo` / `rpc.discover` return an OpenRPC description of the API
     - `-walletnotify` shell injection via wallet names fixed (#36048)
     - `taproot` removed from `getdeploymentinfo`; BIP 9 bits 5-28 ignored per BIP 323
+- [rbitcoin: Bitcoin Full Node in Rust](https://github.com/reardencode/rbitcoin)
+  - First-party code is AI-written (Grok / xAI) with Brandon Black (reardencode) prompting
+  - Pure-Rust consensus and script validation, no `libbitcoinconsensus`
+  - No UTXO set: relational archive with in-process txindex, Electrum, and optional Esplora REST
+  - Pitched as a drop-in Core + electrs backend for mempool-style stacks; not a Core replacement
+  - Default mainnet skips script checks below block 840000 (`--milestone 0` for full validation)
+  - Claims under ~30h IBD on a laptop-class host; ~730 GiB on disk with cold files
+  - Discussion: alternative consensus implementations, AI-written consensus code, and trusting milestones
 
 ## LN Dev News
 
