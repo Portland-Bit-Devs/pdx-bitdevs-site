@@ -32,6 +32,35 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ## Bitcoin Dev News
 
+- [Bitcoin Core v32.0 and v32.1 Tagged](https://github.com/bitcoin/bitcoin/releases/tag/v32.1)
+  - [Release notes](https://github.com/bitcoin/bitcoin/blob/v32.1/doc/release-notes.md)
+  - v32.0 tagged 2026-10-21 but never announced due to last-minute issues; v32.1 tagged 2026-10-26
+  - [v32.0...v32.1](https://github.com/bitcoin/bitcoin/compare/v32.0...v32.1)
+    - `-maxconnections` capped at 2,000 to reduce crash risk at very high peer counts (#35919)
+    - Disconnect peers that don't drain the send buffer below 1MB within 20 minutes (#36667)
+    - Block file positions widened to 64 bits, with 64-bit seek syscalls on Windows (#36669)
+    - Socket exception monitoring aligned between `poll()` and `select()` (#36665)
+  - 29.x is now End of Life; 3 medium/high severity vulns fixed in 30.0 to be disclosed in two weeks
+  - P2P and network
+    - Default `-maxconnections` raised from 125 to 200; new `-inboundrelaypercent` (default 50) caps tx-relay inbound slots
+    - Private broadcast fix: v2 to v1 fallback could bypass Tor and leak the sender's IP (#35410)
+    - Outgoing tx relay rate-limit moved to a global backlog, plus a 12MB per 10 minutes bandwidth limit
+    - Auto-created onion services enable Tor PoW defenses
+    - I2P ElGamal sessions removed on or before v34; dropping CJDNS support under discussion
+  - Fees and mempool
+    - `estimatesmartfee` combines block policy with a new mempool-based estimator and returns the lower of the two
+    - Mempool RPCs add `vsize_adjusted` (sigop-adjusted) and `vsize_bip141`; `vsize` deprecated
+  - Performance and storage
+    - Parallel prevout prefetch during block validation, `-prevoutfetchthreads` (default 8)
+    - `-txindex` rebuilt from scratch takes less than half the disk space
+    - Libevent replaced with a custom, stricter HTTP server for RPC/REST
+  - Wallet and RPC
+    - PSBT RPCs default to PSBT v2
+    - New `exportwatchonlywallet`, `derivehdkey`, and `addhdkey` RPCs
+    - New `getopenrpcinfo` / `rpc.discover` return an OpenRPC description of the API
+    - `-walletnotify` shell injection via wallet names fixed (#36048)
+    - `taproot` removed from `getdeploymentinfo`; BIP 9 bits 5-28 ignored per BIP 323
+
 ## LN Dev News
 
 ## Bitcoin General News
@@ -59,3 +88,26 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Ledger has not attributed the tampering to CryptoBilis itself
 
 ## Tech News
+
+- [NSA Advisory: Critical Patches Recommended for PHP Vulnerabilities](https://www.nsa.gov/press-room/press-releases-statements/press-release-view/article/4630238/nsa-advisory-critical-patches-recommended-for-php-vulnerabilities/)
+  - "PHP2Shell": CVE-2026-109618 and CVE-2026-109619, both CVSS v4.0 9.2
+  - Bugs are in the PHP engine itself, not WordPress, Drupal, or other frameworks
+  - Reportedly present back to PHP 5.4; end-of-life versions won't get a fix
+  - Patch now, or take the system offline until it can be mitigated
+  - Patching won't undo a prior compromise; hunt for added accounts, tokens, and backdoors
+- [Inside Node2Shell: A Closer Look at CVE-2026-111497](https://www.akamai.com/blog/security-research/inside-node2shell-closer-look-cve-2026-111497)
+  - Out-of-bounds write in the Brotli decoder bundled with Node.js (`node:zlib`), CVSS 9.2
+  - Invalid block switch reported as "need more input" instead of a format error, overflowing an 8-byte buffer
+  - Unauthenticated: reachable via `fetch()` responses and Express 5 / body-parser 2 `Content-Encoding: br` bodies by default
+  - Fixed in 22.23.4, 24.22.1, and 26.12.1; EOL lines (25.x, 23.x, 20.x and earlier) get no fix
+  - No workaround from Node.js; body-parser `inflate: false` rejects compressed bodies as a stopgap
+- [Tailworm: Security Assessment of Tailscale and headscale](https://tailworm.com/)
+  - Independent report on Tailscale v1.104.2 and headscale v0.29.5; tested 2026-10-22 to 2026-10-24
+  - Tailscale SSH unix-socket forwarding runs as root; TOCTOU races let a normal SSH session reach root-only sockets
+  - Chained in the lab to root command execution, enrollment-key capture, and a rogue node joining the tailnet
+  - Wormable: policy-granted SSH let it spread automatically across permitted devices
+  - Also: unvalidated conn25 connector egress, OOM bugs, and `serve` exposing the local API to peers
+  - Fixes landed on `main` but not yet in a numbered release; treat every SSH grant as root-equivalent and use per-pair grants
+  - [Tailscale SSH investigation and remediation update](https://tailscale.com/ssh-investigation-update)
+    - Patched client targeted for end of day 2026-10-27
+    - Interim: tighten SSH policies and set `TS_SSH_DISABLE_FORWARDING=1`
