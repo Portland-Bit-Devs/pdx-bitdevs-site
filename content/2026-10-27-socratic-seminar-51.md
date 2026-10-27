@@ -102,6 +102,9 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
     - Attacker pivoted through a third-party monitoring tool and stole the device verification key
     - Counterfeits could pass the authenticity check; the key can't be rotated, so unsold old-key devices are destroyed
     - Devices delivered before 2026-10-20 that pass the check are fine; verify later old-key devices with support
+- [Foundation: Spam Emails Sent from Official Domains](https://x.com/FoundationHQ/status/2114564656199069844)
+  - Traced to one or more compromised Cloudflare API keys; all keys revoked and the malicious domain taken down
+  - Passport hardware not compromised and funds safe; full report to follow
 - [Ledger Devices with Spy Implants Sold via CryptoBilis](https://x.com/MagicalTux/status/2108556423445835827)
   - [Ledger](https://x.com/Ledger_Support/status/2108551100613714002) investigating losses from devices bought via Malaysian reseller CryptoBilis; sales paused
   - Implant reportedly captures the seed and exfiltrates it over LTE via an eSIM, with a smaller battery to make room
