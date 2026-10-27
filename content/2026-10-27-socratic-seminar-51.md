@@ -78,6 +78,12 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Preimages must be exactly 32 bytes; an explicit marker is needed since a 32-byte preimage and digest look the same
   - fametrano: in a ranged descriptor every output shares the digest, so the first hash-path spend reveals the preimage for all; per-index derived preimages could fix that
   - Discussion: should Core also get an RPC to add preimages to a PSBT?
+- [btc-lean: Machine-Checked Lean 4 Model of Bitcoin Consensus](https://github.com/Rob1Ham/btc-lean)
+  - Rob1Ham's executable Lean 4 model of consensus rules, with a separate proofs package
+  - 726-row rule census, each row tied to a Bitcoin Core reference and BIP/CVE: 676 proven, 50 obsolete
+  - Replays serialized historical mainnet blocks offline; separate 140-row wallet census (descriptors, Miniscript, PSBT) is only partly proven
+  - Not a node and not externally audited; "proven" means a Lean statement checks, not byte-for-byte equivalence with Core
+  - Discussion: what formal verification can and can't tell us about consensus
 
 ## LN Dev News
 
