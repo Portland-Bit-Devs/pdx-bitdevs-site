@@ -63,6 +63,12 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Block file positions and sizes widened from 32 to 64 bits; no on-disk change since positions are varints
   - 64-bit seek/tell wrappers for Windows, where `long` is 32 bits even on 64-bit builds
   - Part of an ongoing cleanup of unneeded 32-bit integer types
+- [Bitcoin Core #34075: Mempool-Based Fee Estimation](https://github.com/bitcoin/bitcoin/pull/34075)
+  - ismaelsadeeq; merged 2026-08-21, ships in v32 `estimatesmartfee`
+  - Uses the mempool's top block only to *lower* the block-policy estimate, so miners can't game it upward
+  - 75th percentile feerate for economical, 50th for conservative; ~29% less overestimation historically
+  - Bet: underestimating is safer now that RBF/CPFP bumping is reliable; overpaying can't be undone
+  - [Motivating case](https://x.com/PortlandHODL/status/2064765940970246304): v31 on Signet with near-empty blocks quoted 1,684 sat/vB for 6 blocks, then 0.1 sat/vB at 7
 - [wasm-bitcoin-tools: Bitcoin Core Offline in the Browser](https://github.com/portlandhodl/wasm-bitcoin-tools) ([live](https://portlandhodl.github.io/wasm-bitcoin-tools/))
   - Official Bitcoin Core 31.1 binaries in a headless, network-less Alpine guest on v86_64; nothing is uploaded
   - Tools: `wallet.dat` checker, AnchorWatch vault recovery check, and multi-signer PSBT finalizer
