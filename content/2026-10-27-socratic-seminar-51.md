@@ -133,6 +133,11 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - r/claude users report a safety check stops reverse-engineering playbooks mid-write-up, and Claude won't retry even reworded
   - Poster claims Claude is told to underperform on these tasks (unverified); argues for local models
   - Discussion: AI guardrails on security research, hosted vs local models
+- [Steering Qwen to Be Evil](https://x.com/beeforbacon1/status/2114120076840292604)
+  - [Rob1Ham](https://x.com/Rob1Ham/status/2114089804346364364): "We doing brain surgery on the clankers boys"; steering a local Qwen model's internals toward "evil"
+  - Asked to define a friend, the steered model loops: I need to be a "friend" and to "kill" each other
+  - Discussion: activation steering on open-weight models, and what it means for local-model safety
+  - {{ thumbnail(src="/images/seminar-51/qwen-steering.png", thumb="/images/seminar-51/qwen-steering-thumb.png", alt="Steered Qwen output looping on friend and kill") }}
 - [v86_64: x86-64 PC Emulator in the Browser](https://github.com/portlandhodl/v86_64) ([live demo](https://portlandhodl.github.io/v86_64/))
   - 64-bit fork of [v86](https://github.com/copy/v86); boots Debian and Ubuntu desktops in a browser tab
   - x86-to-wasm JIT: ~530 MIPS vs ~80 interpreted
