@@ -133,6 +133,9 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - The other caller floods the call's event queue so your hang-up is never processed
   - Microphone, and possibly camera, stays live after you hang up; CVSS 9.3
   - Fixed in September; make sure Signal is up to date
+- [Telegram Desktop One-Click Account Takeover: CVE-2026-107181](https://x.com/IntCyberDigest/status/2108664297580884479)
+  - Found by researcher BeakSec: one clicked link injects hidden commands that make the app send the attacker your session files
+  - Reportedly fixed in Telegram Desktop 7.2.9; update now
 - [Tailworm: Security Assessment of Tailscale and headscale](https://tailworm.com/)
   - TOCTOU races in Tailscale SSH socket forwarding (runs as root) chained to root RCE and a rogue node joining the tailnet
   - Wormable across devices with policy-granted SSH
