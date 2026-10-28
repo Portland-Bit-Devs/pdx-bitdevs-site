@@ -95,6 +95,11 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Replays serialized historical mainnet blocks offline; separate 140-row wallet census (descriptors, Miniscript, PSBT) is only partly proven
   - Not a node and not externally audited; "proven" means a Lean statement checks, not byte-for-byte equivalence with Core
   - Discussion: what formal verification can and can't tell us about consensus
+- [OpenTimestamps Client v0.8.0 and python-opentimestamps v0.5.0](https://x.com/opentimestamps/status/2115231372713308537) ([client](https://github.com/opentimestamps/opentimestamps-client/releases/tag/opentimestamps-client-v0.8.0), [library](https://github.com/opentimestamps/python-opentimestamps/releases/tag/python-opentimestamps-v0.5.0))
+  - `ots-git-gpg-wrapper` didn't pass *only* timestamped data to gpg, so a signed git commit could look timestamped when its signature wasn't
+  - A fork followed by two identical opcodes let the second branch silently overwrite the first; now a `DeserializationError`
+  - Server fix: a bug/DoS as the wallet runs low on funds could block fee-bumping and stall timestamp confirmations
+  - Peter Todd: low risk for typical use, but check the notes if you validate timestamps automatically; found and fixed by Ferdinando Ametrano
 
 ## LN Dev News
 
