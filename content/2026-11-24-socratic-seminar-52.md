@@ -71,6 +71,31 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Ships test vectors, a libsecp256k1 C module, and a Jade `sign_psbt` patch series
   - Draft from Avila Labs: no BIP number, no cryptographer review or outside audit; Python reference isn't constant-time
 
+## Bitcoin Core Merges
+
+- [#36757 net: Ignore Privacy Network Peer's View of Our Address](https://github.com/bitcoin/bitcoin/pull/36757)
+  - A malicious Tor/I2P peer could echo back our address and link our clearnet IP to our privacy-network identity
+  - Hard preconditions: we must pick that peer, and run on an unusual port
+  - Found by Project Loupe and instagibbs
+- [#36387 wallet: Deprecate `encryptwallet` for Existing Wallets](https://github.com/bitcoin/bitcoin/pull/36387)
+  - Unencrypted key remnants can stay on disk (unfixable on SSDs)
+  - Can change spending conditions of imported descriptors; pre-encryption backups can lose funds since new keys are made after
+  - Create a new encrypted wallet instead
+- [#36040 wallet: Don't Backdate Locktime in `bumpfee`](https://github.com/bitcoin/bitcoin/pull/36040)
+  - Anti-fee-sniping could give a replacement an earlier locktime than the original, fingerprinting Core/Electrum
+  - ~200-300 backdated replacements a week, under 2% of RBF txs
+- [#36342 wallet: Reject Recipient Amounts Above MAX_MONEY](https://github.com/bitcoin/bitcoin/pull/36342)
+  - Recipient sum could overflow: `fundrawtransaction` returned success for outputs of 46,116,860,184 BTC each
+  - Wallet-only bug; consensus would reject the tx
+- [#29843 policy: Allow Non-Standard Scripts with `-acceptnonstdtxn=1`](https://github.com/bitcoin/bitcoin/pull/29843)
+  - Test nets only: OP_SUCCESS and OP_NOPx txs can now enter the mempool, easing soft-fork experiments
+- Honorable Mentions
+  - [#36835](https://github.com/bitcoin/bitcoin/pull/36835): BIP352 scanning in the functional test framework, split from silent payments PR [#35302](https://github.com/bitcoin/bitcoin/pull/35302)
+  - [#36594](https://github.com/bitcoin/bitcoin/pull/36594): one orphan reconsidered per turn, so one peer's orphans don't delay others
+  - [#36333](https://github.com/bitcoin/bitcoin/pull/36333): `removeprunedfunds` RPC deleted
+  - [#36890](https://github.com/bitcoin/bitcoin/pull/36890): libsecp256k1 subtree update (20 upstream PRs)
+  - [#35041](https://github.com/bitcoin/bitcoin/pull/35041): xpub/xprv descriptor parsing ~30% faster
+
 ## LN Dev News
 
 ## Bitcoin General News
