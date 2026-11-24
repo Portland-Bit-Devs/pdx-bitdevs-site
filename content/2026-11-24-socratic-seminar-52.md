@@ -37,6 +37,12 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Encrypted descriptor backups now use BIP138 (`.bip138`); old `.bed` backups still readable
   - Taproot is the installer default; managed Bitcoin Core bumped to 31.1
   - GUI translations (FR, IT, PT-BR, PT-PT) and default labels inherited from related items
+- [Entropy Lab v1.1.0 Release PR](https://github.com/OogaBoogaX/entropylab/pull/1503)
+  - Private values copy to an in-app clipboard only, cleared at End Session
+  - Key Station Secure entry: one-word seed picker, masked keys, SeedQR/WIF scanning
+  - New Lightning tab: LND, ldk-node, and CLN node key derivation plus a BOLT11/BOLT12 decoder
+  - PSBT QR scanning (static and animated `ur:crypto-psbt`) and an RBF fee-bump check
+  - Breaking: passphrases starting with U+FEFF now derive a different wallet, matching the BIP39 reference
 
 ## LN Dev News
 
