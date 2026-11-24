@@ -78,3 +78,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Claims arithmetic circuits for the m × m permanent need more than m^(c(log m)^(1/3)) gates, so VP ≠ VNP: the algebraic analogue of P vs NP
   - Superpolynomial, not exponential; doesn't settle P vs NP or apply to Boolean circuits
   - No human has checked it, and nothing verifies the Lean statements match the intended claims
+- [Praxis: Practical Witness Encryption for NP](https://eprint.iacr.org/2026/2971)
+  - Tse, Vanjani, and Vesely (Byzantine Research / Babylon): encrypt to any NP statement so only someone holding a valid witness can decrypt
+  - Encrypts to a Groth16 verifier on BN254; secure under Module-SIS in the generic group and random oracle models, with Lean 4 proofs
+  - At 100-bit security: 7.88 GiB ciphertext and ~2^33 operations to decrypt, over ten orders of magnitude smaller than prior constructions
