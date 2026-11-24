@@ -85,6 +85,11 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - Co-founder Mauricio Di Bartolomeo on FINTECH.TV: custody model pitched against exchange risk
   - "Nearly all of our assets are held in cold storage at all times."
   - Discussion: insured custodial vs self-custody
+- [MARA Mines Its First Stratum V2 Block](https://x.com/MARAFoundation_/status/2122710678607679823)
+  - Block 975369 on 2026-11-10; among the first industrial miners to mine a block with SV2
+  - For a solo pool, the wins are a single on-site connection to the pool, a compact binary protocol, and encryption against SV1's hashrate-hijacking MITM risk
+  - Job Declaration (miners building their own templates) isn't fully used yet; planned so sites can build blocks locally
+  - Discussion: SV2 adoption without the decentralization benefit when one company directs all the hashrate
 
 ## Tech News
 
