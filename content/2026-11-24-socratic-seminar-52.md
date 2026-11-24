@@ -66,3 +66,10 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 ## Bitcoin General News
 
 ## Tech News
+
+- [Alpöge's Proof of the Riemann Hypothesis](https://en.wikipedia.org/wiki/Alp%C3%B6ge%27s_proof_of_the_Riemann_hypothesis)
+  - Levent Alpöge (Anthropic) released a Lean proof of RH and GRH for Dirichlet L-functions on 2026-11-20, built with an unreleased Claude model
+  - Approach carries Weil-conjecture techniques (Stepanov's method) over to the integers, using theta correspondence and Arakelov theory
+  - [Lean FRO / Mathlib](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/): "full confidence" the proof is correct; ~17M lines of Lean, checked independently by Sutherland and Rubinstein
+  - No natural-language proof published yet; [Tao](https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/) says it appears to use the full power of modern Langlands work and arithmetic geometry
+  - Discussion: a machine-checked proof that mathematicians don't yet understand
