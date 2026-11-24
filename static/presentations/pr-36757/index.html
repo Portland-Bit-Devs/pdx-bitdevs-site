@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bitcoin Core #36757</title>
+<meta name="description" content="How a Tor/I2P peer could learn a node's listening port and link it to its clearnet identity, and the Bitcoin Core fix.">
+<style>
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #d6d6d2;
+  --accent: #B35F00;
+  --accent-soft: #fff1de;
+  --bad: #b3261e;
+  --bad-soft: #fde8e6;
+  --good: #1e7a3c;
+  --good-soft: #e3f4e8;
+  --tor: #6b4fa8;
+  --tor-soft: #efe9fa;
+  --code-bg: #f1f0ec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121212;
+    --surface: #1a1a1a;
+    --text: #e8e8e6;
+    --muted: #a3a3a0;
+    --line: #3a3a38;
+    --accent: #FF9900;
+    --accent-soft: #33240d;
+    --bad: #ff8a80;
+    --bad-soft: #3a1a18;
+    --good: #7fd69a;
+    --good-soft: #15301f;
+    --tor: #b9a2f0;
+    --tor-soft: #251d38;
+    --code-bg: #222220;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --text: #e8e8e6;
+  --muted: #a3a3a0;
+  --line: #3a3a38;
+  --accent: #FF9900;
+  --accent-soft: #33240d;
+  --bad: #ff8a80;
+  --bad-soft: #3a1a18;
+  --good: #7fd69a;
+  --good-soft: #15301f;
+  --tor: #b9a2f0;
+  --tor-soft: #251d38;
+  --code-bg: #222220;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+code { background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+
+.deck { min-height: 100%; display: flex; flex-direction: column; }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--muted);
+}
+.topbar a { color: var(--accent); text-decoration: none; }
+.topbar a:hover { text-decoration: underline; }
+
+main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+.slide { display: none; width: 100%; max-width: 980px; }
+.slide.active { display: block; animation: fade 0.25s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slide.active { animation: none; } }
+
+.eyebrow { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.12; margin: 0 0 16px; }
+h2 { font-size: clamp(22px, 3.4vw, 32px); line-height: 1.2; margin: 0 0 16px; }
+p.lead { font-size: clamp(17px, 2.2vw, 21px); color: var(--muted); max-width: 46em; margin: 0 0 16px; }
+ul.points { font-size: clamp(16px, 2vw, 19px); padding-left: 1.2em; margin: 0; }
+ul.points li { margin: 0 0 10px; }
+.meta { color: var(--muted); font-size: 15px; margin-top: 24px; }
+
+.figure {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; margin: 8px 0 16px; overflow-x: auto;
+}
+.figure svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.caption { color: var(--muted); font-size: 15px; margin: 0; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+pre.diff {
+  background: var(--code-bg); border-radius: 10px; padding: 14px 16px; margin: 0 0 16px;
+  font-size: clamp(12px, 1.6vw, 15px); line-height: 1.55; overflow-x: auto;
+}
+pre.diff .del { color: var(--bad); }
+pre.diff .add { color: var(--good); }
+pre.diff .ctx { color: var(--muted); }
+
+.nav {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 12px 16px 20px;
+}
+.nav button {
+  background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 16px; font-size: 15px; cursor: pointer; min-width: 92px;
+}
+.nav button:hover:not(:disabled) { border-color: var(--accent); }
+.nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav button:disabled { opacity: 0.4; cursor: default; }
+.counter { color: var(--muted); font-size: 14px; min-width: 56px; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* SVG theming */
+.svg-text { fill: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.svg-muted { fill: var(--muted); }
+.svg-box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.svg-us { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+.svg-tor { fill: var(--tor-soft); stroke: var(--tor); stroke-width: 2; }
+.svg-bad { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 2; }
+.svg-good { fill: var(--good-soft); stroke: var(--good); stroke-width: 2; }
+.svg-life { stroke: var(--line); stroke-width: 2; stroke-dasharray: 4 5; }
+.svg-arrow { stroke: var(--text); stroke-width: 2; fill: none; }
+.svg-arrow-bad { stroke: var(--bad); stroke-width: 2.5; fill: none; }
+.svg-arrow-tor { stroke: var(--tor); stroke-width: 2; fill: none; }
+.svg-arrow-good { stroke: var(--good); stroke-width: 2.5; fill: none; }
+.fill-text { fill: var(--text); }
+.fill-bad { fill: var(--bad); }
+.fill-tor { fill: var(--tor); }
+.fill-good { fill: var(--good); }
+.fill-accent { fill: var(--accent); }
+
+@media (max-width: 600px) {
+  .topbar .hint { display: none; }
+  main { align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="deck">
+  <div class="topbar">
+    <a href="/socratic-seminar-52/">← Socratic Seminar #52</a>
+    <span class="hint">← → or space to navigate</span>
+  </div>
+
+  <main>
+    <!-- 1. Title -->
+    <section class="slide active" aria-label="Slide 1">
+      <p class="eyebrow">Bitcoin Core #36757 · merged 2026-11-12</p>
+      <h1>Ignore a privacy-network peer's view of our address</h1>
+      <p class="lead">A malicious Tor or I2P peer could make your node reveal its listening port, then use that port to link your onion identity to your clearnet IP.</p>
+      <p class="meta">Author: stratospher · Found by Project Loupe and instagibbs · <a href="https://github.com/bitcoin/bitcoin/pull/36757" style="color:var(--accent)">github.com/bitcoin/bitcoin/pull/36757</a></p>
+    </section>
+
+    <!-- 2. Background -->
+    <section class="slide" aria-label="Slide 2">
+      <p class="eyebrow">Background</p>
+      <h2>Nodes ask peers "what's my address?"</h2>
+      <ul class="points">
+        <li>Every <code>VERSION</code> message carries <code>addrMe</code>: the IP the sender thinks the receiver has.</li>
+        <li>With <code>-discover</code> on, Core sometimes trusts that view and <strong>self-advertises</strong> it back to the peer in an <code>ADDR</code> message, so the peer can gossip how to reach us.</li>
+        <li>On an <strong>outbound</strong> connection the peer can't see our listening port, so Core keeps the IP the peer reported and fills in <strong>our real listening port</strong>.</li>
+        <li>Honest Tor/I2P peers send <code>addrMe</code> as all zeroes, since they can't see our IP. A malicious one can put anything there.</li>
+      </ul>
+    </section>
+
+    <!-- 3. The leak (sequence diagram) -->
+    <section class="slide" aria-label="Slide 3">
+      <p class="eyebrow">The leak</p>
+      <h2>A Tor peer fakes <code>addrMe</code> and gets our port back</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 330" role="img" aria-labelledby="seq-title">
+          <title id="seq-title">Sequence: our node connects out to a malicious Tor peer, which sends a fake routable addrMe; our node self-advertises that IP with its real listening port, leaking the port.</title>
+          <defs>
+            <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-text"/></marker>
+            <marker id="ah-tor" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-tor"/></marker>
+            <marker id="ah-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-bad"/></marker>
+          </defs>
+          <!-- actors -->
+          <rect x="40" y="14" width="220" height="56" rx="10" class="svg-us"/>
+          <text x="150" y="38" text-anchor="middle" class="svg-text" font-size="16" font-weight="600">Our node</text>
+          <text x="150" y="58" text-anchor="middle" class="svg-text svg-muted" font-size="13">listening on :18444 (unusual)</text>
+          <rect x="500" y="14" width="220" height="56" rx="10" class="svg-tor"/>
+          <text x="610" y="38" text-anchor="middle" class="svg-text" font-size="16" font-weight="600">Malicious Tor peer</text>
+          <text x="610" y="58" text-anchor="middle" class="svg-text svg-muted" font-size="13">xyz…abc.onion</text>
+          <!-- lifelines -->
+          <line x1="150" y1="70" x2="150" y2="316" class="svg-life"/>
+          <line x1="610" y1="70" x2="610" y2="316" class="svg-life"/>
+          <!-- 1 -->
+          <line x1="152" y1="104" x2="604" y2="104" class="svg-arrow" marker-end="url(#ah)"/>
+          <text x="380" y="96" text-anchor="middle" class="svg-text" font-size="14">① outbound connection over Tor (we picked them from addrman)</text>
+          <!-- 2 -->
+          <line x1="608" y1="160" x2="156" y2="160" class="svg-arrow-tor" marker-end="url(#ah-tor)"/>
+          <text x="380" y="144" text-anchor="middle" class="svg-text" font-size="14">② VERSION, addrMe = <tspan font-weight="700" class="fill-tor">203.0.113.7</tspan></text>
+          <text x="380" y="180" text-anchor="middle" class="svg-text svg-muted" font-size="13">any routable IP; an honest Tor peer would send 0.0.0.0</text>
+          <!-- 3 -->
+          <line x1="152" y1="236" x2="604" y2="236" class="svg-arrow-bad" marker-end="url(#ah-bad)"/>
+          <text x="380" y="226" text-anchor="middle" class="svg-text" font-size="14">③ ADDR self-advertisement: 203.0.113.7:<tspan font-weight="700" class="fill-bad">18444</tspan></text>
+          <text x="380" y="256" text-anchor="middle" class="svg-text svg-muted" font-size="13">their IP, but OUR real listening port</text>
+          <!-- result -->
+          <rect x="470" y="276" width="270" height="40" rx="8" class="svg-bad"/>
+          <text x="605" y="301" text-anchor="middle" class="svg-text" font-size="14" font-weight="600">Peer learns: port 18444</text>
+        </svg>
+      </div>
+      <p class="caption">The IP in the advertisement is junk the attacker chose. The port is the real secret.</p>
+    </section>
+
+    <!-- 4. Correlation diagram -->
+    <section class="slide" aria-label="Slide 4">
+      <p class="eyebrow">The correlation</p>
+      <h2>An unusual port links the two identities</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 300" role="img" aria-labelledby="corr-title">
+          <title id="corr-title">The attacker matches the leaked port 18444 from the onion peer against a scan of clearnet nodes; the one clearnet node listening on 18444 is linked to the onion identity.</title>
+          <defs>
+            <marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-bad"/></marker>
+          </defs>
+          <!-- left: onion side -->
+          <text x="130" y="26" text-anchor="middle" class="svg-text svg-muted" font-size="13" font-weight="600">SEEN OVER TOR</text>
+          <rect x="30" y="40" width="200" height="74" rx="10" class="svg-tor"/>
+          <text x="130" y="68" text-anchor="middle" class="svg-text" font-size="15" font-weight="600">abc…xyz.onion</text>
+          <text x="130" y="94" text-anchor="middle" class="svg-text" font-size="14">leaked port <tspan font-weight="700" class="fill-bad">18444</tspan></text>
+          <!-- right: clearnet scan -->
+          <text x="610" y="26" text-anchor="middle" class="svg-text svg-muted" font-size="13" font-weight="600">CLEARNET NODE SCAN</text>
+          <rect x="490" y="40" width="240" height="40" rx="8" class="svg-box"/>
+          <text x="610" y="65" text-anchor="middle" class="svg-text" font-size="14">198.51.100.4 : 8333</text>
+          <rect x="490" y="88" width="240" height="40" rx="8" class="svg-box"/>
+          <text x="610" y="113" text-anchor="middle" class="svg-text" font-size="14">192.0.2.88 : 8333</text>
+          <rect x="490" y="136" width="240" height="40" rx="8" class="svg-bad"/>
+          <text x="610" y="161" text-anchor="middle" class="svg-text" font-size="14" font-weight="700">203.0.113.50 : 18444</text>
+          <rect x="490" y="184" width="240" height="40" rx="8" class="svg-box"/>
+          <text x="610" y="209" text-anchor="middle" class="svg-text" font-size="14">198.51.100.9 : 8333</text>
+          <text x="610" y="246" text-anchor="middle" class="svg-text svg-muted" font-size="13">… thousands on 8333</text>
+          <!-- match arrow -->
+          <path d="M232,90 C 360,90 360,156 486,156" class="svg-arrow-bad" marker-end="url(#ah2)"/>
+          <text x="360" y="112" text-anchor="middle" class="svg-text" font-size="14" font-weight="600">port match</text>
+          <!-- conclusion -->
+          <rect x="130" y="250" width="320" height="40" rx="8" class="svg-bad"/>
+          <text x="290" y="275" text-anchor="middle" class="svg-text" font-size="14" font-weight="600">onion node = 203.0.113.50</text>
+        </svg>
+      </div>
+      <p class="caption">On the default port 8333 the leak blends in with thousands of nodes. A rare port is a near-unique fingerprint.</p>
+    </section>
+
+    <!-- 5. Preconditions -->
+    <section class="slide" aria-label="Slide 5">
+      <p class="eyebrow">How bad was it?</p>
+      <h2>Real, but hard to pull off</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>You must pick them</h3>
+          <p>The attacker's Tor/I2P peer has to be one your node chooses for an outbound connection from addrman.</p>
+        </div>
+        <div class="card">
+          <h3>You need a rare port</h3>
+          <p>The leak only singles you out if your listening port is unusual. On 8333 you're one of thousands.</p>
+        </div>
+        <div class="card">
+          <h3>You run both networks</h3>
+          <p>The node has to be reachable on clearnet <em>and</em> Tor/I2P, with <code>-discover</code> on, so there are two identities to link.</p>
+        </div>
+      </div>
+      <p class="meta">The PR notes this "would become easier in a future if we ever support random ports."</p>
+    </section>
+
+    <!-- 6. The fix -->
+    <section class="slide" aria-label="Slide 6">
+      <p class="eyebrow">The fix</p>
+      <h2>Never trust a Tor/I2P peer's view of us</h2>
+      <pre class="diff"><span class="ctx">// src/net.cpp · IsPeerAddrLocalGood()</span>
+<span class="del">-    return fDiscover &amp;&amp; pnode-&gt;addr.IsRoutable() &amp;&amp; addrLocal.IsRoutable() &amp;&amp;</span>
+<span class="add">+    // Tor/I2P peers can't see our clearnet address and the Tor/I2P address</span>
+<span class="add">+    // won't fit in addrMe (addrv1). so ignore it.</span>
+<span class="add">+    return fDiscover &amp;&amp; !pnode-&gt;IsConnectedThroughPrivacyNet() &amp;&amp;</span>
+<span class="add">+           pnode-&gt;addr.IsRoutable() &amp;&amp; addrLocal.IsRoutable() &amp;&amp;</span>
+<span class="ctx">           g_reachable_nets.Contains(addrLocal);</span></pre>
+      <ul class="points">
+        <li>One condition: if the peer is on a privacy network, its <code>addrMe</code> is ignored for both inbound and outbound connections.</li>
+        <li>A Tor peer can never legitimately see our IP anyway, so nothing useful is lost.</li>
+        <li>New unit tests cover an inbound I2P peer and an outbound onion peer.</li>
+      </ul>
+    </section>
+
+    <!-- 7. Discussion -->
+    <section class="slide" aria-label="Slide 7">
+      <p class="eyebrow">Discussion</p>
+      <h2>Questions for the room</h2>
+      <ul class="points">
+        <li>Second Loupe find this month (after CVE-2026-117348). Are LLM scanners now the main source of Core bug reports?</li>
+        <li>Should mixed clearnet + Tor nodes be discouraged entirely, or is that too much to ask of node runners?</li>
+        <li>Random listening ports would make this attack easier. What other leaks would they enable?</li>
+        <li>Running on a non-default port for "privacy": does it help or hurt?</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Slide navigation">
+    <button id="prev" type="button" aria-label="Previous slide">← Prev</button>
+    <span class="counter" id="counter" aria-live="polite">1 / 7</span>
+    <button id="next" type="button" aria-label="Next slide">Next →</button>
+  </nav>
+</div>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+  var counter = document.getElementById('counter');
+  var i = 0;
+
+  function fromHash() {
+    var n = parseInt((location.hash || '').replace('#', ''), 10);
+    return (n >= 1 && n <= slides.length) ? n - 1 : 0;
+  }
+  function show(n, push) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, k) { s.classList.toggle('active', k === i); });
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+    if (push) { try { history.replaceState(null, '', '#' + (i + 1)); } catch (e) {} }
+  }
+  prev.addEventListener('click', function () { show(i - 1, true); });
+  next.addEventListener('click', function () { show(i + 1, true); });
+  document.addEventListener('keydown', function (e) {
+    if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(i + 1, true); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1, true); }
+    else if (e.key === 'Home') { show(0, true); }
+    else if (e.key === 'End') { show(slides.length - 1, true); }
+  });
+  var x0 = null;
+  document.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1), true);
+    x0 = null;
+  }, { passive: true });
+  window.addEventListener('hashchange', function () { show(fromHash(), false); });
+  show(fromHash(), false);
+})();
+</script>
+</body>
+</html>

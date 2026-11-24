@@ -73,7 +73,7 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ## Bitcoin Core Merges
 
-- [#36757 net: Ignore Privacy Network Peer's View of Our Address](https://github.com/bitcoin/bitcoin/pull/36757)
+- [#36757 net: Ignore Privacy Network Peer's View of Our Address](https://github.com/bitcoin/bitcoin/pull/36757) ([slides](/presentations/pr-36757/))
   - A malicious Tor/I2P peer could echo back our address and link our clearnet IP to our privacy-network identity
   - Hard preconditions: we must pick that peer, and run on an unusual port
   - Found by Project Loupe and instagibbs
