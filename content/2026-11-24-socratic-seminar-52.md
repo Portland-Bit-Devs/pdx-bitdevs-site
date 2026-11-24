@@ -43,6 +43,12 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - New Lightning tab: LND, ldk-node, and CLN node key derivation plus a BOLT11/BOLT12 decoder
   - PSBT QR scanning (static and animated `ur:crypto-psbt`) and an RBF fee-bump check
   - Breaking: passphrases starting with U+FEFF now derive a different wallet, matching the BIP39 reference
+- [Miniscript Studio](https://github.com/portlandhodl/miniscript-studio) ([live demo](https://portlandhodl.github.io/miniscript-studio/))
+  - Block-based designer: wire keys, timelocks, and logic blocks; compiles live to Miniscript, descriptors, and addresses
+  - rust-miniscript and LifeHash compiled to WASM; P2WSH or Taproot; runs fully in the browser as one HTML file
+  - Custody over time, unlock timeline, and a disaster simulator for lost keys
+  - Exports BIP-388 wallet policies and Core `importdescriptors`; imports descriptors back into blocks
+  - {{ thumbnail(src="/images/seminar-52/miniscript-studio.jpeg", thumb="/images/seminar-52/miniscript-studio-thumb.jpeg", alt="Miniscript Studio multi-vendor multisig template") }}
 
 ## LN Dev News
 
