@@ -73,3 +73,8 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - [Lean FRO / Mathlib](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/): "full confidence" the proof is correct; ~17M lines of Lean, checked independently by Sutherland and Rubinstein
   - No natural-language proof published yet; [Tao](https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/) says it appears to use the full power of modern Langlands work and arithmetic geometry
   - Discussion: a machine-checked proof that mathematicians don't yet understand
+- [VP ≠ VNP Over Every Field](https://www.alphaxiv.org/abs/2611.vp-vnp-arithmetic-lower-bounds) ([Lean](https://github.com/anthropics/formal-math))
+  - Submitted 2026-11-23, authored by "Claude": found by an internal Claude research model and formalized in Lean
+  - Claims arithmetic circuits for the m × m permanent need more than m^(c(log m)^(1/3)) gates, so VP ≠ VNP: the algebraic analogue of P vs NP
+  - Superpolynomial, not exponential; doesn't settle P vs NP or apply to Boolean circuits
+  - No human has checked it, and nothing verifies the Lean statements match the intended claims
