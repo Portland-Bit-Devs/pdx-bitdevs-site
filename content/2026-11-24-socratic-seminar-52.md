@@ -32,6 +32,11 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ## Bitcoin Dev News
 
+- [Liana v16.0](https://github.com/wizardsardine/liana/releases/tag/v16.0) ([announcement](https://x.com/lianabitcoin/status/2117680178658763099))
+  - Database migration: wallets opened with v16 can't be opened by v15 or below
+  - Encrypted descriptor backups now use BIP138 (`.bip138`); old `.bed` backups still readable
+  - Taproot is the installer default; managed Bitcoin Core bumped to 31.1
+  - GUI translations (FR, IT, PT-BR, PT-PT) and default labels inherited from related items
 
 ## LN Dev News
 
