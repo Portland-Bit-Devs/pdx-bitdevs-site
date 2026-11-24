@@ -65,6 +65,10 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ## Bitcoin General News
 
+- [Ledn Launches Insured U.S. Custody in All 50 States](https://x.com/FINTECHTVglobal/status/2125289595881365558)
+  - Co-founder Mauricio Di Bartolomeo on FINTECH.TV: custody model pitched against exchange risk
+  - "Nearly all of our assets are held in cold storage at all times."
+  - Discussion: insured custodial vs self-custody
 ## Tech News
 
 - [Alpöge's Proof of the Riemann Hypothesis](https://en.wikipedia.org/wiki/Alp%C3%B6ge%27s_proof_of_the_Riemann_hypothesis)
