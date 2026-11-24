@@ -32,6 +32,11 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ## Bitcoin Dev News
 
+- [Testnet5 Is Live](https://x.com/stevenroose3/status/2121490980671021286) ([BIP95](https://github.com/bitcoin/bips/blob/master/bip-0095.md), [genesis params PR](https://github.com/bitcoin/bips/pull/2356), [Core PR #35861](https://github.com/bitcoin/bitcoin/pull/35861))
+  - Genesis mined publicly on 2026-11-14; 166 blocks in the first hour
+  - BIP95 (Espinasa, Jahr) replaces Testnet4: drops the 20-minute min-difficulty exception that was constantly exploited, and raises minimum difficulty to ~1M
+  - BIP54 (consensus cleanup) enforced from block 1, so miners can test it; network magic spells `FIVE`
+  - Core support still an open PR; a [p2poolv2](https://p2poolv2.org) deployment is live, with a node at `tn5.21m.dev`
 - [CVE-2026-117348: Node Stall via Duplicate Orphan Announcements](https://x.com/BitcoinNewsCom/status/2125204945230090465) ([advisory](https://bitcoincore.org/en/2026/11/20/disclose-orphan-inv-stall/))
   - Medium severity: send an orphan with thousands of missing parents, then an `inv` repeating its wtxid 50,000 times
   - Since 29.0 each duplicate re-checks every parent; the node stalls over 12 s per message, blocks included
