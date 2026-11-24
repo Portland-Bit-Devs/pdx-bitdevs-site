@@ -32,6 +32,12 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ## Bitcoin Dev News
 
+- [CVE-2026-117348: Node Stall via Duplicate Orphan Announcements](https://x.com/BitcoinNewsCom/status/2125204945230090465) ([advisory](https://bitcoincore.org/en/2026/11/20/disclose-orphan-inv-stall/))
+  - Medium severity: send an orphan with thousands of missing parents, then an `inv` repeating its wtxid 50,000 times
+  - Since 29.0 each duplicate re-checks every parent; the node stalls over 12 s per message, blocks included
+  - Affects 29.0-31.2; fixed in 30.5, 31.3, and 32.1 ([#35878](https://github.com/bitcoin/bitcoin/pull/35878) skips duplicate `inv` entries); 29.x is EOL and gets no fix
+  - Found by an LLM scan in Elias Rohrer's [Project Loupe](https://github.com/project-loupe/loupe) at Spiral, validated by Gregory Sanders; Stutxo reported it independently
+  - Disclosed early under the new policy for "easily discoverable" bugs
 - [Liana v16.0](https://github.com/wizardsardine/liana/releases/tag/v16.0) ([announcement](https://x.com/lianabitcoin/status/2117680178658763099))
   - Database migration: wallets opened with v16 can't be opened by v15 or below
   - Encrypted descriptor backups now use BIP138 (`.bip138`); old `.bed` backups still readable
