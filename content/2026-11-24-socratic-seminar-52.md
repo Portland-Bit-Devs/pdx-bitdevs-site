@@ -116,6 +116,10 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - For a solo pool, the wins are a single on-site connection to the pool, a compact binary protocol, and encryption against SV1's hashrate-hijacking MITM risk
   - Job Declaration (miners building their own templates) isn't fully used yet; planned so sites can build blocks locally
   - Discussion: SV2 adoption without the decentralization benefit when one company directs all the hashrate
+  - [sv2blocks.com](https://sv2blocks.com/): tracker for blocks mined with Stratum V2
+    - 9 SV2 blocks total, 0.04% of all blocks, as of 2026-11-24 (block 977,431)
+    - MARA Pool has 8, starting at 975,369; the earliest tracked is DMND's 955,318 on 2026-06-25
+    - {{ thumbnail(src="/images/seminar-52/sv2blocks.jpeg", thumb="/images/seminar-52/sv2blocks-thumb.jpeg", alt="sv2blocks.com dashboard showing 9 Stratum V2 blocks") }}
 
 ## Tech News
 
