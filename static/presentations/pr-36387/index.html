@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bitcoin Core #36387</title>
+<meta name="description" content="Why Bitcoin Core deprecated encrypting existing wallets: key rotation, stale backups, exposed old keys and swapped imported descriptors.">
+<style>
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #d6d6d2;
+  --accent: #B35F00;
+  --accent-soft: #fff1de;
+  --bad: #b3261e;
+  --bad-soft: #fde8e6;
+  --good: #1e7a3c;
+  --good-soft: #e3f4e8;
+  --tor: #6b4fa8;
+  --tor-soft: #efe9fa;
+  --code-bg: #f1f0ec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121212;
+    --surface: #1a1a1a;
+    --text: #e8e8e6;
+    --muted: #a3a3a0;
+    --line: #3a3a38;
+    --accent: #FF9900;
+    --accent-soft: #33240d;
+    --bad: #ff8a80;
+    --bad-soft: #3a1a18;
+    --good: #7fd69a;
+    --good-soft: #15301f;
+    --tor: #b9a2f0;
+    --tor-soft: #251d38;
+    --code-bg: #222220;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --text: #e8e8e6;
+  --muted: #a3a3a0;
+  --line: #3a3a38;
+  --accent: #FF9900;
+  --accent-soft: #33240d;
+  --bad: #ff8a80;
+  --bad-soft: #3a1a18;
+  --good: #7fd69a;
+  --good-soft: #15301f;
+  --tor: #b9a2f0;
+  --tor-soft: #251d38;
+  --code-bg: #222220;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+code { background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+
+.deck { min-height: 100%; display: flex; flex-direction: column; }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--muted);
+}
+.topbar a { color: var(--accent); text-decoration: none; }
+.topbar a:hover { text-decoration: underline; }
+
+main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+.slide { display: none; width: 100%; max-width: 980px; }
+.slide.active { display: block; animation: fade 0.25s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slide.active { animation: none; } }
+
+.eyebrow { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.12; margin: 0 0 16px; }
+h2 { font-size: clamp(22px, 3.4vw, 32px); line-height: 1.2; margin: 0 0 16px; }
+p.lead { font-size: clamp(17px, 2.2vw, 21px); color: var(--muted); max-width: 46em; margin: 0 0 16px; }
+ul.points { font-size: clamp(16px, 2vw, 19px); padding-left: 1.2em; margin: 0; }
+ul.points li { margin: 0 0 10px; }
+.meta { color: var(--muted); font-size: 15px; margin-top: 24px; }
+
+.figure {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; margin: 8px 0 16px; overflow-x: auto;
+}
+.figure svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.caption { color: var(--muted); font-size: 15px; margin: 0; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+pre.diff {
+  background: var(--code-bg); border-radius: 10px; padding: 14px 16px; margin: 0 0 16px;
+  font-size: clamp(12px, 1.6vw, 15px); line-height: 1.55; overflow-x: auto;
+}
+pre.diff .del { color: var(--bad); }
+pre.diff .add { color: var(--good); }
+pre.diff .ctx { color: var(--muted); }
+
+.nav {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 12px 16px 20px;
+}
+.nav button {
+  background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 16px; font-size: 15px; cursor: pointer; min-width: 92px;
+}
+.nav button:hover:not(:disabled) { border-color: var(--accent); }
+.nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav button:disabled { opacity: 0.4; cursor: default; }
+.counter { color: var(--muted); font-size: 14px; min-width: 56px; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* SVG theming */
+.svg-text { fill: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.svg-muted { fill: var(--muted); }
+.svg-box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.svg-us { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+.svg-tor { fill: var(--tor-soft); stroke: var(--tor); stroke-width: 2; }
+.svg-bad { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 2; }
+.svg-good { fill: var(--good-soft); stroke: var(--good); stroke-width: 2; }
+.svg-life { stroke: var(--line); stroke-width: 2; stroke-dasharray: 4 5; }
+.svg-arrow { stroke: var(--text); stroke-width: 2; fill: none; }
+.svg-arrow-bad { stroke: var(--bad); stroke-width: 2.5; fill: none; }
+.svg-arrow-tor { stroke: var(--tor); stroke-width: 2; fill: none; }
+.svg-arrow-good { stroke: var(--good); stroke-width: 2.5; fill: none; }
+.fill-text { fill: var(--text); }
+.fill-bad { fill: var(--bad); }
+.fill-tor { fill: var(--tor); }
+.fill-good { fill: var(--good); }
+.fill-accent { fill: var(--accent); }
+
+@media (max-width: 600px) {
+  .topbar .hint { display: none; }
+  main { align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="deck">
+  <div class="topbar">
+    <a href="/socratic-seminar-52/">← Socratic Seminar #52</a>
+    <span class="hint">← → or space to navigate</span>
+  </div>
+
+  <main>
+    <!-- 1. Title -->
+    <section class="slide active" aria-label="Slide 1">
+      <p class="eyebrow">Bitcoin Core #36387 · merged 2026-11-20</p>
+      <h1>Deprecate <code>encryptwallet</code> for existing wallets</h1>
+      <p class="lead">Encrypting a wallet after it was created rotates its keys, leaves old key material behind, and can silently retire descriptors you imported. Born-encrypted wallets are now the only recommended path.</p>
+      <p class="meta">Author: davidgumberg · Follows RFC <a href="https://github.com/bitcoin/bitcoin/issues/36027" style="color:var(--accent)">#36027</a> (achow101) · <a href="https://github.com/bitcoin/bitcoin/pull/36387" style="color:var(--accent)">github.com/bitcoin/bitcoin/pull/36387</a></p>
+    </section>
+
+    <!-- 2. Background -->
+    <section class="slide" aria-label="Slide 2">
+      <p class="eyebrow">Background</p>
+      <h2>Why encrypting after the fact ever existed</h2>
+      <ul class="points">
+        <li>When wallet encryption was introduced, only one wallet could be loaded, and it was created by default <strong>prefilled with keys</strong>. Encrypting afterward was the only option.</li>
+        <li>Today <code>createwallet</code> takes a <code>passphrase</code>, so a wallet can be encrypted from birth. That has worked for years.</li>
+        <li><code>encryptwallet</code> <strong>rotates keys</strong> on purpose: the old keys sat on disk unencrypted, so they're treated as possibly compromised.</li>
+        <li>That rotation is the source of most of the footguns.</li>
+      </ul>
+    </section>
+
+    <!-- 3. Backup / funds timeline diagram -->
+    <section class="slide" aria-label="Slide 3">
+      <p class="eyebrow">Footgun 1 &amp; 2</p>
+      <h2>Old backups miss new coins; old coins stay exposed</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 340" role="img" aria-labelledby="tl-title">
+          <title id="tl-title">Timeline: a backup is taken while the wallet is unencrypted and 1 BTC is received on old keys. encryptwallet generates new descriptors, and 2 BTC is later received on new keys. Restoring the old backup misses the 2 BTC; anyone holding the old backup or plaintext disk remnants can still spend the 1 BTC, because existing funds are not moved.</title>
+          <defs>
+            <marker id="tl-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-text"/></marker>
+          </defs>
+          <!-- lane labels -->
+          <text x="20" y="92" class="svg-text" font-size="13" font-weight="600">OLD keys</text>
+          <text x="20" y="108" class="svg-text svg-muted" font-size="12">plaintext on disk</text>
+          <text x="20" y="182" class="svg-text" font-size="13" font-weight="600">NEW keys</text>
+          <text x="20" y="198" class="svg-text svg-muted" font-size="12">encrypted</text>
+          <!-- time axis -->
+          <line x1="140" y1="40" x2="740" y2="40" class="svg-arrow" marker-end="url(#tl-ah)"/>
+          <text x="740" y="28" text-anchor="end" class="svg-text svg-muted" font-size="12">time</text>
+          <!-- lanes -->
+          <rect x="140" y="70" width="320" height="50" rx="8" class="svg-us"/>
+          <rect x="460" y="70" width="280" height="50" rx="8" class="svg-box" stroke-dasharray="5 5"/>
+          <text x="600" y="100" text-anchor="middle" class="svg-text svg-muted" font-size="13">inactive, but coins stay here</text>
+          <rect x="460" y="160" width="280" height="50" rx="8" class="svg-good"/>
+          <!-- events -->
+          <text x="200" y="100" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">Backup A</text>
+          <text x="340" y="100" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">+1 BTC received</text>
+          <text x="600" y="190" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">+2 BTC received</text>
+          <!-- encryptwallet marker -->
+          <line x1="460" y1="52" x2="460" y2="222" class="svg-arrow-tor" stroke-dasharray="6 4"/>
+          <rect x="398" y="226" width="124" height="28" rx="6" class="svg-tor"/>
+          <text x="460" y="245" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">encryptwallet</text>
+          <!-- outcomes -->
+          <rect x="140" y="270" width="285" height="58" rx="8" class="svg-bad"/>
+          <text x="285" y="294" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">Restore Backup A</text>
+          <text x="285" y="314" text-anchor="middle" class="svg-text" font-size="13">sees 1 BTC, <tspan font-weight="700" class="fill-bad">misses the 2 BTC</tspan></text>
+          <rect x="440" y="270" width="300" height="58" rx="8" class="svg-bad"/>
+          <text x="590" y="294" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">Thief with Backup A or old disk data</text>
+          <text x="590" y="314" text-anchor="middle" class="svg-text" font-size="13"><tspan font-weight="700" class="fill-bad">can still spend the 1 BTC</tspan></text>
+        </svg>
+      </div>
+      <p class="caption">Encryption doesn't move existing coins, and Core makes no attempt to wipe old key material from disk: "difficult and dangerous, and for some SSD's infeasible."</p>
+    </section>
+
+    <!-- 4. Imported descriptors diagram -->
+    <section class="slide" aria-label="Slide 4">
+      <p class="eyebrow">Footgun 3 · issue #26607</p>
+      <h2>Your imported descriptors get swapped out</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 270" role="img" aria-labelledby="imp-title">
+          <title id="imp-title">Before encryptwallet, a blank wallet's active receive descriptor is one the user imported. After encryptwallet, the wallet generates its own descriptors and makes them active, so the imported descriptor becomes inactive and new addresses come from keys the user never chose.</title>
+          <defs>
+            <marker id="imp-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-tor"/></marker>
+          </defs>
+          <!-- before -->
+          <text x="160" y="26" text-anchor="middle" class="svg-text svg-muted" font-size="13" font-weight="600">BEFORE</text>
+          <rect x="30" y="40" width="260" height="190" rx="12" class="svg-box"/>
+          <text x="160" y="68" text-anchor="middle" class="svg-text" font-size="15" font-weight="600">Blank wallet</text>
+          <rect x="50" y="86" width="220" height="62" rx="8" class="svg-us"/>
+          <text x="160" y="110" text-anchor="middle" class="svg-text" font-size="14" font-weight="600">Imported descriptor</text>
+          <text x="160" y="132" text-anchor="middle" class="svg-text" font-size="13">ACTIVE · e.g. your multisig</text>
+          <text x="160" y="180" text-anchor="middle" class="svg-text svg-muted" font-size="13">getnewaddress →</text>
+          <text x="160" y="202" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">your keys ✓</text>
+          <!-- arrow -->
+          <line x1="300" y1="135" x2="456" y2="135" class="svg-arrow-tor" marker-end="url(#imp-ah)"/>
+          <text x="378" y="122" text-anchor="middle" class="svg-text" font-size="14" font-weight="600">encryptwallet</text>
+          <!-- after -->
+          <text x="600" y="26" text-anchor="middle" class="svg-text svg-muted" font-size="13" font-weight="600">AFTER</text>
+          <rect x="470" y="40" width="260" height="190" rx="12" class="svg-box"/>
+          <rect x="482" y="56" width="236" height="50" rx="8" class="svg-box" stroke-dasharray="5 5"/>
+          <text x="600" y="78" text-anchor="middle" class="svg-text svg-muted" font-size="13">Imported descriptor</text>
+          <text x="600" y="96" text-anchor="middle" class="svg-text svg-muted" font-size="12">inactive</text>
+          <rect x="482" y="114" width="236" height="50" rx="8" class="svg-bad"/>
+          <text x="600" y="136" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">Wallet-made descriptors</text>
+          <text x="600" y="154" text-anchor="middle" class="svg-text" font-size="12">ACTIVE</text>
+          <text x="600" y="190" text-anchor="middle" class="svg-text svg-muted" font-size="13">getnewaddress →</text>
+          <text x="600" y="212" text-anchor="middle" class="svg-text" font-size="13" font-weight="600"><tspan class="fill-bad">keys you never chose ✗</tspan></text>
+        </svg>
+      </div>
+      <p class="caption">Funds can end up sent to descriptors the user didn't intend, changing the spending conditions out from under them.</p>
+    </section>
+
+    <!-- 5. The change -->
+    <section class="slide" aria-label="Slide 5">
+      <p class="eyebrow">The change</p>
+      <h2>Off by default, behind <code>-deprecatedrpc</code></h2>
+      <pre class="diff"><span class="ctx">// src/wallet/rpc/encrypt.cpp · encryptwallet()</span>
+<span class="add">+    if (!pwallet-&gt;chain().rpcEnableDeprecated("encryptwallet")) {</span>
+<span class="add">+        throw JSONRPCError(RPC_METHOD_DEPRECATED, "DEPRECATION WARNING: ...</span>
+<span class="add">+            Start bitcoind with the `-deprecatedrpc=encryptwallet` option ...");</span>
+<span class="add">+    }</span></pre>
+      <div class="cards">
+        <div class="card">
+          <h3>Deprecated</h3>
+          <p><code>encryptwallet</code> on an existing unencrypted wallet. Errors (code -32) unless started with <code style="white-space:nowrap">-deprecatedrpc=encryptwallet</code>; removal planned for a future major release.</p>
+        </div>
+        <div class="card">
+          <h3>Unchanged</h3>
+          <p>Born-encrypted wallets via <code>createwallet … passphrase=</code>, and <code>walletpassphrasechange</code>.</p>
+        </div>
+        <div class="card">
+          <h3>Also updated</h3>
+          <p><code>doc/managing-wallets.md</code> now recommends born-encrypted wallets; functional tests switched to them.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Migration -->
+    <section class="slide" aria-label="Slide 6">
+      <p class="eyebrow">What to do instead</p>
+      <h2>Start encrypted, then move the coins</h2>
+      <pre class="diff"><span class="ctx">$ bitcoin-cli -named createwallet wallet_name="vault" passphrase="…"</span>
+<span class="ctx">$ bitcoin-cli -rpcwallet="vault" backupwallet "/safe/place/vault.dat"</span>
+<span class="ctx">$ bitcoin-cli -rpcwallet="vault" getnewaddress</span>
+<span class="ctx">  # send everything from the old wallet to the new address</span></pre>
+      <ul class="points">
+        <li>Create the new wallet with a passphrase so its keys never hit disk in plaintext.</li>
+        <li>Back it up right away, then send the old wallet's funds to it. Encrypting in place would have left them on the exposed keys.</li>
+        <li>Treat the old wallet and every backup of it as compromised once it's empty.</li>
+      </ul>
+      <p class="meta">The docs recommend <code>createwallet</code> with a passphrase; the sweep and retire steps follow from #36027's point that encryption doesn't move existing funds.</p>
+    </section>
+
+    <!-- 7. Discussion -->
+    <section class="slide" aria-label="Slide 7">
+      <p class="eyebrow">Discussion</p>
+      <h2>Questions for the room</h2>
+      <ul class="points">
+        <li>Is wallet-file encryption worth much at all versus full-disk encryption or a hardware signer?</li>
+        <li>Rotate keys on encryption, or keep imported descriptors? Is there any right answer for <code>encryptwallet</code>?</li>
+        <li>Who still relies on encrypting after the fact: old scripts, node-in-a-box UIs, tutorials?</li>
+        <li>Should Core warn loudly when an unencrypted wallet holds funds?</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Slide navigation">
+    <button id="prev" type="button" aria-label="Previous slide">← Prev</button>
+    <span class="counter" id="counter" aria-live="polite">1 / 7</span>
+    <button id="next" type="button" aria-label="Next slide">Next →</button>
+  </nav>
+</div>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+  var counter = document.getElementById('counter');
+  var i = 0;
+
+  function fromHash() {
+    var n = parseInt((location.hash || '').replace('#', ''), 10);
+    return (n >= 1 && n <= slides.length) ? n - 1 : 0;
+  }
+  function show(n, push) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, k) { s.classList.toggle('active', k === i); });
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+    if (push) { try { history.replaceState(null, '', '#' + (i + 1)); } catch (e) {} }
+  }
+  prev.addEventListener('click', function () { show(i - 1, true); });
+  next.addEventListener('click', function () { show(i + 1, true); });
+  document.addEventListener('keydown', function (e) {
+    if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(i + 1, true); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1, true); }
+    else if (e.key === 'Home') { show(0, true); }
+    else if (e.key === 'End') { show(slides.length - 1, true); }
+  });
+  var x0 = null;
+  document.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1), true);
+    x0 = null;
+  }, { passive: true });
+  window.addEventListener('hashchange', function () { show(fromHash(), false); });
+  show(fromHash(), false);
+})();
+</script>
+</body>
+</html>

@@ -77,18 +77,19 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - A malicious Tor/I2P peer could echo back our address and link our clearnet IP to our privacy-network identity
   - Hard preconditions: we must pick that peer, and run on an unusual port
   - Found by Project Loupe and instagibbs
-- [#36387 wallet: Deprecate `encryptwallet` for Existing Wallets](https://github.com/bitcoin/bitcoin/pull/36387)
-  - Unencrypted key remnants can stay on disk (unfixable on SSDs)
+- [#36387 wallet: Deprecate `encryptwallet` for Existing Wallets](https://github.com/bitcoin/bitcoin/pull/36387) ([slides](/presentations/pr-36387/))
+  - Unencrypted key remnants can stay on disk (infeasible to wipe on some SSDs); encrypting doesn't move existing coins
   - Can change spending conditions of imported descriptors; pre-encryption backups can lose funds since new keys are made after
   - Create a new encrypted wallet instead
-- [#36040 wallet: Don't Backdate Locktime in `bumpfee`](https://github.com/bitcoin/bitcoin/pull/36040)
+- [#36040 wallet: Don't Backdate Locktime in `bumpfee`](https://github.com/bitcoin/bitcoin/pull/36040) ([slides](/presentations/pr-36040/))
   - Anti-fee-sniping could give a replacement an earlier locktime than the original, fingerprinting Core/Electrum
   - ~200-300 backdated replacements a week, under 2% of RBF txs
-- [#36342 wallet: Reject Recipient Amounts Above MAX_MONEY](https://github.com/bitcoin/bitcoin/pull/36342)
+- [#36342 wallet: Reject Recipient Amounts Above MAX_MONEY](https://github.com/bitcoin/bitcoin/pull/36342) ([slides](/presentations/pr-36342/))
   - Recipient sum could overflow: `fundrawtransaction` returned success for outputs of 46,116,860,184 BTC each
   - Wallet-only bug; consensus would reject the tx
-- [#29843 policy: Allow Non-Standard Scripts with `-acceptnonstdtxn=1`](https://github.com/bitcoin/bitcoin/pull/29843)
-  - Test nets only: OP_SUCCESS and OP_NOPx txs can now enter the mempool, easing soft-fork experiments
+- [#29843 policy: Allow Non-Standard Scripts with `-acceptnonstdtxn=1`](https://github.com/bitcoin/bitcoin/pull/29843) ([slides](/presentations/pr-29843/))
+  - All non-main chains: skips every policy-only script flag, so OP_SUCCESS, OP_NOPx, and unknown witness/leaf versions can enter the mempool
+  - Consensus flags still enforced; motivated by OP_CAT/APO txs standard on Bitcoin Inquisition
 - Honorable Mentions
   - [#36835](https://github.com/bitcoin/bitcoin/pull/36835): BIP352 scanning in the functional test framework, split from silent payments PR [#35302](https://github.com/bitcoin/bitcoin/pull/35302)
   - [#36594](https://github.com/bitcoin/bitcoin/pull/36594): one orphan reconsidered per turn, so one peer's orphans don't delay others

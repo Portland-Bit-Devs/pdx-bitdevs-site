@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bitcoin Core #36342</title>
+<meta name="description" content="How unchecked output amounts overflowed the wallet's int64 recipient sum, and the Bitcoin Core fix.">
+<style>
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #d6d6d2;
+  --accent: #B35F00;
+  --accent-soft: #fff1de;
+  --bad: #b3261e;
+  --bad-soft: #fde8e6;
+  --good: #1e7a3c;
+  --good-soft: #e3f4e8;
+  --tor: #6b4fa8;
+  --tor-soft: #efe9fa;
+  --code-bg: #f1f0ec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121212;
+    --surface: #1a1a1a;
+    --text: #e8e8e6;
+    --muted: #a3a3a0;
+    --line: #3a3a38;
+    --accent: #FF9900;
+    --accent-soft: #33240d;
+    --bad: #ff8a80;
+    --bad-soft: #3a1a18;
+    --good: #7fd69a;
+    --good-soft: #15301f;
+    --tor: #b9a2f0;
+    --tor-soft: #251d38;
+    --code-bg: #222220;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --text: #e8e8e6;
+  --muted: #a3a3a0;
+  --line: #3a3a38;
+  --accent: #FF9900;
+  --accent-soft: #33240d;
+  --bad: #ff8a80;
+  --bad-soft: #3a1a18;
+  --good: #7fd69a;
+  --good-soft: #15301f;
+  --tor: #b9a2f0;
+  --tor-soft: #251d38;
+  --code-bg: #222220;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+code { background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+
+.deck { min-height: 100%; display: flex; flex-direction: column; }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--muted);
+}
+.topbar a { color: var(--accent); text-decoration: none; }
+.topbar a:hover { text-decoration: underline; }
+
+main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+.slide { display: none; width: 100%; max-width: 980px; }
+.slide.active { display: block; animation: fade 0.25s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slide.active { animation: none; } }
+
+.eyebrow { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.12; margin: 0 0 16px; }
+h2 { font-size: clamp(22px, 3.4vw, 32px); line-height: 1.2; margin: 0 0 16px; }
+p.lead { font-size: clamp(17px, 2.2vw, 21px); color: var(--muted); max-width: 46em; margin: 0 0 16px; }
+ul.points { font-size: clamp(16px, 2vw, 19px); padding-left: 1.2em; margin: 0; }
+ul.points li { margin: 0 0 10px; }
+.meta { color: var(--muted); font-size: 15px; margin-top: 24px; }
+
+.figure {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; margin: 8px 0 16px; overflow-x: auto;
+}
+.figure svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.caption { color: var(--muted); font-size: 15px; margin: 0; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+pre.diff {
+  background: var(--code-bg); border-radius: 10px; padding: 14px 16px; margin: 0 0 16px;
+  font-size: clamp(12px, 1.6vw, 15px); line-height: 1.55; overflow-x: auto;
+}
+pre.diff .del { color: var(--bad); }
+pre.diff .add { color: var(--good); }
+pre.diff .ctx { color: var(--muted); }
+
+.nav {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 12px 16px 20px;
+}
+.nav button {
+  background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 16px; font-size: 15px; cursor: pointer; min-width: 92px;
+}
+.nav button:hover:not(:disabled) { border-color: var(--accent); }
+.nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav button:disabled { opacity: 0.4; cursor: default; }
+.counter { color: var(--muted); font-size: 14px; min-width: 56px; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* SVG theming */
+.svg-text { fill: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.svg-muted { fill: var(--muted); }
+.svg-box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.svg-us { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+.svg-tor { fill: var(--tor-soft); stroke: var(--tor); stroke-width: 2; }
+.svg-bad { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 2; }
+.svg-good { fill: var(--good-soft); stroke: var(--good); stroke-width: 2; }
+.svg-life { stroke: var(--line); stroke-width: 2; stroke-dasharray: 4 5; }
+.svg-arrow { stroke: var(--text); stroke-width: 2; fill: none; }
+.svg-arrow-bad { stroke: var(--bad); stroke-width: 2.5; fill: none; }
+.svg-arrow-tor { stroke: var(--tor); stroke-width: 2; fill: none; }
+.svg-arrow-good { stroke: var(--good); stroke-width: 2.5; fill: none; }
+.fill-text { fill: var(--text); }
+.fill-bad { fill: var(--bad); }
+.fill-tor { fill: var(--tor); }
+.fill-good { fill: var(--good); }
+.fill-accent { fill: var(--accent); }
+
+@media (max-width: 600px) {
+  .topbar .hint { display: none; }
+  main { align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="deck">
+  <div class="topbar">
+    <a href="/socratic-seminar-52/">← Socratic Seminar #52</a>
+    <span class="hint">← → or space to navigate</span>
+  </div>
+
+  <main>
+    <!-- 1. Title -->
+    <section class="slide active" aria-label="Slide 1">
+      <p class="eyebrow">Bitcoin Core #36342 · merged 2026-11-20</p>
+      <h1>Reject recipient amounts above MAX_MONEY</h1>
+      <p class="lead">The wallet added up output amounts without a range check. Big enough outputs overflowed a 64-bit integer, crashing the node or making <code>fundrawtransaction</code> "succeed" with 46 billion BTC outputs.</p>
+      <p class="meta">Author: Bruce039 · <a href="https://github.com/bitcoin/bitcoin/pull/36342" style="color:var(--accent)">github.com/bitcoin/bitcoin/pull/36342</a></p>
+    </section>
+
+    <!-- 2. Background -->
+    <section class="slide" aria-label="Slide 2">
+      <p class="eyebrow">Background</p>
+      <h2>Amounts are signed 64-bit satoshis</h2>
+      <ul class="points">
+        <li><code>CAmount</code> is an <code>int64_t</code> counting satoshis. Its max is 2<sup>63</sup> − 1 ≈ 9.22 × 10<sup>18</sup> sat.</li>
+        <li><code>MAX_MONEY</code> = 21,000,000 BTC = 2.1 × 10<sup>15</sup> sat, about 4,400× smaller than the int64 ceiling.</li>
+        <li><code>MoneyRange(v)</code> means 0 ≤ v ≤ MAX_MONEY. Consensus code checks it per output and on the running total.</li>
+        <li>The wallet's <code>CreateTransactionInternal</code> only checked that amounts weren't negative, then did <code>recipients_sum += recipient.nAmount</code> with no range check.</li>
+      </ul>
+    </section>
+
+    <!-- 3. Overflow diagram -->
+    <section class="slide" aria-label="Slide 3">
+      <p class="eyebrow">The overflow</p>
+      <h2>Two outputs of 2<sup>62</sup> sat wrap the sum negative</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 320" role="img" aria-labelledby="ovf-title">
+          <title id="ovf-title">An int64 number line from -2^63 to 2^63-1. MAX_MONEY is a tiny sliver near zero. Adding 2^62 twice passes INT64_MAX and wraps around to -2^63.</title>
+          <defs>
+            <marker id="ah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-text"/></marker>
+            <marker id="ah-ob" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-bad"/></marker>
+          </defs>
+          <text x="40" y="30" class="svg-text" font-size="14">recipients_sum starts at 0, then adds each output:</text>
+          <!-- MAX_MONEY callout, top-left of zero -->
+          <text x="366" y="92" text-anchor="end" class="svg-text fill-good" font-size="13" font-weight="600">MAX_MONEY (21M BTC)</text>
+          <text x="366" y="110" text-anchor="end" class="svg-text fill-good" font-size="13">is this sliver at 0</text>
+          <path d="M370,104 L381,140" stroke="var(--good)" stroke-width="1.5"/>
+          <!-- number line -->
+          <line x1="60" y1="150" x2="700" y2="150" stroke="var(--line)" stroke-width="3"/>
+          <line x1="60" y1="140" x2="60" y2="160" stroke="var(--muted)" stroke-width="2"/>
+          <line x1="380" y1="138" x2="380" y2="162" stroke="var(--muted)" stroke-width="2"/>
+          <line x1="540" y1="140" x2="540" y2="160" stroke="var(--muted)" stroke-width="2"/>
+          <line x1="700" y1="140" x2="700" y2="160" stroke="var(--muted)" stroke-width="2"/>
+          <rect x="380" y="143" width="4" height="14" class="fill-good"/>
+          <text x="72" y="180" class="svg-text svg-muted" font-size="13">−2⁶³</text>
+          <text x="380" y="180" text-anchor="middle" class="svg-text svg-muted" font-size="13">0</text>
+          <text x="540" y="180" text-anchor="middle" class="svg-text svg-muted" font-size="13">2⁶²</text>
+          <text x="688" y="180" text-anchor="end" class="svg-text svg-muted" font-size="13">2⁶³ − 1</text>
+          <text x="688" y="197" text-anchor="end" class="svg-text svg-muted" font-size="12">INT64_MAX</text>
+          <!-- hops -->
+          <path d="M384,132 C 420,72 504,72 538,132" class="svg-arrow" marker-end="url(#ah-o)"/>
+          <text x="461" y="64" text-anchor="middle" class="svg-text" font-size="14">+ 2⁶² (output 1)</text>
+          <path d="M542,132 C 580,72 664,72 698,132" class="svg-arrow-bad" marker-end="url(#ah-ob)"/>
+          <text x="620" y="64" text-anchor="middle" class="svg-text fill-bad" font-size="14" font-weight="600">+ 2⁶² (output 2)</text>
+          <!-- wrap -->
+          <path d="M708,156 C 708,330 52,330 52,166" class="svg-arrow-bad" stroke-dasharray="6 5" marker-end="url(#ah-ob)"/>
+          <rect x="230" y="222" width="300" height="38" rx="8" class="svg-bad"/>
+          <text x="380" y="246" text-anchor="middle" class="svg-text" font-size="14" font-weight="600">2⁶³ overflows → wraps to −2⁶³</text>
+        </svg>
+      </div>
+      <p class="caption">Signed overflow is undefined behavior in C++; UBSan flags it at the <code>recipients_sum +=</code> line. In practice it wraps around.</p>
+    </section>
+
+    <!-- 4. Outcomes -->
+    <section class="slide" aria-label="Slide 4">
+      <p class="eyebrow">What happened on master</p>
+      <h2>Crash, wrong error, or fake success</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Sum wraps negative</h3>
+          <p>Two outputs of 2<sup>62</sup> sat: the node aborts on <code>assert(!m_selected_inputs.empty())</code> in <code>RecalculateWaste</code>.</p>
+        </div>
+        <div class="card">
+          <h3>Sum wraps small</h3>
+          <p>Other values wrap to a small positive number, and <code>fundrawtransaction</code> returns success for outputs of 46,116,860,184 BTC each (2<sup>62</sup> sat).</p>
+        </div>
+        <div class="card">
+          <h3>One output &gt; MAX_MONEY</h3>
+          <p>No overflow, just a misleading "Insufficient funds" error instead of "invalid amount".</p>
+        </div>
+      </div>
+      <p class="meta">The "Transaction too large" check only runs after coin selection, so it never got a chance to stop this.</p>
+    </section>
+
+    <!-- 5. Reachable paths -->
+    <section class="slide" aria-label="Slide 5">
+      <p class="eyebrow">How to reach it</p>
+      <h2>Raw amounts, or just a lot of valid ones</h2>
+      <ul class="points">
+        <li><strong>Easiest:</strong> <code>fundrawtransaction</code> on a raw tx with two outputs of 2<sup>62</sup> sat each.</li>
+        <li><strong>With only valid amounts:</strong> <code>walletcreatefundedpsbt</code>, <code>send</code> or <code>sendmany</code> with a few thousand outputs of 21M BTC each. About 4,393 of them pass 2<sup>63</sup>.</li>
+        <li>It needs RPC access to the wallet, so this is a local crash and correctness bug, not a remote attack.</li>
+      </ul>
+    </section>
+
+    <!-- 6. The fix -->
+    <section class="slide" aria-label="Slide 6">
+      <p class="eyebrow">The fix</p>
+      <h2>Range-check every amount and the running sum</h2>
+      <pre class="diff"><span class="ctx">// src/wallet/spend.cpp · CreateTransactionInternal()</span>
+<span class="ctx">     for (const auto&amp; recipient : vecSend) {</span>
+<span class="add">+        if (!MoneyRange(recipient.nAmount) || !MoneyRange(recipients_sum + recipient.nAmount)) {</span>
+<span class="add">+            return util::Error{_("Transaction output amount must be valid")};</span>
+<span class="add">+        }</span>
+<span class="ctx">         if (IsDust(recipient, wallet.chain().relayDustFee())) {</span>
+<span class="ctx">     ...</span>
+<span class="ctx">// CreateTransaction(): old negative-only check removed, MoneyRange covers it</span>
+<span class="del">-    if (std::any_of(vecSend.cbegin(), vecSend.cend(),</span>
+<span class="del">-                    [](const auto&amp; recipient){ return recipient.nAmount &lt; 0; })) {</span>
+<span class="del">-        return util::Error{_("Transaction amounts must not be negative")};</span>
+<span class="del">-    }</span></pre>
+      <ul class="points">
+        <li>The check runs before the add, so the sum can never leave [0, MAX_MONEY] and never overflows.</li>
+        <li>It fails before coin selection starts. New test covers &gt; MAX_MONEY, a sum &gt; MAX_MONEY, int64 overflow and a negative output.</li>
+      </ul>
+    </section>
+
+    <!-- 7. Consensus / discussion -->
+    <section class="slide" aria-label="Slide 7">
+      <p class="eyebrow">Why no coins were at risk</p>
+      <h2>Consensus already says no</h2>
+      <pre class="diff"><span class="ctx">// src/consensus/tx_check.cpp · CheckTransaction()</span>
+<span class="ctx">        if (txout.nValue &gt; MAX_MONEY)</span>
+<span class="ctx">            return state.Invalid(..., "bad-txns-vout-toolarge");</span>
+<span class="ctx">        nValueOut += txout.nValue;</span>
+<span class="ctx">        if (!MoneyRange(nValueOut))</span>
+<span class="ctx">            return state.Invalid(..., "bad-txns-txouttotal-toolarge");</span></pre>
+      <ul class="points">
+        <li>A "funded" 46-billion-BTC transaction could never be relayed or mined.</li>
+        <li>Discussion: consensus checks MoneyRange on every add; why didn't the wallet reuse the same pattern from the start?</li>
+        <li>Callers that build transactions from untrusted input: what else trusts amounts before coin selection?</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Slide navigation">
+    <button id="prev" type="button" aria-label="Previous slide">← Prev</button>
+    <span class="counter" id="counter" aria-live="polite">1 / 7</span>
+    <button id="next" type="button" aria-label="Next slide">Next →</button>
+  </nav>
+</div>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+  var counter = document.getElementById('counter');
+  var i = 0;
+
+  function fromHash() {
+    var n = parseInt((location.hash || '').replace('#', ''), 10);
+    return (n >= 1 && n <= slides.length) ? n - 1 : 0;
+  }
+  function show(n, push) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, k) { s.classList.toggle('active', k === i); });
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+    if (push) { try { history.replaceState(null, '', '#' + (i + 1)); } catch (e) {} }
+  }
+  prev.addEventListener('click', function () { show(i - 1, true); });
+  next.addEventListener('click', function () { show(i + 1, true); });
+  document.addEventListener('keydown', function (e) {
+    if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(i + 1, true); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1, true); }
+    else if (e.key === 'Home') { show(0, true); }
+    else if (e.key === 'End') { show(slides.length - 1, true); }
+  });
+  var x0 = null;
+  document.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1), true);
+    x0 = null;
+  }, { passive: true });
+  window.addEventListener('hashchange', function () { show(fromHash(), false); });
+  show(fromHash(), false);
+})();
+</script>
+</body>
+</html>

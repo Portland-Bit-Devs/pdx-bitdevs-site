@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bitcoin Core #36040</title>
+<meta name="description" content="Why a Bitcoin Core fee bump could get an older locktime than the transaction it replaced, how that fingerprinted the wallet, and the fix.">
+<style>
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #d6d6d2;
+  --accent: #B35F00;
+  --accent-soft: #fff1de;
+  --bad: #b3261e;
+  --bad-soft: #fde8e6;
+  --good: #1e7a3c;
+  --good-soft: #e3f4e8;
+  --tor: #6b4fa8;
+  --tor-soft: #efe9fa;
+  --code-bg: #f1f0ec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121212;
+    --surface: #1a1a1a;
+    --text: #e8e8e6;
+    --muted: #a3a3a0;
+    --line: #3a3a38;
+    --accent: #FF9900;
+    --accent-soft: #33240d;
+    --bad: #ff8a80;
+    --bad-soft: #3a1a18;
+    --good: #7fd69a;
+    --good-soft: #15301f;
+    --tor: #b9a2f0;
+    --tor-soft: #251d38;
+    --code-bg: #222220;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --text: #e8e8e6;
+  --muted: #a3a3a0;
+  --line: #3a3a38;
+  --accent: #FF9900;
+  --accent-soft: #33240d;
+  --bad: #ff8a80;
+  --bad-soft: #3a1a18;
+  --good: #7fd69a;
+  --good-soft: #15301f;
+  --tor: #b9a2f0;
+  --tor-soft: #251d38;
+  --code-bg: #222220;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+code { background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+
+.deck { min-height: 100%; display: flex; flex-direction: column; }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--muted);
+}
+.topbar a { color: var(--accent); text-decoration: none; }
+.topbar a:hover { text-decoration: underline; }
+
+main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+.slide { display: none; width: 100%; max-width: 980px; }
+.slide.active { display: block; animation: fade 0.25s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slide.active { animation: none; } }
+
+.eyebrow { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.12; margin: 0 0 16px; }
+h2 { font-size: clamp(22px, 3.4vw, 32px); line-height: 1.2; margin: 0 0 16px; }
+p.lead { font-size: clamp(17px, 2.2vw, 21px); color: var(--muted); max-width: 46em; margin: 0 0 16px; }
+ul.points { font-size: clamp(16px, 2vw, 19px); padding-left: 1.2em; margin: 0; }
+ul.points li { margin: 0 0 10px; }
+.meta { color: var(--muted); font-size: 15px; margin-top: 24px; }
+
+.figure {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; margin: 8px 0 16px; overflow-x: auto;
+}
+.figure svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.caption { color: var(--muted); font-size: 15px; margin: 0; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+pre.diff {
+  background: var(--code-bg); border-radius: 10px; padding: 14px 16px; margin: 0 0 16px;
+  font-size: clamp(12px, 1.6vw, 15px); line-height: 1.55; overflow-x: auto;
+}
+pre.diff .del { color: var(--bad); }
+pre.diff .add { color: var(--good); }
+pre.diff .ctx { color: var(--muted); }
+
+.nav {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 12px 16px 20px;
+}
+.nav button {
+  background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 16px; font-size: 15px; cursor: pointer; min-width: 92px;
+}
+.nav button:hover:not(:disabled) { border-color: var(--accent); }
+.nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav button:disabled { opacity: 0.4; cursor: default; }
+.counter { color: var(--muted); font-size: 14px; min-width: 56px; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* SVG theming */
+.svg-text { fill: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.svg-muted { fill: var(--muted); }
+.svg-box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.svg-us { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+.svg-tor { fill: var(--tor-soft); stroke: var(--tor); stroke-width: 2; }
+.svg-bad { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 2; }
+.svg-good { fill: var(--good-soft); stroke: var(--good); stroke-width: 2; }
+.svg-life { stroke: var(--line); stroke-width: 2; stroke-dasharray: 4 5; }
+.svg-arrow { stroke: var(--text); stroke-width: 2; fill: none; }
+.svg-arrow-bad { stroke: var(--bad); stroke-width: 2.5; fill: none; }
+.svg-arrow-tor { stroke: var(--tor); stroke-width: 2; fill: none; }
+.svg-arrow-good { stroke: var(--good); stroke-width: 2.5; fill: none; }
+.fill-text { fill: var(--text); }
+.fill-bad { fill: var(--bad); }
+.fill-tor { fill: var(--tor); }
+.fill-good { fill: var(--good); }
+.fill-accent { fill: var(--accent); }
+
+@media (max-width: 600px) {
+  .topbar .hint { display: none; }
+  main { align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="deck">
+  <div class="topbar">
+    <a href="/socratic-seminar-52/">← Socratic Seminar #52</a>
+    <span class="hint">← → or space to navigate</span>
+  </div>
+
+  <main>
+    <!-- 1. Title -->
+    <section class="slide active" aria-label="Slide 1">
+      <p class="eyebrow">Bitcoin Core #36040 · merged 2026-11-20</p>
+      <h1>Don't backdate the locktime when bumping fees</h1>
+      <p class="lead">A random privacy feature could give a fee bump an <em>older</em> locktime than the transaction it replaces. No natural wallet does that, so it marked the replacement as made by Bitcoin Core or Electrum.</p>
+      <p class="meta">Author: Bicaru20 · Fixes <a href="https://github.com/bitcoin/bitcoin/issues/26526" style="color:var(--accent)">#26526</a> (0xB10C, 2022) · <a href="https://github.com/bitcoin/bitcoin/pull/36040" style="color:var(--accent)">github.com/bitcoin/bitcoin/pull/36040</a></p>
+    </section>
+
+    <!-- 2. Background -->
+    <section class="slide" aria-label="Slide 2">
+      <p class="eyebrow">Background</p>
+      <h2>Anti-fee-sniping sets <code>nLockTime</code> to the tip</h2>
+      <ul class="points">
+        <li>Core sets each new transaction's <code>nLockTime</code> to the current block height, so it can only be mined in the <strong>next</strong> block. That makes re-mining the last block to steal its fees (fee sniping) less attractive.</li>
+        <li><strong>10% of the time</strong> it backdates the locktime by a random <strong>0 to 99 blocks</strong>, so transactions that are signed and broadcast later (high-latency mixnets, some CoinJoins) don't stand out.</li>
+        <li>Electrum does something similar.</li>
+        <li>Problem: <code>bumpfee</code> builds the replacement as a fresh transaction, and rolls the dice again.</li>
+      </ul>
+    </section>
+
+    <!-- 3. Diagram -->
+    <section class="slide" aria-label="Slide 3">
+      <p class="eyebrow">The fingerprint</p>
+      <h2>The replacement can land below the original</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 360" role="img" aria-labelledby="lt-title">
+          <title id="lt-title">Block height number line. Original tx A has locktime 1000. Before the fix, the replacement B created at height 1002 could be backdated anywhere from 903 to 1002, e.g. 962, below A. After the fix it is limited to 1000 to 1002.</title>
+          <defs>
+            <marker id="ah-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-bad"/></marker>
+          </defs>
+          <!-- BEFORE row -->
+          <text x="30" y="34" class="svg-text" font-size="15" font-weight="700">Before</text>
+          <text x="96" y="34" class="svg-text svg-muted" font-size="13">B's locktime is drawn from tip − 99 … tip, ignoring A</text>
+          <rect x="60" y="78" width="586" height="30" rx="4" class="svg-bad" opacity="0.55"/>
+          <text x="66" y="125" class="svg-text svg-muted" font-size="12">← range starts at 903</text>
+          <line x1="40" y1="93" x2="730" y2="93" class="svg-arrow"/>
+          <!-- A marker -->
+          <line x1="626" y1="60" x2="626" y2="112" stroke-width="3" class="svg-arrow-tor"/>
+          <text x="626" y="54" text-anchor="middle" class="svg-text" font-size="13" font-weight="700"><tspan class="fill-tor">A</tspan> lock 1000</text>
+          <!-- B backdated marker -->
+          <circle cx="267" cy="93" r="8" class="svg-bad"/>
+          <text x="267" y="66" text-anchor="middle" class="svg-text" font-size="13" font-weight="700"><tspan class="fill-bad">B</tspan> lock 962</text>
+          <path d="M600,140 C 480,170 360,170 275,108" class="svg-arrow-bad" marker-end="url(#ah-b)"/>
+          <text x="440" y="178" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">B.locktime &lt; A.locktime → only Core/Electrum do this</text>
+
+          <!-- AFTER row -->
+          <text x="30" y="232" class="svg-text" font-size="15" font-weight="700">After</text>
+          <text x="96" y="232" class="svg-text svg-muted" font-size="13">A's locktime becomes the floor (minimum_height)</text>
+          <rect x="620" y="276" width="32" height="30" rx="4" class="svg-good"/>
+          <line x1="40" y1="291" x2="730" y2="291" class="svg-arrow"/>
+          <line x1="626" y1="258" x2="626" y2="310" stroke-width="3" class="svg-arrow-tor"/>
+          <text x="560" y="262" text-anchor="end" class="svg-text" font-size="13" font-weight="700"><tspan class="fill-tor">A</tspan> lock 1000</text>
+          <text x="660" y="262" class="svg-text" font-size="13" font-weight="700"><tspan class="fill-good">B</tspan> 1000–1002</text>
+          <!-- axis ticks -->
+          <g class="svg-text svg-muted" font-size="12" text-anchor="middle">
+            <text x="60" y="336">940</text><text x="248" y="336">960</text><text x="437" y="336">980</text><text x="626" y="336">1000</text>
+          </g>
+          <text x="645" y="352" text-anchor="middle" class="svg-text svg-muted" font-size="12">tip 1002</text>
+          <line x1="645" y1="300" x2="645" y2="322" class="svg-life"/>
+        </svg>
+      </div>
+      <p class="caption">Example: A was signed at height 1000; the bump happens at 1002. Heights are illustrative.</p>
+    </section>
+
+    <!-- 4. Data -->
+    <section class="slide" aria-label="Slide 4">
+      <p class="eyebrow">How common?</p>
+      <h2>Rare, which is exactly why it identifies you</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>1,000,000+</h3>
+          <p>RBF replacements in the PR's dataset, 2025-05-01 to 2026-06-01.</p>
+        </div>
+        <div class="card">
+          <h3>~200–300 a week</h3>
+          <p>Replacements with a locktime lower than the transaction they replaced.</p>
+        </div>
+        <div class="card">
+          <h3>&lt; 2%</h3>
+          <p>Of all replaced transactions, on average. Few enough that each one points to a Core or Electrum <code>bumpfee</code>.</p>
+        </div>
+      </div>
+      <p class="meta">Reported by 0xB10C in issue #26526 (Nov 2022), with a matching <a href="https://github.com/spesmilo/electrum/issues/8073" style="color:var(--accent)">Electrum issue #8073</a>.</p>
+    </section>
+
+    <!-- 5. Fix -->
+    <section class="slide" aria-label="Slide 5">
+      <p class="eyebrow">The fix</p>
+      <h2>Pass the old locktime in as a floor</h2>
+      <pre class="diff"><span class="ctx">// src/wallet/feebumper.cpp · CreateRateBumpTransaction()</span>
+<span class="add">+    new_coin_control.m_minimum_locktime = tx-&gt;nLockTime;</span>
+<span class="ctx"></span>
+<span class="ctx">// src/wallet/spend.cpp · DiscourageFeeSniping(..., minimum_height)</span>
+<span class="del">-        if (rng_fast.randrange(10) == 0) {</span>
+<span class="del">-            tx.nLockTime = std::max(0, int(tx.nLockTime) - int(rng_fast.randrange(100)));</span>
+<span class="add">+        if (rng_fast.randrange(10) == 0 &amp;&amp; tx.nLockTime &gt; minimum_height) {</span>
+<span class="add">+            int range = std::min(100, int(block_height - static_cast&lt;int&gt;(minimum_height) + 1));</span>
+<span class="add">+            tx.nLockTime = int(tx.nLockTime) - int(rng_fast.randrange(range));</span></pre>
+      <ul class="points">
+        <li>The 10% backdating roll stays, but the result never goes below the original's locktime; if the original was at the tip, there's no room to backdate.</li>
+        <li>Only <code>bumpfee</code> sets the floor; every other send passes 0 and behaves exactly as before.</li>
+      </ul>
+    </section>
+
+    <!-- 6. Edge cases -->
+    <section class="slide" aria-label="Slide 6">
+      <p class="eyebrow">Edge cases</p>
+      <h2>Keeping the other fingerprints constant</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Wallet not synced</h3>
+          <p>Previously locktime 0. Now it uses the floor, so a bump never goes below the original, and normal sends still get a constant 0.</p>
+        </div>
+        <div class="card">
+          <h3>Floor above our tip</h3>
+          <p>If the original's locktime is ahead of our lagging node, use 0, so the tx stays final and doesn't reveal how far behind we are.</p>
+        </div>
+        <div class="card">
+          <h3>Tested bounds</h3>
+          <p>A new unit test checks backdated locktimes always stay within 99 blocks of the tip and never below the floor.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Discussion -->
+    <section class="slide" aria-label="Slide 7">
+      <p class="eyebrow">Discussion</p>
+      <h2>Questions for the room</h2>
+      <ul class="points">
+        <li>The issue sat open for four years. How many other wallet fingerprints are hiding in RBF behavior (fee steps, input order, change position)?</li>
+        <li>Does random backdating still buy privacy, now that every replacement keeps a floor?</li>
+        <li>Electrum has the same behavior. Should wallets coordinate on one anti-fee-sniping policy?</li>
+        <li>Is anti-fee-sniping still worth it while the subsidy dominates block rewards?</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Slide navigation">
+    <button id="prev" type="button" aria-label="Previous slide">← Prev</button>
+    <span class="counter" id="counter" aria-live="polite">1 / 7</span>
+    <button id="next" type="button" aria-label="Next slide">Next →</button>
+  </nav>
+</div>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+  var counter = document.getElementById('counter');
+  var i = 0;
+
+  function fromHash() {
+    var n = parseInt((location.hash || '').replace('#', ''), 10);
+    return (n >= 1 && n <= slides.length) ? n - 1 : 0;
+  }
+  function show(n, push) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, k) { s.classList.toggle('active', k === i); });
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+    if (push) { try { history.replaceState(null, '', '#' + (i + 1)); } catch (e) {} }
+  }
+  prev.addEventListener('click', function () { show(i - 1, true); });
+  next.addEventListener('click', function () { show(i + 1, true); });
+  document.addEventListener('keydown', function (e) {
+    if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(i + 1, true); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1, true); }
+    else if (e.key === 'Home') { show(0, true); }
+    else if (e.key === 'End') { show(slides.length - 1, true); }
+  });
+  var x0 = null;
+  document.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1), true);
+    x0 = null;
+  }, { passive: true });
+  window.addEventListener('hashchange', function () { show(fromHash(), false); });
+  show(fromHash(), false);
+})();
+</script>
+</body>
+</html>
