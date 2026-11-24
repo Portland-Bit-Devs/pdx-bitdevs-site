@@ -60,6 +60,11 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
   - In-browser Noir/UltraHonk prover (~10.7 KB proof, depth 3, ~65 s on 16 threads); optional SP1 → Groth16 server (356 B, depth 16)
   - Signet demo anchors key B with an on-chain spend; verifier checks the proof and the signature
   - {{ thumbnail(src="/images/seminar-52/xproof.jpeg", thumb="/images/seminar-52/xproof-thumb.jpeg", alt="xproof landing page") }}
+- [Anti-Exfil Signing Draft BIPs](https://github.com/AvilaLabs/anti-exfil) ([handbook](https://anti-exfil.avilalabs.org/))
+  - Stops a signing device from leaking its keys through chosen nonces: the host adds randomness to each nonce and checks the result
+  - Covers BIP340 and ECDSA, plus new PSBT fields so wallets and devices can use it without private extensions
+  - Ships test vectors, a libsecp256k1 C module, and a Jade `sign_psbt` patch series
+  - Draft from Avila Labs: no BIP number, no cryptographer review or outside audit; Python reference isn't constant-time
 
 ## LN Dev News
 
