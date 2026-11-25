@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Math Proofs</title>
+<meta name="description" content="Alpöge and Claude's Lean proof of the Riemann Hypothesis and Claude's claimed VP ≠ VNP separation: what each claims, how Lean verification works, and where each stands.">
+<style>
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #d6d6d2;
+  --accent: #B35F00;
+  --accent-soft: #fff1de;
+  --bad: #b3261e;
+  --bad-soft: #fde8e6;
+  --good: #1e7a3c;
+  --good-soft: #e3f4e8;
+  --tor: #6b4fa8;
+  --tor-soft: #efe9fa;
+  --code-bg: #f1f0ec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121212;
+    --surface: #1a1a1a;
+    --text: #e8e8e6;
+    --muted: #a3a3a0;
+    --line: #3a3a38;
+    --accent: #FF9900;
+    --accent-soft: #33240d;
+    --bad: #ff8a80;
+    --bad-soft: #3a1a18;
+    --good: #7fd69a;
+    --good-soft: #15301f;
+    --tor: #b9a2f0;
+    --tor-soft: #251d38;
+    --code-bg: #222220;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --text: #e8e8e6;
+  --muted: #a3a3a0;
+  --line: #3a3a38;
+  --accent: #FF9900;
+  --accent-soft: #33240d;
+  --bad: #ff8a80;
+  --bad-soft: #3a1a18;
+  --good: #7fd69a;
+  --good-soft: #15301f;
+  --tor: #b9a2f0;
+  --tor-soft: #251d38;
+  --code-bg: #222220;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+code { background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+
+.deck { min-height: 100%; display: flex; flex-direction: column; }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--muted);
+}
+.topbar a { color: var(--accent); text-decoration: none; }
+.topbar a:hover { text-decoration: underline; }
+
+main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+.slide { display: none; width: 100%; max-width: 980px; }
+.slide.active { display: block; animation: fade 0.25s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slide.active { animation: none; } }
+
+.eyebrow { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.12; margin: 0 0 16px; }
+h2 { font-size: clamp(22px, 3.4vw, 32px); line-height: 1.2; margin: 0 0 16px; }
+p.lead { font-size: clamp(17px, 2.2vw, 21px); color: var(--muted); max-width: 46em; margin: 0 0 16px; }
+ul.points { font-size: clamp(16px, 2vw, 19px); padding-left: 1.2em; margin: 0; }
+ul.points li { margin: 0 0 10px; }
+.meta { color: var(--muted); font-size: 15px; margin-top: 24px; }
+
+.figure {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; margin: 8px 0 16px; overflow-x: auto;
+}
+.figure svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.caption { color: var(--muted); font-size: 15px; margin: 0; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+pre.diff {
+  background: var(--code-bg); border-radius: 10px; padding: 14px 16px; margin: 0 0 16px;
+  font-size: clamp(12px, 1.6vw, 15px); line-height: 1.55; overflow-x: auto;
+}
+pre.diff .del { color: var(--bad); }
+pre.diff .add { color: var(--good); }
+pre.diff .ctx { color: var(--muted); }
+
+.nav {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 12px 16px 20px;
+}
+.nav button {
+  background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 16px; font-size: 15px; cursor: pointer; min-width: 92px;
+}
+.nav button:hover:not(:disabled) { border-color: var(--accent); }
+.nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav button:disabled { opacity: 0.4; cursor: default; }
+.counter { color: var(--muted); font-size: 14px; min-width: 56px; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* SVG theming */
+.svg-text { fill: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.svg-muted { fill: var(--muted); }
+.svg-box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.svg-us { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+.svg-tor { fill: var(--tor-soft); stroke: var(--tor); stroke-width: 2; }
+.svg-bad { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 2; }
+.svg-good { fill: var(--good-soft); stroke: var(--good); stroke-width: 2; }
+.svg-life { stroke: var(--line); stroke-width: 2; stroke-dasharray: 4 5; }
+.svg-arrow { stroke: var(--text); stroke-width: 2; fill: none; }
+.svg-arrow-bad { stroke: var(--bad); stroke-width: 2.5; fill: none; }
+.svg-arrow-tor { stroke: var(--tor); stroke-width: 2; fill: none; }
+.svg-arrow-good { stroke: var(--good); stroke-width: 2.5; fill: none; }
+.fill-text { fill: var(--text); }
+.fill-bad { fill: var(--bad); }
+.fill-tor { fill: var(--tor); }
+.fill-good { fill: var(--good); }
+.fill-accent { fill: var(--accent); }
+
+@media (max-width: 600px) {
+  .topbar .hint { display: none; }
+  main { align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="deck">
+  <div class="topbar">
+    <a href="/socratic-seminar-52/">← Socratic Seminar #52</a>
+    <span class="hint">← → or space to navigate</span>
+  </div>
+
+  <main>
+    <!-- 1. Title -->
+    <section class="slide active" aria-label="Slide 1">
+      <p class="eyebrow">Tech News · two AI-made proofs in one week</p>
+      <h1>Machine-checked, not yet understood</h1>
+      <p class="lead">On Nov 20, Levent Alpöge and Claude released a Lean proof of the Riemann Hypothesis. On Nov 23, a paper written entirely by Claude claimed VP ≠ VNP. Both proofs compile in Lean, but they stand on very different footing.</p>
+      <p class="meta"><a href="https://en.wikipedia.org/wiki/Alp%C3%B6ge%27s_proof_of_the_Riemann_hypothesis" style="color:var(--accent)">RH article</a> · <a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/" style="color:var(--accent)">Lean FRO statement</a> · <a href="https://www.alphaxiv.org/abs/2611.vp-vnp-arithmetic-lower-bounds" style="color:var(--accent)">VP ≠ VNP paper</a> · <a href="https://github.com/anthropics/formal-math/tree/main/vp-vnp" style="color:var(--accent)">VP ≠ VNP Lean</a></p>
+    </section>
+
+    <!-- 2. What RH says -->
+    <section class="slide" aria-label="Slide 2">
+      <p class="eyebrow">Result 1 · the Riemann Hypothesis</p>
+      <h2>Every nontrivial zero sits on one line</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 300" role="img" aria-labelledby="rh-title">
+          <title id="rh-title">The critical strip of the zeta function between real part 0 and 1. The known nontrivial zeros at heights 14.13, 21.02, 25.01, 30.42 and 32.94 all lie on the line with real part one half. RH says no zero lies off that line.</title>
+          <rect x="170" y="20" width="240" height="250" class="svg-box"/>
+          <line x1="140" y1="270" x2="450" y2="270" class="svg-arrow"/>
+          <line x1="170" y1="285" x2="170" y2="14" class="svg-life"/>
+          <line x1="410" y1="285" x2="410" y2="14" class="svg-life"/>
+          <line x1="290" y1="14" x2="290" y2="270" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="7 5"/>
+          <text x="170" y="292" text-anchor="middle" class="svg-text svg-muted" font-size="13">Re = 0</text>
+          <text x="290" y="292" text-anchor="middle" class="svg-text fill-accent" font-size="13" font-weight="700">Re = ½</text>
+          <text x="410" y="292" text-anchor="middle" class="svg-text svg-muted" font-size="13">Re = 1</text>
+          <text x="128" y="148" text-anchor="end" class="svg-text svg-muted" font-size="13">critical</text>
+          <text x="128" y="165" text-anchor="end" class="svg-text svg-muted" font-size="13">strip</text>
+          <g>
+            <circle cx="290" cy="166" r="6" class="svg-us"/><text x="302" y="171" class="svg-text" font-size="12">½ + 14.13i</text>
+            <circle cx="290" cy="114" r="6" class="svg-us"/><text x="302" y="119" class="svg-text" font-size="12">½ + 21.02i</text>
+            <circle cx="290" cy="85" r="6" class="svg-us"/><text x="302" y="90" class="svg-text" font-size="12">½ + 25.01i</text>
+            <circle cx="290" cy="45" r="6" class="svg-us"/><text x="302" y="50" class="svg-text" font-size="12">½ + 30.42i</text>
+            <circle cx="290" cy="27" r="6" class="svg-us"/><text x="302" y="32" class="svg-text" font-size="12">½ + 32.94i</text>
+          </g>
+          <circle cx="370" cy="210" r="8" class="svg-bad"/>
+          <text x="370" y="215" text-anchor="middle" class="svg-text fill-bad" font-size="13" font-weight="700">✕</text>
+          <text x="370" y="238" text-anchor="middle" class="svg-text fill-bad" font-size="12" font-weight="600">no zero here</text>
+          <rect x="480" y="40" width="260" height="200" rx="10" class="svg-us"/>
+          <text x="610" y="70" text-anchor="middle" class="svg-text" font-size="15" font-weight="700">Why number theorists care</text>
+          <text x="610" y="100" text-anchor="middle" class="svg-text" font-size="13">RH is equivalent to</text>
+          <text x="610" y="128" text-anchor="middle" class="svg-text" font-size="15" font-weight="700">ψ(x) = x + O(√x · log²x)</text>
+          <text x="610" y="158" text-anchor="middle" class="svg-text" font-size="13">The primes up to x are spread</text>
+          <text x="610" y="176" text-anchor="middle" class="svg-text" font-size="13">as evenly as they possibly can be:</text>
+          <text x="610" y="194" text-anchor="middle" class="svg-text" font-size="13">the error is about √x.</text>
+          <text x="610" y="222" text-anchor="middle" class="svg-text svg-muted" font-size="12">ψ: Chebyshev's prime-counting function</text>
+        </svg>
+      </div>
+      <p class="caption">Claimed and formalized: RH, plus the Generalized RH for Dirichlet L-functions. Not claimed: the extended or grand RH. Posed in 1859; a Clay Millennium Prize problem.</p>
+    </section>
+
+    <!-- 3. Proof strategy -->
+    <section class="slide" aria-label="Slide 3">
+      <p class="eyebrow">Result 1 · how the proof goes</p>
+      <h2>A function-field trick, carried over to the integers</h2>
+      <div class="cards">
+        <div class="card"><h3>The idea</h3><p>Stepanov gave a short proof of RH for curves over finite fields using a "multiplicity" trick. Over the integers there's no multiplicity, which Alpöge likens to "differentiating whole numbers". The proof replaces it with a chain of theta lifts, of length about √X for a prime sum of length X.</p></div>
+        <div class="card"><h3>Step 1: a weaker estimate is enough</h3><p>Bounding a smoothed prime-counting error only on scattered ranges, G(x) ≤ x<sup>1/2+ε</sup> for Y &lt; x &lt; Y<sup>3/2</sup>, already forces RH. This step uses classical Landau–Turán methods.</p></div>
+        <div class="card"><h3>Step 2: prove that estimate</h3><p>Repeated theta correspondence moves automorphic forms between unitary groups. Arakelov theory compares the resulting divisibility with the size of the periods. Tao: it uses "the full power of modern developments on the Langlands program".</p></div>
+      </div>
+      <p class="meta">The strategy comes from AI-agent summaries of the Lean source by Robin Zhang (IHES) and Michael Rubinstein (Waterloo), plus Alpöge's 4-page remark. No complete human-readable proof exists yet. Nuccio: "it basically contains all number theory produced in the last 50 years."</p>
+    </section>
+
+    <!-- 4. RH verification -->
+    <section class="slide" aria-label="Slide 4">
+      <p class="eyebrow">Result 1 · verification</p>
+      <h2>Checked every way the Lean community knows</h2>
+      <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr))">
+        <div class="card"><h3>17M lines</h3><p>175,187 modules. Dozens of people rebuilt it. Sutherland's sandboxed rebuild reproduced the 61.6 GB proof export byte for byte.</p></div>
+        <div class="card"><h3>Right statement</h3><p>It proves Mathlib's own, expert-vetted <code>RiemannHypothesis</code>. Two independent tools (comparator, con-leche) confirm the theorem matches that statement.</p></div>
+        <div class="card"><h3>No extra axioms</h3><p>Only <code>propext</code>, <code>Classical.choice</code> and <code>Quot.sound</code>. No <code>sorry</code>, <code>native_decide</code> or kernel bypasses in any file.</p></div>
+        <div class="card"><h3>Many kernels</h3><p>Lean's kernel (48 h), its paranoid mode (72 h), nanoda (Rust), lean4lean, and con-leche/con-ron, which are formally proved never to accept a false proof.</p></div>
+      </div>
+      <p class="meta">Lean FRO and Mathlib Initiative, Nov 21: "We have full confidence that Alpöge's proof of the Riemann Hypothesis is correct." Independent dashboards: <a href="https://math.mit.edu/~drew/grh/" style="color:var(--accent)">Sutherland (MIT)</a>, whose checks were run with Claude Code, and <a href="https://mrubinst.github.io/grh-lean-verification/" style="color:var(--accent)">Rubinstein (Waterloo)</a>.</p>
+    </section>
+
+    <!-- 5. Det vs perm -->
+    <section class="slide" aria-label="Slide 5">
+      <p class="eyebrow">Result 2 · background</p>
+      <h2>VP vs VNP: determinant vs permanent</h2>
+      <div class="figure">
+        <svg viewBox="0 30 760 260" role="img" aria-labelledby="dp-title">
+          <title id="dp-title">For a 3 by 3 matrix, the determinant and the permanent sum the same six products. The determinant gives three of them a minus sign; the permanent makes all six plus. The determinant is computable in polynomial time; the permanent is believed to need superpolynomial size.</title>
+          <rect x="20" y="70" width="150" height="130" rx="10" class="svg-box"/>
+          <text x="95" y="112" text-anchor="middle" class="svg-text" font-size="17" font-family="ui-monospace, Menlo, monospace">a  b  c</text>
+          <text x="95" y="142" text-anchor="middle" class="svg-text" font-size="17" font-family="ui-monospace, Menlo, monospace">d  e  f</text>
+          <text x="95" y="172" text-anchor="middle" class="svg-text" font-size="17" font-family="ui-monospace, Menlo, monospace">g  h  i</text>
+          <text x="95" y="226" text-anchor="middle" class="svg-text svg-muted" font-size="12">same 6 products</text>
+          <text x="95" y="242" text-anchor="middle" class="svg-text svg-muted" font-size="12">(one per permutation)</text>
+          <!-- det row -->
+          <text x="200" y="66" class="svg-text" font-size="15" font-weight="700">det =</text>
+          <g font-size="15" font-family="ui-monospace, Menlo, monospace">
+            <rect x="255" y="44" width="72" height="34" rx="6" class="svg-good"/><text x="291" y="66" text-anchor="middle" class="svg-text">+aei</text>
+            <rect x="335" y="44" width="72" height="34" rx="6" class="svg-good"/><text x="371" y="66" text-anchor="middle" class="svg-text">+bfg</text>
+            <rect x="415" y="44" width="72" height="34" rx="6" class="svg-good"/><text x="451" y="66" text-anchor="middle" class="svg-text">+cdh</text>
+            <rect x="495" y="44" width="72" height="34" rx="6" class="svg-bad"/><text x="531" y="66" text-anchor="middle" class="svg-text">−ceg</text>
+            <rect x="575" y="44" width="72" height="34" rx="6" class="svg-bad"/><text x="611" y="66" text-anchor="middle" class="svg-text">−bdi</text>
+            <rect x="655" y="44" width="72" height="34" rx="6" class="svg-bad"/><text x="691" y="66" text-anchor="middle" class="svg-text">−afh</text>
+          </g>
+          <text x="255" y="104" class="svg-text" font-size="13">signs make massive cancellation possible →</text>
+          <text x="255" y="122" class="svg-text fill-good" font-size="13" font-weight="700">polynomial-size circuits (Gaussian elimination): in VP</text>
+          <!-- perm row -->
+          <text x="200" y="176" class="svg-text" font-size="15" font-weight="700">per =</text>
+          <g font-size="15" font-family="ui-monospace, Menlo, monospace">
+            <rect x="255" y="154" width="72" height="34" rx="6" class="svg-good"/><text x="291" y="176" text-anchor="middle" class="svg-text">+aei</text>
+            <rect x="335" y="154" width="72" height="34" rx="6" class="svg-good"/><text x="371" y="176" text-anchor="middle" class="svg-text">+bfg</text>
+            <rect x="415" y="154" width="72" height="34" rx="6" class="svg-good"/><text x="451" y="176" text-anchor="middle" class="svg-text">+cdh</text>
+            <rect x="495" y="154" width="72" height="34" rx="6" class="svg-good"/><text x="531" y="176" text-anchor="middle" class="svg-text">+ceg</text>
+            <rect x="575" y="154" width="72" height="34" rx="6" class="svg-good"/><text x="611" y="176" text-anchor="middle" class="svg-text">+bdi</text>
+            <rect x="655" y="154" width="72" height="34" rx="6" class="svg-good"/><text x="691" y="176" text-anchor="middle" class="svg-text">+afh</text>
+          </g>
+          <text x="255" y="214" class="svg-text" font-size="13">no signs, no known shortcut →</text>
+          <text x="255" y="232" class="svg-text fill-bad" font-size="13" font-weight="700">complete for VNP (Valiant, 1979)</text>
+          <text x="255" y="262" class="svg-text svg-muted" font-size="12">In characteristic 2, −1 = +1, so det = per there.</text>
+          <text x="255" y="279" class="svg-text svg-muted" font-size="12">That's why the claim excludes char 2 for the permanent.</text>
+        </svg>
+      </div>
+      <p class="caption"><strong>VP:</strong> polynomial families with polynomial-size arithmetic circuits (only +, × and constants). <strong>VNP:</strong> exponential-size sums of VP polynomials. VP ≠ VNP is the algebraic analogue of P ≠ NP.</p>
+    </section>
+
+    <!-- 6. VP≠VNP claim -->
+    <section class="slide" aria-label="Slide 6">
+      <p class="eyebrow">Result 2 · the claim</p>
+      <h2>A superpolynomial lower bound, over every field</h2>
+      <pre class="diff"><span class="ctx">-- vp-vnp/Statement.lean (the headline bound)</span>
+<span class="add">def Beyond (c : ℝ) (m s : ℕ) : Prop :=</span>
+<span class="add">  (m : ℝ) ^ (c * Real.logb 2 m ^ (1 / 3 : ℝ)) &lt; s</span>
+<span class="ctx">-- every circuit for perm m (char ≠ 2) or the Hamiltonian cycle polynomial</span>
+<span class="ctx">-- has s gates with Beyond c m s, for some c &gt; 0 and all m ≥ m₀</span></pre>
+      <div class="cards">
+        <div class="card"><h3>Claims</h3><p>More than m<sup>c·(log₂ m)<sup>1/3</sup></sup> gates, for approximating circuits too. So VP ⊊ VNP, and VNP isn't even in the closure of VP, over every field.</p></div>
+        <div class="card"><h3>Doesn't claim</h3><p>P ≠ NP. Anything about Boolean circuits, since algebraic circuits must work on all field inputs, not just 0/1. An exponential bound. An explicit m₀ or the best exponent.</p></div>
+        <div class="card"><h3>Who checked</h3><p>Paper and Lean written by AI models. "No human mathematician has checked the proof." The repo's CI runs comparator and the nanoda kernel.</p></div>
+      </div>
+      <p class="meta">Valiant posed the question in 1979. Past lower bounds needed restrictions such as bounded depth; this claims to rule out every polynomial-size circuit. Submitted to alphaXiv's AI track on 2026-11-23, with "Claude" as sole author.</p>
+    </section>
+
+    <!-- 7. Statement gap + status matrix -->
+    <section class="slide" aria-label="Slide 7">
+      <p class="eyebrow">Side by side</p>
+      <h2>Lean checks the proof, not what you meant</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 300" role="img" aria-labelledby="mx-title">
+          <title id="mx-title">Status matrix. Statement means what is intended: RH yes, using Mathlib's vetted definition; VP not equal VNP unverified, its own new definitions. Compiles: both yes. Proves exactly that statement: both yes, by comparator. Independent kernels: RH many, VP not equal VNP nanoda in the repo's own CI. Independent outside checkers: RH several, VP not equal VNP none yet. Human understanding: RH partial, VP not equal VNP none.</title>
+          <text x="20" y="26" class="svg-text svg-muted" font-size="13" font-weight="700">CHECK</text>
+          <text x="505" y="26" text-anchor="middle" class="svg-text" font-size="14" font-weight="700">Riemann Hypothesis</text>
+          <text x="665" y="26" text-anchor="middle" class="svg-text" font-size="14" font-weight="700">VP ≠ VNP</text>
+          <g font-size="13">
+            <text x="20" y="62" class="svg-text">① statement says what's claimed</text>
+            <rect x="420" y="44" width="170" height="28" rx="6" class="svg-good"/><text x="505" y="63" text-anchor="middle" class="svg-text">Mathlib's vetted def</text>
+            <rect x="596" y="44" width="148" height="28" rx="6" class="svg-bad"/><text x="670" y="63" text-anchor="middle" class="svg-text">own defs, unvetted</text>
+            <text x="20" y="104" class="svg-text">② code compiles</text>
+            <rect x="420" y="86" width="170" height="28" rx="6" class="svg-good"/><text x="505" y="105" text-anchor="middle" class="svg-text">dozens of rebuilds</text>
+            <rect x="600" y="86" width="140" height="28" rx="6" class="svg-good"/><text x="670" y="105" text-anchor="middle" class="svg-text">repo CI</text>
+            <text x="20" y="146" class="svg-text">③ proves exactly that statement</text>
+            <rect x="420" y="128" width="170" height="28" rx="6" class="svg-good"/><text x="505" y="147" text-anchor="middle" class="svg-text">2 comparator tools</text>
+            <rect x="600" y="128" width="140" height="28" rx="6" class="svg-good"/><text x="670" y="147" text-anchor="middle" class="svg-text">comparator in CI</text>
+            <text x="20" y="188" class="svg-text">④ independent proof checkers</text>
+            <rect x="420" y="170" width="170" height="28" rx="6" class="svg-good"/><text x="505" y="189" text-anchor="middle" class="svg-text">6+ kernels</text>
+            <rect x="600" y="170" width="140" height="28" rx="6" class="svg-us"/><text x="670" y="189" text-anchor="middle" class="svg-text">nanoda in CI</text>
+            <text x="20" y="230" class="svg-text">outside verification</text>
+            <rect x="420" y="212" width="170" height="28" rx="6" class="svg-good"/><text x="505" y="231" text-anchor="middle" class="svg-text">Lean FRO + others</text>
+            <rect x="600" y="212" width="140" height="28" rx="6" class="svg-bad"/><text x="670" y="231" text-anchor="middle" class="svg-text">none yet</text>
+            <text x="20" y="272" class="svg-text">human understanding</text>
+            <rect x="420" y="254" width="170" height="28" rx="6" class="svg-us"/><text x="505" y="273" text-anchor="middle" class="svg-text">strategy only</text>
+            <rect x="600" y="254" width="140" height="28" rx="6" class="svg-bad"/><text x="670" y="273" text-anchor="middle" class="svg-text">none</text>
+          </g>
+        </svg>
+      </div>
+      <p class="caption">Rows ①–④ are the Lean community's four criteria. Why ① matters: the Xena blog's example <code style="white-space:nowrap">∀ a b c n : ℕ, n ≥ 3 → aⁿ + bⁿ ≠ cⁿ</code> compiles fine but is false, because ℕ includes 0. VP, VNP and "circuit" aren't in Mathlib, so the repo defines them itself.</p>
+    </section>
+
+    <!-- 8. Reactions -->
+    <section class="slide" aria-label="Slide 8">
+      <p class="eyebrow">Reactions</p>
+      <h2>Historic, if it holds; awkward either way</h2>
+      <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr))">
+        <div class="card"><h3>"A historic milestone"</h3><p>James Maynard, if it fully checks out. Clay president Martin Bridson: "an announcement of historic significance", but understanding will take time.</p></div>
+        <div class="card"><h3>Skeptics</h3><p>Granville criticized the 4-page sketch and its timing, a day after Anthropic's IPO. Radziwiłł noted there's no human understanding in the formalization. Alpöge himself: "The Lean is full of garbage obviously, but compiles."</p></div>
+        <div class="card"><h3>A human rival</h3><p>Hours later, Ravi Vakil posted Alessandro Masullo's "all human, with no AI" RH preprint as a "hurried announcement" (Nature). It's unverified.</p></div>
+        <div class="card"><h3>Who gets credit?</h3><p>The Leiden Declaration, signed by thousands, says credit and responsibility belong to humans. The WSJ called it "centaur science". The VP ≠ VNP paper lists only Claude.</p></div>
+      </div>
+    </section>
+
+    <!-- 9. Discussion -->
+    <section class="slide" aria-label="Slide 9">
+      <p class="eyebrow">Discussion</p>
+      <h2>Does any of this touch Bitcoin?</h2>
+      <div class="cards">
+        <div class="card"><h3>RH: no</h3><p>secp256k1 rests on the elliptic-curve discrete-log problem, and SHA-256 on its own design. Neither depends on RH. GRH makes the Miller primality test deterministic, but AKS (2002) already did that unconditionally.</p></div>
+        <div class="card"><h3>VP ≠ VNP: no</h3><p>It's a worst-case bound for algebraic circuits. Cryptography needs average-case hardness for Boolean computation. It neither proves nor breaks any assumption Bitcoin uses.</p></div>
+      </div>
+      <ul class="points" style="margin-top:20px">
+        <li>If no human understands a proof but six independent kernels accept it, is it a proof? What would change your mind?</li>
+        <li>Lean shrinks the trust problem to "is the statement right?" Who should review statements, and how?</li>
+        <li>Could the same pipeline (AI writes it, Lean checks it) verify consensus code or Miniscript compilers?</li>
+        <li>Should an AI be listed as an author, as on the VP ≠ VNP paper?</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Slide navigation">
+    <button id="prev" type="button" aria-label="Previous slide">← Prev</button>
+    <span class="counter" id="counter" aria-live="polite">1 / 9</span>
+    <button id="next" type="button" aria-label="Next slide">Next →</button>
+  </nav>
+</div>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+  var counter = document.getElementById('counter');
+  var i = 0;
+
+  function fromHash() {
+    var n = parseInt((location.hash || '').replace('#', ''), 10);
+    return (n >= 1 && n <= slides.length) ? n - 1 : 0;
+  }
+  function show(n, push) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, k) { s.classList.toggle('active', k === i); });
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+    if (push) { try { history.replaceState(null, '', '#' + (i + 1)); } catch (e) {} }
+  }
+  prev.addEventListener('click', function () { show(i - 1, true); });
+  next.addEventListener('click', function () { show(i + 1, true); });
+  document.addEventListener('keydown', function (e) {
+    if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(i + 1, true); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1, true); }
+    else if (e.key === 'Home') { show(0, true); }
+    else if (e.key === 'End') { show(slides.length - 1, true); }
+  });
+  var x0 = null;
+  document.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1), true);
+    x0 = null;
+  }, { passive: true });
+  window.addEventListener('hashchange', function () { show(fromHash(), false); });
+  show(fromHash(), false);
+})();
+</script>
+</body>
+</html>

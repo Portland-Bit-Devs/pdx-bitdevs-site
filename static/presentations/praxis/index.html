@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Praxis Witness Encryption</title>
+<meta name="description" content="Praxis, a practical witness encryption scheme for NP: how it works, its costs against prior work, its assumptions, and the Bitcoin uses it cites.">
+<style>
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #d6d6d2;
+  --accent: #B35F00;
+  --accent-soft: #fff1de;
+  --bad: #b3261e;
+  --bad-soft: #fde8e6;
+  --good: #1e7a3c;
+  --good-soft: #e3f4e8;
+  --tor: #6b4fa8;
+  --tor-soft: #efe9fa;
+  --code-bg: #f1f0ec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121212;
+    --surface: #1a1a1a;
+    --text: #e8e8e6;
+    --muted: #a3a3a0;
+    --line: #3a3a38;
+    --accent: #FF9900;
+    --accent-soft: #33240d;
+    --bad: #ff8a80;
+    --bad-soft: #3a1a18;
+    --good: #7fd69a;
+    --good-soft: #15301f;
+    --tor: #b9a2f0;
+    --tor-soft: #251d38;
+    --code-bg: #222220;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --text: #e8e8e6;
+  --muted: #a3a3a0;
+  --line: #3a3a38;
+  --accent: #FF9900;
+  --accent-soft: #33240d;
+  --bad: #ff8a80;
+  --bad-soft: #3a1a18;
+  --good: #7fd69a;
+  --good-soft: #15301f;
+  --tor: #b9a2f0;
+  --tor-soft: #251d38;
+  --code-bg: #222220;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+code { background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+
+.deck { min-height: 100%; display: flex; flex-direction: column; }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--muted);
+}
+.topbar a { color: var(--accent); text-decoration: none; }
+.topbar a:hover { text-decoration: underline; }
+
+main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+.slide { display: none; width: 100%; max-width: 980px; }
+.slide.active { display: block; animation: fade 0.25s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slide.active { animation: none; } }
+
+.eyebrow { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.12; margin: 0 0 16px; }
+h2 { font-size: clamp(22px, 3.4vw, 32px); line-height: 1.2; margin: 0 0 16px; }
+p.lead { font-size: clamp(17px, 2.2vw, 21px); color: var(--muted); max-width: 46em; margin: 0 0 16px; }
+ul.points { font-size: clamp(16px, 2vw, 19px); padding-left: 1.2em; margin: 0; }
+ul.points li { margin: 0 0 10px; }
+.meta { color: var(--muted); font-size: 15px; margin-top: 24px; }
+
+.figure {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; margin: 8px 0 16px; overflow-x: auto;
+}
+.figure svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.caption { color: var(--muted); font-size: 15px; margin: 0; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+pre.diff {
+  background: var(--code-bg); border-radius: 10px; padding: 14px 16px; margin: 0 0 16px;
+  font-size: clamp(12px, 1.6vw, 15px); line-height: 1.55; overflow-x: auto;
+}
+pre.diff .del { color: var(--bad); }
+pre.diff .add { color: var(--good); }
+pre.diff .ctx { color: var(--muted); }
+
+.nav {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 12px 16px 20px;
+}
+.nav button {
+  background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 16px; font-size: 15px; cursor: pointer; min-width: 92px;
+}
+.nav button:hover:not(:disabled) { border-color: var(--accent); }
+.nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav button:disabled { opacity: 0.4; cursor: default; }
+.counter { color: var(--muted); font-size: 14px; min-width: 56px; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* SVG theming */
+.svg-text { fill: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.svg-muted { fill: var(--muted); }
+.svg-box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.svg-us { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+.svg-tor { fill: var(--tor-soft); stroke: var(--tor); stroke-width: 2; }
+.svg-bad { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 2; }
+.svg-good { fill: var(--good-soft); stroke: var(--good); stroke-width: 2; }
+.svg-life { stroke: var(--line); stroke-width: 2; stroke-dasharray: 4 5; }
+.svg-arrow { stroke: var(--text); stroke-width: 2; fill: none; }
+.svg-arrow-bad { stroke: var(--bad); stroke-width: 2.5; fill: none; }
+.svg-arrow-tor { stroke: var(--tor); stroke-width: 2; fill: none; }
+.svg-arrow-good { stroke: var(--good); stroke-width: 2.5; fill: none; }
+.fill-text { fill: var(--text); }
+.fill-bad { fill: var(--bad); }
+.fill-tor { fill: var(--tor); }
+.fill-good { fill: var(--good); }
+.fill-accent { fill: var(--accent); }
+
+@media (max-width: 600px) {
+  .topbar .hint { display: none; }
+  main { align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="deck">
+  <div class="topbar">
+    <a href="/socratic-seminar-52/">← Socratic Seminar #52</a>
+    <span class="hint">← → or space to navigate</span>
+  </div>
+
+  <main>
+    <!-- 1. Title -->
+    <section class="slide active" aria-label="Slide 1">
+      <p class="eyebrow">IACR ePrint 2026/2971 · arXiv 2611.28552 · preprint, 2026-11-21</p>
+      <h1>Praxis: practical witness encryption for NP</h1>
+      <p class="lead">Encrypt a message so that anyone who can prove a statement can read it, with no key holder. After 13 years of feasibility results, a scheme with real numbers: a 7.88 GiB ciphertext and seconds to encrypt or decrypt.</p>
+      <p class="meta">David Tse, Nikhil Vanjani, Psi Vesely (Byzantine Research, Stanford; contacts at babylonchain.io) · <a href="https://eprint.iacr.org/2026/2971" style="color:var(--accent)">eprint.iacr.org/2026/2971</a> · Lean proofs: <a href="https://github.com/psivesely/praxis-lean" style="color:var(--accent)">psivesely/praxis-lean</a></p>
+    </section>
+
+    <!-- 2. What WE is -->
+    <section class="slide" aria-label="Slide 2">
+      <p class="eyebrow">Background</p>
+      <h2>Encrypt to a statement, not to a key</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 290" role="img" aria-labelledby="we-title">
+          <title id="we-title">Normal public-key encryption: only the holder of the secret key can decrypt. Witness encryption: the message is locked to a statement, and anyone holding a valid witness, such as a proof, can decrypt; if the statement is false, the message stays hidden.</title>
+          <defs>
+            <marker id="we-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-text"/></marker>
+            <marker id="we-ah-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-good"/></marker>
+          </defs>
+          <text x="20" y="28" class="svg-text svg-muted" font-size="13" font-weight="600">PUBLIC-KEY ENCRYPTION</text>
+          <rect x="20" y="42" width="150" height="56" rx="10" class="svg-box"/>
+          <text x="95" y="75" text-anchor="middle" class="svg-text" font-size="15">message</text>
+          <line x1="172" y1="70" x2="276" y2="70" class="svg-arrow" marker-end="url(#we-ah)"/>
+          <text x="224" y="60" text-anchor="middle" class="svg-text svg-muted" font-size="12">Alice's pubkey</text>
+          <rect x="280" y="42" width="170" height="56" rx="10" class="svg-box"/>
+          <text x="365" y="75" text-anchor="middle" class="svg-text" font-size="15">ciphertext</text>
+          <line x1="452" y1="70" x2="556" y2="70" class="svg-arrow" marker-end="url(#we-ah)"/>
+          <rect x="560" y="42" width="180" height="56" rx="10" class="svg-us"/>
+          <text x="650" y="67" text-anchor="middle" class="svg-text" font-size="14" font-weight="600">only Alice</text>
+          <text x="650" y="86" text-anchor="middle" class="svg-text svg-muted" font-size="12">holds the secret key</text>
+          <line x1="20" y1="128" x2="740" y2="128" class="svg-life"/>
+          <text x="20" y="160" class="svg-text svg-muted" font-size="13" font-weight="600">WITNESS ENCRYPTION</text>
+          <rect x="20" y="174" width="150" height="56" rx="10" class="svg-box"/>
+          <text x="95" y="207" text-anchor="middle" class="svg-text" font-size="15">message</text>
+          <line x1="172" y1="202" x2="276" y2="202" class="svg-arrow" marker-end="url(#we-ah)"/>
+          <text x="224" y="192" text-anchor="middle" class="svg-text svg-muted" font-size="12">a statement</text>
+          <rect x="280" y="174" width="170" height="56" rx="10" class="svg-tor"/>
+          <text x="365" y="198" text-anchor="middle" class="svg-text" font-size="14" font-weight="600">ciphertext</text>
+          <text x="365" y="217" text-anchor="middle" class="svg-text svg-muted" font-size="12">carries its own condition</text>
+          <line x1="452" y1="202" x2="556" y2="202" class="svg-arrow-good" marker-end="url(#we-ah-good)"/>
+          <rect x="560" y="174" width="180" height="56" rx="10" class="svg-good"/>
+          <text x="650" y="198" text-anchor="middle" class="svg-text" font-size="14" font-weight="600">anyone with a witness</text>
+          <text x="650" y="217" text-anchor="middle" class="svg-text svg-muted" font-size="12">e.g. a valid proof</text>
+          <text x="380" y="270" text-anchor="middle" class="svg-text svg-muted" font-size="13">No key to distribute, no party trusted to release it. If the statement is false, the message stays hidden.</text>
+        </svg>
+      </div>
+      <p class="caption">Introduced by Garg, Gentry, Sahai and Waters (STOC 2013). "Extractable" WE goes further: anyone who can tell encryptions apart must effectively know a witness.</p>
+    </section>
+
+    <!-- 3. Why impractical -->
+    <section class="slide" aria-label="Slide 3">
+      <p class="eyebrow">The problem</p>
+      <h2>13 years of "pick two"</h2>
+      <p class="lead">Every earlier construction had at most two of three properties. The paper claims Praxis is the first with all three.</p>
+      <div class="cards">
+        <div class="card"><h3>General</h3><p>Works for any NP statement. Practical schemes with proofs only handled narrow relations, like signatures or commitment openings.</p></div>
+        <div class="card"><h3>Proven secure</h3><p>Under well-studied models and assumptions. Other NP schemes rested on heuristics or purpose-built assumptions, many since attacked or broken.</p></div>
+        <div class="card"><h3>Practical</h3><p>Real sizes and running times. The proven general schemes (via iO, codes, or a rank gap) were feasibility results only.</p></div>
+      </div>
+      <ul class="points" style="margin-top:18px">
+        <li><strong>Starting point:</strong> Hair and Sahai (arXiv 2609.18275, Sep 2026) proved WE for NP in the generic group model from a "rank gap". Their abstract credits the main results to "Codex / ChatGPT 6 Astra Ultra", working from a strategy the authors suggested.</li>
+        <li>Praxis keeps their template but fixes the gap, and ends decryption with a short search instead of a polynomial one.</li>
+      </ul>
+    </section>
+
+    <!-- 4. How it works -->
+    <section class="slide" aria-label="Slide 4">
+      <p class="eyebrow">The construction</p>
+      <h2>One Groth16 verifier serves every statement</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 250" role="img" aria-labelledby="flow-title">
+          <title id="flow-title">Praxis encrypts once to a fixed Groth16 verifier on BN254 with the instance as constants. To decrypt, run any program in a zkVM to get a Groth16 proof, feed it to decryption, then search a short range for one secret integer. Without a witness, an attacker must guess four integers at once or solve Module-SIS.</title>
+          <defs>
+            <marker id="fl-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-text"/></marker>
+          </defs>
+          <text x="20" y="22" class="svg-text svg-muted" font-size="13" font-weight="600">ENCRYPT</text>
+          <rect x="20" y="34" width="210" height="60" rx="10" class="svg-box"/>
+          <text x="125" y="59" text-anchor="middle" class="svg-text" font-size="14">instance: program +</text>
+          <text x="125" y="78" text-anchor="middle" class="svg-text" font-size="14">public inputs/outputs</text>
+          <line x1="232" y1="64" x2="290" y2="64" class="svg-arrow" marker-end="url(#fl-ah)"/>
+          <rect x="294" y="34" width="250" height="60" rx="10" class="svg-tor"/>
+          <text x="419" y="59" text-anchor="middle" class="svg-text" font-size="14" font-weight="600">fixed Groth16 verifier, BN254</text>
+          <text x="419" y="78" text-anchor="middle" class="svg-text svg-muted" font-size="12">quadratic system, ~2^18.6 unknowns</text>
+          <line x1="546" y1="64" x2="604" y2="64" class="svg-arrow" marker-end="url(#fl-ah)"/>
+          <rect x="608" y="34" width="132" height="60" rx="10" class="svg-us"/>
+          <text x="674" y="59" text-anchor="middle" class="svg-text" font-size="14" font-weight="600">ciphertext</text>
+          <text x="674" y="78" text-anchor="middle" class="svg-text svg-muted" font-size="12">7.88 GiB</text>
+          <text x="20" y="134" class="svg-text svg-muted" font-size="13" font-weight="600">DECRYPT</text>
+          <rect x="20" y="146" width="160" height="60" rx="10" class="svg-box"/>
+          <text x="100" y="171" text-anchor="middle" class="svg-text" font-size="14">e.g. a Rust program</text>
+          <text x="100" y="190" text-anchor="middle" class="svg-text svg-muted" font-size="12">+ an accepted input</text>
+          <line x1="182" y1="176" x2="224" y2="176" class="svg-arrow" marker-end="url(#fl-ah)"/>
+          <rect x="228" y="146" width="150" height="60" rx="10" class="svg-box"/>
+          <text x="303" y="171" text-anchor="middle" class="svg-text" font-size="14">zkVM / SNARK</text>
+          <text x="303" y="190" text-anchor="middle" class="svg-text svg-muted" font-size="12">ends in Groth16</text>
+          <line x1="380" y1="176" x2="422" y2="176" class="svg-arrow" marker-end="url(#fl-ah)"/>
+          <rect x="426" y="146" width="160" height="60" rx="10" class="svg-box"/>
+          <text x="506" y="171" text-anchor="middle" class="svg-text" font-size="14">proof → linear work</text>
+          <text x="506" y="190" text-anchor="middle" class="svg-text svg-muted" font-size="12">over the ciphertext</text>
+          <line x1="588" y1="176" x2="604" y2="176" class="svg-arrow" marker-end="url(#fl-ah)"/>
+          <rect x="608" y="146" width="132" height="60" rx="10" class="svg-good"/>
+          <text x="674" y="171" text-anchor="middle" class="svg-text" font-size="14" font-weight="600">short search</text>
+          <text x="674" y="190" text-anchor="middle" class="svg-text svg-muted" font-size="12">~2^29.4 guesses</text>
+          <text x="380" y="238" text-anchor="middle" class="svg-text svg-muted" font-size="13">Without a witness: guess four secret integers at once (exponentially longer), or solve Module-SIS.</text>
+        </svg>
+      </div>
+      <p class="caption">Because the verifier is universal, every relation gets the same system size and the same costs. Decryption yields a key (a witness KEM), so a normal cipher handles messages of any length.</p>
+    </section>
+
+    <!-- 5. The numbers -->
+    <section class="slide" aria-label="Slide 5">
+      <p class="eyebrow">The numbers · 100-bit security, same Groth16 statement</p>
+      <h2>Over ten orders of magnitude smaller</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 300" role="img" aria-labelledby="bar-title">
+          <title id="bar-title">Log-scale comparison with Hair and Sahai's basic construction. Ciphertext: 1.1 times 10 to the 11 GiB versus 7.88 GiB. Encryption: 2.6 times 10 to the 20 versus 2.0 times 10 to the 10 field multiplications. Decryption: 1.2 times 10 to the 16 versus 8.6 times 10 to the 9.</title>
+          <!-- axis: log10 0..21 mapped to x 200..720 (24.76 px per decade) -->
+          <g class="svg-text svg-muted" font-size="11">
+            <line x1="200" y1="270" x2="720" y2="270" class="svg-life"/>
+            <text x="200" y="288" text-anchor="middle">10⁰</text>
+            <text x="323.8" y="288" text-anchor="middle">10⁵</text>
+            <text x="447.6" y="288" text-anchor="middle">10¹⁰</text>
+            <text x="571.4" y="288" text-anchor="middle">10¹⁵</text>
+            <text x="695.2" y="288" text-anchor="middle">10²⁰</text>
+          </g>
+          <!-- Ciphertext GiB: HS 1.1e11 -> 11.04 dec -> 273.4px ; Praxis 7.88 -> 0.897 dec -> 22.2px -->
+          <text x="20" y="40" class="svg-text" font-size="14" font-weight="600">Ciphertext (GiB)</text>
+          <rect x="200" y="50" width="273.4" height="22" rx="4" class="svg-bad"/>
+          <text x="481" y="66" class="svg-text" font-size="13">1.1 × 10¹¹ Hair–Sahai</text>
+          <rect x="200" y="78" width="22.2" height="22" rx="4" class="svg-good"/>
+          <text x="230" y="94" class="svg-text" font-size="13" font-weight="700">7.88 Praxis</text>
+          <!-- Encryption: HS 2.6e20 -> 20.41 -> 505.5px ; Praxis 2.0e10 -> 10.30 -> 255.1px -->
+          <text x="20" y="130" class="svg-text" font-size="14" font-weight="600">Encryption</text>
+          <text x="20" y="148" class="svg-text svg-muted" font-size="12">field mults</text>
+          <rect x="200" y="122" width="505.5" height="22" rx="4" class="svg-bad"/>
+          <text x="690" y="138" text-anchor="end" class="svg-text" font-size="13">2.6 × 10²⁰</text>
+          <rect x="200" y="150" width="255.1" height="22" rx="4" class="svg-good"/>
+          <text x="463" y="166" class="svg-text" font-size="13" font-weight="700">2.0 × 10¹⁰ (2^34.2)</text>
+          <!-- Decryption: HS 1.2e16 -> 16.08 -> 398.1px ; Praxis 8.6e9 -> 9.93 -> 246.0px -->
+          <text x="20" y="202" class="svg-text" font-size="14" font-weight="600">Decryption</text>
+          <text x="20" y="220" class="svg-text svg-muted" font-size="12">field mults, expected</text>
+          <rect x="200" y="194" width="398.1" height="22" rx="4" class="svg-bad"/>
+          <text x="606" y="210" class="svg-text" font-size="13">1.2 × 10¹⁶</text>
+          <rect x="200" y="222" width="246.0" height="22" rx="4" class="svg-good"/>
+          <text x="454" y="238" class="svg-text" font-size="13" font-weight="700">8.6 × 10⁹ (2^33.0)</text>
+        </svg>
+      </div>
+      <p class="caption">Log scale, from the paper's Table 1, against Hair and Sahai's basic construction (their values are lower bounds). Ciphertext and encryption: over ten orders of magnitude smaller; decryption: over six.</p>
+    </section>
+
+    <!-- 6. Practical? -->
+    <section class="slide" aria-label="Slide 6">
+      <p class="eyebrow">Practical, with an asterisk</p>
+      <h2>Laptop-scale, but 7.88 GiB per ciphertext</h2>
+      <div class="cards">
+        <div class="card"><h3>Encrypt</h3><p>2^34.2 field multiplications, "seconds on a laptop" per the paper. About 12 GB of memory.</p></div>
+        <div class="card"><h3>Decrypt</h3><p>2^33.0 expected, also seconds, given a Groth16 proof. About 5 GB of memory, with the ciphertext streamed. Fails with probability under 2^−252.</p></div>
+        <div class="card"><h3>Ciphertext</h3><p>7.88 GiB (8.46 GB as sent), the same for every statement. About 2^27.6 group elements, batch-compressed.</p></div>
+      </div>
+      <ul class="points" style="margin-top:18px">
+        <li>Practical next to the 10¹¹ GiB before it, but you won't put it on-chain or email it. Each ciphertext is tied to one statement.</li>
+        <li>Decryption is exponential in the security level, just short at λ = 100: about 2^(λ/4) · N^(1/4) operations.</li>
+      </ul>
+    </section>
+
+    <!-- 7. Caveats -->
+    <section class="slide" aria-label="Slide 7">
+      <p class="eyebrow">What it rests on</p>
+      <h2>Assumptions and caveats</h2>
+      <div class="cards">
+        <div class="card"><h3>Honest Groth16 setup</h3><p>Whoever kept the setup's secret randomness could decrypt <em>every</em> ciphertext made for that key. Same trust as the SNARK, but now it guards secrets.</p></div>
+        <div class="card"><h3>Idealized models</h3><p>Extraction is proved in the bilinear generic group model and random oracle model, under Module-SIS. Real attacks on BN254 aren't generic: discrete log there is about 2^103.</p></div>
+        <div class="card"><h3>Parameters by best attack</h3><p>Module-SIS is sized by the best known attack, standard practice. For the proof alone to give 100 bits, it would need about 4.5 more bits.</p></div>
+        <div class="card"><h3>Fresh and unreviewed</h3><p>A preprint posted 2026-11-21. Lean 4 checks correctness and extraction at these exact parameters; matching definitions to intent is checked by reading.</p></div>
+      </div>
+    </section>
+
+    <!-- 8. Bitcoin + discussion -->
+    <section class="slide" aria-label="Slide 8">
+      <p class="eyebrow">Why bitdevs should care</p>
+      <h2>Bitcoin uses the paper cites</h2>
+      <div class="cards">
+        <div class="card"><h3>Custodian-free bridges</h3><p><a href="https://ethresear.ch/t/trustless-bitcoin-bridge-creation-with-witness-encryption/11953" style="color:var(--accent)">Hioki, 2022</a>: encrypt a deposit address's private key so only a proof of redemption on the other chain can recover it.</p></div>
+        <div class="card"><h3>Proof verification</h3><p><a href="https://eprint.iacr.org/2026/065" style="color:var(--accent)">BABE</a> (with Tse): WE plus a garbled circuit to verify Groth16 on Bitcoin, 1000× less off-chain storage than BitVM3's 42 GiB garbled circuits.</p></div>
+        <div class="card"><h3>Covenants, no soft fork</h3><p><a href="https://eprint.iacr.org/2026/186" style="color:var(--accent)">Bitcoin PIPEs v2</a>: lock a Bitcoin key under an NP statement; the spend is an ordinary Schnorr signature.</p></div>
+      </div>
+      <ul class="points" style="margin-top:18px">
+        <li>The paper lists these uses but doesn't build them. Is a 7.88 GiB ciphertext workable for a bridge operator?</li>
+        <li>If WE can emulate covenants, does that weaken the case for OP_CAT or CTV, or strengthen it?</li>
+        <li>Who would you trust to run the Groth16 setup when its toxic waste decrypts the coins' keys?</li>
+        <li>How much weight do we give generic-group proofs for keys that guard bitcoin?</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Slide navigation">
+    <button id="prev" type="button" aria-label="Previous slide">← Prev</button>
+    <span class="counter" id="counter" aria-live="polite">1 / 8</span>
+    <button id="next" type="button" aria-label="Next slide">Next →</button>
+  </nav>
+</div>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+  var counter = document.getElementById('counter');
+  var i = 0;
+
+  function fromHash() {
+    var n = parseInt((location.hash || '').replace('#', ''), 10);
+    return (n >= 1 && n <= slides.length) ? n - 1 : 0;
+  }
+  function show(n, push) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, k) { s.classList.toggle('active', k === i); });
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+    if (push) { try { history.replaceState(null, '', '#' + (i + 1)); } catch (e) {} }
+  }
+  prev.addEventListener('click', function () { show(i - 1, true); });
+  next.addEventListener('click', function () { show(i + 1, true); });
+  document.addEventListener('keydown', function (e) {
+    if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(i + 1, true); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1, true); }
+    else if (e.key === 'Home') { show(0, true); }
+    else if (e.key === 'End') { show(slides.length - 1, true); }
+  });
+  var x0 = null;
+  document.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1), true);
+    x0 = null;
+  }, { passive: true });
+  window.addEventListener('hashchange', function () { show(fromHash(), false); });
+  show(fromHash(), false);
+})();
+</script>
+</body>
+</html>

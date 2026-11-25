@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xproof ZK Link Proof</title>
+<meta name="description" content="How xproof proves two Bitcoin keys share a BIP32 xpub in zero knowledge, what the on-chain anchor adds, and what it does not prove.">
+<style>
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #d6d6d2;
+  --accent: #B35F00;
+  --accent-soft: #fff1de;
+  --bad: #b3261e;
+  --bad-soft: #fde8e6;
+  --good: #1e7a3c;
+  --good-soft: #e3f4e8;
+  --tor: #6b4fa8;
+  --tor-soft: #efe9fa;
+  --code-bg: #f1f0ec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121212;
+    --surface: #1a1a1a;
+    --text: #e8e8e6;
+    --muted: #a3a3a0;
+    --line: #3a3a38;
+    --accent: #FF9900;
+    --accent-soft: #33240d;
+    --bad: #ff8a80;
+    --bad-soft: #3a1a18;
+    --good: #7fd69a;
+    --good-soft: #15301f;
+    --tor: #b9a2f0;
+    --tor-soft: #251d38;
+    --code-bg: #222220;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --text: #e8e8e6;
+  --muted: #a3a3a0;
+  --line: #3a3a38;
+  --accent: #FF9900;
+  --accent-soft: #33240d;
+  --bad: #ff8a80;
+  --bad-soft: #3a1a18;
+  --good: #7fd69a;
+  --good-soft: #15301f;
+  --tor: #b9a2f0;
+  --tor-soft: #251d38;
+  --code-bg: #222220;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+code { background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+
+.deck { min-height: 100%; display: flex; flex-direction: column; }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--muted);
+}
+.topbar a { color: var(--accent); text-decoration: none; }
+.topbar a:hover { text-decoration: underline; }
+
+main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+.slide { display: none; width: 100%; max-width: 980px; }
+.slide.active { display: block; animation: fade 0.25s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slide.active { animation: none; } }
+
+.eyebrow { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.12; margin: 0 0 16px; }
+h2 { font-size: clamp(22px, 3.4vw, 32px); line-height: 1.2; margin: 0 0 16px; }
+p.lead { font-size: clamp(17px, 2.2vw, 21px); color: var(--muted); max-width: 46em; margin: 0 0 16px; }
+ul.points { font-size: clamp(16px, 2vw, 19px); padding-left: 1.2em; margin: 0; }
+ul.points li { margin: 0 0 10px; }
+.meta { color: var(--muted); font-size: 15px; margin-top: 24px; }
+
+.figure {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; margin: 8px 0 16px; overflow-x: auto;
+}
+.figure svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.caption { color: var(--muted); font-size: 15px; margin: 0; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+pre.diff {
+  background: var(--code-bg); border-radius: 10px; padding: 14px 16px; margin: 0 0 16px;
+  font-size: clamp(12px, 1.6vw, 15px); line-height: 1.55; overflow-x: auto;
+}
+pre.diff .del { color: var(--bad); }
+pre.diff .add { color: var(--good); }
+pre.diff .ctx { color: var(--muted); }
+
+.nav {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 12px 16px 20px;
+}
+.nav button {
+  background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 16px; font-size: 15px; cursor: pointer; min-width: 92px;
+}
+.nav button:hover:not(:disabled) { border-color: var(--accent); }
+.nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav button:disabled { opacity: 0.4; cursor: default; }
+.counter { color: var(--muted); font-size: 14px; min-width: 56px; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* SVG theming */
+.svg-text { fill: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.svg-muted { fill: var(--muted); }
+.svg-box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.svg-us { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+.svg-tor { fill: var(--tor-soft); stroke: var(--tor); stroke-width: 2; }
+.svg-bad { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 2; }
+.svg-good { fill: var(--good-soft); stroke: var(--good); stroke-width: 2; }
+.svg-life { stroke: var(--line); stroke-width: 2; stroke-dasharray: 4 5; }
+.svg-arrow { stroke: var(--text); stroke-width: 2; fill: none; }
+.svg-arrow-bad { stroke: var(--bad); stroke-width: 2.5; fill: none; }
+.svg-arrow-tor { stroke: var(--tor); stroke-width: 2; fill: none; }
+.svg-arrow-good { stroke: var(--good); stroke-width: 2.5; fill: none; }
+.fill-text { fill: var(--text); }
+.fill-bad { fill: var(--bad); }
+.fill-tor { fill: var(--tor); }
+.fill-good { fill: var(--good); }
+.fill-accent { fill: var(--accent); }
+
+@media (max-width: 600px) {
+  .topbar .hint { display: none; }
+  main { align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="deck">
+  <div class="topbar">
+    <a href="/socratic-seminar-52/">← Socratic Seminar #52</a>
+    <span class="hint">← → or space to navigate</span>
+  </div>
+
+  <main>
+    <!-- 1. Title -->
+    <section class="slide active" aria-label="Slide 1">
+      <p class="eyebrow">xproof · portlandhodl · statement xproof-ownership-link-v1</p>
+      <h1>Prove two keys share a wallet. Reveal nothing else.</h1>
+      <p class="lead">A zero-knowledge proof that two public keys descend from one BIP32 xpub, without revealing the xpub, its chain code, or the derivation paths. Runs in the browser, on signet.</p>
+      <p class="meta"><a href="https://github.com/portlandhodl/xproof" style="color:var(--accent)">github.com/portlandhodl/xproof</a> · <a href="https://portlandhodl.github.io/xproof/" style="color:var(--accent)">live demo</a> · draft spec, demo implementation</p>
+    </section>
+
+    <!-- 2. The problem: an xpub links everything -->
+    <section class="slide" aria-label="Slide 2">
+      <p class="eyebrow">The problem</p>
+      <h2>Showing your xpub links every key you'll ever use</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 270" role="img" aria-labelledby="xp-title">
+          <title id="xp-title">An xpub derives every non-hardened child key; anyone holding it can link all past and future addresses of the wallet.</title>
+          <defs>
+            <marker id="xp-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-text"/></marker>
+          </defs>
+          <rect x="300" y="14" width="160" height="50" rx="10" class="svg-bad"/>
+          <text x="380" y="36" text-anchor="middle" class="svg-text" font-size="15" font-weight="700">xpub</text>
+          <text x="380" y="55" text-anchor="middle" class="svg-text" font-size="12">pubkey K + chain code c</text>
+          <!-- level 1 -->
+          <line x1="380" y1="64" x2="200" y2="104" class="svg-arrow"/>
+          <line x1="380" y1="64" x2="560" y2="104" class="svg-arrow"/>
+          <rect x="150" y="104" width="100" height="36" rx="8" class="svg-box"/>
+          <text x="200" y="127" text-anchor="middle" class="svg-text" font-size="13">m/0</text>
+          <rect x="510" y="104" width="100" height="36" rx="8" class="svg-box"/>
+          <text x="560" y="127" text-anchor="middle" class="svg-text" font-size="13">m/1</text>
+          <!-- level 2 -->
+          <line x1="200" y1="140" x2="90" y2="180" class="svg-arrow"/>
+          <line x1="200" y1="140" x2="200" y2="180" class="svg-arrow"/>
+          <line x1="200" y1="140" x2="310" y2="180" class="svg-arrow"/>
+          <line x1="560" y1="140" x2="450" y2="180" class="svg-arrow"/>
+          <line x1="560" y1="140" x2="560" y2="180" class="svg-arrow"/>
+          <line x1="560" y1="140" x2="670" y2="180" class="svg-arrow"/>
+          <g font-size="12">
+            <rect x="50" y="180" width="80" height="32" rx="6" class="svg-bad"/><text x="90" y="201" text-anchor="middle" class="svg-text">m/0/0</text>
+            <rect x="160" y="180" width="80" height="32" rx="6" class="svg-bad"/><text x="200" y="201" text-anchor="middle" class="svg-text">m/0/1</text>
+            <rect x="270" y="180" width="80" height="32" rx="6" class="svg-bad"/><text x="310" y="201" text-anchor="middle" class="svg-text">m/0/2 …</text>
+            <rect x="410" y="180" width="80" height="32" rx="6" class="svg-bad"/><text x="450" y="201" text-anchor="middle" class="svg-text">m/1/0</text>
+            <rect x="520" y="180" width="80" height="32" rx="6" class="svg-bad"/><text x="560" y="201" text-anchor="middle" class="svg-text">m/1/1</text>
+            <rect x="630" y="180" width="80" height="32" rx="6" class="svg-bad"/><text x="670" y="201" text-anchor="middle" class="svg-text">m/1/2 …</text>
+          </g>
+          <text x="380" y="246" text-anchor="middle" class="svg-text fill-bad" font-size="14" font-weight="600">every receive and change key, past and future, is now linkable</text>
+        </svg>
+      </div>
+      <ul class="points">
+        <li>Public (non-hardened) derivation needs only the xpub: <code>I = HMAC-SHA512(c, ser_P(K) ‖ ser32(i))</code>, child <code>K′ = K + I<sub>L</sub>·G</code>, chain code <code>c′ = I<sub>R</sub></code>.</li>
+        <li>Worse: an xpub plus <em>any one</em> non-hardened child private key recovers the parent private key.</li>
+      </ul>
+    </section>
+
+    <!-- 3. The statement: public vs private -->
+    <section class="slide" aria-label="Slide 3">
+      <p class="eyebrow">The statement</p>
+      <h2>Two keys go public. The tree stays hidden.</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 290" role="img" aria-labelledby="st-title">
+          <title id="st-title">Hidden witness: the xpub, chain code and both paths. Public journal: key A, key B, a context hash and an expiry. The proof says one hidden xpub derives both keys.</title>
+          <defs>
+            <marker id="st-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-tor"/></marker>
+          </defs>
+          <!-- hidden region -->
+          <rect x="20" y="14" width="420" height="262" rx="12" class="svg-box" stroke-dasharray="6 5"/>
+          <text x="40" y="40" class="svg-text svg-muted" font-size="13" font-weight="700">PRIVATE WITNESS (never leaves the prover)</text>
+          <rect x="150" y="56" width="160" height="46" rx="10" class="svg-tor"/>
+          <text x="230" y="77" text-anchor="middle" class="svg-text" font-size="14" font-weight="700">K_par, c_par</text>
+          <text x="230" y="94" text-anchor="middle" class="svg-text svg-muted" font-size="12">the xpub</text>
+          <path d="M210,102 L120,150" class="svg-arrow-tor" stroke-dasharray="5 4"/>
+          <path d="M250,102 L340,150" class="svg-arrow-tor" stroke-dasharray="5 4"/>
+          <text x="150" y="128" text-anchor="end" class="svg-text svg-muted" font-size="12">path_a</text>
+          <text x="332" y="128" class="svg-text svg-muted" font-size="12">path_b</text>
+          <path d="M120,150 L120,210" class="svg-arrow-tor" stroke-dasharray="5 4" marker-end="url(#st-ah)"/>
+          <path d="M340,150 L340,210" class="svg-arrow-tor" stroke-dasharray="5 4" marker-end="url(#st-ah)"/>
+          <circle cx="120" cy="150" r="5" class="svg-tor"/><circle cx="340" cy="150" r="5" class="svg-tor"/>
+          <text x="230" y="180" text-anchor="middle" class="svg-text svg-muted" font-size="12">1–3 steps each;</text>
+          <text x="230" y="196" text-anchor="middle" class="svg-text svg-muted" font-size="12">paths and lengths hidden</text>
+          <!-- leaves -->
+          <rect x="60" y="214" width="120" height="44" rx="10" class="svg-us"/>
+          <text x="120" y="241" text-anchor="middle" class="svg-text" font-size="15" font-weight="700">key A</text>
+          <rect x="280" y="214" width="120" height="44" rx="10" class="svg-us"/>
+          <text x="340" y="241" text-anchor="middle" class="svg-text" font-size="15" font-weight="700">key B</text>
+          <!-- public journal -->
+          <rect x="480" y="14" width="260" height="262" rx="12" class="svg-good"/>
+          <text x="500" y="40" class="svg-text" font-size="13" font-weight="700">PUBLIC JOURNAL (106 bytes)</text>
+          <g font-size="13">
+            <text x="500" y="76" class="svg-text">key_a</text><text x="720" y="76" text-anchor="end" class="svg-text svg-muted">33 B</text>
+            <text x="500" y="106" class="svg-text">key_b <tspan class="svg-muted" font-size="12">(the anchor)</tspan></text><text x="720" y="106" text-anchor="end" class="svg-text svg-muted">33 B</text>
+            <text x="500" y="136" class="svg-text">context_hash</text><text x="720" y="136" text-anchor="end" class="svg-text svg-muted">32 B</text>
+            <text x="500" y="166" class="svg-text">expires_at <tspan class="svg-muted" font-size="12">(unix ms)</tspan></text><text x="720" y="166" text-anchor="end" class="svg-text svg-muted">8 B</text>
+          </g>
+          <line x1="500" y1="186" x2="720" y2="186" class="svg-life"/>
+          <text x="610" y="214" text-anchor="middle" class="svg-text" font-size="13">+ the claim:</text>
+          <text x="610" y="236" text-anchor="middle" class="svg-text" font-size="13" font-weight="700">"one hidden xpub</text>
+          <text x="610" y="256" text-anchor="middle" class="svg-text" font-size="13" font-weight="700">derives both keys"</text>
+        </svg>
+      </div>
+      <p class="caption">Also enforced: key A ≠ key B, every index non-hardened, no invalid derivation step. The context hash and expiry stop a proof being replayed in another session.</p>
+    </section>
+
+    <!-- 4. The circuit trick -->
+    <section class="slide" aria-label="Slide 4">
+      <p class="eyebrow">Inside the circuit</p>
+      <h2>Elliptic-curve addition, smuggled through ECDSA verify</h2>
+      <p class="lead" style="font-size:17px">The Noir circuit has no native secp256k1 math. Each derivation step <code>C = K + t·G</code> is checked with Barretenberg's ECDSA-verification black box, run twice:</p>
+      <pre class="diff"><span class="ctx">// prover supplies child point C as a hint; t = parse256(HMAC-SHA512(...)[0..32])</span>
+<span class="add">(A) forward:  V(K, t·x(C), (x(C), s₁))   ⇒  x(K + t·G) ≡ x(C)</span>
+<span class="add">(B) back:     V(C, −t·x(K), (x(K), s₂))  ⇒  x(C − t·G) ≡ x(K)</span>
+<span class="ctx">    with s ∈ {r, n − r}, so ECDSA's R = (e/s)·G + (r/s)·Q collapses to Q ± t·G</span></pre>
+      <div class="cards">
+        <div class="card"><h3>Why two checks</h3><p>(A) alone only fixes the x-coordinate. (B) pins the y-parity, so a prover can't claim the negated key −K<sub>A</sub>. The test suite includes that attack, and the circuit rejects it.</p></div>
+        <div class="card"><h3>Same work every time</h3><p>Always 3 steps per path; shorter paths repeat a no-op step. Proving time can't leak the path length.</p></div>
+        <div class="card"><h3>Cost</h3><p>1,757,751 gates (2²¹): 22 SHA-512 compressions (~65k gates each) and 12 ECDSA gadgets (~38k each).</p></div>
+      </div>
+    </section>
+
+    <!-- 5. Protocol: prove, anchor, verify -->
+    <section class="slide" aria-label="Slide 5">
+      <p class="eyebrow">The protocol</p>
+      <h2>Prove, anchor on-chain, verify</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 300" role="img" aria-labelledby="pr-title">
+          <title id="pr-title">The verifier sends a session context. The prover spends from key B on signet, creating a public signature, then generates the proof bound to the context and sends the proof file. The verifier checks the proof, the freshness, and the on-chain signature itself.</title>
+          <defs>
+            <marker id="pr-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-text"/></marker>
+            <marker id="pr-ah-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-good"/></marker>
+          </defs>
+          <rect x="20" y="12" width="190" height="48" rx="10" class="svg-us"/>
+          <text x="115" y="34" text-anchor="middle" class="svg-text" font-size="15" font-weight="600">Prover</text>
+          <text x="115" y="52" text-anchor="middle" class="svg-text svg-muted" font-size="12">xpub + key B privkey</text>
+          <rect x="285" y="12" width="190" height="48" rx="10" class="svg-box"/>
+          <text x="380" y="34" text-anchor="middle" class="svg-text" font-size="15" font-weight="600">Signet chain</text>
+          <text x="380" y="52" text-anchor="middle" class="svg-text svg-muted" font-size="12">Esplora API (demo)</text>
+          <rect x="550" y="12" width="190" height="48" rx="10" class="svg-good"/>
+          <text x="645" y="34" text-anchor="middle" class="svg-text" font-size="15" font-weight="600">Verifier</text>
+          <text x="645" y="52" text-anchor="middle" class="svg-text svg-muted" font-size="12">sees only proof + chain</text>
+          <line x1="115" y1="60" x2="115" y2="292" class="svg-life"/>
+          <line x1="380" y1="60" x2="380" y2="292" class="svg-life"/>
+          <line x1="645" y1="60" x2="645" y2="292" class="svg-life"/>
+          <!-- 1 -->
+          <line x1="643" y1="96" x2="121" y2="96" class="svg-arrow" marker-end="url(#pr-ah)"/>
+          <text x="380" y="88" text-anchor="middle" class="svg-text" font-size="13">① session context (verifier picks it) + expiry</text>
+          <!-- 2 -->
+          <line x1="117" y1="138" x2="374" y2="138" class="svg-arrow" marker-end="url(#pr-ah)"/>
+          <text x="245" y="130" text-anchor="middle" class="svg-text" font-size="13">② spend from key B</text>
+          <text x="245" y="156" text-anchor="middle" class="svg-text svg-muted" font-size="12">P2WPKH witness [sig, key_B] goes public</text>
+          <!-- 3 -->
+          <rect x="14" y="172" width="202" height="40" rx="8" class="svg-tor"/>
+          <text x="115" y="197" text-anchor="middle" class="svg-text" font-size="12">③ prove, bound to context</text>
+          <!-- 4 -->
+          <line x1="117" y1="236" x2="639" y2="236" class="svg-arrow" marker-end="url(#pr-ah)"/>
+          <text x="380" y="228" text-anchor="middle" class="svg-text" font-size="13">④ proof file (10.7 KB or 356 B)</text>
+          <!-- 5 -->
+          <line x1="643" y1="276" x2="386" y2="276" class="svg-arrow-good" marker-end="url(#pr-ah-g)"/>
+          <text x="512" y="268" text-anchor="middle" class="svg-text" font-size="13">⑤ fetch key B's spend</text>
+          <text x="512" y="292" text-anchor="middle" class="svg-text svg-muted" font-size="12">recompute BIP143 sighash, verify sig</text>
+        </svg>
+      </div>
+      <p class="caption">The verifier checks the proof against a pinned verification key, then <code>context_hash</code> and expiry, then the anchor. It derives the address from key_b itself and trusts no transaction data from the prover.</p>
+    </section>
+
+    <!-- 6. Two provers -->
+    <section class="slide" aria-label="Slide 6">
+      <p class="eyebrow">Two backends, one relation</p>
+      <h2>In your browser, or on your own server</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>In-browser (default)</h3>
+          <p>Noir → Barretenberg UltraHonk, WASM. Witness never leaves the tab.</p>
+          <ul class="points" style="font-size:15px;margin-top:10px">
+            <li>Proof: <strong>10,688 bytes</strong></li>
+            <li>Max path depth: <strong>3</strong></li>
+            <li>~65 s on 16 threads (witness 6 s + proving 49 s); ~4.6 min single-threaded</li>
+            <li>Downloads ~4 MB circuit + 64 MB setup params per proof</li>
+            <li>Setup: universal (Aztec Ignition SRS)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Server: SP1 → Groth16</h3>
+          <p>Rust guest in the SP1 zkVM, STARK wrapped in Groth16. <strong>The xpub is sent to the server</strong>: run it only on hardware you control.</p>
+          <ul class="points" style="font-size:15px;margin-top:10px">
+            <li>Proof: <strong>356 bytes</strong></li>
+            <li>Max path depth: <strong>16</strong></li>
+            <li>~3.7 min (first run downloads ~8 GB of circuit files)</li>
+            <li>Setup: SP1's circuit-specific Groth16 setup</li>
+            <li>Never emits a bare STARK: it isn't zero-knowledge</li>
+          </ul>
+        </div>
+      </div>
+      <p class="meta">Timings measured in headless Chromium on an 88-core server (README). Both proofs are verifiable on-chain; verification takes under a second.</p>
+    </section>
+
+    <!-- 7. Limits -->
+    <section class="slide" aria-label="Slide 7">
+      <p class="eyebrow">What it does not prove</p>
+      <h2>Knowing the xpub is not owning the coins</h2>
+      <div class="cards">
+        <div class="card"><h3>Not spend authority</h3><p>Anyone with the xpub, e.g. a watch-only auditor, can make the same proof. Spend authority comes only from the anchor.</p></div>
+        <div class="card"><h3>Anchor can be old</h3><p>A past spend shows someone controlled key B once, not now. The spec suggests also requiring a fresh signature by key B over the context hash.</p></div>
+        <div class="card"><h3>Proofs can be forwarded</h3><p>Anyone holding the file can verify the link. The context stops reuse as a login, but the link is public forever once revealed.</p></div>
+        <div class="card"><h3>Trusted setups</h3><p>UltraHonk relies on the Ignition ceremony (1-of-N honest); Groth16 on Succinct's setup.</p></div>
+        <div class="card"><h3>Demo only</h3><p>Signet only; the seed lives in localStorage. Draft spec, no audit mentioned.</p></div>
+        <div class="card"><h3>Hardened paths</h3><p>Out of scope: hardened derivation needs the parent private key, and the prover is assumed to hold only an xpub.</p></div>
+      </div>
+    </section>
+
+    <!-- 8. Demo + discussion -->
+    <section class="slide" aria-label="Slide 8">
+      <p class="eyebrow">Try it · discuss</p>
+      <h2>Where would you use this?</h2>
+      <div class="figure" style="padding:8px">
+        <img src="demo.jpeg" alt="xproof live demo: Prove two keys share a wallet, reveal nothing else" style="display:block;width:100%;max-height:236px;object-fit:cover;object-position:top;border-radius:8px" loading="lazy">
+      </div>
+      <ul class="points">
+        <li>Proving to an exchange or auditor that a deposit and a withdrawal address are yours, without handing over the xpub. Is a link proof enough, or do they really need spend proofs?</li>
+        <li>Once two keys are proven linked, that link is public forever. When is that a privacy win, and when a loss?</li>
+        <li>65 seconds in a browser, 356 bytes from a server. Which matters more for real deployments?</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Slide navigation">
+    <button id="prev" type="button" aria-label="Previous slide">← Prev</button>
+    <span class="counter" id="counter" aria-live="polite">1 / 8</span>
+    <button id="next" type="button" aria-label="Next slide">Next →</button>
+  </nav>
+</div>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+  var counter = document.getElementById('counter');
+  var i = 0;
+
+  function fromHash() {
+    var n = parseInt((location.hash || '').replace('#', ''), 10);
+    return (n >= 1 && n <= slides.length) ? n - 1 : 0;
+  }
+  function show(n, push) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, k) { s.classList.toggle('active', k === i); });
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+    if (push) { try { history.replaceState(null, '', '#' + (i + 1)); } catch (e) {} }
+  }
+  prev.addEventListener('click', function () { show(i - 1, true); });
+  next.addEventListener('click', function () { show(i + 1, true); });
+  document.addEventListener('keydown', function (e) {
+    if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(i + 1, true); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1, true); }
+    else if (e.key === 'Home') { show(0, true); }
+    else if (e.key === 'End') { show(slides.length - 1, true); }
+  });
+  var x0 = null;
+  document.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1), true);
+    x0 = null;
+  }, { passive: true });
+  window.addEventListener('hashchange', function () { show(fromHash(), false); });
+  show(fromHash(), false);
+})();
+</script>
+</body>
+</html>
