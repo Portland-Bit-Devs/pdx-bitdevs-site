@@ -101,12 +101,15 @@ If you can't make it to the main event please join us at Lutz Tavern around 9PM 
 
 ## Bitcoin General News
 
-- [Fake Electrum Proxy Servers Appear](https://x.com/0xB10C/status/2125269595854414009) ([bnoc.xyz thread](https://bnoc.xyz/t/electrum-proxy-servers-spun-up-in-mid-november-2026/215))
+- [Fake Electrum Proxy Servers Appear](https://x.com/0xB10C/status/2125269595854414009) ([bnoc.xyz thread](https://bnoc.xyz/t/electrum-proxy-servers-spun-up-in-mid-november-2026/215), [slides](/presentations/electrum-proxies/))
   - 37+ domains, mostly registered Nov 15-19 with self-signed certs, gossiped as Electrum servers; they proxy real servers like Emzy's and Seth's Fulcrum
-  - Lookalike names (e.g. `block-stream.info`); suspected goal is address clustering by becoming a wallet's main server
-  - Worse: 11+ servers returned altered transactions on broadcast, swapping the recipient for an address with matching last characters
-  - Electrum 4.3.4-4.7.2 clients seen connected; [GHSA-6jp4-8v48-cc5v](https://github.com/spesmilo/electrum/security/advisories/GHSA-6jp4-8v48-cc5v) (server replaces a just-broadcast tx) fixed in 4.8.3
-  - Upgrade Electrum, pin trusted servers, or run your own
+  - Lookalike names (e.g. `block-stream.info`); first suspected of address clustering by becoming a wallet's main server
+  - [Update: they're exploiting the recent Electrum vulnerability](https://x.com/0xB10C/status/2125369936260313375): 18 servers confirmed by b10c and Andrew Toth
+    - [CVE-2026-117601](https://github.com/spesmilo/electrum/security/advisories/GHSA-6jp4-8v48-cc5v): the server swallows a broadcast tx and shows a forged one paying the attacker; if the user fee-bumps it, the wallet signs a real payment to the attacker
+    - Forged tx: recipient ground to match the last 4 characters, RBF signaled, signatures replaced; one user lost funds before the fix
+    - Electrum 4.3.4-4.7.2 clients seen connected; 4.8.3 (2026-10-24) checks signatures on the wallet's own unconfirmed inputs
+    - {{ thumbnail(src="/images/seminar-52/electrum-exploit-confirmed.jpeg", thumb="/images/seminar-52/electrum-exploit-confirmed-thumb.jpeg", alt="b10c confirming proxies exploit the Electrum vulnerability, with original vs ground address") }}
+  - Upgrade Electrum, pin a trusted server with auto-connect off, or run your own; check outputs before signing any fee bump
 - [Ledn Launches Insured U.S. Custody in All 50 States](https://x.com/FINTECHTVglobal/status/2125289595881365558)
   - Co-founder Mauricio Di Bartolomeo on FINTECH.TV: custody model pitched against exchange risk
   - "Nearly all of our assets are held in cold storage at all times."

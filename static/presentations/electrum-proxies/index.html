@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fake Electrum Servers</title>
+<meta name="description" content="How fake Electrum proxy servers exploit CVE-2026-117601 to turn a fee bump into a payment to the attacker, and how to protect yourself.">
+<style>
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #d6d6d2;
+  --accent: #B35F00;
+  --accent-soft: #fff1de;
+  --bad: #b3261e;
+  --bad-soft: #fde8e6;
+  --good: #1e7a3c;
+  --good-soft: #e3f4e8;
+  --tor: #6b4fa8;
+  --tor-soft: #efe9fa;
+  --code-bg: #f1f0ec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121212;
+    --surface: #1a1a1a;
+    --text: #e8e8e6;
+    --muted: #a3a3a0;
+    --line: #3a3a38;
+    --accent: #FF9900;
+    --accent-soft: #33240d;
+    --bad: #ff8a80;
+    --bad-soft: #3a1a18;
+    --good: #7fd69a;
+    --good-soft: #15301f;
+    --tor: #b9a2f0;
+    --tor-soft: #251d38;
+    --code-bg: #222220;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --text: #e8e8e6;
+  --muted: #a3a3a0;
+  --line: #3a3a38;
+  --accent: #FF9900;
+  --accent-soft: #33240d;
+  --bad: #ff8a80;
+  --bad-soft: #3a1a18;
+  --good: #7fd69a;
+  --good-soft: #15301f;
+  --tor: #b9a2f0;
+  --tor-soft: #251d38;
+  --code-bg: #222220;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+code { background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+
+.deck { min-height: 100%; display: flex; flex-direction: column; }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--muted);
+}
+.topbar a { color: var(--accent); text-decoration: none; }
+.topbar a:hover { text-decoration: underline; }
+
+main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+.slide { display: none; width: 100%; max-width: 980px; }
+.slide.active { display: block; animation: fade 0.25s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slide.active { animation: none; } }
+
+.eyebrow { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.12; margin: 0 0 16px; }
+h2 { font-size: clamp(22px, 3.4vw, 32px); line-height: 1.2; margin: 0 0 16px; }
+p.lead { font-size: clamp(17px, 2.2vw, 21px); color: var(--muted); max-width: 46em; margin: 0 0 16px; }
+ul.points { font-size: clamp(16px, 2vw, 19px); padding-left: 1.2em; margin: 0; }
+ul.points li { margin: 0 0 10px; }
+.meta { color: var(--muted); font-size: 15px; margin-top: 24px; }
+
+.figure {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; margin: 8px 0 16px; overflow-x: auto;
+}
+.figure svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.caption { color: var(--muted); font-size: 15px; margin: 0; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+pre.diff {
+  background: var(--code-bg); border-radius: 10px; padding: 14px 16px; margin: 0 0 16px;
+  font-size: clamp(12px, 1.6vw, 15px); line-height: 1.55; overflow-x: auto;
+}
+pre.diff .del { color: var(--bad); }
+pre.diff .add { color: var(--good); }
+pre.diff .ctx { color: var(--muted); }
+
+.nav {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 12px 16px 20px;
+}
+.nav button {
+  background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 16px; font-size: 15px; cursor: pointer; min-width: 92px;
+}
+.nav button:hover:not(:disabled) { border-color: var(--accent); }
+.nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav button:disabled { opacity: 0.4; cursor: default; }
+.counter { color: var(--muted); font-size: 14px; min-width: 56px; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* SVG theming */
+.svg-text { fill: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.svg-muted { fill: var(--muted); }
+.svg-box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.svg-us { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+.svg-tor { fill: var(--tor-soft); stroke: var(--tor); stroke-width: 2; }
+.svg-bad { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 2; }
+.svg-good { fill: var(--good-soft); stroke: var(--good); stroke-width: 2; }
+.svg-life { stroke: var(--line); stroke-width: 2; stroke-dasharray: 4 5; }
+.svg-arrow { stroke: var(--text); stroke-width: 2; fill: none; }
+.svg-arrow-bad { stroke: var(--bad); stroke-width: 2.5; fill: none; }
+.svg-arrow-tor { stroke: var(--tor); stroke-width: 2; fill: none; }
+.svg-arrow-good { stroke: var(--good); stroke-width: 2.5; fill: none; }
+.fill-text { fill: var(--text); }
+.fill-bad { fill: var(--bad); }
+.fill-tor { fill: var(--tor); }
+.fill-good { fill: var(--good); }
+.fill-accent { fill: var(--accent); }
+
+@media (max-width: 600px) {
+  .topbar .hint { display: none; }
+  main { align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="deck">
+  <div class="topbar">
+    <a href="/socratic-seminar-52/">← Socratic Seminar #52</a>
+    <span class="hint">← → or space to navigate</span>
+  </div>
+
+  <main>
+    <!-- 1. Title -->
+    <section class="slide active" aria-label="Slide 1">
+      <p class="eyebrow">Electrum · CVE-2026-117601 · exploited in the wild</p>
+      <h1>Fake Electrum servers are hijacking fee bumps</h1>
+      <p class="lead">Dozens of new "Electrum servers" quietly proxy real ones. At least 18 of them forge your just-broadcast transaction so that, if you bump its fee, your wallet signs a payment to the attacker.</p>
+      <p class="meta">Spotted by b10c (2026-11-23) · confirmed by b10c and Andrew Toth (2026-11-24) · <a href="https://bnoc.xyz/t/electrum-proxy-servers-spun-up-in-mid-november-2026/215" style="color:var(--accent)">bnoc.xyz thread</a> · <a href="https://github.com/spesmilo/electrum/security/advisories/GHSA-6jp4-8v48-cc5v" style="color:var(--accent)">advisory</a></p>
+    </section>
+
+    <!-- 2. Trust model -->
+    <section class="slide" aria-label="Slide 2">
+      <p class="eyebrow">Background</p>
+      <h2>What an Electrum client trusts its server with</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 300" role="img" aria-labelledby="trust-title">
+          <title id="trust-title">An Electrum wallet connects to about ten servers for block headers, but sends its addresses and broadcasts to one main server, which it trusts for unconfirmed transactions.</title>
+          <defs>
+            <marker id="t-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-text"/></marker>
+            <marker id="t-ah-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-bad"/></marker>
+          </defs>
+          <rect x="30" y="115" width="190" height="70" rx="10" class="svg-us"/>
+          <text x="125" y="145" text-anchor="middle" class="svg-text" font-size="16" font-weight="600">Electrum wallet</text>
+          <text x="125" y="167" text-anchor="middle" class="svg-text svg-muted" font-size="13">light client, no full node</text>
+          <!-- header servers -->
+          <rect x="440" y="22" width="300" height="44" rx="8" class="svg-box"/>
+          <text x="590" y="49" text-anchor="middle" class="svg-text" font-size="14">~9 other servers: headers + fees</text>
+          <path d="M222,135 C 320,135 340,44 434,44" class="svg-arrow" marker-end="url(#t-ah)"/>
+          <text x="255" y="62" text-anchor="middle" class="svg-text svg-muted" font-size="13">SPV checks, fork detection</text>
+          <!-- main server -->
+          <rect x="470" y="186" width="260" height="100" rx="10" class="svg-bad"/>
+          <text x="600" y="216" text-anchor="middle" class="svg-text" font-size="15" font-weight="700">1 "main" server</text>
+          <text x="600" y="238" text-anchor="middle" class="svg-text" font-size="13">gets all your addresses</text>
+          <text x="600" y="256" text-anchor="middle" class="svg-text" font-size="13">broadcasts your transactions</text>
+          <text x="600" y="275" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">trusted for unconfirmed txs</text>
+          <path d="M222,168 C 330,168 360,234 466,234" class="svg-arrow-bad" marker-end="url(#t-ah-bad)"/>
+          <text x="330" y="232" text-anchor="middle" class="svg-text svg-muted" font-size="13">picked arbitrarily</text>
+        </svg>
+      </div>
+      <p class="caption">From Electrum's own FAQ: confirmed transactions are verified with SPV; "the server is trusted about unconfirmed transactions" and "can lie by omission."</p>
+    </section>
+
+    <!-- 3. The infrastructure -->
+    <section class="slide" aria-label="Slide 3">
+      <p class="eyebrow">The setup</p>
+      <h2>A fleet of proxies in front of real servers</h2>
+      <div class="figure">
+        <svg viewBox="0 55 760 185" role="img" aria-labelledby="proxy-title">
+          <title id="proxy-title">Wallets connect to a lookalike proxy domain, which relays to a real Fulcrum server such as electrum.emzy.de, so everything looks normal while the proxy sees and can alter the traffic.</title>
+          <defs>
+            <marker id="p-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-text"/></marker>
+          </defs>
+          <rect x="20" y="90" width="170" height="64" rx="10" class="svg-us"/>
+          <text x="105" y="118" text-anchor="middle" class="svg-text" font-size="15" font-weight="600">Your wallet</text>
+          <text x="105" y="139" text-anchor="middle" class="svg-text svg-muted" font-size="13">Electrum ≤ 4.8.2</text>
+          <rect x="285" y="70" width="200" height="104" rx="10" class="svg-bad"/>
+          <text x="385" y="98" text-anchor="middle" class="svg-text" font-size="15" font-weight="700">Proxy</text>
+          <text x="385" y="120" text-anchor="middle" class="svg-text" font-size="13">genesisblock.beer</text>
+          <text x="385" y="139" text-anchor="middle" class="svg-text" font-size="13">block-stream.info</text>
+          <text x="385" y="158" text-anchor="middle" class="svg-text" font-size="13">ledgerbitcoin.site …</text>
+          <rect x="580" y="90" width="160" height="64" rx="10" class="svg-good"/>
+          <text x="660" y="118" text-anchor="middle" class="svg-text" font-size="15" font-weight="600">Real Fulcrum</text>
+          <text x="660" y="139" text-anchor="middle" class="svg-text svg-muted" font-size="13">electrum.emzy.de</text>
+          <line x1="192" y1="122" x2="280" y2="122" class="svg-arrow" marker-end="url(#p-ah)"/>
+          <line x1="487" y1="122" x2="575" y2="122" class="svg-arrow" marker-end="url(#p-ah)"/>
+          <text x="385" y="204" text-anchor="middle" class="svg-text svg-muted" font-size="13">passes through the real server's banner and donation address, so it looks legitimate</text>
+          <text x="385" y="228" text-anchor="middle" class="svg-text svg-muted" font-size="13">keeps idle connections open to look like normal clients</text>
+        </svg>
+      </div>
+      <div class="cards">
+        <div class="card"><h3>37+ domains</h3><p>Most registered Nov 15–19; a batch from Dec 2025–Jan 2026 got certs the same week. Self-signed, 10-year TLS certs.</p></div>
+        <div class="card"><h3>Cheap VPS hosting</h3><p>Mostly Vultr, plus MHost, PsychoVPS, DigitalOcean and others, across NL, AU, SG, JP, GB, PL and US.</p></div>
+        <div class="card"><h3>Seen from the real side</h3><p>Emzy: 52 connections from 19 proxies. Seth: 41 connections from 20 of the IPs.</p></div>
+      </div>
+    </section>
+
+    <!-- 4. The attack sequence -->
+    <section class="slide" aria-label="Slide 4">
+      <p class="eyebrow">The attack</p>
+      <h2>Swallow, forge, and wait for a fee bump</h2>
+      <div class="figure">
+        <svg viewBox="0 0 760 366" role="img" aria-labelledby="atk-title">
+          <title id="atk-title">The wallet broadcasts tx1; the malicious server never relays it and instead reports a forged tx2 paying the attacker. The wallet shows tx2. If the user bumps its fee, the wallet signs a valid replacement paying the attacker, which the server broadcasts.</title>
+          <defs>
+            <marker id="a-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-text"/></marker>
+            <marker id="a-ah-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-bad"/></marker>
+            <marker id="a-ah-tor" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="fill-tor"/></marker>
+          </defs>
+          <rect x="30" y="12" width="200" height="48" rx="10" class="svg-us"/>
+          <text x="130" y="42" text-anchor="middle" class="svg-text" font-size="15" font-weight="600">Wallet (≤ 4.8.2)</text>
+          <rect x="300" y="12" width="200" height="48" rx="10" class="svg-bad"/>
+          <text x="400" y="42" text-anchor="middle" class="svg-text" font-size="15" font-weight="600">Malicious server</text>
+          <rect x="570" y="12" width="160" height="48" rx="10" class="svg-box"/>
+          <text x="650" y="42" text-anchor="middle" class="svg-text" font-size="15" font-weight="600">Bitcoin network</text>
+          <line x1="130" y1="60" x2="130" y2="356" class="svg-life"/>
+          <line x1="400" y1="60" x2="400" y2="356" class="svg-life"/>
+          <line x1="650" y1="60" x2="650" y2="330" class="svg-life"/>
+          <!-- 1 -->
+          <line x1="132" y1="98" x2="394" y2="98" class="svg-arrow" marker-end="url(#a-ah)"/>
+          <text x="265" y="90" text-anchor="middle" class="svg-text" font-size="13">① broadcast tx1 (pay Bob)</text>
+          <text x="525" y="102" text-anchor="middle" class="svg-text fill-bad" font-size="13" font-weight="700">✕ never relayed</text>
+          <!-- 2 -->
+          <line x1="398" y1="148" x2="136" y2="148" class="svg-arrow-bad" marker-end="url(#a-ah-bad)"/>
+          <text x="265" y="140" text-anchor="middle" class="svg-text" font-size="13">② history now shows forged tx2</text>
+          <text x="265" y="168" text-anchor="middle" class="svg-text svg-muted" font-size="12">pays attacker · invalid sigs · not checked</text>
+          <!-- 3 -->
+          <rect x="20" y="188" width="220" height="44" rx="8" class="svg-box"/>
+          <text x="130" y="208" text-anchor="middle" class="svg-text" font-size="13">③ user sees "unconfirmed"</text>
+          <text x="130" y="225" text-anchor="middle" class="svg-text" font-size="13">and clicks <tspan font-weight="700">Bump fee</tspan></text>
+          <!-- 4 -->
+          <line x1="132" y1="270" x2="394" y2="270" class="svg-arrow-bad" marker-end="url(#a-ah-bad)"/>
+          <text x="265" y="262" text-anchor="middle" class="svg-text" font-size="13">④ tx2′: same outputs, higher fee,</text>
+          <text x="265" y="290" text-anchor="middle" class="svg-text fill-bad" font-size="13" font-weight="700">validly signed by the wallet</text>
+          <!-- 5 -->
+          <line x1="402" y1="314" x2="644" y2="314" class="svg-arrow-tor" marker-end="url(#a-ah-tor)"/>
+          <text x="525" y="306" text-anchor="middle" class="svg-text" font-size="13">⑤ broadcast tx2′</text>
+          <rect x="470" y="326" width="270" height="34" rx="8" class="svg-bad"/>
+          <text x="605" y="348" text-anchor="middle" class="svg-text" font-size="13" font-weight="700">attacker paid; Bob gets nothing</text>
+        </svg>
+      </div>
+      <p class="caption">The forged tx2 can't be mined, since its signatures are bad. The theft only works if the user re-signs it with a fee bump. One reporter did, and lost funds.</p>
+    </section>
+
+    <!-- 5. Evidence -->
+    <section class="slide" aria-label="Slide 5">
+      <p class="eyebrow">The evidence</p>
+      <h2>b10c's test: what the proxy changed</h2>
+      <p class="lead" style="font-size:17px">He sent a real 2-in, 2-out mempool transaction (57aa9dfb…) to <code>genesisblock.beer:50002</code> and decoded what came back (77aa1d24…).</p>
+      <pre class="diff"><span class="ctx">recipient (1.35345340 BTC)</span>
+<span class="del">-  bc1py3h2pm9s2t4m9kzxu0jh05yets678qmhyvsw77cv2zpvf40ryg3s3f<strong>qnd9</strong></span>
+<span class="add">+  bc1p4xq3wepg3fdph0w89rp03dypm4rffeaad46htqp769jc9ds83qtq5s<strong>qnd9</strong></span>
+<span class="ctx">nSequence, both inputs</span>
+<span class="del">-  0xffffffff   final, no RBF</span>
+<span class="add">+  0xfffffffd   signals RBF, so it can be bumped</span>
+<span class="ctx">change output</span>
+<span class="del">-  0.23259556 BTC   (fee 16,709 sat)</span>
+<span class="add">+  0.23259777 BTC   (fee 16,488 sat, 221 sat lower)</span>
+<span class="ctx">signatures</span>
+<span class="add">+  replaced; the attacker can't sign for your coins</span></pre>
+      <div class="cards">
+        <div class="card"><h3>Ground address</h3><p>Same <code>bc1p</code> type, same last 4 characters. Anyone who checks only the ends of an address is fooled.</p></div>
+        <div class="card"><h3>Same amount</h3><p>The recipient value is untouched, so the transaction looks right at a glance.</p></div>
+        <div class="card"><h3>Primed to bump</h3><p>RBF is switched on and the fee shaved. In the advisory's loss case, the forged tx had zero fee.</p></div>
+      </div>
+    </section>
+
+    <!-- 6. Who's exploiting -->
+    <section class="slide" aria-label="Slide 6">
+      <p class="eyebrow">Confirmed</p>
+      <h2>18 servers caught forging transactions</h2>
+      <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr))">
+        <div class="card"><p style="white-space:nowrap"><code>genesisblock.beer</code><br><code>btc-node01.club</code><br><code>solidusnode.cfd</code><br><code>ledgerbitcoin.site</code><br><code>satoshi-relay.top</code></p></div>
+        <div class="card"><p style="white-space:nowrap"><code>chainlinkbtc.sbs</code><br><code>bitcoindpubnode.pw</code><br><code>21million.surf</code><br><code>prunebtcnode.top</code><br><code>block840000.xyz</code></p></div>
+        <div class="card"><p style="white-space:nowrap"><code>ironledger.biz</code><br><code>el-commu.cc</code><br><code>qbtcnode.network</code><br><code>lightbtc.co</code><br><code>fulcrumx.online</code></p></div>
+        <div class="card"><p style="white-space:nowrap"><code>electron-node.pro</code><br><code>hodlnode.pro</code><br><code>block-stream.info</code><br><span style="color:var(--muted)">(Andrew Toth's list)</span></p></div>
+      </div>
+      <p class="meta">Union of b10c's list (last updated 2026-11-24 23:33 UTC) and Andrew Toth's. Both say there may be more. Wallets seen connected through these proxies: Electrum 4.3.4, 4.4.5, 4.5.8, 4.6.2 and 4.7.2, all vulnerable.</p>
+    </section>
+
+    <!-- 7. Timeline + fix -->
+    <section class="slide" aria-label="Slide 7">
+      <p class="eyebrow">Timeline and fix</p>
+      <h2>Disclosed in October, exploited in November</h2>
+      <div class="figure">
+        <svg viewBox="0 50 760 115" role="img" aria-labelledby="tl-title">
+          <title id="tl-title">Timeline: Oct 11 first private report; Oct 18 a user reports losing funds after a fee bump; Oct 24 Electrum 4.8.3 released and the bug disclosed; Nov 15 to 19 most proxy domains registered; Nov 23 b10c spots the proxies; Nov 24 exploitation confirmed.</title>
+          <line x1="30" y1="100" x2="730" y2="100" class="svg-arrow"/>
+          <g>
+            <circle cx="60" cy="100" r="7" class="svg-box"/>
+            <text x="60" y="78" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">Oct 11</text>
+            <text x="60" y="128" text-anchor="middle" class="svg-text svg-muted" font-size="12">1st report:</text>
+            <text x="60" y="144" text-anchor="middle" class="svg-text svg-muted" font-size="12">tx swapped</text>
+          </g>
+          <g>
+            <circle cx="170" cy="100" r="7" class="svg-bad"/>
+            <text x="170" y="78" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">Oct 18</text>
+            <text x="170" y="128" text-anchor="middle" class="svg-text fill-bad" font-size="12" font-weight="600">user bumps fee,</text>
+            <text x="170" y="144" text-anchor="middle" class="svg-text fill-bad" font-size="12" font-weight="600">loses funds</text>
+          </g>
+          <g>
+            <circle cx="290" cy="100" r="7" class="svg-good"/>
+            <text x="290" y="78" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">Oct 24</text>
+            <text x="290" y="128" text-anchor="middle" class="svg-text fill-good" font-size="12" font-weight="600">4.8.3 released,</text>
+            <text x="290" y="144" text-anchor="middle" class="svg-text fill-good" font-size="12" font-weight="600">public advisory</text>
+          </g>
+          <g>
+            <rect x="460" y="92" width="100" height="16" rx="4" class="svg-bad"/>
+            <text x="510" y="78" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">Nov 15–19</text>
+            <text x="510" y="128" text-anchor="middle" class="svg-text svg-muted" font-size="12">most proxy</text>
+            <text x="510" y="144" text-anchor="middle" class="svg-text svg-muted" font-size="12">domains registered</text>
+          </g>
+          <g>
+            <circle cx="630" cy="100" r="7" class="svg-tor"/>
+            <text x="630" y="78" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">Nov 23</text>
+            <text x="630" y="128" text-anchor="middle" class="svg-text svg-muted" font-size="12">b10c spots</text>
+            <text x="630" y="144" text-anchor="middle" class="svg-text svg-muted" font-size="12">proxies</text>
+          </g>
+          <g>
+            <circle cx="710" cy="100" r="7" class="svg-bad"/>
+            <text x="710" y="78" text-anchor="middle" class="svg-text" font-size="13" font-weight="600">Nov 24</text>
+            <text x="710" y="128" text-anchor="middle" class="svg-text fill-bad" font-size="12" font-weight="600">exploit</text>
+            <text x="710" y="144" text-anchor="middle" class="svg-text fill-bad" font-size="12" font-weight="600">confirmed</text>
+          </g>
+        </svg>
+      </div>
+      <ul class="points">
+        <li><strong>The fix (4.8.3, commit 90fe308):</strong> before adding an unconfirmed tx to history, the wallet verifies the signatures on inputs that spend <em>its own</em> coins. A forged tx2 is rejected.</li>
+        <li><strong>Still trusted:</strong> incoming unconfirmed payments. Checking those would need a script interpreter and every unconfirmed parent.</li>
+      </ul>
+    </section>
+
+    <!-- 8. What to do + discussion -->
+    <section class="slide" aria-label="Slide 8">
+      <p class="eyebrow">What to do</p>
+      <h2>Protect yourself, then discuss</h2>
+      <div class="cards">
+        <div class="card"><h3>Upgrade</h3><p>Electrum 4.8.3 or later. Every version seen connected through the proxies was vulnerable.</p></div>
+        <div class="card"><h3>Pick your server</h3><p>Run your own, or pin a trusted one with auto-connect off. Clients on servers they trust weren't affected.</p></div>
+        <div class="card"><h3>Read before you sign</h3><p>Check the full recipient address and amount on every signature, fee bumps included, ideally on a hardware wallet screen.</p></div>
+      </div>
+      <ul class="points" style="margin-top:20px">
+        <li>Most proxy domains were registered about three weeks <em>after</em> the public advisory. Was disclosure the starting gun? Should fixes like this come with forced updates?</li>
+        <li>Servers are found by gossip, so anyone can advertise one. How the proxies became wallets' main server is still unknown. How should light clients choose whom to trust?</li>
+        <li>Ground suffixes beat a "check the last few characters" habit. What should wallets show instead?</li>
+        <li>Server operators saw the proxies as idle clients. Could public servers detect and block relaying?</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Slide navigation">
+    <button id="prev" type="button" aria-label="Previous slide">← Prev</button>
+    <span class="counter" id="counter" aria-live="polite">1 / 8</span>
+    <button id="next" type="button" aria-label="Next slide">Next →</button>
+  </nav>
+</div>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+  var counter = document.getElementById('counter');
+  var i = 0;
+
+  function fromHash() {
+    var n = parseInt((location.hash || '').replace('#', ''), 10);
+    return (n >= 1 && n <= slides.length) ? n - 1 : 0;
+  }
+  function show(n, push) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, k) { s.classList.toggle('active', k === i); });
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+    if (push) { try { history.replaceState(null, '', '#' + (i + 1)); } catch (e) {} }
+  }
+  prev.addEventListener('click', function () { show(i - 1, true); });
+  next.addEventListener('click', function () { show(i + 1, true); });
+  document.addEventListener('keydown', function (e) {
+    if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(i + 1, true); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1, true); }
+    else if (e.key === 'Home') { show(0, true); }
+    else if (e.key === 'End') { show(slides.length - 1, true); }
+  });
+  var x0 = null;
+  document.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1), true);
+    x0 = null;
+  }, { passive: true });
+  window.addEventListener('hashchange', function () { show(fromHash(), false); });
+  show(fromHash(), false);
+})();
+</script>
+</body>
+</html>
